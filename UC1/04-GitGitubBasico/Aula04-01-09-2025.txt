@@ -1,0 +1,27 @@
+Objetivo da aula de hoje: 01/09/2025 - CONTINUAÇÃO CASA ABERTA
+
+#01_ Finalização do Cadastro de Email e Username - OK
+	A) QUEM JÁ FEZ O CADASTRO PODE FICAR AVONTADE PARA PARTICIPAR DO CASA ABERTA SENAC 2025
+
+#02_ Cronograma do mês de Setembro 2025 - OK
+
+#03_ Criar uma conta no LinkedIn https://br.linkedin.com/
+
+#04_ Acesso e Utilização Básica do Github
+	a) Criação e Personalização do Primeiro Repositório
+	b) Criação do Repositório Pessoal
+
+Vídeo01: 💻 BÁSICO do BÁSICO de Git e Github utilizando o Linux Mint 20.3 Una x64 🐧🐧
+https://www.youtube.com/watch?v=JDCYyjbrJu0&t
+
+Vídeo02: 🤩 Configuração e Integração do Git e Github com o VSCode no GNU/Linux (Linux Mint 22) e Windows 10 
+https://www.youtube.com/watch?v=VBxmsmPK60s
+
+#05_ Acesso e Utilização Básica do ChatGPT
+	a) Utilizar a IA (AI) ao seu favor para criar texto, documentação e personalização nos repositórios do Github
+
+#06_ Acesso e Utilização Básica do Tinkercad
+	a) Acessar a plataformar e conhecer os recursos de criação de Circuitos Elétricos e Eletrônicos
+
+#07_ Envio de toda a documentação para a o Github
+	a) Enviar as documentações da aula para o respositório do curso

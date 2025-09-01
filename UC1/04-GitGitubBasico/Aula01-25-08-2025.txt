@@ -1,0 +1,68 @@
+Objetivo da aula de hoje: 25/08/2025
+
+#01_ Técnico em Informática Tarde
+a) 1200hs +- 2 anos de curso;
+b) 100% Presencial
+c) Seg, Ter, Qua, Qui e Sex: 
+d) 13:30hs até 17:30hs - 4hs
+e) 25% Faltas - 300hs - 75 dias
+f) UC - Unidade Curricular: 16
+	Exemplo: UC-1: 84hs 21hs - 5 dias
+g) Intervalo: 15hs - 15/20m - 17:30hs
+h) Refeitório / Lanchonete
+-------------------------------------
+UC-1: Básico de Hardware
+	  Básico de Elétrica
+	  Básico de Eletrônica (Arduino)
+	  
+	  Robson Vaamonde: Básico Elétrica / Básico Eletrônica
+	  (Seg, Qua e Sex) até 05/09
+	  
+	  Leandro Ramos: Básico Hardware
+	  (Ter e Quin)
+	  
+	  José de Assis: Básico Elétrica e Eletrônica (Arduino)
+	  (Seg, Qua e Sex) 08/09 - 08/10
+
+i) Turma Dividida: A=15 - B=14: - Lab18
+j) Estágio: UC-1 até UC-4
+	UC-4	PI - Projeto Integrador
+	UC-8	PI - Projeto Integrador
+	UC-16 	PI - Projeto Integrador
+--------------------------------------
+K) Nome da Turma: TEI-04-2025
+
+#02_ Cronograma do mês de Agosto/2025
+
+#03_ Cadastro nos Sites (Ferramentas)
+a) Site do SENAC São Paulo - OK
+	Site: https://www.sp.senac.br/
+	Usuário / senha: 
+
+b) Site do Github - FAZER EM CASA
+	Site: https://github.com/
+	Username: CUIDADO!!!!!!!
+
+c) Github Vaamonde (Vava)
+	Site: github.com/vaamonde
+
+d) Site Tinkercad (Autodesk)
+	Site: https://www.tinkercad.com/
+	Criar uma conta pessoal
+
+e) Site Netacad (Cisco)
+	Site: https://www.netacad.com/
+	Criar uma conta pessoal
+
+f) IA (AI):
+	#01_ https://chatgpt.com/
+	Quem é Robson Vaamonde
+	(dica sempre se logar)
+	
+	#02_ https://gemini.google.com/
+	Quem é Robson Vaamonde
+	(dica sempre se logar)
+
+	#03_ https://copilot.microsoft.com/
+	Quem é Robson Vaamonde
+	(dica sempre se logar @senacsp.edu.br)

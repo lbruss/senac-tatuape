@@ -1,0 +1,17 @@
+Objetivo da aula de hoje: 29/08/2025
+
+#01_ Finalização do Cadastro de Email e Username
+	A) QUEM JÁ FEZ O CADASTRO PODE FICAR AVONTADE PARA PARTICIPAR DO CASA ABERTA SENAC 2025
+
+#02_ Acesso e Utilização Básica do Github
+	a) Criação e Personalização do Primeiro Repositório
+	b) Criação do Repositório Pessoal
+
+#03_ Acesso e Utilização Básica do ChatGPT
+	a) Utilizar a IA (AI) ao seu favor para criar texto, documentação e personalização nos repositórios do Github
+
+#04_ Acesso e Utilização Básica do Tinkercad
+	a) Acessar a plataformar e conhecer os recursos de criação de Circuitos Elétricos e Eletrônicos
+
+#05_ Envio de toda a documentação para a o Github
+	a) Enviar as documentações da aula para o respositório do curso
