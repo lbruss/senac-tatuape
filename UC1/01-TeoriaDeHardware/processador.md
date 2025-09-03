@@ -31,5 +31,11 @@ Intel Ultra ---> Modelo de Placa Mãe: LGA 1851
 Threads = Processador Lógico ---> Processadores lógicos
 
  4   /     4  --> É legal, mas o   4  /  8    --> É melhor
-Core   Thread                   Core   Thread
+Core = 4  Thread = 4               Core = 4 Thread = 8
 
+Intel ---> Número de performace-core ---> Core pequeno e core grande, mas isso apartir dos Intel da 13º e 14º geração e ultras
+Intel Ultra não dobra os cores e threads que nem o AMD (Por enquanto)
+
+Para achar a ficha dos processadores da Intel só pesquisar: "ark (modelo)"
+E para acahar a ficha dos processadores da AMD: "AMD Ryzen (modelo)"
+Mas diferente da Intel que tem a ficha de todos os seus processadores, o AMD não tem a ficha de seus processadores antigos
