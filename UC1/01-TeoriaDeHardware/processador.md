@@ -1,41 +1,45 @@
-Intel i?   Ultra?
-AMD Ryzen ?
+# Processadores Intel e AMD ⚡
 
-3-Entrda 
-5-Internacional 
-7-Desempenho
-9-Trabalho Pesado
+## Intel: Séries e Soquetes 🔵
+- **Intel i3, i5, i7, i9** → Diferentes níveis de desempenho:
+  - **3** → Entrada  
+  - **5** → Intermediário  
+  - **7** → Alto desempenho  
+  - **9** → Trabalho pesado  
+- **Linha Ultra** → nova geração da Intel  
+- **Soquetes:**
+  - **10ª e 11ª Geração** → LGA 1200  
+  - **12ª, 13ª e 14ª Geração** → LGA 1700  
+  - **Intel Ultra** → LGA 1851  
 
-Core = Núcleo que seria o "motor"
+---
 
-Quanto mais Core, melhor, mais poder de processamento
+## AMD: Séries e Soquetes 🟠
+- **Ryzen (arquiteturas por geração):**
+  - Ryzen **1000–5000** → **Soquete AM4**  
+  - Ryzen **7000–9000** → **Soquete AM5**  
 
-GHz: "velocidade" que seria a frequência e sempre varia
+---
 
-Core é diferente de GHz
+## Core, Thread e GHz ⚙️
+- **Core (Núcleo):** o *motor* do processador → quanto mais cores, maior o poder de processamento.  
+- **GHz (Frequência):** “velocidade” do núcleo → pode variar conforme a carga.  
+- **Importante:** Core ≠ GHz.  
 
-Intel i1... i14... Ultra
+### Threads 🧵
+- **Threads = Processadores lógicos.**  
+- Exemplos:  
+  - `4 Cores / 4 Threads` → desempenho básico.  
+  - `4 Cores / 8 Threads` → mais eficiente (melhor multitarefa).  
 
-AMD - Soquete
+### Diferenças Intel x AMD
+- **Intel (13ª, 14ª e Ultra):** performance-cores (altos) + efficiency-cores (baixos).  
+- **AMD:** multiplica cores em threads (ex.: 6C/12T).  
+- **Intel Ultra (atual):** não dobra cores/threads como o AMD (ainda).  
 
-Ryzen 1000, 2000, 3000/4000, 5000 ---> Modelo de Placa Mãe: AM4
-Ryzen 7000/8000, 9000 ---> Modelo de Placa Mãe: AM5
+---
 
-Intel - Soquete
-
-Intel 10º, 11º geração ---> Modelo de Placa Mãe: LGA 1200
-Intel 12º, 13º, 14º geração ---> Modelo de Placa Mãe: LGA 1700
-Intel Ultra ---> Modelo de Placa Mãe: LGA 1851
-
-
-Threads = Processador Lógico ---> Processadores lógicos
-
- 4   /     4  --> É legal, mas o   4  /  8    --> É melhor
-Core = 4  Thread = 4               Core = 4 Thread = 8
-
-Intel ---> Número de performace-core ---> Core pequeno e core grande, mas isso apartir dos Intel da 13º e 14º geração e ultras
-Intel Ultra não dobra os cores e threads que nem o AMD (Por enquanto)
-
-Para achar a ficha dos processadores da Intel só pesquisar: "ark (modelo)"
-E para acahar a ficha dos processadores da AMD: "AMD Ryzen (modelo)"
-Mas diferente da Intel que tem a ficha de todos os seus processadores, o AMD não tem a ficha de seus processadores antigos
+## Consultando Fichas Técnicas 📑
+- **Intel:** basta pesquisar `ark (modelo)` → exemplo: `ark i7-12700K`.  
+- **AMD:** pesquisar `AMD Ryzen (modelo)` → exemplo: `AMD Ryzen 7 5800X`.  
+  - Diferença: a Intel disponibiliza fichas de **todas** as gerações, já a AMD não mantém informações completas dos modelos mais antigos.  
