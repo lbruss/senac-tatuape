@@ -64,4 +64,17 @@
 ## Transistor
 - É como se fosse o neurônio do cerebro.
 - Antes deles era a Valvula.
-- O transistor esquenta muito, mas se for pqueno não fica muito quente, esquenta menos. (Atualmente o menor é de 5 nm) 
+- O transistor esquenta muito, mas se for pqueno não fica muito quente, esquenta menos. (Atualmente, o mais pequeno é de 5 nm)
+- 1 nm = 0,00000001 mm
+
+---
+
+## TSMC - Taiwan
+- Fabrica chips para TODOS
+
+---
+
+### TDP
+- Consumo de energia do processador
+- Varia
+- Em w
