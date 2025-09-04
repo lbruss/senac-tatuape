@@ -55,6 +55,6 @@
 ---
 
 ## Cache
-- **L1:**Esta dentro do núcleo.
+- **L1:** Está dentro do núcleo.
 - **L2:**
 - **L3:**
