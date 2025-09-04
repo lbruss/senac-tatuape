@@ -1,6 +1,6 @@
-# Processadores Intel e AMD ⚡
+# Processadores Intel e AMD
 
-## Intel: Séries e Soquetes 🔵
+## Intel: Séries e Soquetes
 - **Intel i3, i5, i7, i9** → Diferentes níveis de desempenho:
   - **3** → Entrada  
   - **5** → Intermediário  
@@ -14,19 +14,19 @@
 
 ---
 
-## AMD: Séries e Soquetes 🟠
+## AMD: Séries e Soquetes
 - **Ryzen (arquiteturas por geração):**
   - Ryzen **1000–5000** → **Soquete AM4**  
   - Ryzen **7000–9000** → **Soquete AM5**  
 
 ---
 
-## Core, Thread e GHz ⚙️
+## Core, Thread e GHz
 - **Core (Núcleo):** o *motor* do processador → quanto mais cores, maior o poder de processamento.  
 - **GHz (Frequência):** “velocidade” do núcleo → pode variar conforme a carga.  
 - **Importante:** Core ≠ GHz.  
 
-### Threads 🧵
+### Threads
 - **Threads = Processadores lógicos.**  
 - Exemplos:  
   - `4 Cores / 4 Threads` → desempenho básico.  
@@ -39,14 +39,14 @@
 
 ---
 
-## Consultando Fichas Técnicas 📑
+## Consultando Fichas Técnicas
 - **Intel:** basta pesquisar `ark (modelo)` → exemplo: `ark i7-12700K`.  
 - **AMD:** pesquisar `AMD Ryzen (modelo)` → exemplo: `AMD Ryzen 7 5800X`.  
   - Diferença: a Intel disponibiliza fichas de **todas** as gerações, já a AMD não mantém informações completas dos modelos mais antigos.
 
 ---
 
-## AMD
+### AMD - Processsadores
 - **Trabalho pesado:** Necessário mais núcleos, threads e GHz.
 - **Para jogos:** Necessário mais cache: X3D ou 3D.
 
@@ -56,5 +56,12 @@
 
 ## Cache
 - **L1:** Está dentro do núcleo.
-- **L2:**
-- **L3:**
+- **L2:** Como se fosse um "quintal" exclusivamente para um núcleo.
+- **L3:** Como se fosse um "quintal" para todos os outros núcleos, compartilhado.
+
+---
+
+## Transistor
+- É como se fosse o neurônio do cerebro.
+- Antes deles era a Valvula.
+- O transistor esquenta muito, mas se for pqueno não fica muito quente, esquenta menos. (Atualmente o menor é de 5 nm) 
