@@ -42,4 +42,19 @@
 ## Consultando Fichas Técnicas 📑
 - **Intel:** basta pesquisar `ark (modelo)` → exemplo: `ark i7-12700K`.  
 - **AMD:** pesquisar `AMD Ryzen (modelo)` → exemplo: `AMD Ryzen 7 5800X`.  
-  - Diferença: a Intel disponibiliza fichas de **todas** as gerações, já a AMD não mantém informações completas dos modelos mais antigos.  
+  - Diferença: a Intel disponibiliza fichas de **todas** as gerações, já a AMD não mantém informações completas dos modelos mais antigos.
+
+---
+
+## AMD
+- **Trabalho pesado:** Necessário mais núcleos, threads e GHz.
+- **Para jogos:** Necessário mais cache: X3D ou 3D.
+
+**OBS:** Para jogos, se baseia nos consoles (8/16 é o mais comum).
+
+---
+
+## Cache
+- **L1:**Esta dentro do núcleo.
+- **L2:**
+- **L3:**
