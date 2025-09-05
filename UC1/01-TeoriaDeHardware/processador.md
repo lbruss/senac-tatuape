@@ -80,3 +80,54 @@
 - Representa o **consumo de energia** do processador.  
 - Medido em **Watts (W)**.  
 - Pode variar conforme o uso.  
+
+### EM RESUMO
+
+# AMD – Processadores
+
+### Uso Ideal
+| Situação          | O que é mais importante?        | Exemplos/Observações |
+|-------------------|---------------------------------|-----------------------|
+| **Trabalho pesado** | Mais **núcleos, threads e GHz** | Renderização, edição de vídeo, multitarefas |
+| **Jogos**          | Mais **cache (X3D/3D)**         | Consoles costumam ter **8C / 16T** |
+
+---
+
+## Cache
+
+| Tipo  | Localização                   | Característica |
+|-------|-------------------------------|----------------|
+| **L1** | Dentro do núcleo              | Muito rápido, mas pequeno |
+| **L2** | Exclusivo de cada núcleo      | “Quintal” individual |
+| **L3** | Compartilhado entre núcleos   | “Quintal” coletivo |
+
+---
+
+## Transistor
+
+| Item            | Informação |
+|-----------------|------------|
+| Função          | “Neurônio” do processador |
+| Antes dele      | Válvulas |
+| Problema        | Esquenta muito |
+| Solução atual   | Quanto **menor**, menos calor |
+| Escala atual    | **5 nm** |
+| Conversão       | **1 nm = 0,00000001 mm** |
+
+---
+
+## TSMC – Taiwan
+- Principal fabricante mundial de chips.  
+- Produz para **AMD, NVIDIA, Apple, Qualcomm** e muitas outras empresas.  
+
+---
+
+## TDP (Thermal Design Power)
+
+| Faixa de TDP | Consumo típico | Uso comum |
+|--------------|---------------|-----------|
+| **15–45 W**  | Baixo         | Notebooks ultrafinos |
+| **65–95 W**  | Médio         | Desktops padrão |
+| **105–170 W**| Alto          | Processadores de alto desempenho / overclock |
+
+---
