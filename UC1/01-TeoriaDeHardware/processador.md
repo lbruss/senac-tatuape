@@ -46,35 +46,37 @@
 
 ---
 
-### AMD - Processsadores
-- **Trabalho pesado:** Necessário mais núcleos, threads e GHz.
-- **Para jogos:** Necessário mais cache: X3D ou 3D.
+## AMD – Processadores
+- **Trabalho pesado:** exige mais **núcleos, threads e GHz**.  
+- **Jogos:** demanda mais **cache** → modelos com **X3D / 3D** são ideais.  
 
-**OBS:** Para jogos, se baseia nos consoles (8/16 é o mais comum).
+**Observação:** Nos consoles, a configuração mais comum é **8 Cores / 16 Threads**.
 
 ---
 
 ## Cache
-- **L1:** Está dentro do núcleo.
-- **L2:** Como se fosse um "quintal" exclusivamente para um núcleo.
-- **L3:** Como se fosse um "quintal" para todos os outros núcleos, compartilhado.
+- **L1:** dentro do núcleo (ultrarrápido, mas pequeno).  
+- **L2:** “quintal” exclusivo de cada núcleo.  
+- **L3:** “quintal” compartilhado entre todos os núcleos.  
 
 ---
 
 ## Transistor
-- É como se fosse o neurônio do cerebro.
-- Antes deles era a Valvula.
-- O transistor esquenta muito, mas se for pqueno não fica muito quente, esquenta menos. (Atualmente, o mais pequeno é de 5 nm)
-- 1 nm = 0,00000001 mm
+- Funciona como o **neurônio do processador**.  
+- Antes dele, era usada a **válvula**.  
+- Transistores **esquentam**, mas quanto **menores**, menos calor geram.  
+- Atualmente: fabricação em **5 nm** (nanômetros).  
+- **1 nm = 0,00000001 mm**.  
 
 ---
 
-## TSMC - Taiwan
-- Fabrica chips para TODOS
+## TSMC – Taiwan
+- Principal fabricante de chips do mundo.  
+- Produz para **diversas empresas** (incluindo AMD, Apple, NVIDIA e outras).  
 
 ---
 
-### TDP
-- Consumo de energia do processador
-- Varia
-- Em w
+## TDP (Thermal Design Power)
+- Representa o **consumo de energia** do processador.  
+- Medido em **Watts (W)**.  
+- Pode variar conforme o uso.  
