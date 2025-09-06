@@ -122,3 +122,4 @@ Este documento traz conceitos básicos sobre **tensão, corrente, resistência e
 ### Triângulo da Potência (2º Triângulo)
 <img width="587" height="568" alt="2ºTriangulo de Ohm" src="https://github.com/user-attachments/assets/3ff826b9-f44a-4813-b9e5-052ffd8d24fe" />
 
+https://github.com/lbruss/senac-tatuape/blob/main/UC1/02-EletricaBasica/Aula01-Lousa-05-09-2025.pdf
