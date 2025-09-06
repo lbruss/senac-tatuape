@@ -1,109 +1,124 @@
-Tomada 
-AC = CA = Corrente alternada
-127/220
+# Fundamentos de Eletricidade e Eletrônica
 
-Exemplo: Encontrado no carregador
-Entrada = input
-Ex: 100 --> 240
+Este documento traz conceitos básicos sobre **tensão, corrente, resistência e potência**, com exemplos práticos e cálculos organizados.
 
-100v --> 127v/200 --> 240v
+---
 
-Pico de tenção = Queima na hora
-Queda de tenção = Vai gastando gradativamente
+## ⚡ Tomada e Corrente
+- **AC = CA = Corrente Alternada**
+  - Tensões comuns: **127V / 220V**
+  - Exemplo: carregador de celular
+    - **Entrada (Input):** 100–240V  
+    - **Saída (Output):** 5.0V / 3.0A
 
-DC = CC
-3,3V/5V/12V
+- **DC = CC = Corrente Contínua**
+  - Tensões típicas: **3,3V / 5V / 12V**  
+  - Obs.: **12V é a mais importante** em eletrônica.
 
-12V é mais importante
+---
 
-Hz = frequência 50/60
-Frequência vem da CA
+## ⚠️ Pico e Queda de Tensão
+- **Pico de tensão:** pode queimar componentes instantaneamente.  
+- **Queda de tensão:** degrada equipamentos gradualmente.
 
-Saida = Output
+---
 
-Exemplo do carregador:
-5.0v
-3.0a
+## 🔊 Frequência
+- Unidade: **Hz (Hertz)**  
+- Padrões: **50Hz / 60Hz**  
+- Origem: da **corrente alternada (CA).**
 
-O ser humano morre pela corrente (A) --. maximo que se pode resistir é 0.03A
-O ser humano morre pela tensão
+---
 
-1º Lei de Ohm
-1º triangulo
+## ⚠️ Corrente Elétrica e Risco Humano
+- O **ser humano morre pela corrente (A).**
+- Máximo suportado: **0,03A (30mA).**
+- Tensões elevadas também são letais.
 
-Uv = Calculo matematico da tensão 
-RΩ = Resistor 
-Ia = Calculo matematico da corrente
+---
 
-V = Volts
-A = Amper --> Corrente
-Ω = Ohms --> Resistencia
+## 📐 1ª Lei de Ohm
+### Fórmula Básica
+- **U (V) = R (Ω) × I (A)**  
+  - U → Tensão (Volts)  
+  - I → Corrente (Ampères)  
+  - R → Resistência (Ohms)
 
-Divisão feita pela vertical
-multiplicação feita pela horizontal
-obs:
-Uv dividido pela RΩ --> é o certo
-Uv dividido pela IA --> é o certo
-O contrario é o errado
+### 1º Triângulo da Lei de Ohm
 
-Exemplo:
+<img width="660" height="571" alt="Triangulo de Ohm" src="https://github.com/user-attachments/assets/2657b1ba-6736-4250-ae60-e75a932b8c5c" />
 
-Uv = 5v
-Ia = 3a
-RΩ = ?
+- **Divisão:** feita na vertical.  
+- **Multiplicação:** feita na horizontal.
 
-RΩ = 5/3 = 1,66Ω 
+### Exemplo
+- U = 5V  
+- I = 3A  
+- R = U / I = 5 ÷ 3 = **1,66Ω**
 
-OBS: corrente nunca sera maior que a tensão, se for maior ou igual pode dar curto circuito
+**Obs.:** a corrente **nunca será maior que a tensão**. Se for igual ou maior → risco de curto-circuito.
 
-2ºtriangulo
-Pw = Potencia
-Ex: 67w
-33w
+---
 
-Mesma regra que o 1ºtriangulo 
+## 💡 2º Triângulo: Potência 
+<img width="587" height="568" alt="2ºTriangulo de Ohm" src="https://github.com/user-attachments/assets/c0333592-1e87-49f0-8821-385440737c5e" />
 
-obs: na vida real voce não tera a informação do Ia que seria a corrente
+### Fórmula Básica
+- **P (W) = U (V) × I (A)**
 
-Exemplo da lampada:
-P=60w
-U=127V
-I=?=60/127=0,47a
-R=?=127/0,47=270,21Ω
+### Exemplo 1: Lâmpada
+- P = 60W  
+- U = 127V  
+- I = P ÷ U = 60 ÷ 127 = **0,47A**  
+- R = U ÷ I = 127 ÷ 0,47 = **270,21Ω**
 
-Exemplo do Chuveiro: Ligado nas tensões 127/220
-P=5500w
-U=220v --> 126v
-I=25a --> 43,3a
-R=?=8,8Ω --> 0,34Ω 
+### Exemplo 2: Chuveiro
+- P = 5500W  
+- U = 220V  
+- I = P ÷ U = 5500 ÷ 220 = **25A**  
+- R = U ÷ I = 220 ÷ 25 = **8,8Ω**
 
-PSU=Fonte
-Ex: PSU=400
-80Plus voce ve
-Real voce ve -->400w
-Full range voce ve --> etiqueta vermelha
-PFC nao se sabe
+---
 
-Uv=220v
-Ia=?=400/220=1,81a
-RΩ=?=220/1,81=121,54Ω
+## 🔌 Fonte de Alimentação (PSU)
+- Exemplo: **PSU 400W (80 Plus)**
+- **Potência real:** 400W  
+- **Tensão de entrada (Uv):** 220V  
+- **Corrente (Ia):** P ÷ U = 400 ÷ 220 = **1,81A**  
+- **Resistência (R):** U ÷ I = 220 ÷ 1,81 = **121,54Ω**
 
-Calcular valor do resistor led
+---
 
-led branco --> 3v
-I -->0,02
-P=?=3x0,02=0,06
+## 💡 Cálculo de Resistor para LED
+### Fórmula
+- **Rled = (Vali - Vled) ÷ Iled**  
+- Onde:  
+  - Vali → tensão de alimentação  
+  - Vled → tensão do LED (ex.: 3V para LED branco)  
+  - Iled → corrente do LED (0,02A = 20mA)  
+  - P = V × I
 
-Rled=(Vali-Vled)/Aled
+### Exemplos
+1. **Vali = 5V**  
+   R = (5 - 3) ÷ 0,02 = **100Ω**
 
-exemplo 1:
-Vali=5V
-Rled=?=(Vali-Vled)/Aled=5-3/0,02=100Ω
-exemplo 2:
-Vali=12V
-Rled=?=12-3/0,02=450Ω
-exemplo 3:
-1ºVali=127V
-R=?=127-3/0,02=6200Ω
-2ºVali=220V
-R=?=220-3/0,02=10850Ω
+2. **Vali = 12V**  
+   R = (12 - 3) ÷ 0,02 = **450Ω**
+
+3. **Vali = 127V**  
+   R = (127 - 3) ÷ 0,02 = **6200Ω**
+
+4. **Vali = 220V**  
+   R = (220 - 3) ÷ 0,02 = **10850Ω**
+
+---
+
+## 📊 Resumo Visual
+### Triângulo da 1ª Lei de Ohm
+
+- 1º Triângulo
+<img width="660" height="571" alt="1ºTriangulo de Ohm" src="https://github.com/user-attachments/assets/167601f5-b7f9-404f-85b5-745fdf7844d4" />
+
+### Triângulo da Potência (2º Triângulo)
+<img width="587" height="568" alt="2ºTriangulo de Ohm" src="https://github.com/user-attachments/assets/3ff826b9-f44a-4813-b9e5-052ffd8d24fe" />
+
