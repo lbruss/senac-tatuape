@@ -83,3 +83,27 @@ Ex: PSU=400
 Real voce ve -->400w
 Full range voce ve --> etiqueta vermelha
 PFC nao se sabe
+
+Uv=220v
+Ia=?=400/220=1,81a
+RΩ=?=220/1,81=121,54Ω
+
+Calcular valor do resistor led
+
+led branco --> 3v
+I -->0,02
+P=?=3x0,02=0,06
+
+Rled=(Vali-Vled)/Aled
+
+exemplo 1:
+Vali=5V
+Rled=?=(Vali-Vled)/Aled=5-3/0,02=100Ω
+exemplo 2:
+Vali=12V
+Rled=?=12-3/0,02=450Ω
+exemplo 3:
+1ºVali=127V
+R=?=127-3/0,02=6200Ω
+2ºVali=220V
+R=?=220-3/0,02=10850Ω
