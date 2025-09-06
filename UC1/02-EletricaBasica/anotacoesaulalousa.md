@@ -1,10 +1,10 @@
 # Fundamentos de Eletricidade e Eletrônica
 
-Este documento traz conceitos básicos sobre **tensão, corrente, resistência e potência**, com exemplos práticos e cálculos organizados.
+Este documento traz conceitos básicos sobre **tensão, corrente, resistência e potência**, com exemplos práticos e cálculos.
 
 ---
 
-## ⚡ Tomada e Corrente
+## Tomada e Corrente
 - **AC = CA = Corrente Alternada**
   - Tensões comuns: **127V / 220V**
   - Exemplo: carregador de celular
@@ -17,27 +17,27 @@ Este documento traz conceitos básicos sobre **tensão, corrente, resistência e
 
 ---
 
-## ⚠️ Pico e Queda de Tensão
+## Pico e Queda de Tensão
 - **Pico de tensão:** pode queimar componentes instantaneamente.  
 - **Queda de tensão:** degrada equipamentos gradualmente.
 
 ---
 
-## 🔊 Frequência
+## Frequência
 - Unidade: **Hz (Hertz)**  
 - Padrões: **50Hz / 60Hz**  
 - Origem: da **corrente alternada (CA).**
 
 ---
 
-## ⚠️ Corrente Elétrica e Risco Humano
+## Corrente Elétrica e Risco Humano
 - O **ser humano morre pela corrente (A).**
 - Máximo suportado: **0,03A (30mA).**
 - Tensões elevadas também são letais.
 
 ---
 
-## 📐 1ª Lei de Ohm
+## 1ª Lei de Ohm
 ### Fórmula Básica
 - **U (V) = R (Ω) × I (A)**  
   - U → Tensão (Volts)  
@@ -60,7 +60,7 @@ Este documento traz conceitos básicos sobre **tensão, corrente, resistência e
 
 ---
 
-## 💡 2º Triângulo: Potência 
+## 2º Triângulo: Potência 
 <img width="587" height="568" alt="2ºTriangulo de Ohm" src="https://github.com/user-attachments/assets/c0333592-1e87-49f0-8821-385440737c5e" />
 
 ### Fórmula Básica
@@ -80,7 +80,7 @@ Este documento traz conceitos básicos sobre **tensão, corrente, resistência e
 
 ---
 
-## 🔌 Fonte de Alimentação (PSU)
+## Fonte de Alimentação (PSU)
 - Exemplo: **PSU 400W (80 Plus)**
 - **Potência real:** 400W  
 - **Tensão de entrada (Uv):** 220V  
@@ -89,7 +89,7 @@ Este documento traz conceitos básicos sobre **tensão, corrente, resistência e
 
 ---
 
-## 💡 Cálculo de Resistor para LED
+## Cálculo de Resistor para LED
 ### Fórmula
 - **Rled = (Vali - Vled) ÷ Iled**  
 - Onde:  
@@ -113,7 +113,7 @@ Este documento traz conceitos básicos sobre **tensão, corrente, resistência e
 
 ---
 
-## 📊 Resumo Visual
+## Resumo Visual
 ### Triângulo da 1ª Lei de Ohm
 
 - 1º Triângulo
