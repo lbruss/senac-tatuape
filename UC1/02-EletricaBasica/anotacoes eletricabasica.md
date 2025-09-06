@@ -13,3 +13,5 @@ Apesar da variação estética — alguns modelos têm todos os fios pretos —,
 
 - **Laranja → 3.3V**  
  Utilizado para **HDs, SSDs, memórias e placa de vídeo**
+
+<img width="1058" height="616" alt="image" src="https://github.com/user-attachments/assets/36f416ca-14c7-49c5-94db-c2e31aa042cc" />
