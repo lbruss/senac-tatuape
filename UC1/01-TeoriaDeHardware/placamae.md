@@ -37,5 +37,5 @@
 # Placa-Branca-VRM
 ![Placa-Branca-VRM](https://github.com/user-attachments/assets/a03ae10b-c9b2-46f5-bf39-71073262a8ee)
 
-# VRM
+# VRM (Voltage Regulator Module)
 <img width="1200" height="1200" alt="image" src="https://github.com/user-attachments/assets/d27fe91d-a881-4d30-864f-b06045f9901c" />
