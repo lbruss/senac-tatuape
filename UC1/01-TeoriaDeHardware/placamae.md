@@ -24,11 +24,12 @@
   - Quantidade de portas e slots (RAM, M.2, PCIe)  
   - Recursos extras (Wi-Fi, Bluetooth, USBs de alta velocidade, suporte a overclock)  
 
-# B650
-<img width="2400" height="2400" alt="b650m-tuf-asus" src="https://github.com/user-attachments/assets/94f2f49a-1b53-4180-8dd3-f4c3daf006d0" />
-
 # A620
 ![Placa-Mãe MSI Pro A620M-E-Aula](https://github.com/user-attachments/assets/68254f65-f157-4e34-9887-e43a88526347)
+
+# B650
+<img width="2400" height="2400" alt="b650m-tuf-asus" src="https://github.com/user-attachments/assets/66a50da6-161f-453b-96ad-7aa54860b33a" />
+
 
 # X670
 ![placa-mae-asus-tuf-gaming-x670e-plus-aula](https://github.com/user-attachments/assets/b9320bd4-ad5c-4cf9-ab33-ed15b1328fdf)
