@@ -1,20 +1,37 @@
 # Processadores Intel e AMD
 
-## Intel: Séries e Soquetes
-- **Intel i3, i5, i7, i9** → Diferentes níveis de desempenho:
-  - **3** → Entrada  
-  - **5** → Intermediário  
-  - **7** → Alto desempenho  
-  - **9** → Trabalho pesado  
-- **Linha Ultra** → nova geração da Intel  
-- **Soquetes:**
+## Tipos (Intel e AMD)
+
+- i3 / Ryzen 3 → entrada
+- i5 / Ryzen 5 → intermediário
+- i7 / Ryzen 7 → desempenho
+- i9 / Ryzen 9 → trabalho pesado
+
+## Marcas
+
+Intel → i1 ao i14 / Ultra
+
+- **Linha Ultra** → nova geração da Intel 
+
+AMD → Ryzen 1000, 2000, 3000/4000, 5000, 7000/8000, 9000
+
+**Como saber qual é melhor?** 
+
+Intel Core i5 14400 é inferior ao i5 14600
+
+AMD Ryzen 5 7500F é inferior ao Ryzen 5 7600
+
+---
+
+## Intel: Soquetes
+
   - **10ª e 11ª Geração** → LGA 1200  
   - **12ª, 13ª e 14ª Geração** → LGA 1700  
   - **Intel Ultra** → LGA 1851  
 
 ---
 
-## AMD: Séries e Soquetes
+## AMD: Soquetes
 - **Ryzen (arquiteturas por geração):**
   - Ryzen **1000–5000** → **Soquete AM4**  
   - Ryzen **7000–9000** → **Soquete AM5**  
