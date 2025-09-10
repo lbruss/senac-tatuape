@@ -33,7 +33,7 @@ Exemplo clássico para iniciantes: fazer um LED no pino 13 piscar a cada 1 segun
 
 /**
  * Exemplo: Piscar LED
- * Autor: Enzo Mesquita
+ * Autor: Bruss Loza
  * Objetivo: Demonstrar uso de saídas digitais
  */
  
@@ -72,9 +72,10 @@ delay(100) → 0,1 segundo
 
 Quanto menor o valor, mais rápido o LED pisca.
 
-
 ---
 
  Conclusão
 
-O projeto Pisca LED é o primeiro passo no mundo Arduino, perfeito para aprender como controlar saídas digitais e entender a lógica básica de programação embarcada.
+O projeto Pisca LED é o primeiro passo no mundo Arduino,
+perfeito para aprender como controlar saídas digitais e
+entender a lógica básica de programação embarcada.
