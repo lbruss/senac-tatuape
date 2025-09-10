@@ -30,7 +30,6 @@
 # B650
 <img width="2400" height="2400" alt="b650m-tuf-asus" src="https://github.com/user-attachments/assets/66a50da6-161f-453b-96ad-7aa54860b33a" />
 
-
 # X670
 ![placa-mae-asus-tuf-gaming-x670e-plus-aula](https://github.com/user-attachments/assets/b9320bd4-ad5c-4cf9-ab33-ed15b1328fdf)
 
@@ -39,3 +38,13 @@
 
 # VRM (Voltage Regulator Module)
 <img width="1200" height="1200" alt="image" src="https://github.com/user-attachments/assets/d27fe91d-a881-4d30-864f-b06045f9901c" />
+
+**OBS:** Quando o VRM não dá conta de alimentar o processador, ele esquenta e o sistema desliga.
+→ Esse fenômeno é chamado de throttling.
+Se o VRM atingir 120 °C a 140 °C, ativa-se uma trava de segurança.
+DrMOS é mais eficiente e esquenta menos.
+MOSFETs são os componentes usados no VRM para regular a energia.
+
+# Resumo do VRM (Voltage Regulator Module):
+**O VRM é responsável por fornecer a energia correta para o processador e memória.
+Se ele não for eficiente ou estiver sobrecarregado, pode superaquecer e comprometer a estabilidade do sistema.**
