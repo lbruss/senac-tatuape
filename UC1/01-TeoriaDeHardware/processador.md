@@ -36,6 +36,19 @@ AMD Ryzen 5 7500F é inferior ao Ryzen 5 7600
   - Ryzen **1000–5000** → **Soquete AM4**  
   - Ryzen **7000–9000** → **Soquete AM5**  
 
+## Sufixos dos Processadores
+
+## AMD
+- G → gráficos integrados (ex: Ryzen 5 8600G)
+- X → maior frequência (ex: Ryzen 5 5600X)
+- F → sem gráficos integrados (ex: Ryzen 5 7600F)
+- 3D → maior cache (ex: Ryzen 7 7800X3D)
+
+## Intel
+- F → sem gráficos integrados
+- K → desbloqueado para overclock
+
+
 ---
 
 ## Core, Thread e GHz
