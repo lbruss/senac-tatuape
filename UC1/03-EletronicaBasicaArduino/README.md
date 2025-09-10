@@ -1,6 +1,8 @@
-Comentários no Código Arduino
+# Comentários no Código Arduino
+
 Os comentários não são executados pelo microcontrolador. Eles servem para documentar e explicar o código.
 
+```C
 /**
  * Comentário de Cabeçalho
  * Explica objetivo, autor, data, licença, etc.
@@ -15,17 +17,17 @@ Os comentários não são executados pelo microcontrolador. Eles servem para doc
 // Explica instruções individuais.
 
 
-⚠️ Boas Práticas
+ Boas Práticas
 
-✅ Use comentários para explicar o "porquê" do código
-✅ Seja claro e objetivo
-✅ Atualize os comentários quando modificar o código
+ Use comentários para explicar o "porquê" do código
+ Seja claro e objetivo
+ Atualize os comentários quando modificar o código
 
-❌ Evite comentários óbvios demais
-❌ Não deixe comentários desatualizados ou confusos
+ Evite comentários óbvios demais
+ Não deixe comentários desatualizados ou confusos
 
 
-💡 Projeto: Piscar LED
+ Projeto: Piscar LED
 
 Exemplo clássico para iniciantes: fazer um LED no pino 13 piscar a cada 1 segundo.
 
@@ -46,7 +48,7 @@ void loop() {
   delay(1000);            // espera 1 segundo
 }
 
-🔧 Comandos Importantes
+ Comandos Importantes
 
 Comando	Função	Exemplo
 
@@ -59,7 +61,7 @@ delay(ms)	Pausa o programa em milissegundos	delay(1000); // 1 segundo
 
 ---
 
-⏱️ Sobre o Delay
+ Sobre o Delay
 
 delay(1000) → 1 segundo
 
@@ -73,6 +75,6 @@ Quanto menor o valor, mais rápido o LED pisca.
 
 ---
 
-🚀 Conclusão
+ Conclusão
 
 O projeto Pisca LED é o primeiro passo no mundo Arduino, perfeito para aprender como controlar saídas digitais e entender a lógica básica de programação embarcada.
