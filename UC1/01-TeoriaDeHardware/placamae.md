@@ -26,7 +26,7 @@
 
 ---
 
-# Conectores da Placa-Mãe
+# Recursos da Placa-Mãe
 
 ## Ventoinhas e Resfriamento
 - **PWM (Pulse Width Modulation):** Controla a rotação das ventoinhas.  
