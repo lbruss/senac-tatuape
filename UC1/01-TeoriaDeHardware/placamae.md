@@ -30,6 +30,10 @@
 # B650
 <img width="2400" height="2400" alt="b650m-tuf-asus" src="https://github.com/user-attachments/assets/66a50da6-161f-453b-96ad-7aa54860b33a" />
 
+# Suas Funções (B650)
+
+<img width="2400" height="2400" alt="b650m-aula-desenhado-do-LELE" src="https://github.com/user-attachments/assets/1f739690-1213-4f23-be92-9c1514528f44" />
+
 # X670
 ![placa-mae-asus-tuf-gaming-x670e-plus-aula](https://github.com/user-attachments/assets/b9320bd4-ad5c-4cf9-ab33-ed15b1328fdf)
 
