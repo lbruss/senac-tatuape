@@ -23,9 +23,87 @@
   - Qualidade de energia e durabilidade  
   - Quantidade de portas e slots (RAM, M.2, PCIe)  
   - Recursos extras (Wi-Fi, Bluetooth, USBs de alta velocidade, suporte a overclock)
- 
-PWM → Fans
 
+---
+
+# Conectores da Placa-Mãe
+
+## Ventoinhas e Resfriamento
+- **PWM (Pulse Width Modulation):** Controla a rotação das ventoinhas.  
+  - **CPU_FAN e CPU_OPT:** Ventoinhas do processador.  
+  - **CHA_FAN / SYS_FAN (2, 3...):** Ventoinhas do gabinete.  
+  - **AIO_PUMP / AIRPUMP:** Conector da bomba do **Water Cooler** (funciona a 100%).  
+
+> Caso precise de mais conexões, utilize um **HUB PWM** ou **Splitter**.
+
+---
+
+## Iluminação (LEDs)
+- **ARGB (5V – 3 pinos):** Efeitos de cor dinâmicos (arco-íris).  
+- **RGB (12V – 4 pinos):** Apenas cores fixas.  
+
+> Ambos são usados em **Fans** e **fitas de LED**.  
+> Se a placa-mãe não tiver suporte, é necessário usar uma **controladora ARGB/RGB**.  
+> Também é possível expandir conexões com **HUBs ou Splitters**.
+
+---
+
+## Diagnóstico
+- **Debug LED:** Mostra erros de inicialização.  
+- **Speaker:** Emite **bipes** para indicar falhas (alternativa ao Debug LED).  
+- **CLRTC (Clear CMOS):** Reseta a BIOS para o padrão de fábrica.  
+- **POST (Power-On Self Test):** Auto-teste executado na inicialização.  
+
+---
+
+## Memória e Armazenamento
+- **DDR5:** Padrão mais recente de memória RAM.  
+- **SATA:** Conector para HDs e SSDs SATA.  
+- **M.2 (NVMe ou SATA):** Conector para SSDs de alta velocidade.  
+
+---
+
+## Conexões USB
+| Tipo       | Característica |
+|------------|----------------|
+| **USB 2.0** | Entradas pretas, mais simples. |
+| **USB 3.x** | Entradas azuis, mais rápidas. |
+| **USB-C**   | Novo padrão reversível, compacto e moderno. |
+
+---
+
+## Painel Frontal
+- **JFP (Front Panel):** Conectores para ligar/desligar o PC, reset, LEDs de status e HDD.  
+
+---
+
+## Componentes Principais
+- **Chipset:** Gerencia toda a placa-mãe (*o coração do sistema*).  
+- **ATX:** Padrão de tamanho e energia da placa-mãe.  
+- **AAFP (Audio Header / JAUD):** Conector de áudio frontal.  
+
+---
+
+## Slots PCI Express
+| Slot                          | Uso principal |
+|-------------------------------|---------------|
+| **PCIe x16**                  | Placas de vídeo (GPU). |
+| **PCIe x1**                   | Placas de rede, Wi-Fi, som, etc. |
+| **PCIe x4**                   | Placas de captura, SSDs via adaptadores. (Parece x16, mas entrega apenas x4 de largura.) |
+
+---
+
+## Áudio
+- **JAUD (Audio Header):** Conector para áudio do painel frontal.  
+
+---
+
+## Bateria CMOS
+- Modelo padrão: **CR2032**.  
+- Mantém configurações da BIOS (data, hora, boot).  
+- **Dica:** Se o relógio do PC começar a atrasar, é sinal de que a bateria está fraca e precisa ser trocada.  
+
+---
 
 # A620
 ![Placa-Mãe MSI Pro A620M-E-Aula](https://github.com/user-attachments/assets/68254f65-f157-4e34-9887-e43a88526347)
@@ -100,3 +178,5 @@ MOSFETs são os componentes usados no VRM para regular a energia.
 # Resumo do VRM (Voltage Regulator Module):
 **O VRM é responsável por fornecer a energia correta para o processador e memória.
 Se ele não for eficiente ou estiver sobrecarregado, pode superaquecer e comprometer a estabilidade do sistema.**
+
+---
