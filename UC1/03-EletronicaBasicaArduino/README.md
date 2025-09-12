@@ -105,7 +105,7 @@ void loop()
 
 }
 
-###semaforo de fato###
+###semaforo de fato### rua A
 
 /*
   Semáforo
@@ -114,26 +114,100 @@ void loop()
 
 void setup()
 {
-  pinMode(13, OUTPUT);
-  pinMode(12, OUTPUT);
-  pinMode(11, OUTPUT);
+  pinMode(13, OUTPUT);//Vermelho
+  pinMode(12, OUTPUT);//Amarelo
+  pinMode(11, OUTPUT);//Verde
 }
 
 void loop()
 {
-  digitalWrite(13, HIGH);
+  digitalWrite(11, HIGH);
   delay(2000);
-  digitalWrite(13, LOW);
-  delay(2000);
+  digitalWrite(11,LOW);
   digitalWrite(12, HIGH);
   delay(2000);
   digitalWrite(12, LOW);
-  delay(2000);
-  digitalWrite(11, HIGH);
-  delay(2000);
-  digitalWrite(11, LOW);
+  digitalWrite(13, HIGH);
   delay(2000);
   digitalWrite(13, LOW);
-  digitalWrite(12, LOW);
-  digitalWrite(11, LOW);
+}
+
+
+Rua B - teste
+
+/*
+  Semáforo
+  @author Bruss Loza
+*/
+
+void setup()
+{
+  pinMode(13, OUTPUT);//Vermelho A
+  pinMode(12, OUTPUT);//Amarelo A
+  pinMode(11, OUTPUT);//Verde A
+  
+  pinMode(10, OUTPUT);//Vermelho B
+  pinMode(9, OUTPUT);//Amarelo B
+  pinMode(8, OUTPUT);//Verde B
+  
+  digitalWrite(10, HIGH);//Vermelho B
+  digitalWrite(9, HIGH);//Amarelo B
+  digitalWrite(8, HIGH);//Verde B
+}
+
+void loop()
+{
+  digitalWrite(11, HIGH);//Verde A
+  delay(2000);
+  digitalWrite(11,LOW);//Verde A
+  digitalWrite(12, HIGH);//Amarelo A
+  delay(2000);
+  digitalWrite(12, LOW);//Amarelo A
+  digitalWrite(13, HIGH);//Vermelho A
+  delay(2000);
+  digitalWrite(13, LOW);//Vermelho A
+}
+
+Rua B
+
+/*
+  Semáforo
+  @author Bruss Loza
+*/
+
+void setup()
+{
+  pinMode(13, OUTPUT);//Vermelho A
+  pinMode(12, OUTPUT);//Amarelo A
+  pinMode(11, OUTPUT);//Verde A
+  
+  pinMode(10, OUTPUT);//Vermelho B
+  pinMode(9, OUTPUT);//Amarelo B
+  pinMode(8, OUTPUT);//Verde B
+}
+
+void loop()
+{
+  digitalWrite(11, HIGH);//Verde A
+  delay(3000);
+  digitalWrite(11,LOW);//Verde A
+  
+  digitalWrite(10, HIGH);//Vermelho B
+  delay(3000);
+  digitalWrite(10, LOW);//Vermelho B
+    
+  digitalWrite(12, HIGH);//Amarelo A
+  delay(3000);
+  digitalWrite(12, LOW);//Amarelo A
+  
+  digitalWrite(8, HIGH);//Verde B
+  delay(3000);
+  digitalWrite(8, LOW);//Verde B
+  
+  digitalWrite(13, HIGH);//Vermelho A
+  delay(3000);
+  digitalWrite(13, LOW);//Vermelho A
+  
+  digitalWrite(9, HIGH);//Amarelo B
+  delay(3000);
 }
