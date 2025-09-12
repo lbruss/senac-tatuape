@@ -79,3 +79,61 @@ Quanto menor o valor, mais rápido o LED pisca.
 O projeto Pisca LED é o primeiro passo no mundo Arduino,
 perfeito para aprender como controlar saídas digitais e
 entender a lógica básica de programação embarcada.
+
+Semaforo
+
+teste
+
+/*
+  Semáforo
+  @author Bruss Loza
+*/
+
+void setup()
+{
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(13, OUTPUT);
+  
+  digitalWrite(11, HIGH);
+  digitalWrite(12, HIGH);
+  digitalWrite(13, HIGH);
+}
+
+void loop()
+{
+
+}
+
+###semaforo de fato###
+
+/*
+  Semáforo
+  @author Bruss Loza
+*/
+
+void setup()
+{
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(13, HIGH);
+  delay(2000);
+  digitalWrite(13, LOW);
+  delay(2000);
+  digitalWrite(12, HIGH);
+  delay(2000);
+  digitalWrite(12, LOW);
+  delay(2000);
+  digitalWrite(11, HIGH);
+  delay(2000);
+  digitalWrite(11, LOW);
+  delay(2000);
+  digitalWrite(13, LOW);
+  digitalWrite(12, LOW);
+  digitalWrite(11, LOW);
+}
