@@ -80,9 +80,11 @@ O projeto Pisca LED é o primeiro passo no mundo Arduino,
 perfeito para aprender como controlar saídas digitais e
 entender a lógica básica de programação embarcada.
 
-Semaforo
+---
 
-teste
+DESAFIO DO SEMÁFORO
+
+ → TESTE DOS LEDS - 01
 
 /*
   Semáforo
@@ -105,7 +107,9 @@ void loop()
 
 }
 
-###semaforo de fato### rua A
+---
+
+DESAFIO CONCLUÍDO - SEMÁFORO FEITO
 
 /*
   Semáforo
@@ -132,8 +136,11 @@ void loop()
   digitalWrite(13, LOW);
 }
 
+---
 
-Rua B - teste
+DESAFIO DO CRUZAMNETO DE SEMÁFORO
+
+ → TESTE DOS LEDS - 02
 
 /*
   Semáforo
@@ -157,18 +164,12 @@ void setup()
 
 void loop()
 {
-  digitalWrite(11, HIGH);//Verde A
-  delay(2000);
-  digitalWrite(11,LOW);//Verde A
-  digitalWrite(12, HIGH);//Amarelo A
-  delay(2000);
-  digitalWrite(12, LOW);//Amarelo A
-  digitalWrite(13, HIGH);//Vermelho A
-  delay(2000);
-  digitalWrite(13, LOW);//Vermelho A
+
 }
 
-Rua B
+---
+
+DESAFIO CONCLUÍDO - CRUZAMENTO DE SEMÁFORO FEITO
 
 /*
   Semáforo
@@ -188,26 +189,21 @@ void setup()
 
 void loop()
 {
-  digitalWrite(11, HIGH);//Verde A
-  delay(3000);
-  digitalWrite(11,LOW);//Verde A
-  
-  digitalWrite(10, HIGH);//Vermelho B
-  delay(3000);
-  digitalWrite(10, LOW);//Vermelho B
-    
-  digitalWrite(12, HIGH);//Amarelo A
-  delay(3000);
-  digitalWrite(12, LOW);//Amarelo A
-  
-  digitalWrite(8, HIGH);//Verde B
-  delay(3000);
-  digitalWrite(8, LOW);//Verde B
-  
-  digitalWrite(13, HIGH);//Vermelho A
-  delay(3000);
-  digitalWrite(13, LOW);//Vermelho A
-  
-  digitalWrite(9, HIGH);//Amarelo B
-  delay(3000);
+  digitalWrite(11, HIGH);
+  digitalWrite(10, HIGH);
+  delay(2000);
+  digitalWrite(11, LOW);
+  digitalWrite(12, HIGH);
+  delay(2000);
+  digitalWrite(12, LOW);
+  digitalWrite(13, HIGH);
+  delay(3000);//Não sei se deixo assim ou eu tiro este delay
+  digitalWrite(10, LOW);
+  digitalWrite(8, HIGH);
+  delay(2000);
+  digitalWrite(8, LOW);
+  digitalWrite(9, HIGH);
+  delay(2000);
+  digitalWrite(13, LOW);
+  digitalWrite(9, LOW);
 }
