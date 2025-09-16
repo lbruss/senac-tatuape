@@ -196,7 +196,7 @@ Se ele não for eficiente ou estiver sobrecarregado, pode superaquecer e comprom
 
 # Z890 - Intel
 
-![placa-mae-asus-rog-strix-z890-e-gaming-wifi-chipset-z890-intel-lga-1851-atx-ddr5_217043](https://github.com/user-attachments/assets/00b4b589-d06a-45ef-83fd-5eb0a013f2e0)
+![490235643-00b4b589-d06a-45ef-83fd-5eb0a013f2e0](https://github.com/user-attachments/assets/43be6241-8bf1-486c-aa97-4dc7f82933bd)
 
 ---
 
