@@ -3,7 +3,7 @@
 ## Soquetes AMD
 - **AM4** → Ryzen 1000, 2000, 3000, 4000 e 5000  
 - **AM5** → Ryzen 7000, 8000 e 9000  
-  - **A (A620)** → Entrada, mais simples  
+  - **A (A620)** → Entrada, mais simples → Pode fazer Overclock
   - **B (B650, B840, B850)** → Intermediária  
   - **X (X670, X870)** → Topo de linha, mais recursos  
 
