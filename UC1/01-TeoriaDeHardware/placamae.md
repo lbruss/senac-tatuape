@@ -5,7 +5,14 @@
 - **AM5** → Ryzen 7000, 8000 e 9000  
   - **A (A620)** → Entrada, mais simples → Pode fazer Overclock
   - **B (B650, B840, B850)** → Intermediária  
-  - **X (X670, X870)** → Topo de linha, mais recursos  
+  - **X (X670, X870)** → Topo de linha, mais recursos
+ 
+---
+
+## Soquetes Intel
+  - **H** → Entrada
+  - **B** → Intermediaria
+  - **Z** → Topo de Linha → Pode fazer Overclock
 
 ---
 
@@ -181,12 +188,18 @@ Se ele não for eficiente ou estiver sobrecarregado, pode superaquecer e comprom
 
 ---
 
+# H810 - Intel
+
 ![placa-mae-asus-prime-h810m-a-chipset-h810-intel-lga-1851](https://github.com/user-attachments/assets/795a7cbd-210d-4ab1-a30f-dba75e63e621)
 
 ---
 
+# Z890 - Intel
+
 ![placa-mae-asus-rog-strix-z890-e-gaming-wifi-chipset-z890-intel-lga-1851-atx-ddr5_217043](https://github.com/user-attachments/assets/00b4b589-d06a-45ef-83fd-5eb0a013f2e0)
 
-----
+---
+
+
 
 ![placa-mae-asus-prime-h810m-a-chipset-h810-intel-lga-1851](https://github.com/user-attachments/assets/4da8d5a0-a37f-458a-b585-f878fb1f192b)
