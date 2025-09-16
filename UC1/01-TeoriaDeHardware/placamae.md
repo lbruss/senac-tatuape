@@ -180,3 +180,13 @@ MOSFETs são os componentes usados no VRM para regular a energia.
 Se ele não for eficiente ou estiver sobrecarregado, pode superaquecer e comprometer a estabilidade do sistema.**
 
 ---
+
+![placa-mae-asus-prime-h810m-a-chipset-h810-intel-lga-1851](https://github.com/user-attachments/assets/795a7cbd-210d-4ab1-a30f-dba75e63e621)
+
+---
+
+![placa-mae-asus-rog-strix-z890-e-gaming-wifi-chipset-z890-intel-lga-1851-atx-ddr5_217043](https://github.com/user-attachments/assets/00b4b589-d06a-45ef-83fd-5eb0a013f2e0)
+
+----
+
+![placa-mae-asus-prime-h810m-a-chipset-h810-intel-lga-1851](https://github.com/user-attachments/assets/4da8d5a0-a37f-458a-b585-f878fb1f192b)
