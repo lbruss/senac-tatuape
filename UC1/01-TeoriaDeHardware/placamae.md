@@ -200,6 +200,3 @@ Se ele não for eficiente ou estiver sobrecarregado, pode superaquecer e comprom
 
 ---
 
-
-
-![placa-mae-asus-prime-h810m-a-chipset-h810-intel-lga-1851](https://github.com/user-attachments/assets/4da8d5a0-a37f-458a-b585-f878fb1f192b)
