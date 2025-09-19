@@ -194,6 +194,12 @@ Se ele não for eficiente ou estiver sobrecarregado, pode superaquecer e comprom
 
 ---
 
+# B860
+
+<img width="1000" height="1000" alt="placa-mae-msi-mag-b860-tomahawk-wifi-intel-atx-ddr5-udimm-wi-fi-7-preto-b860tomahawkwifi_1742821092_gja feitag" src="https://github.com/user-attachments/assets/a5b96041-f753-497d-b882-931a974c6056" />
+
+---
+
 # Z890 - Intel
 
 ![490235643-00b4b589-d06a-45ef-83fd-5eb0a013f2e0](https://github.com/user-attachments/assets/43be6241-8bf1-486c-aa97-4dc7f82933bd)
