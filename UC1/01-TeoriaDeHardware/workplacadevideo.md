@@ -1,6 +1,6 @@
-# 🎮 Placa de Vídeo Maxsun Intel Arc B580 Milestone – Tecnologias
+#  Placa de Vídeo Maxsun Intel Arc B580 Milestone – Tecnologias
 
-## 📊 Especificações Principais
+##  Especificações Principais
 
 | Parâmetro | Valor |
 |---|---|
@@ -16,7 +16,7 @@
 
 ---
 
-## ⚙️ Tecnologias e Recursos
+## Tecnologias e Recursos
 
 | Tecnologia | O que é | Benefício prático |
 |---|---|---|
@@ -29,9 +29,9 @@
 
 ---
 
-# 🎮 Placa de Vídeo Maxsun Intel Arc B570 Milestone (10GB, GDDR6)
+#  Placa de Vídeo Maxsun Intel Arc B570 Milestone (10GB, GDDR6)
 
-## 🔹 Especificações Técnicas
+##  Especificações Técnicas
 
 | Componente        | Detalhes |
 |-------------------|----------|
@@ -50,15 +50,15 @@
 
 ---
 
-## 🖥️ Tecnologias Principais
+##  Tecnologias Principais
 
-### 🌟 Ray Tracing
+###  Ray Tracing
 - Técnica que simula luz, reflexos e sombras com realismo.  
 - A B570 possui **18 unidades dedicadas de Ray Tracing**.  
 - Ideal para jogos em **1080p** com efeitos em nível médio/alto.  
 - Em **1440p**, exige ajustes ou uso do **XeSS** para manter FPS estável.
 
-### 🚀 XeSS (Xe Super Sampling)
+###  XeSS (Xe Super Sampling)
 - Tecnologia de **upscaling com IA** da Intel.  
 - Renderiza em resolução menor e amplia para a resolução final com qualidade próxima do nativo.  
 - Aumenta FPS sem perda visual significativa.  
@@ -66,7 +66,7 @@
 
 ---
 
-## ⚡ Resumo de Uso
+##  Resumo de Uso
 - **1080p:** excelente desempenho em jogos modernos, Ray Tracing em qualidade média/alta.  
 - **1440p:** bom desempenho com **XeSS ativado**.  
 - **Ray Tracing + XeSS:** combinação recomendada para equilibrar gráficos e FPS.  
