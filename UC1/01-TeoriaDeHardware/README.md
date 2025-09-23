@@ -1,4 +1,7 @@
 # Principais componentes do PC
+
+---
+
 - Processador (CPU)
 - Placa-mãe
 - Memória RAM (DDR)
