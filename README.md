@@ -1,3 +1,5 @@
+![GitHub License](https://img.shields.io/github/license/lbruss/robo-desvia?style=flat)
+
 # 💻 Curso Técnico em Informática - SENAC Tatuapé
 
 Repositório destinado ao registro de **conteúdos, exercícios e projetos** desenvolvidos no **Curso Técnico em Informática (SENAC Tatuapé)**.  
@@ -34,3 +36,5 @@ Este repositório funciona como:
 ## 📌 Observação
 Este espaço é de caráter **educacional** e será atualizado gradualmente com novos conteúdos, servindo tanto para acompanhamento pessoal quanto como fonte de apoio a colegas da área.
 
+## Autor
+Bruss Loza
