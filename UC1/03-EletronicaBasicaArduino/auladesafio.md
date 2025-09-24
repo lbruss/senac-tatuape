@@ -26,5 +26,8 @@ brincadeira 02
 materiais da bincadeira 02
 
 2 - Motor de engrenagem de uso não profissional
+
 2 - 4 baterias, AA, não Bateria 1,5V
+
 2 - 4 baterias, AA, não Bateria 1,5V
+
