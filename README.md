@@ -1,4 +1,4 @@
-![GitHub License](https://img.shields.io/github/license/lbruss/robo-desvia?style=flat)
+![GitHub License](https://img.shields.io/github/license/lbruss/senac-tatuape?style=flat)
 
 # 💻 Curso Técnico em Informática - SENAC Tatuapé
 
