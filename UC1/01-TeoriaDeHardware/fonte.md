@@ -40,3 +40,23 @@ e tambem tem o teste do ruido da fonte, selo do ruido
 
 Ripple
 quanto maio for, mais perigoso é, pode queimar os componentes do PC
+
+Potencia da fonte
+
+1º maneira de se ver
+placa de video
+exemplo: RTX 5070
+uma fonte apenas para essa placa de video, o requesito minimo seria uma fonte de 250W
+agora, para o PC inteiro seria umna fonte de 650W
+
+2º maneira de ver
+pesquisar: Calculadora de potencia da fonte
+um site recomendado seria da PC Builds
+Site: https://pc-builds.com/pt/power-supply-calculator/
+
+Se a fonte não for o suficiente para suportar o PC inteiro, o PC vai reiniciar, fonte mal dimensionada
+
+existe fonte pequenas, BEM pequenas mesmo
+SFX e SFX-L
+
+A garantia minima de qualquer fonte deve ser de 5 a 10 anos de garantia
