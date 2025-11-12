@@ -1,0 +1,30 @@
+Objetivo da aula de hoje: 05/11/2025
+
+#01_ Se autenticar com a sua conta no Github
+
+#02_ Material das aulas de GNU/Linux Desktop
+https://github.com/vaamonde/dell-linuxmint
+
+#03_ Material das aulas na Rede SENAC-TAT
+T:\Publica\!!!!!!!RobsonVaamonde\LinuxMint
+
+#04_ Material Extra de Estudos de GNU/Linux
+a) Guia Foca: https://guiafoca.org/
+b) SS64: https://ss64.com/
+c) Aurelio: https://aurelio.net/
+d) DistroWatch: https://distrowatch.com/
+e) LPI: https://learning.lpi.org/pt/
+
+#04_ Copiar a ISO do Linux Mint 22.2 para o seu computador: ok
+
+#05_ Criar a máquna Virtual no VirtualBOX
+Link: https://github.com/vaamonde/dell-linuxmint/blob/master/software/00-install-linuxmint-22.2-virtualbox-7.1.md
+
+#06_ Instalar o Linux Mint 22.2 Zara
+Link: https://github.com/vaamonde/dell-linuxmint/blob/master/software/00-install-linuxmint-22.2-virtualbox-7.1.md
+
+#07_ Atualizar o Linux Mint (MintUpdate)
+Link: https://github.com/vaamonde/dell-linuxmint/blob/master/software/00-install-linuxmint-22.2-virtualbox-7.1.md
+
+#06_ Instalar os Convidados do VirtualBOX
+Link: https://github.com/vaamonde/dell-linuxmint/blob/master/software/00-install-linuxmint-22.2-virtualbox-7.1.md

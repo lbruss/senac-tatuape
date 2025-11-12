@@ -1,0 +1,106 @@
+Objetivo da aula de hoje: 07/11/2025
+
+#01_ Se autenticar com a sua conta no Github no Windows (desktop senac) e também no Linux Mint.
+
+#02_ Material das aulas de GNU/Linux Desktop
+https://github.com/vaamonde/dell-linuxmint
+
+#03_ Material das aulas na Rede SENAC-TAT
+T:\Publica\!!!!!!!RobsonVaamonde\LinuxMint
+
+#04_ Material Extra de Estudos de GNU/Linux
+a) Guia Foca: https://guiafoca.org/
+b) SS64: https://ss64.com/
+c) Aurelio: https://aurelio.net/
+d) DistroWatch: https://distrowatch.com/
+e) LPI: https://learning.lpi.org/pt/
+
+Debian (1993) --> Ubuntu (2004) --> Linux Mint (2006)
+pacote: .deb (apt-get, apt ou dpkg)
+
+Red Hat (1995) --> Fedora (2003)
+pacote: .rpm (dnf, yum ou rpm)
+
+Debian: https://www.debian.org/
+Ubuntu: https://ubuntu.com/
+Linux Mint: https://linuxmint.com/
+
+#05_ Conhecendo Terminal (Bash/Shell)
+
+#06_ Teclas de Atalho do Terminal
+a) Ctrl + Alt + T: Terminal
+b) Ctrl + D: Comando exit
+c) Ctrl + Alt + Backspace: Finalizar ambiente gráfico
+d) Ctrl + Alt + F? (F1 até F7): Bash/Shell (puro)
+F1 até F6: Terminal
+F7: Ambiente Gráfico 
+e) Ctrl + L: clear
+f) TAB (tabulador): Auto-Complemento
+g) Ctrl + Alt + L: Bloquear a Tela
+
+#07_ Atualizando o Sistema via Terminal
+
+a) Linux Case Sensitive
+b) O que é opções e parâmetros dos comandos Linux
+
+sudo -i
+
+O que é sources.list
+
+https://guiafoca.org/guiaonline/inicianteintermediario/ch20s02.html
+
+#Atualizar as listas do Sources.list
+#01) sudo apt update
+
+#Atualizar todos os softwares
+#02) sudo apt upgrade
+
+#Atualizar todos os softwares Forçado
+#03) sudo apt full-upgrade
+
+#Atualizar todo o Sistema Operacional (Kernel - Núcleo)
+#04) sudo apt dist-upgrade
+
+#Limpar aplicativos desnecessários
+#05) sudo apt autoremove
+
+#Limpar o sistema operacional
+#06) sudo apt autoclean
+
+#Limpar as Lista do Sources.List
+#07) sudo apt clean
+#08) sudo apt update
+#09) sudo reboot
+
+#08_ Desligar a Reiniciar o Terminal
+reboot (reiniciar o sistema operacional)
+https://guiafoca.org/guiaonline/inicianteintermediario/ch10s24.html
+
+poweroff (desliga o sistema operacional)
+
+#09_ Integração do Git, VScode e Github
+
+sudo apt install git vim python3 pip
+
+Material Github (Antigo) Dell-LinuxMint: 
+Link: https://github.com/vaamonde/dell-linuxmint/blob/master/software/23-git-github.md
+Vídeo: https://www.youtube.com/watch?v=JDCYyjbrJu0
+
+Material atualizado Python3: 
+Link: https://github.com/vaamonde/python3/blob/main/01-introduction/01-install.md
+Vídeo: https://www.youtube.com/watch?v=klIKuVGRHmM
+
+Link: https://github.com/vaamonde/python3/blob/main/01-introduction/02-git-gthub.md
+Vídeo: https://www.youtube.com/watch?v=VBxmsmPK60s
+------------------------------------------
+
+#01) Configuração do Git Local
+
+git clone: clonar o repositório
+
+git pull: atualizar repositório
+git add . : atualizar tudo
+git commit -m "Atualizacao"
+git push: enviar arquivos para Github
+
+git pull

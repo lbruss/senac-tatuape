@@ -1,0 +1,91 @@
+Objetivo da aula de hoje: 07/11/2025
+
+#01_ Se autenticar com a sua conta no Github
+
+#02_ Material das aulas de GNU/Linux Desktop
+https://github.com/vaamonde/dell-linuxmint
+
+#03_ Material das aulas na Rede SENAC-TAT
+T:\Publica\!!!!!!!RobsonVaamonde\LinuxMint
+
+#04_ Material Extra de Estudos de GNU/Linux
+a) Guia Foca: https://guiafoca.org/
+b) SS64: https://ss64.com/
+c) Aurelio: https://aurelio.net/
+d) DistroWatch: https://distrowatch.com/
+e) LPI: https://learning.lpi.org/pt/
+
+Debian (1993) --> Ubuntu (2004) --> Linux Mint (2006)
+pacote: .deb (apt-get, apt ou dpkg)
+
+Red Hat (1995) --> Fedora (2003)
+pacote: .rpm (dnf, yum ou rpm)
+
+Debian: https://www.debian.org/
+Ubuntu: https://ubuntu.com/
+Linux Mint: https://linuxmint.com/
+
+#05_ Instalação de Softwares (Navegadores - Ícone desktop)
+
+a) Navegador "PADRÃO" do Linux Mint Mozilla Firefox
+https://www.firefox.com/pt-BR/
+
+b) Navegador Google Chrome (PT-BR)
+https://www.google.com/intl/pt-BR/chrome/
+
+Google: COMO INSTALAR O NAVEGADOR !!!!!!! NO LINUX MINT 22.2
+
+c) Navegador Chromium (Base do Google Chrome e Edge)
+https://www.chromium.org/getting-involved/download-chromium/
+Dica: Gerenciador de Aplicativo (Flatpak ou Pacote)
+
+d) Navegador Microosft Edge for Linux (BETA)
+https://www.microsoft.com/pt-br/edge/download?form=MA13FJ
+
+e) Navegador Brave
+https://brave.com/linux/
+
+f) Navegador Vivaldi
+https://vivaldi.com/pt-br/download/
+
+g) Navegador Opera (não usar Opera-X atual GX não tem versão para Linux)
+https://www.opera.com/pt-br
+
+h) Navegador Falkon (Novo, nunca usei, boa sorte)
+https://flathub.org/en/apps/org.kde.falkon/install
+Dica: Flatpak
+
+i) Navegador Midori
+https://astian.org/midori-browser/linux/
+
+j) Navegador Tor (Rede do SENAC bloqueia o acesso)
+Dica: Terminal
+
+#06_ Conhecendo o site Alternative To (Alternativas para)
+Link: https://alternativeto.net/
+
+#07_ Buscar alternativas para o: Microsoft Office
+
+a) Pacote Office "PADRÃO" do Linux Mint LibreOffice
+https://www.libreoffice.org/download/download-libreoffice/
+
+b) WPS Office: https://br.wps.com/
+c) Free Office: https://www.freeoffice.com/pt/
+d) Only Office Desktop: https://www.onlyoffice.com/pt/desktop
+
+#08_ Conhecendo o Terminal e Instalando Softwares de Editores de Texto Profissional
+
+a) Instalação do Visual Studio Code (VSCode)
+https://code.visualstudio.com/
+
+b) Instalação do NotepadQQ (versão alternativa do Notepad++ do Windows)
+https://notepadqq.com/
+
+c) Instalação do Editor de Texto por linha de comando VIM
+https://www.vim.org/
+
+d) Instalação do Git (para integração com o Github)
+https://git-scm.com/
+
+
+sudo apt install git vim notepadqq
