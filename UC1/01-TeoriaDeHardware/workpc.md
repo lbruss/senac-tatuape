@@ -1,4 +1,8 @@
-# Full HD competitivo - R$6.500,00
+# PESQUISA FEITA APENAS PARA "BRINCAR"
+
+---
+
+## Full HD competitivo - R$6.500,00
 **Processador**
 
 https://www.pichau.com.br/processador-amd-ryzen-7-7700-8-core-16-threads-3-8ghz-5-3ghz-turbo-cache-40mb-am5-100-100000592box?gad_source=1&gad_campaignid=17412712029&gbraid=0AAAAADvAK92nHZxbL4tH7yW6ENMoUXqRo&gclid=CjwKCAjw_-3GBhAYEiwAjh9fUHqDFRuugYgPEpW43zcRdabRtF6vpbEEV-kQcHa4WWtQ18K-zMj_7BoC8NgQAvD_BwE
@@ -39,7 +43,7 @@ https://www.pichau.com.br/kit-ventoinhas-aigo-darkflash-infinity-24t-argb-3x120m
 
 ---
 
-# 1440p Jogos modo história - R$10.000,00
+## 1440p Jogos modo história - R$10.000,00
 **Processador**
 
 https://www.pichau.com.br/processador-amd-ryzen-7-9800x3d-8-core-16-threads-4-7ghz-5-2ghz-turbo-cache-104mb-am5-100-100001084wof?srsltid=AfmBOoqsLK04a552UtPK-THGZlfRDD4WIqtvZGVpjfMQ4ttPhEqV-tTp
@@ -80,7 +84,7 @@ https://www.pichau.com.br/kit-ventoinhas-pichau-dual-ring-p1-argb-3x120mm-preta-
 
 ---
 
-# Trabalho pesado e edição de vídeo - R$8.000,00
+## Trabalho pesado e edição de vídeo - R$8.000,00
 **Processador**
 
 https://www.pichau.com.br/processador-amd-ryzen-9-9900x-12-core-24-threads-4-4ghz-5-6ghz-turbo-cache-76mb-am5-100-100000662wof?srsltid=AfmBOornBcAXJXDpx4mdIsEx-JroEyQR8oe_ai_eW2KKndOAZhp4Y_4z
