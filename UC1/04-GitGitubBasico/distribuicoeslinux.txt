@@ -100,3 +100,71 @@ após isso, pode usar o seu Manjaro normalmente
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Passo a passo direto para instalar Ubuntu 24.04 no Oracle VirtualBox:
+1.	Baixar arquivos necessários
+o	Instale o Oracle VirtualBox no Windows.
+o	Baixe a ISO do Ubuntu 24.04 Desktop no site oficial.
+Abrir o Oracle VirtualBOX
+  Selecione: Ferramentas
+    Clique em: <Novo>
+      01) Nome da máquina virtual e Sistema Operacional:
+        Nome: MajaroLinux
+        Edição: (Default)
+        Tipo: Linux
+        Versão: Arch Linux (64-bit) ou Other Linux (64-bit) (Manjaro é baseado em Arch).
+      02) Hardware:
+        Memória Base: 5000MB 
+        Processadores: 2 CPU
+         03) Disco Rígido Virtual:
+          Tamanho do Disco: 50GB (alterar conforme necessidade)
+        <Finalizar>
+
+No Oracle VirtualBOX
+  Selecione a Máquina Virtual: MajaroLinux
+    Clique em: Configurações da Máquina Virtual Linux (Propriedades/Configurações)
+      01) Opção: Geral
+        Guia: Avançado
+          Área de Transferência Compartilhada: Bi-direcional (Configurar)
+          Arrastar e Soltar: Bi-direcional (Configurar)
+      02) Opção: Sistema
+        Guia: Placa-Mãe
+          Relógio da máquina retorna hora UTC: OFF (Desabilitado) 
+
+        Guia: Processador
+          Processadores: 02 CPUs
+          Recursos Estendidos:
+            Habilitar PAE/NX: ON (Habilitado)
+            Habilitar VT-x/AMD-V Aninhado: ON (Habilitado)
+      03) Opção: Monitor
+        Guia: Tela
+          Memória de Vídeo: 128MB (Configurar)
+          Aceleração: Habilitar Aceleração 3D ON (Habilitado)
+      04) Opção: Rede
+        Guia: Adaptador 1
+          Habilitar Placa de Rede ON (Habilitado)
+          Conectado a: Placa em Modo Bridge (Configurar)
+  <OK>
+
+No Oracle VirtualBOX
+  Selecione a Máquina Virtual: MajaroLinux
+    Clique em: <Iniciar (T)>
+      Na tela de: VirtualBoxVM
+        DVD: <não selecionado> - Clique em: <Outro...>
+        Selecione a ISO do: Manjaro Linux Desktop 25.10 - Clique em: <Abrir (O)>
+      <Montar e Tentar Novo Boot>
+
+
