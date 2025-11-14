@@ -96,6 +96,33 @@ sudo pacman -Syu
 após isso, pode usar o seu Manjaro normalmente
 
 
+Dicas apos a atualização
+baixe os navegadores, escolha qual quiser
+
+Chrome
+Instalar pelo terminal (modo rápido)
+
+Primeiro, habilite AUR no terminal:
+pamac config set --enable-aur true
+
+Depois instale o Chrome:
+pamac build google-chrome
+
+
+Opera
+No terminal:
+pamac build opera
+
+
+Se quiser instale o Visual Code
+Pelo terminal
+
+Habilitar AUR:
+pamac config set --enable-aur true
+
+Instalar:
+pamac build visual-studio-code-bin
+
 
 
 
@@ -151,8 +178,9 @@ No Oracle VirtualBOX
             Habilitar VT-x/AMD-V Aninhado: ON (Habilitado)
       03) Opção: Monitor
         Guia: Tela
-          Memória de Vídeo: 128MB (Configurar)
-          Aceleração: Habilitar Aceleração 3D ON (Habilitado)
+
+desative essa opção de "Aceleração 3D"
+
       04) Opção: Rede
         Guia: Adaptador 1
           Habilitar Placa de Rede ON (Habilitado)
