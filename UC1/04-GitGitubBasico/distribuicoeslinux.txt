@@ -141,10 +141,10 @@ pamac build visual-studio-code-bin
 
 
 
-Passo a passo direto para instalar Ubuntu 24.04 no Oracle VirtualBox:
+Passo a passo direto para instalar Ubuntu 25.10 no Oracle VirtualBox:
 1.	Baixar arquivos necessários
 o	Instale o Oracle VirtualBox no Windows.
-o	Baixe a ISO do Ubuntu 24.04 Desktop no site oficial.
+o	Baixe a ISO do Ubuntu 25.10 Desktop no site oficial.
 Abrir o Oracle VirtualBOX
   Selecione: Ferramentas
     Clique em: <Novo>
@@ -194,5 +194,9 @@ No Oracle VirtualBOX
         DVD: <não selecionado> - Clique em: <Outro...>
         Selecione a ISO do: Manjaro Linux Desktop 25.10 - Clique em: <Abrir (O)>
       <Montar e Tentar Novo Boot>
+
+Apos isso, va ate a barra branca no canto superior esquerdo, clique e abra o primeiro software, escolha as opçoes de suas preferencias, quando aparecer a pagina de instalar software, marque as opções de se quiser, é opcional
+em todas as abas são todas as a primeira opção 
+quado aparecer a aba de por as suas informaçõe, so ative a primeira opção das ultimas duas e vai avançando
 
 
