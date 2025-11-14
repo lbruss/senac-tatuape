@@ -200,3 +200,32 @@ em todas as abas são todas as a primeira opção
 quado aparecer a aba de por as suas informaçõe, so ative a primeira opção das ultimas duas e vai avançando
 
 
+
+
+
+
+
+
+
+
+apos a atualização
+baixe o navegador, do seu interesse
+
+Chrome
+Instalar pelo terminal (método rápido)
+
+Entre na pasta onde o arquivo foi baixado, por exemplo “Downloads”:
+cd Downloads
+Instale o pacote:
+sudo apt install ./google-chrome-stable_current_amd64.deb
+
+
+Opera
+nstalar pelo terminal (método rápido)
+
+Entre na pasta onde o arquivo foi baixado:
+cd Downloads
+
+Instale o .deb:
+sudo apt install ./opera-stable_*.deb
+
