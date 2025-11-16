@@ -22,7 +22,14 @@ O que é:
 
 Objetivo:
 Entregar a experiência do Arch Linux de forma acessível, estável e amigável, combinando desempenho com usabilidade para usuários iniciantes e avançados.
-Como instalar as distribuições GNU/Linux no VirtualBox (Ubuntu Linux Desktop 24.04 e Manjaro Linux Desktop 25.10)
+
+
+
+
+
+
+
+Como instalar as distribuições GNU/Linux no VirtualBox (Ubuntu Linux Desktop 25.10 e Manjaro Linux Desktop 25.10)
 Passo a passo direto para instalar Manjaro Linux Desktop 25.10 no Oracle VirtualBox:
 1.	Baixar arquivos necessários
 o	Instale o Oracle VirtualBox no Windows.
