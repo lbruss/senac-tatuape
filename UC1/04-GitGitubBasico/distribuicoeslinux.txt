@@ -1,5 +1,5 @@
-Ubuntu Linux Desktop 24.04
-Ubuntu Linux Desktop 24.04 é uma distribuição Linux voltada para uso cotidiano em computadores pessoais. Baseia-se no Debian, usa a interface GNOME e recebe atualizações de longo prazo (LTS), garantindo estabilidade e suporte prolongado.
+Ubuntu Linux Desktop 25.10
+Ubuntu Linux Desktop 25.10 é uma distribuição Linux voltada para uso cotidiano em computadores pessoais. Baseia-se no Debian, usa a interface GNOME e recebe atualizações de longo prazo (LTS), garantindo estabilidade e suporte prolongado.
 
 Para que serve:
 Serve como sistema operacional completo para atividades diárias: navegação, estudos, programação, edição de documentos, multimídia e uso profissional.
