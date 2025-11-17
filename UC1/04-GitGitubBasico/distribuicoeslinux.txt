@@ -207,7 +207,8 @@ em todas as abas são todas as a primeira opção
 quado aparecer a aba de por as suas informaçõe, so ative a primeira opção das ultimas duas e vai avançando
 
 
-Apos a instalação, cline na opção reiniciar
+Apos a instalação, cline na opção reiniciar, caso não der certo, va na janela do Virtual Box na opção Maquina e depois em reiniciar
+
 
 
 
