@@ -268,3 +268,39 @@ Ubuntu
 
 Manjaro
 <img width="1440" height="794" alt="manjaro" src="https://github.com/user-attachments/assets/f2db386b-21c1-425d-9e6d-4250d632ba44" />
+
+
+
+
+
+WUBUNTU (Winux 11.25)
+
+O que é
+
+“Wubuntu” é uma distribuição Linux que tenta imitar a aparência e o comportamento do Windows (especialmente Windows 10/11), tanto visualmente quanto em algumas funcionalidades UI.
+Atualmente, é mais comumente chamada de Winux. 
+Desenvolvida pela empresa LinuxFX / CyberTech. 
+A versão 11.25 (“Winux 11.25 LTS “Noble””) é uma versão de suporte de longo prazo. 
+
+Para que serve
+
+Serve para quem quer migrar para Linux, mas sem abrir mão da interface familiar do Windows. 
+Tem tema Plasma (KDE) altamente customizado para parecer com Windows. 
+Inclui compatibilidade para rodar aplicativos Windows:
+Usa Wine para .exe e .msi. 
+Suporte a apps Android via emulador (na versão “PowerTools”) segundo a nota de lançamento. 
+Vem com alguns softwares pré-instalados: navegador (Edge), OnlyOffice, cliente de e-mail, etc. 
+Pode ser usado para dar “segunda vida” a máquinas mais antigas, segundo a própria proposta do sistema. 
+
+Em qual distribuição é baseado
+
+Winux / Wubuntu é baseado no Kubuntu, que por sua vez é uma variante do Ubuntu usando KDE Plasma. 
+Na versão 11.25, especificamente, é baseado no Ubuntu 24.04 LTS (“Noble”). 
+SourceForge
+Usam o kernel Linux 6.14 nessa versão.
+
+Pontos polêmicos / riscos
+
+Há críticas de que a distribuição infringe marcas registradas da Microsoft (uso de ícones, logotipo “Windows”, Copilot, etc.). 
+Também há relatos de preocupações com privacidade: algumas versões e licenças pagas envolvem componentes proprietários. 
+Em fóruns Linux, alguns usuários afirmam que não há ganho técnico tão grande, já que por baixo continua sendo “só Ubuntu + tema”. 
