@@ -312,3 +312,68 @@ No terminal digite
 sudo ./VBoxLinuxAdditions.run
 
 e ai pode remover o CD virtual que esta pronto
+
+
+
+
+
+Softwares
+
+Wine Linux
+Wine é uma camada de compatibilidade que permite rodar programas do Windows no Linux (e em outros sistemas, como macOS), sem precisar instalar o Windows.
+
+Resumo direto:
+
+O que é: Um software que traduz chamadas do Windows para chamadas que o Linux entende.
+
+Para que serve: Executar arquivos .exe e .msi no Linux.
+
+Como funciona: Ele recria partes das bibliotecas do Windows (DLLs) e converte as instruções para o Linux.
+
+Vantagem: Não é emulação; por isso muitos programas rodam rápido.
+
+
+
+
+PlayOnLinux
+PlayOnLinux é uma interface gráfica que facilita o uso do Wine no Linux.
+
+Resumo direto e objetivo:
+
+O que é: Um programa que gerencia diferentes versões do Wine e cria ambientes separados para instalar aplicativos Windows.
+
+Para que serve: Instalar programas do Windows no Linux de forma simplificada, sem precisar configurar o Wine manualmente.
+
+Como funciona: Ele cria “prefixos” (ambientes isolados) com configurações específicas para cada software, usando scripts prontos.
+
+Vantagens:
+
+Instalação mais fácil de jogos e programas populares.
+
+Permite múltiplas versões do Wine para compatibilidade.
+
+Interface amigável.
+
+
+Steam Proton
+Steam Proton é uma tecnologia da Valve que permite rodar jogos de Windows no Linux através do Steam.
+
+Resumo direto:
+
+O que é: Uma camada de compatibilidade baseada no Wine, criada e otimizada pela Valve.
+
+Para que serve: Executar jogos desenvolvidos somente para Windows em sistemas Linux, dentro do Steam.
+
+Como funciona:
+
+Usa Wine + DXVK + VKD3D para converter DirectX (Windows) em Vulkan (Linux).
+
+Implementa correções e otimizações específicas para jogos.
+
+Vantagens:
+
+Muitos jogos funcionam sem configuração manual.
+
+Alto desempenho em vários títulos AAA.
+
+Atualizações contínuas da Valve.
