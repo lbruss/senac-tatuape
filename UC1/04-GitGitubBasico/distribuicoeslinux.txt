@@ -207,7 +207,7 @@ em todas as abas são todas as a primeira opção
 quado aparecer a aba de por as suas informaçõe, so ative a primeira opção das ultimas duas e vai avançando
 
 
-
+Apos a instalação, cline na opção reiniciar
 
 
 
