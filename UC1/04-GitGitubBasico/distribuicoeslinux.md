@@ -304,3 +304,11 @@ Pontos polêmicos / riscos
 Há críticas de que a distribuição infringe marcas registradas da Microsoft (uso de ícones, logotipo “Windows”, Copilot, etc.). 
 Também há relatos de preocupações com privacidade: algumas versões e licenças pagas envolvem componentes proprietários. 
 Em fóruns Linux, alguns usuários afirmam que não há ganho técnico tão grande, já que por baixo continua sendo “só Ubuntu + tema”. 
+
+
+A instalação dele no Virtual Box é a mesma coisa que nos outros
+mas na hora de inserir imagem de CD dos adicionais para convidado no Virtual Box, voce adiciona e vai abrir uma notificação, abre, clica com o botão direito em algum canto que não tenha um arquivo a ser selecionado e em seguida clique em "Abrir terminal aqui"
+No terminal digite
+sudo ./VBoxLinuxAdditions.run
+
+e ai pode remover o CD virtual que esta pronto
