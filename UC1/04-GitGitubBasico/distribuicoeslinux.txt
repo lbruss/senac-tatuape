@@ -243,3 +243,16 @@ sudo snap install opera
 baixar o VScode
 Terminal:
 sudo snap install code --classic
+
+Como inserir imagem de CD dos adicionais para convidado no Virtual Box Ubuntu 25.10
+
+No terminal: 
+
+  lsmod | grep vbox
+  sudo apt update
+   sudo apt install build-essential dkms linux-headers-$(uname -r)
+  lsblk
+   sudo mount /dev/sr0 /mnt
+  ls /mnt
+  cd /mnt
+  sudo sh VBoxLinuxAdditions.run
