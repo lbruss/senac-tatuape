@@ -211,9 +211,6 @@ Apos a instalação, cline na opção reiniciar, caso não der certo, va na jane
 apos isso, vai aparecer uma aba e vai avançando ate aparecer uma opção de atualizar os programas, atualize
 
 
-
-
-
 Para atualizar o sistema
 No terminal:
 sudo apt update
@@ -231,7 +228,7 @@ Instalar pelo terminal (método rápido)
 Entre na pasta onde o arquivo foi baixado, por exemplo “Downloads”:
 cd Downloads
 Instale o pacote:
-sudo apt install ./google-chrome-stable_current_amd64.deb
+sudo snap install chrome
 
 
 Opera
@@ -241,5 +238,5 @@ Entre na pasta onde o arquivo foi baixado:
 cd Downloads
 
 Instale o .deb:
-sudo apt install ./opera-stable_*.deb
+sudo snap install opera
 
