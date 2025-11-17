@@ -240,3 +240,6 @@ cd Downloads
 Instale o .deb:
 sudo snap install opera
 
+baixar o VScode
+Terminal:
+sudo snap install code --classic
