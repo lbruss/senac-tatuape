@@ -263,6 +263,8 @@ No terminal:
 
 
 Ubuntu
+<img width="1440" height="794" alt="ubuntu25 10" src="https://github.com/user-attachments/assets/144cd6e6-f73a-475b-80a1-36fb87999497" />
 
 
 Manjaro
+<img width="1440" height="794" alt="manjaro" src="https://github.com/user-attachments/assets/f2db386b-21c1-425d-9e6d-4250d632ba44" />
