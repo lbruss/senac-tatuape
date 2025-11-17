@@ -218,6 +218,9 @@ Para atualizar o sistema
 No terminal:
 sudo apt update
 
+apos isso, 
+sudo apt upgrade
+
 
 apos a atualização
 baixe o navegador, do seu interesse
