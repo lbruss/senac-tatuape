@@ -245,6 +245,9 @@ Terminal:
 sudo snap install code --classic
 
 Como inserir imagem de CD dos adicionais para convidado no Virtual Box Ubuntu 25.10
+Va na janela do Virtual Box
+Dispositivos → Inserir imagem de CD dos Adicionais para Convidado…
+caso acontecer nada va no terminal
 
 No terminal: 
 
@@ -256,3 +259,4 @@ No terminal:
   ls /mnt
   cd /mnt
   sudo sh VBoxLinuxAdditions.run
+  cd
