@@ -214,6 +214,9 @@ apos isso, vai aparecer uma aba e vai avançando ate aparecer uma opção de atu
 
 
 
+Para atualizar o sistema
+No terminal:
+sudo apt update
 
 
 apos a atualização
