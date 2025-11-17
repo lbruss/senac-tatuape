@@ -208,7 +208,7 @@ quado aparecer a aba de por as suas informaçõe, so ative a primeira opção da
 
 
 Apos a instalação, cline na opção reiniciar, caso não der certo, va na janela do Virtual Box na opção Maquina e depois em reiniciar
-
+apos isso, vai aparecer uma aba e vai avançando ate aparecer uma opção de atualizar os programas, atualize
 
 
 
