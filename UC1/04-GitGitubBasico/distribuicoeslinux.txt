@@ -260,3 +260,9 @@ No terminal:
   cd /mnt
   sudo sh VBoxLinuxAdditions.run
   cd
+
+
+Ubuntu
+
+
+Manjaro
