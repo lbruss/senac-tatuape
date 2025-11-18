@@ -319,6 +319,31 @@ e ai pode remover o CD virtual que esta pronto
 
 instalar o vs code, é o mesmo do Ubuntu e os navegadores tambem
 
+Chorme por exemplo
+Baixar o .deb oficial (recomendado)
+
+Abra o navegador (Edge, Firefox ou outro).
+
+Acesse o site oficial:
+google.com/chrome
+
+Clique em Download Chrome.
+
+Escolha .deb (Debian/Ubuntu).
+
+Baixe o arquivo.
+Depois de baixar:
+
+Instalar
+
+Abra a pasta Downloads.
+na pasta clique com o botao direito e va em "abrir no terminal"
+e digite os seguintes codigos
+sudo apt update
+sudo apt install ./google-chrome-stable_current_amd64.deb
+
+apos isso procure o chrome no menu iniciar 
+
 
 
 
