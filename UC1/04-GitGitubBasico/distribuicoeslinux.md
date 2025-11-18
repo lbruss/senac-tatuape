@@ -306,7 +306,11 @@ Também há relatos de preocupações com privacidade: algumas versões e licen�
 Em fóruns Linux, alguns usuários afirmam que não há ganho técnico tão grande, já que por baixo continua sendo “só Ubuntu + tema”. 
 
 
-A instalação dele no Virtual Box é a mesma coisa que nos outros
+A instalação dele no Virtual Box é a mesma coisa que nos outros, no terminal para finalizar
+sudo apt update
+sudo apt upgrade
+
+
 mas na hora de inserir imagem de CD dos adicionais para convidado no Virtual Box, voce adiciona e vai abrir uma notificação, abre, clica com o botão direito em algum canto que não tenha um arquivo a ser selecionado e em seguida clique em "Abrir terminal aqui"
 No terminal digite
 sudo ./VBoxLinuxAdditions.run
