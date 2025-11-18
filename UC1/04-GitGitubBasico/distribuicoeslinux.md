@@ -407,3 +407,453 @@ Muitos jogos funcionam sem configuração manual.
 Alto desempenho em vários títulos AAA.
 
 Atualizações contínuas da Valve.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Guia Completo: Ubuntu 25.10, Manjaro 25.10, Winux/Wubuntu 11.25 e Instalação no VirtualBox
+
+---
+
+# 1. Ubuntu Linux Desktop 25.10
+
+## O que é
+Ubuntu Linux Desktop 25.10 é uma distribuição GNU/Linux baseada no Debian, com foco em estabilidade, facilidade de uso e segurança. Utiliza o ambiente gráfico GNOME e oferece suporte prolongado em suas versões LTS.
+
+## Para que serve
+É um sistema operacional completo para:
+- Navegação e estudos  
+- Programação e desenvolvimento  
+- Escritórios e produtividade  
+- Multimídia  
+- Uso profissional em geral  
+
+## Objetivo
+Fornecer uma plataforma simples, segura e confiável para qualquer tipo de usuário, desde iniciantes até profissionais, incentivando o uso de software livre.
+
+---
+
+# 2. Manjaro Linux Desktop 25.10
+
+## O que é
+Manjaro Linux 25.10 é uma distribuição baseada no Arch Linux, mas muito mais amigável. É uma distribuição **rolling release**, recebendo atualizações contínuas. Oferece as interfaces XFCE, KDE e GNOME.
+
+## Para que serve
+Sistema operacional ideal para:
+- Uso diário  
+- Estudos e programação  
+- Jogos  
+- Tarefas avançadas  
+- Usuários que querem softwares sempre atualizados  
+
+## Objetivo
+Oferecer a experiência do Arch Linux de maneira acessível, rápida e estável, sem a complexidade da instalação manual original.
+
+---
+
+# 3. Instalação no VirtualBox  
+## Instalação do **Manjaro Linux Desktop 25.10**
+
+### 1. Baixar arquivos necessários
+- Instale o **Oracle VirtualBox** no Windows.  
+- Baixe a ISO oficial do Manjaro.
+
+---
+
+## 2. Criar a máquina virtual
+**VirtualBox → Ferramentas → Novo**
+
+### Configurações iniciais:
+**01) Nome e sistema**  
+- Nome: `ManjaroLinux`  
+- Tipo: Linux  
+- Versão: Arch Linux (64-bit) ou Other Linux (64-bit)
+
+**02) Hardware**  
+- Memória: **5000 MB**  
+- Processadores: **4 CPUs**
+
+**03) Disco Virtual**  
+- Tamanho: **50 GB** (ou mais, se desejar)
+
+Clique em **Finalizar**.
+
+---
+
+## 3. Configurar a máquina virtual
+Selecione a VM → **Configurações**
+
+### 01) Geral → Avançado
+- Área de transferência compartilhada: **Bi-direcional**  
+- Arrastar e soltar: **Bi-direcional**
+
+### 02) Sistema → Placa-mãe
+- Relógio retorna hora UTC: **OFF**
+
+### Sistema → Processador
+- Processadores: **4 CPUs**  
+- Habilitar PAE/NX: **ON**  
+- Habilitar VT-x/AMD-V aninhado: **ON**
+
+### 03) Monitor → Tela
+- Memória de vídeo: **128 MB**
+- Aceleração 3D: **ON**
+
+### 04) Rede → Adaptador 1
+- Habilitar: **ON**
+- Conectado a: **Bridge**
+
+Clique em **OK**.
+
+---
+
+## 4. Iniciar a máquina virtual
+Selecionar VM → **Iniciar**
+
+- Em *DVD*, clique em **Outro…**  
+- Selecione a ISO do Manjaro  
+- Clique em **Montar e Tentar Novo Boot**
+
+---
+
+## 5. Instalação do Manjaro
+- Feche a janela inicial.  
+- Abra o instalador (ícone único na área de trabalho).  
+- Siga o passo a passo tradicional: idioma, teclado, disco, usuário etc.  
+
+Antes de reiniciar:
+**VirtualBox → Dispositivos → Discos Ópticos → Remover disco da unidade**
+
+Então reinicie a VM.
+
+---
+
+## 6. Caso o sistema não abra corretamente
+No terminal:
+
+```
+sudo pacman -S virtualbox-guest-utils
+sudo systemctl enable --now vboxservice.service
+```
+## 7. Atualizar o sistema
+
+```
+sudo pacman -Syu
+```
+---
+
+## 8. Dicas pós-instalação
+**Instalar Google Chrome (AUR)**
+
+```
+pamac config set --enable-aur true
+pamac build google-chrome
+```
+**Instalar Opera**
+
+```
+pamac build opera
+```
+
+**Instalar Visual Studio Code**
+
+```
+pamac build visual-studio-code-bin
+```
+
+---
+
+# Instalação do Ubuntu 25.10 no VirtualBox  
+Guia completo, organizado e claro.
+
+---
+
+## 1. Baixar os arquivos necessários
+
+1. Instale o **VirtualBox** (versão mais recente).
+2. Baixe a **ISO do Ubuntu 25.10 Desktop** no site oficial do Ubuntu.
+
+---
+
+## 2. Criar a máquina virtual  
+*(A base é semelhante à criação do Manjaro)*
+
+**Nome sugerido:** `UbuntuLinux`  
+**Tipo:** `Linux`  
+**Versão:** `Ubuntu (64-bit)`
+
+**Configurações principais:**
+- **Memória RAM:** 5000 MB  
+- **Processadores (CPU):** 4  
+- **Disco virtual:** 50 GB (VDI dinâmico)
+
+---
+
+## 3. Configurar a máquina virtual antes de iniciar
+
+### Geral → Avançado
+- Habilitar **Área de Transferência (Clipboard) Bi-direcional**
+- Habilitar **Arrastar e Soltar (Drag & Drop) Bi-direcional**
+
+### Sistema → Processador
+- Ativar **PAE/NX**
+- Ativar **Virtualização VT-x/AMD-V aninhada** (Nested Virtualization)
+
+### Exibição (Monitor)
+- **Desative a aceleração 3D**  
+  *O Ubuntu 25.10 apresenta bugs quando a aceleração 3D está ligada.*
+
+### Rede
+- Mude para **Placa em Modo Bridge**  
+  (A máquina terá acesso à rede como se fosse um PC real.)
+
+---
+
+## 4. Iniciar a máquina virtual
+
+1. Clique em **Iniciar**.
+2. Selecione a **ISO do Ubuntu 25.10**.
+3. Clique em **Montar e Tentar Novo Boot**.
+
+O sistema iniciará o instalador.
+
+---
+
+## 5. Instalar o Ubuntu 25.10
+
+Durante a instalação:
+
+1. Selecione **Idioma** e **Layout do Teclado**.
+2. Na etapa **Instalação de software**, marque as opções desejadas  
+   (ex.: instalar codecs, atualizações, etc.).
+3. Na etapa de criação do usuário, **marque apenas a primeira opção** das duas últimas caixas mostradas.
+4. Continue até o final do instalador.
+5. Reinicie o sistema quando for solicitado.  
+   - Se ocorrer erro ao reiniciar, use:  
+     **Menu da Máquina → Reiniciar**
+
+Após o primeiro boot:
+
+- O Ubuntu solicitará **atualizações** → aceite e conclua.  
+- Reinicie novamente se for necessário.
+
+---
+
+## 6. (Recomendado) Instalar os "Guest Additions"
+
+Depois do Ubuntu instalado:
+
+1. No menu do VirtualBox, clique em:  
+   **Dispositivos → Inserir imagem de CD dos Adicionais para Convidado**
+2. O Ubuntu deve montar o CD automaticamente.
+3. Abra o terminal e execute:
+
+```
+sudo bash /media/$USER/VBox_GAs_*/VBoxLinuxAdditions.run
+```
+
+---
+
+## 7. Atualizar o sistema (terminal)
+
+```
+sudo apt update
+sudo apt upgrade
+```
+
+---
+
+## 8. Instalar navegadores
+
+**Chrome**
+```
+cd Downloads
+sudo snap install chrome
+```
+
+**Opera**
+```
+cd Downloads
+sudo snap install opera
+```
+
+**Visual Studio Code**
+```
+sudo snap install code --classic
+```
+
+---
+
+# 5. Adicionais para Convidado (Guest Additions) – Ubuntu 25.10
+**Passo a passo**
+
+VirtualBox → **Dispositivos** → **Inserir imagem de CD dos Adicionais para Convidado**
+
+Se nada acontecer:
+
+```
+lsmod | grep vbox
+sudo apt update
+sudo apt install build-essential dkms linux-headers-$(uname -r)
+lsblk
+sudo mount /dev/sr0 /mnt
+ls /mnt
+cd /mnt
+sudo sh VBoxLinuxAdditions.run
+cd
+```
+
+---
+
+# 6. WUBUNTU (Winux 11.25)
+
+## O que é
+Wubuntu/Winux 11.25 é uma distribuição Linux baseada no **Kubuntu/Ubuntu 24.04 LTS**, projetada para reproduzir a aparência e o funcionamento do Windows 10/11.  
+Ela utiliza o **KDE Plasma** personalizado para imitar fielmente o sistema da Microsoft.
+
+---
+
+## Para que serve
+Wubuntu é voltado para usuários que:
+
+- Querem migrar do Windows para Linux sem estranhar a interface.  
+- Precisam rodar programas Windows através do **Wine**.  
+- Desejam compatibilidade com aplicativos Android usando **PowerTools**.  
+- Buscam um Linux estável, mas com visual e comportamento semelhantes ao Windows.
+
+---
+
+## Principais características
+
+- **Interface KDE Plasma totalmente modificada** para parecer Windows 10/11.  
+- **Microsoft Edge pré-instalado** (versão Linux).  
+- Suite **OnlyOffice** instalada por padrão.  
+- Base sólida do **Ubuntu 24.04 LTS**.  
+- Kernel **Linux 6.14**.  
+- Integrações extras para melhorar a compatibilidade com softwares Windows e Android.
+
+---
+
+## Controvérsias
+
+- Acusações de **uso indevido de marcas registradas** da Microsoft na interface.  
+- Preocupações envolvendo **privacidade**, principalmente em edições pagas.  
+- Críticas de parte da comunidade Linux por ser “apenas um Ubuntu com tema de Windows”.  
+
+---
+
+## Instalação no VirtualBox (igual ao Ubuntu)
+
+Para finalizar no terminal:
+
+```
+sudo apt update
+sudo apt upgrade
+```
+
+---
+
+## Guest Additions no Winux
+
+- Inserir imagem de CD
+- Abrir a notificação
+- Clique com botão direito → "Abrir terminal aqui"
+
+Execute:
+
+```
+sudo ./VBoxLinuxAdditions.run
+```
+
+---
+
+## Instalar Chrome no Winux (método recomendado)
+
+Baixe o .deb no site oficial → Downloads → Terminal:
+
+```
+sudo apt update
+sudo apt install ./google-chrome-stable_current_amd64.deb
+```
+
+---
+
+# 7. Softwares Importantes
+
+## Wine Linux
+Permite rodar programas do Windows (.exe, .msi) diretamente no Linux.
+
+### Como funciona
+- Traduz chamadas do Windows para chamadas compatíveis com Linux.
+- Não é um emulador, e sim uma camada de compatibilidade.
+
+### Vantagens
+- Não utiliza emulação.
+- Roda muitos programas com excelente desempenho.
+
+---
+
+## PlayOnLinux
+Interface gráfica para facilitar o uso do Wine.
+
+### Para que serve
+- Instalar programas do Windows facilmente.
+- Criar ambientes separados para cada aplicação.
+- Utilizar diferentes versões do Wine quando necessário.
+
+---
+
+## Steam Proton
+Tecnologia da Valve para rodar jogos de Windows no Linux via Steam.
+
+### Como funciona
+- Baseado no Wine.
+- Utiliza **DXVK** e **VKD3D** para converter DirectX em Vulkan.
+- Possui otimizações específicas para jogos.
+
+### Vantagens
+- Grande parte dos jogos roda diretamente, sem ajustes.
+- Alto desempenho.
+- Recebe atualizações constantes.
+
+---
+
+## Fim do Guia
+Este documento reúne explicações completas sobre Ubuntu, Manjaro, Winux, instalação no VirtualBox e ferramentas essenciais do ecossistema Linux.
+
+
+
+
+
+
+
+
