@@ -317,6 +317,7 @@ sudo ./VBoxLinuxAdditions.run
 
 e ai pode remover o CD virtual que esta pronto
 
+instalar o vs code, é o mesmo do Ubuntu e os navegadores tambem
 
 
 
