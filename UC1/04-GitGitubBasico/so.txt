@@ -82,20 +82,11 @@ vai reiniciar e vai avançando, quando chegar novamente na parte de rede, clique
 coloque o seu nome
 se quiser colocar senha, coloque, se não quiser apenas avance
 as opções a seguir são pessoais, de preferncia diga tudo não, todos na segunda opção
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+apos a instalação do windows, conecte a internet, indo para a aba do Virtual box
+na opção maquina, configurções, vai em rede e mude a opção não conectado para NAT
+instale os drivers, no virtual box, dispositivos, inserir CD 
+va em no explorador de arquivos, vai em unidade de CD e instale o "VBoxWindowsAdditions", so com esse nome
+vai avançando e vai reiniciar sozinho e esta pronto o seu windows
 
 Instalação Windows 11 em Maquina real:
 
@@ -110,11 +101,3 @@ apos a instalação do windows, instalar os divers
 Driver Booster é um bom software para buscar e instalar os drivers
 
 e ja esta feito, pode usar o seu windows
-
-
-
-
-
-
-
-
