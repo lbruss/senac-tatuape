@@ -1,5 +1,26 @@
 Insatalação Windows 11 
 
+Criar midia com o seguinte site oficial: https://www.microsoft.com/pt-br/software-download/windows11
+va em: Criar mídia de instalação do Windows 11
+em seguida clique em "baixar agora", ja com o pendrive plugado na maquina (Recomendo plugar na porta USB azul)
+Abra o software baixado 
+
+Com o software aberto, leia tudo e aceite, clique em avançar
+Avançar novamente
+Deixe marcado unidade Flash USB e avançar
+Nesse momento ele reconhece o pendrive e em seguida clique em avançar e ja vai estar baixando o windows 11 no pendrive
+
+
+
+
+
+
+
+
+
+
+
+
 Via Virtual Box Oracle:
 
 
