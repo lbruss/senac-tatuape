@@ -35,9 +35,34 @@ Apos isso inice a maquina
 apos isso, clique em qualquer tecla quando pedir, clique rapido em qualquer tecla
 
 Instalação 
+Escolha o idioma, va em avançar
+teclado com "ç" Teclado ABNT, teclado sem o "ç" Teclado americano (Estados Unidos Internacional), escolha e avance
+marque a caixa de "Concordo que tudo sera excluido..." e marque em "Instalar o Windows 11" e avance
+clique em "Não tenho chave"
+selecione a "Imagem"
+Windows Home, bem basico e limitado, menos desempenho abaixo do que o Windows Pro
+Windows Pro, mais segurança, trabalhar com um dominio, mais profissional, mais desempenho
+selecione o que desejar e clique em avançar
+se tiver todos os requisitos para baixar o windows 11, so clicando em avançar
 
 
 
+se não tiver os requisitos para baixar o windows 11, não vai baixar
+nesse caso de aparecer a mensagem que não é possivel instalar, voltar para a tela de escolha da "Imagem" clique as telcas
+Shift + F10 para abir o prompt de comando
+Digite:
+regedit
+pressione enter
+
+No registro do Windows, expandir HKey_Local_Machine, expandir o System e selecione o Setup
+Selecionar o Setup com o botao direito do mouse e cirar uma chave de nome: LabConfig
+No lado direto (em branco), criar 4 Valor DWord (32bits)
+
+ByPassTPMCheck
+ByPassSecureBootCheck
+ByPassRAMCheck
+ByPassStorageCheck
+ByPassCPUCheck
 
 
 
