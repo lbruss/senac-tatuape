@@ -64,7 +64,9 @@ ByPassRAMCheck
 ByPassStorageCheck
 ByPassCPUCheck
 
-
+Clique com botao direito, um por vez, em modificar, APENAS altere o numero 0 para 1, apenas isso
+apos isso, fechar o registro do windows, clicando apenas no botão vermelho em fechar
+apos isso, vai avançando normalmente como se estivesse instalando normalmente
 
 
 
