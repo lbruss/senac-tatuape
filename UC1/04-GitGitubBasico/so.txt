@@ -80,39 +80,8 @@ Entre na BIOS/Setup da maquina com F12, F10 ou a com a tecla DELETE, vai variand
 Mude a ordem de boot, faça com que esse pendrive plugado fique em primeiro na hora do boot
 salvar e sair ou clique enter, depende da maquina
 apos isso
-
-Instalação 
-Escolha o idioma, va em avançar
-teclado com "ç" Teclado ABNT, teclado sem o "ç" Teclado americano (Estados Unidos Internacional), escolha e avance
-marque a caixa de "Concordo que tudo sera excluido..." e marque em "Instalar o Windows 11" e avance
-clique em "Não tenho chave"
-selecione a "Imagem"
-Windows Home, bem basico e limitado, menos desempenho abaixo do que o Windows Pro
-Windows Pro, mais segurança, trabalhar com um dominio, mais profissional, mais desempenho
-selecione o que desejar e clique em avançar
-se tiver todos os requisitos para baixar o windows 11, so clicando em avançar
-
-se não tiver os requisitos para baixar o windows 11, não vai baixar
-nesse caso de aparecer a mensagem que não é possivel instalar, voltar para a tela de escolha da "Imagem" clique as telcas
-Shift + F10 para abir o prompt de comando
-Digite:
-regedit
-pressione enter
-
-No registro do Windows, expandir HKey_Local_Machine, expandir o System e selecione o Setup
-Selecionar o Setup com o botao direito do mouse e cirar uma chave de nome: LabConfig
-No lado direto (em branco), criar 4 Valor DWord (32bits)
-
-ByPassTPMCheck
-ByPassSecureBootCheck
-ByPassRAMCheck
-ByPassStorageCheck
-ByPassCPUCheck
-
-Clique com botao direito, um por vez, em modificar, APENAS altere o numero 0 para 1, apenas isso
-apos isso, fechar o registro do windows, clicando apenas no botão vermelho em fechar
-apos isso, vai avançando normalmente como se estivesse instalando normalmente
-
+é o mesmo processo que o do Virtual Box, a partir da instalação
+e se não estiver conectado a internet, é o mesmo procedimento ja feito antes no Virtual Box
 
 
 
