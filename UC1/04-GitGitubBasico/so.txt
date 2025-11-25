@@ -68,7 +68,32 @@ Clique com botao direito, um por vez, em modificar, APENAS altere o numero 0 par
 apos isso, fechar o registro do windows, clicando apenas no botão vermelho em fechar
 apos isso, vai avançando normalmente como se estivesse instalando normalmente
 
-Processo de burlar instalação caso esteja sem internet, no caso co virtual box que foi selecionado que não esta conectado
+selecione o seu pais e clique em "sim"
+o seu teclado, selecione de acordo com a sua escolha ja feita antes na instalação
+em pular ou coloque outro teclado
+Processo de burlar instalação caso esteja sem internet, no caso co virtual box que foi selecionado que não esta conectado, ja que se fosse instalar com a internet conectada, o windows iria instalar varios software que talvez voce nem va usar, depois baixa esses softwares de quiser
+
+instalar sem internet (Muito melhor, intalação limpa)
+pressionar as teclas Shift + F10
+digitar: oobe\bypassnro
+e pressione enter
+
+vai reiniciar e vai avançando, quando chegar novamente na parte de rede, clique em "não tenho internet"
+coloque o seu nome
+se quiser colocar senha, coloque, se não quiser apenas avance
+as opções a seguir são pessoais, de preferncia diga tudo não, todos na segunda opção
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
