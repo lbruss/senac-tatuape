@@ -9,27 +9,32 @@ Com o software aberto, leia tudo e aceite, clique em avançar
 Avançar novamente
 Deixe marcado unidade Flash USB e avançar
 Nesse momento ele reconhece o pendrive e em seguida clique em avançar e ja vai estar baixando o windows 11 no pendrive
-
-
-
-
-
-
-
-
-
-
+apos a finalizar as atividades, pode retirar o pendrive
 
 
 Via Virtual Box Oracle:
 
+Abra o Virtual Box
+va em "Novo"
+em nome, coloque o que quiser 
+em imagem ISO, va em "Outro" e procure a iso do windows 11
+Opção: Pular Instalação Desassistida (Serve para pular as abas de interação na hora da instalação, são aquelas perguntas pessoais, marque se quiser)
+finalize
 
+clique na maquina criada 
+va em configurações, ative a opção Expert
 
+aba Geral, Avançado, e selecione "Bi-direcional" nas duas opções
+aba Sistema, Placa-mae, memoria base, coloque ate o limite da barra verde, não deixe na barra vermelha, apenas verde
+na mesma aba, Processador, processadores, coloque ate o 4 no maximo e habilite os recursos estendidos, as duas opções, ou so uma
+aba Display, habilite Aceleração 3D e coloque a Memoria de video no maximo 
+aba Rede, em "Conectado a" selecione "Não conectado"
+Por fim, clique em Ok
 
+Apos isso inice a maquina
+apos isso, clique em qualquer tecla quando pedir, clique rapido em qualquer tecla
 
-
-
-
+Instalação 
 
 
 
