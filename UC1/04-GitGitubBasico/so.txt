@@ -106,6 +106,8 @@ salvar e sair ou clique enter, depende da maquina
 apos isso
 é o mesmo processo que o do Virtual Box, a partir da instalação
 e se não estiver conectado a internet, é o mesmo procedimento ja feito antes no Virtual Box
+apos a instalação do windows, instalar os divers
+Driver Booster é um bom software para buscar e instalar os drivers
 
 e ja esta feito, pode usar o seu windows
 
