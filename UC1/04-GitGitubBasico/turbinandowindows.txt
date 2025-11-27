@@ -1,0 +1,49 @@
+deixando o windows mais leve e rapido (turbinando)
+
+apos a instalação do windows 11, atualize (vai demorar bastante)
+para atualizar, va na barra de pesquisa na barra de tarefas e digite "update" e va em "vereficar atualizações" e em "Abrir" e verificar se ha atualizações e atualize
+
+Dica: não isntale os drivers antes de atualizar o windows
+Dica: driver de video (sempre do fabricante, sempre baixe do fabricante, não use o driver booster)
+
+Otimizar o windows (Obrigatorio para PCs lentos)
+
+ecnomia de energia
+na barra de pesquisa, pesquise por "energia" e selecione "editar plano de energia"
+va na opção "alterar configurações de energia avançadas", na opção equilibrado, selecione "alto desempenho"
+em desligar disco rigido apos mude para zero, escreva "0", agora em aplicar e em ok
+va na parte superior da aba, em um icone de seta para cima, clique em "alto desempenho", em editar configurações plano
+em desligar video, coloque "nunca"
+volte na outra aba, do lado esquerdo, clique em editar botoes de energia, na segunda opção, selecione Nada a fazer", depois em salvar alterações
+
+va na barra de pequisa e digite "Painel de controle" e clique em abrir
+
+em Programas, vai em desinstalar um programa
+selecionar o OneDrive, clique com o botão direito e clique em desisntalar
+selecione conexão de area de trabalho remota, e desisntale da mesma maneira
+
+va ate o menu inicar, clique em Todos
+procure por Clima, clique com o botão direito e desistale
+faça o mesmo com o copilot, microsoft noticias, o teams, microfsoft To DO, notas autoadesivas, outlook, solitarie jogo e vai fazendo isso em aplicativos que talvez nem va usar
+
+na barra de pesquisa, pesquise por limpeza de disco 
+clique em na primeira opção de limpeza, botao que tem um tipo de escudo
+apos isso, selecione todos os arquivos e dlique em OK e em excluir aquivos
+
+na barra de tarfeas, clique com o botat direito, selecione gerenciador de tarfeas e clique na opção que tem o simbolo de um velocimetro
+selecione o que voce não for usar e clique com o botão direito nele e selecione desabilitar
+
+na area de trabalho, clique com o botão direito nela e selecione personalizar e va em cores e ative a opção efeito transparente
+
+volte para o painel de controle 
+em sistema e segurança 
+em seguida em sistema
+procure configurações avançadas do sistema
+em remoto, desmarque a primeira opção da assistencia remota
+em proteção do sistema, em configurar, marque o desativar e depois em ok
+em avançado, desempenho, configurações, selecione personalizar e desmarque as 8 primeiras opções
+na mesma aba, va em avançado (faça essa parte so se tiver 8GB de memoria ram, mais que isso não precisa)
+em memoria virtual, em alterar, na primeira opção desmarque, marque em tamanho personalizado, coloque a quantidade da sua memoria ram nas duas opções, depois em definir, e depois em ok
+apos isso ok, aplicar, em ok, e depois em reiniciar agora
+e espere reinicar para que as alterações sejam aplicadas
+
