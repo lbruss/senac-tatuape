@@ -47,3 +47,14 @@ em memoria virtual, em alterar, na primeira opção desmarque, marque em tamanho
 apos isso ok, aplicar, em ok, e depois em reiniciar agora
 e espere reinicar para que as alterações sejam aplicadas
 
+va na barra de tarefas e clique com o botão direito e depois em configurações da barra de tarefas
+em "pesquisar" selecione ocultar
+em visão de tarefas desativa
+em widgets desativa
+
+na barra de tarefas, clique com o botão de direto os aplicativos que voce não gosta ou não usa, e selecione desafixar da barra de tarefas
+se quiser, na aba de configurações de barra de tarefas, va em comportamento de barra de tarefas, em alinhamento da barra de tarefas, coloque em esquerda
+
+no menu inicar, abra configurações, va em sistema, depois notificações, desativa
+volte para sistema
+va em multitarefas, desative a primeira opção
