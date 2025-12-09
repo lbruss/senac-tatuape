@@ -1,0 +1,14 @@
+Objetivo da aula de hoje: 27/08/2025
+
+18/09 - Quinta - Festa!!!!!!!!!!!
+#01_ Apresentação da Turma
+a) Nome
+b) Idade
+c) Cursando/Terminou: Ensino Médio
+c) Trabalha: (sim ou não)
+d) Tem conhecimento em TI:
+e) Qual a expectativa do curso Técnico em Informática?
+
+#02_ Apresentação da Secretaria Educacional
+
+#03_ Utilização básica do Github

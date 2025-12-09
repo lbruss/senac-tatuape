@@ -1,0 +1,13 @@
+Objetivo da aula de hoje: 03/09/2025
+
+#01_ Criar uma conta no LinkedIn (Não é OBRIGATÓRIO)
+Link: https://br.linkedin.com/
+
+#03_ Acessar o Github (Criar o Repositório ESPECIAL)
+	a) DESAFIO: Utilizar a IA (AI) para personalizar o seu repositório
+	
+#04_ Acessar o Tinkercad (Conhecer a criar Circuitos Básicos)
+	a) Acessar a plataformar e conhecer os recursos de criação de Circuitos Elétricos e Eletrônicos
+
+#06_ Envio da documentação para a o Github
+	a) Enviar as documentações da aula para o respositório do curso, no diretório da aula criado anteriormente.

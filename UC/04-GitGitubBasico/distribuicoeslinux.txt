@@ -1,0 +1,238 @@
+Ubuntu Linux Desktop 25.10
+Ubuntu Linux Desktop 25.10 é uma distribuição Linux voltada para uso cotidiano em computadores pessoais. Baseia-se no Debian, usa a interface GNOME e recebe atualizações de longo prazo (LTS), garantindo estabilidade e suporte prolongado.
+
+Para que serve:
+Serve como sistema operacional completo para atividades diárias: navegação, estudos, programação, edição de documentos, multimídia e uso profissional.
+
+O que é:
+É um sistema operacional livre e de código aberto, com foco em facilidade de uso, segurança e compatibilidade com uma grande variedade de hardware e softwares.
+
+Objetivo:
+Oferecer uma plataforma estável, segura e simples de usar, adequada tanto para usuários iniciantes quanto para profissionais, promovendo o uso de software livre e um ambiente confiável para trabalho e desenvolvimento.
+
+Manjaro Linux Desktop 25.10
+Manjaro Linux Desktop 25.10 é uma distribuição baseada no Arch Linux, criada para oferecer desempenho, atualização contínua (rolling release) e facilidade de uso sem a complexidade do Arch original.
+
+Para que serve:
+Serve como sistema operacional para uso diário, estudos, desenvolvimento, jogos e tarefas avançadas, oferecendo softwares sempre atualizados.
+
+
+O que é:
+É um sistema operacional livre e de código aberto, com foco em rapidez, atualizações recentes, suporte a múltiplas interfaces (XFCE, GNOME, KDE) e ferramentas próprias que simplificam a gestão do sistema.
+
+Objetivo:
+Entregar a experiência do Arch Linux de forma acessível, estável e amigável, combinando desempenho com usabilidade para usuários iniciantes e avançados.
+
+
+
+
+
+
+
+Como instalar as distribuições GNU/Linux no VirtualBox (Ubuntu Linux Desktop 25.10 e Manjaro Linux Desktop 25.10)
+Passo a passo direto para instalar Manjaro Linux Desktop 25.10 no Oracle VirtualBox:
+1.	Baixar arquivos necessários
+o	Instale o Oracle VirtualBox no Windows.
+o	Baixe a ISO do Manjaro Linux Desktop 25.10  no site oficial.
+Abrir o Oracle VirtualBOX
+  Selecione: Ferramentas
+    Clique em: <Novo>
+      01) Nome da máquina virtual e Sistema Operacional:
+        Nome: MajaroLinux
+        Edição: (Default)
+        Tipo: Linux
+        Versão: Arch Linux (64-bit) ou Other Linux (64-bit) (Manjaro é baseado em Arch).
+      02) Hardware:
+        Memória Base: 5000MB 
+        Processadores: 2 CPU
+         03) Disco Rígido Virtual:
+          Tamanho do Disco: 50GB (alterar conforme necessidade)
+        <Finalizar>
+
+No Oracle VirtualBOX
+  Selecione a Máquina Virtual: MajaroLinux
+    Clique em: Configurações da Máquina Virtual Linux (Propriedades/Configurações)
+      01) Opção: Geral
+        Guia: Avançado
+          Área de Transferência Compartilhada: Bi-direcional (Configurar)
+          Arrastar e Soltar: Bi-direcional (Configurar)
+      02) Opção: Sistema
+        Guia: Placa-Mãe
+          Relógio da máquina retorna hora UTC: OFF (Desabilitado) 
+
+        Guia: Processador
+          Processadores: 02 CPUs
+          Recursos Estendidos:
+            Habilitar PAE/NX: ON (Habilitado)
+            Habilitar VT-x/AMD-V Aninhado: ON (Habilitado)
+      03) Opção: Monitor
+        Guia: Tela
+          Memória de Vídeo: 128MB (Configurar)
+          Aceleração: Habilitar Aceleração 3D ON (Habilitado)
+      04) Opção: Rede
+        Guia: Adaptador 1
+          Habilitar Placa de Rede ON (Habilitado)
+          Conectado a: Placa em Modo Bridge (Configurar)
+  <OK>
+
+No Oracle VirtualBOX
+  Selecione a Máquina Virtual: MajaroLinux
+    Clique em: <Iniciar (T)>
+      Na tela de: VirtualBoxVM
+        DVD: <não selecionado> - Clique em: <Outro...>
+        Selecione a ISO do: Manjaro Linux Desktop 25.10 - Clique em: <Abrir (O)>
+      <Montar e Tentar Novo Boot>
+
+
+
+Após abrir o Manjaro, feche a janela que estiver na tela, clique no único software que é o que vai instalar o Manjaro e vai avançando os no que se pede, suas informações e tudo, quando terminar, antes de reiniciar, na janela do Virtual box, va em dispositivos, discos opticos e em remove disk from, após isso, reinicie o sistema, isso na janela do Virtual Box, em maquina e reiniciar
+
+
+
+Se não abrir:
+Abra o terminal e instale:
+Digite o sequintes codigos
+sudo pacman -S virtualbox-guest-utils
+sudo systemctl enable --now vboxservice.service
+
+Atualizar o sistema
+No terminal:
+
+sudo pacman -Syu
+
+após isso, pode usar o seu Manjaro normalmente
+
+
+Dicas apos a atualização
+baixe os navegadores, escolha qual quiser
+
+Chrome
+Instalar pelo terminal (modo rápido)
+
+Primeiro, habilite AUR no terminal:
+pamac config set --enable-aur true
+
+Depois instale o Chrome:
+pamac build google-chrome
+
+
+Opera
+No terminal:
+pamac build opera
+
+
+Se quiser instale o Visual Code
+Pelo terminal
+
+Habilitar AUR:
+pamac config set --enable-aur true
+
+Instalar:
+pamac build visual-studio-code-bin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Passo a passo direto para instalar Ubuntu 25.10 no Oracle VirtualBox:
+1.	Baixar arquivos necessários
+o	Instale o Oracle VirtualBox no Windows.
+o	Baixe a ISO do Ubuntu 25.10 Desktop no site oficial.
+Abrir o Oracle VirtualBOX
+  Selecione: Ferramentas
+    Clique em: <Novo>
+      01) Nome da máquina virtual e Sistema Operacional:
+        Nome: MajaroLinux
+        Edição: (Default)
+        Tipo: Linux
+        Versão: Arch Linux (64-bit) ou Other Linux (64-bit) (Manjaro é baseado em Arch).
+      02) Hardware:
+        Memória Base: 5000MB 
+        Processadores: 2 CPU
+         03) Disco Rígido Virtual:
+          Tamanho do Disco: 50GB (alterar conforme necessidade)
+        <Finalizar>
+
+No Oracle VirtualBOX
+  Selecione a Máquina Virtual: MajaroLinux
+    Clique em: Configurações da Máquina Virtual Linux (Propriedades/Configurações)
+      01) Opção: Geral
+        Guia: Avançado
+          Área de Transferência Compartilhada: Bi-direcional (Configurar)
+          Arrastar e Soltar: Bi-direcional (Configurar)
+      02) Opção: Sistema
+        Guia: Placa-Mãe
+          Relógio da máquina retorna hora UTC: OFF (Desabilitado) 
+
+        Guia: Processador
+          Processadores: 02 CPUs
+          Recursos Estendidos:
+            Habilitar PAE/NX: ON (Habilitado)
+            Habilitar VT-x/AMD-V Aninhado: ON (Habilitado)
+      03) Opção: Monitor
+        Guia: Tela
+
+desative essa opção de "Aceleração 3D"
+
+      04) Opção: Rede
+        Guia: Adaptador 1
+          Habilitar Placa de Rede ON (Habilitado)
+          Conectado a: Placa em Modo Bridge (Configurar)
+  <OK>
+
+No Oracle VirtualBOX
+  Selecione a Máquina Virtual: MajaroLinux
+    Clique em: <Iniciar (T)>
+      Na tela de: VirtualBoxVM
+        DVD: <não selecionado> - Clique em: <Outro...>
+        Selecione a ISO do: Manjaro Linux Desktop 25.10 - Clique em: <Abrir (O)>
+      <Montar e Tentar Novo Boot>
+
+Apos isso, va ate a barra branca no canto superior esquerdo, clique e abra o primeiro software, escolha as opçoes de suas preferencias, quando aparecer a pagina de instalar software, marque as opções de se quiser, é opcional
+em todas as abas são todas as a primeira opção 
+quado aparecer a aba de por as suas informaçõe, so ative a primeira opção das ultimas duas e vai avançando
+
+
+
+
+
+
+
+
+
+
+apos a atualização
+baixe o navegador, do seu interesse
+
+Chrome
+Instalar pelo terminal (método rápido)
+
+Entre na pasta onde o arquivo foi baixado, por exemplo “Downloads”:
+cd Downloads
+Instale o pacote:
+sudo apt install ./google-chrome-stable_current_amd64.deb
+
+
+Opera
+nstalar pelo terminal (método rápido)
+
+Entre na pasta onde o arquivo foi baixado:
+cd Downloads
+
+Instale o .deb:
+sudo apt install ./opera-stable_*.deb
+
