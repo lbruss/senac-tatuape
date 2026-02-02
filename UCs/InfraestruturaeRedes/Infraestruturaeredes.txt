@@ -21,3 +21,15 @@ SMTP/IMAP/POP3 - PORTA 143 - TCP
 TFTP - PORTA 69 - TCP
 DNS - PORTA 53 - UDP/TCP (Depende do servidor)
 SSH - PORTA 22 - TCP
+
+PROBLEMAS
+CAMADAS OSI
+Física (Cabo, Wifi)
+Enlance (Ethernet)
+Rede (Ip,ICMP, Ping)
+Transporte (TCP/UDP)
+Sessão (Logon)
+Apresentação (Imagens, Textos)
+Aplicação (Https, DNS, SMTP)
+- Estamos trabalhando mais 3,4 e 7
+Dica: Primeiro fazer ping antes de fazer qualquer coisa para saber quais maquinas não está ping funcionando
