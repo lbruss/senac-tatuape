@@ -22,8 +22,8 @@ TFTP - PORTA 69 - TCP
 DNS - PORTA 53 - UDP/TCP (Depende do servidor)
 SSH - PORTA 22 - TCP
 
-PROBLEMAS
-CAMADAS OSI
+Problemas
+Camadas OSI
 Física (Cabo, Wifi)
 Enlance (Ethernet)
 Rede (Ip,ICMP, Ping)
