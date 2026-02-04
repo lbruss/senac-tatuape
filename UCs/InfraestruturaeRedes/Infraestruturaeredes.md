@@ -207,6 +207,53 @@ Esse conjunto de comandos:
 
 
 
+# Exemplo: 
+```
+Would you like to enter the initial configuration dialog? [yes/no]: no
+Press RETURN to get started!
+
+Router>
+Router>enable
+Router#configure terminal
+Enter configuration commands, one per lin. End with CNTL/Z
+Router(config) #username cliente privilegie 15 secret 123456
+Router(config) #line console 0
+Router(config-line) #login local
+Router(config-line) #exit
+Router(config) #exit
+Router#write memory
+Router#exit
+
+Router con0 is now available
+
+Press RETURN to get started
+
+User Access Verification
+
+Username: cliente
+Password: 
+
+Router#configure terminal
+Enter configuration commands, one per lin. End with CNTL/Z
+Router(config) #hostname ROperadora
+ROperadora(config) #interface gigabitEthernet 0/0
+ROperadora(config-if) #ip address 192.168.0.2 255.255.255.0
+ROperadora(config-if) #no shutdown
+
+ROperadora(config-if) #
+LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
+
+LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+
+ROperadora(config-if) #exit
+ROperadora(config) #ip dhcp excluded-address 192.168.0.2
+ROperadora(config) #ip dhcp pool operadora
+ROperadora(dhcp-config) #network 192.168.0.0 255.255.255.0
+ROperadora(dhcp-config) #default-router 192.168.0.2
+ROperadora(dhcp-config) #dns-server 8.8.8.8
+ROperadora(dhcp-config) #
+```
+
 
 
 
