@@ -15,7 +15,8 @@ Os materiais estão organizados por temas, com atualizações contínuas conform
 - Introdução à **Inteligência Artificial (IA)**  
 - Sistemas Operacionais **Microsoft Windows**  
 - Sistemas Operacionais **GNU/Linux** (Open Source)  
-- Procedimentos de instalação, configuração e documentação técnica  
+- Procedimentos de instalação, configuração e documentação técnica
+- Redes e Infraestrutura  
 
 ---
 
