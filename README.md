@@ -16,7 +16,7 @@ Os materiais estão organizados por temas, com atualizações contínuas conform
 - Sistemas Operacionais **Microsoft Windows**  
 - Sistemas Operacionais **GNU/Linux** (Open Source)  
 - Procedimentos de instalação, configuração e documentação técnica
-- Infraestrutura e Redes
+- Redes
 ---
 
 ## 🎯 Objetivo do Repositório
