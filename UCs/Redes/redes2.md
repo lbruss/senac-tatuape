@@ -321,4 +321,127 @@ O switch funciona assim, em essência:
 
 ***
 
+**7.2.2** Tabela de Endereços MAC
 
+🎯 Ideia Principal
+
+Um **switch Ethernet** constrói sua **tabela de endereços MAC** “aprendendo” automaticamente: **toda vez que ele recebe um quadro**, ele grava o **MAC de origem** junto com a **porta de entrada**. Depois, para encaminhar, ele olha o **MAC de destino**: se já souber a porta, envia **só para ela**; se não souber (unicast desconhecido), ele faz **flood** (envia para todas as portas, menos a de entrada). Com o tempo, as entradas “expiram” (aging) se não forem usadas.
+
+***
+
+1️⃣ Como o switch aprende (MAC Learning)
+
+*   Quando o switch recebe **qualquer quadro Ethernet**, a **primeira coisa** que ele faz é olhar o **MAC de origem**.
+*   Ele pergunta: “Esse MAC já está na minha tabela?”
+    *   Se **não estiver**, ele adiciona:  
+        **MAC de origem → porta por onde o quadro entrou**
+    *   Se **já estiver**, ele mantém/atualiza o registro (especialmente se o MAC aparecer em outra porta, o switch atualiza para a nova porta).
+
+💡 **Analogia:** o switch é como um **porteiro** anotando: “A pessoa AA-AA entrou pelo corredor 1”. Da próxima vez, ele já sabe para onde mandar algo destinado a ela.
+
+***
+
+2️⃣ Como o switch encaminha (Forwarding)
+
+Depois de aprender (MAC de origem), ele precisa entregar o quadro. Aí ele olha o **MAC de destino**:
+
+2.1) Se o MAC de destino **está na tabela** (unicast conhecido)
+
+*   Ele envia o quadro **somente para a porta correta** (filtrando as outras portas).
+*   Isso reduz tráfego desnecessário e melhora desempenho.
+
+💡 **Analogia:** o porteiro sabe que “DD-DD mora no corredor 4”, então manda a encomenda **só** para o corredor 4.
+
+2.2) Se o MAC de destino **não está na tabela** (unicast desconhecido)
+
+*   Isso é chamado de **unknown unicast** (unicast desconhecido).
+*   O switch não sabe por qual porta o destino está, então ele faz **flood**:  
+    **envia o quadro por todas as portas, exceto a porta de entrada**.
+
+💡 **Analogia:** o porteiro ainda não sabe onde mora “DD-DD”, então ele manda um aviso para **todos os corredores**, menos o corredor de onde o aviso veio.
+
+***
+
+3️⃣ O que acontece com os hosts quando recebem o “flood”
+
+No exemplo do vídeo (H1 → H4):
+
+*   H1 envia um quadro com:
+    *   **Origem:** AA-AA
+    *   **Destino:** DD-DD
+*   O switch aprende: **AA-AA está na porta Fa0/1**.
+*   Como **DD-DD ainda não existe na tabela**, ele faz flood.
+
+Aí:
+
+*   H2 recebe o quadro e compara o **MAC de destino** com o MAC dele:
+    *   “Não é para mim” → **descarta/ignora**
+*   H3 faz o mesmo → **ignora**
+*   H4 compara e vê:
+    *   “É para mim (DD-DD)” → **aceita o quadro**
+
+💡 **Analogia:** todo mundo no prédio recebe o aviso, mas só quem tem o “nome” igual ao destinatário abre e lê.
+
+***
+
+4️⃣ A resposta do H4 “fecha a tabela” (aprendizado do DD-DD)
+
+Quando H4 responde para H1:
+
+*   H4 envia quadro com:
+    *   **Origem:** DD-DD
+    *   **Destino:** AA-AA
+*   O switch recebe pela porta de H4 (ex.: Fa0/4) e aprende:  
+    **DD-DD está na porta Fa0/4**
+*   Agora ele procura o destino AA-AA:
+    *   já sabe que **AA-AA está na Fa0/1**
+*   Então ele encaminha **só** para a Fa0/1.
+
+✅ Resultado: depois desse “vai e volta”, o switch passa a saber onde estão **AA-AA e DD-DD**, e os próximos quadros **não precisam mais de flood**.
+
+💡 **Analogia:** agora o porteiro já sabe onde moram os dois moradores. A partir daí, ele entrega direto.
+
+***
+
+5️⃣ O que muda na terceira vez (H1 → H4 de novo)
+
+Quando H1 envia novamente para H4:
+
+*   O switch vê **origem AA-AA** → já conhece (sem novidade).
+*   O switch vê **destino DD-DD** → agora conhece (Fa0/4).
+*   Então ele envia **somente** pela Fa0/4.
+
+✅ Ou seja: o primeiro envio teve flood porque o destino era desconhecido, mas depois que o switch aprendeu, ele passou a fazer **encaminhamento direcionado**.
+
+***
+
+6️⃣ “Tempo de vida” das entradas (Aging)
+
+*   O vídeo comenta que o switch mantém essas entradas por cerca de **5 minutos** (tempo típico).
+*   Se um MAC fica um tempo sem aparecer (sem tráfego), o switch pode **remover** a entrada para manter a tabela atualizada.
+
+💡 **Analogia:** o porteiro apaga anotações antigas se faz muito tempo que ninguém vê aquele morador — para não usar informação desatualizada.
+
+***
+
+🧩 Conceito Fundamental
+
+O switch aprende e encaminha assim:
+
+1.  **Aprende pelo MAC de origem** (anota “quem está em qual porta”).
+2.  **Encaminha pelo MAC de destino**:
+    *   se conhece → **envia só na porta certa** (filtra)
+    *   se não conhece → **flood** (todas as portas menos a de entrada)
+3.  Com o tempo, entradas **expiram** se não forem usadas.
+
+***
+
+📌 Em resumo
+
+*   **Switch (Camada 2)** usa **endereços MAC** para tomar decisões.
+*   Ele **constrói a tabela MAC automaticamente** olhando o **MAC de origem** dos quadros que chegam.
+*   **Destino desconhecido** → faz **flood** (unknown unicast).
+*   **Destino conhecido** → encaminha apenas para a **porta correta** (filtro).
+*   Entradas da tabela ficam por um tempo (em torno de **5 min**) e depois podem ser removidas se não houver tráfego.
+
+***
