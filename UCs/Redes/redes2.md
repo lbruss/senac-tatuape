@@ -233,3 +233,92 @@ Sem esse empacotamento por camadas, a rede não saberia **para onde enviar**, **
 
 **7.2.1** Switches Ethernet
 
+🎯 Ideia Principal
+
+**Switch Ethernet** é um equipamento que trabalha na **Camada 2 (Enlace de Dados) do modelo OSI** e toma decisões de encaminhamento usando o que está no **cabeçalho do quadro Ethernet**, principalmente o **MAC de destino**. Para isso, ele usa uma **tabela de endereços MAC** (também chamada de “MAC Address Table”) que diz: *“este MAC está naquela porta”*. Assim, o switch envia o quadro **só para a porta correta**, em vez de mandar para todo mundo.
+
+***
+
+1️⃣ Onde o switch atua (Camada 2) e por quê
+
+*   O switch opera na **Camada 2**, porque ele olha informações do **quadro Ethernet** (que é da Camada 2).
+*   A principal informação usada para decidir o encaminhamento é o **endereço MAC de destino**.
+
+💡 **Analogia:** o switch é como um “porteiro do prédio” que decide em qual corredor entregar a encomenda olhando o **apartamento de destino** (MAC).
+
+***
+
+2️⃣ A tabela MAC (o “mapa” do switch)
+
+*   O switch mantém uma **tabela MAC** que relaciona:  
+    **MAC do dispositivo ↔ porta do switch**
+*   No vídeo, essa tabela já aparece “pronta” (preenchida), e ele diz que depois você vai aprender **como ela é construída**.
+
+💡 **Analogia:** é como a lista da portaria: “Fulano mora no apê 304 (porta X)”.
+
+***
+
+3️⃣ Exemplo do vídeo (H1 → H4) passo a passo
+
+No exemplo aparecem 4 hosts: **H1, H2, H3, H4**, cada um com um MAC “abreviado” só para ficar fácil visualizar:
+
+*   H1 = **AAAA**
+*   H4 = **DDDD**
+
+3.1) H1 monta o quadro Ethernet
+
+*   **MAC de origem (Source MAC)** = AAAA (o próprio H1)
+*   **MAC de destino (Destination MAC)** = DDDD (o H4)
+
+💡 **Analogia:** remetente = quem envia; destinatário = quem vai receber.
+
+3.2) O quadro chega no switch
+
+*   O quadro entra no switch por uma porta (no vídeo: **FastEthernet 0/1**).
+
+3.3) O switch consulta a tabela MAC
+
+*   Ele lê o **MAC de destino = DDDD**
+*   Procura DDDD na tabela e encontra que ele está na porta **FastEthernet 0/4**.
+
+3.4) O switch encaminha somente para a porta correta
+
+*   Em vez de mandar para todas as portas, ele envia **apenas** pela porta **Fa0/4**, na direção do H4.
+
+💡 **Analogia:** é como entregar uma carta só no apartamento certo, e não distribuir cópia para o prédio inteiro.
+
+***
+
+## 4️⃣ Por que isso melhora a rede
+
+Quando o switch encaminha só para a porta do destino:
+
+*   reduz “bagunça” na rede (menos tráfego desnecessário)
+*   melhora desempenho, porque cada dispositivo recebe o que precisa receber
+*   evita que todo mundo “ouça” tudo (mais organização)
+
+💡 **Analogia:** em vez de gritar uma mensagem para todo o bairro, você manda direto para a casa certa.
+
+***
+
+🧩 Conceito Fundamental
+
+O switch funciona assim, em essência:
+
+1.  Recebe um **quadro Ethernet**.
+2.  Lê o **MAC de destino**.
+3.  Procura na **tabela MAC** qual porta leva até esse MAC.
+4.  Encaminha o quadro **somente** por essa porta.
+
+***
+
+📌 Em resumo
+
+*   Switch Ethernet opera na **Camada 2**.
+*   Ele decide usando o **cabeçalho do quadro Ethernet**, principalmente o **MAC de destino**.
+*   Ele usa uma **tabela MAC** para saber em qual porta está o destino.
+*   Exemplo: H1 (AAAA) → H4 (DDDD) → switch consulta tabela → envia só pela porta onde está DDDD.
+
+***
+
+
