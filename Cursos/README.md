@@ -1,1 +1,3 @@
-# Neste repositório vou colocar os cursos que vou fazendo a parte do Técnico de Informática
+Neste repositório vou colocar alguns cursos que vou
+
+fazendo em paralelo ao curso Técnico de Informática
