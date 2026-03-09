@@ -1,4 +1,4 @@
-# Modelo de Documentação/Portfólio
+# Modelo exemplo de Documentação/Portfólio
 
 # Laboratório de Redes 01 - Projeto de Rede Local
 Projeto desenvolvido na disciplina de Redes de Computadores no Curso Técnico de Informática do SENAC.
