@@ -67,7 +67,6 @@ enable
 configure terminal
 int range gigabitEthernet 0/1-2
 channel-group 1 mode passive
-show etherchannel show interfaces etherchannel
 exit
 exit
 write memory
