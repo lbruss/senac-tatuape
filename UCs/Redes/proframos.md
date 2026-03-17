@@ -14,7 +14,6 @@ configure terminal
 enable password SUASENHA
 end
 write memory
-
 ```
 
 
@@ -26,11 +25,13 @@ A senha fica armazenada de forma menos protegida
 
 Método Mais Seguro (Recomendado)
 
+```
 enable
 configure terminal
 enable secret SUASENHA
 end
 write memory
+```
 
 A senha é armazenada de forma criptografada
 
@@ -57,7 +58,6 @@ no enable password
 end
 write memory
 reload
-
 ```
 
 ---
@@ -71,7 +71,6 @@ no enable secret
 end
 write memory
 reload
-
 ```
 
 ---
@@ -140,7 +139,6 @@ interface range gigabitEthernet 0/1-2
 channel-group 1 mode active
 end
 write memory
-
 ```
 
 ---
@@ -154,7 +152,6 @@ interface range gigabitEthernet 0/1-2
 channel-group 1 mode passive
 end
 write memory
-
 ```
 
 ---
@@ -185,14 +182,12 @@ Funciona apenas em equipamentos Cisco
 
 ```
 show etherchannel summary
-
 ```
 
 ou
 
 ```
 show interfaces etherchannel
-
 ```
 
 Esses comandos mostram:
