@@ -1,85 +1,239 @@
-Colocar senha no Switch
-Jeito menos seguro:
+# Segurança e Configurações no Switch
+
+## Senha de Acesso ao Modo Privilegiado
+
+O modo privilegiado (`enable`) dá acesso total ao switch, por isso precisa ser protegido.
+
+---
+
+Método Menos Seguro
+
+```
+enable
+configure terminal
+enable password SUASENHA
+end
+write memory
+
+```
+
+
+A senha fica armazenada de forma menos protegida
+
+
+
+---
+
+Método Mais Seguro (Recomendado)
 
 enable
 configure terminal
-enable password COLOCASENHA
-exit
+enable secret SUASENHA
+end
 write memory
 
-Jeito mais seguro:
+A senha é armazenada de forma criptografada
 
+
+Analogia:
+
+enable password → senha escrita em papel
+
+enable secret → senha guardada em um cofre
+
+
+
+---
+
+**Remover Senha**
+
+Se usou enable password:
+
+
+```
 enable
 configure terminal
-enable secret COLOCASENHA
-exit
-write memory
-
-Se voce usou o comando password:
-
-enable
-configure terminal 
 no enable password
-exit
+end
 write memory
 reload
 
-Se voce usou o comando secret:
+```
 
-enable
-configure terminal 
-no enable secret
-exit
-write memory
-reload
+---
 
-Para colocar senha ao colocar o cabo console no notebook/computador e no Switch:
+Se usou enable secret:
 
+```
 enable
 configure terminal
-line con 0
-password COLOCASENHA
-login
-exit
-exit
+no enable secret
+end
 write memory
+reload
 
-Combinação de teclas para caso travar o Switch ou algum outro host:
+```
+
+---
+
+## Senha no Console (Acesso Físico)
+
+Protege o acesso quando alguém conecta um cabo console ao switch.
+
+```
+enable
+configure terminal
+line console 0
+password SUASENHA
+login
+end
+write memory
+```
+
+Analogia:
+É como colocar uma senha na porta de entrada física do equipamento.
+
+
+---
+
+**Atalho Importante**
+
+Se o terminal travar durante comandos:
 
 Ctrl + Shift + 6
 
-EtherChannel ou Link aggregation (os dois são a mesma coisa)
+Interrompe processos (ex: ping travado)
 
-Comandos:
 
-No primeiro Switch:
+---
+
+# EtherChannel (Link Aggregation)
+
+O EtherChannel permite juntar várias portas físicas em uma única conexão lógica.
+
+
+---
+
+**Vantagens**
+
+Aumenta a velocidade
+
+Melhora a estabilidade
+
+Cria redundância (se um cabo falhar, outro assume)
+
+
+Analogia:
+É como transformar várias ruas em uma avenida larga, permitindo mais fluxo de carros (dados).
+
+
+---
+
+# Configuração do EtherChannel
+
+* Switch 1
+
+```
 enable
 configure terminal
-int range gigabitEthernet 0/1-2
+interface range gigabitEthernet 0/1-2
 channel-group 1 mode active
-exit
-exit
-write memory 
-
-No segundo Switch:
-
-enable
-configure terminal
-int range gigabitEthernet 0/1-2
-channel-group 1 mode passive
-exit
-exit
+end
 write memory
 
-Protocolos para fazer o EtherChannel/Link Aggregation:
+```
 
-LACP - Para qualquer marca de Switch 
-PAgP - Apenas para Switchs da Cisco
+---
 
-Comando para ver as configurações do EtherChannel/Link Aggregation:
+* Switch 2
 
-show etherchannel
+```
+enable
+configure terminal
+interface range gigabitEthernet 0/1-2
+channel-group 1 mode passive
+end
+write memory
 
-Ou
+```
 
+---
+
+# Protocolos do EtherChannel
+
+* LACP (Link Aggregation Control Protocol)
+
+Padrão aberto (IEEE 802.3ad / 802.1AX)
+
+Funciona com diversas marcas
+
+
+
+---
+
+* PAgP (Port Aggregation Protocol)
+
+Proprietário da Cisco
+
+Funciona apenas em equipamentos Cisco
+
+
+
+---
+
+## Verificar Configuração
+
+```
+show etherchannel summary
+
+```
+
+ou
+
+```
 show interfaces etherchannel
+
+```
+
+Esses comandos mostram:
+
+* Portas agregadas
+
+* Status do canal
+
+* Tipo de protocolo usado
+
+
+
+---
+
+**Informação Adicional**
+
+Para o EtherChannel funcionar corretamente, as interfaces devem ter:
+
+* Mesma velocidade
+
+* Mesmo duplex
+
+* Mesma VLAN (em access)
+
+* Mesma configuração trunk (se for trunk)
+
+
+Caso contrário, o canal pode não funcionar corretamente.
+
+
+---
+
+# Conclusão
+
+Com essas configurações você consegue:
+
+Proteger o switch com senha segura
+
+Controlar acesso físico via console
+
+Utilizar agregação de links para melhorar desempenho
+
+
+Esses recursos são essenciais para redes mais seguras, rápidas e profissionais.
