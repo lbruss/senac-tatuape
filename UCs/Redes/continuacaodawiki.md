@@ -1,4 +1,4 @@
-# 🌐 Roteadores — Conceitos e Configuração Básica (Cisco / Packet Tracer)
+# Roteadores — Conceitos e Configuração Básica (Cisco / Packet Tracer)
 
 Os **roteadores** são dispositivos responsáveis por **conectar redes diferentes** e encaminhar os dados entre elas.  
 Eles funcionam como **pontes entre redes**, permitindo que dispositivos locais acessem outras redes ou a internet.
@@ -8,7 +8,7 @@ Se uma rede local fosse uma cidade, o roteador seria a **rodovia que liga essa c
 
 ---
 
-# 🏠 Roteador Doméstico
+## Roteador Doméstico
 
 O **roteador doméstico** é usado em casas e pequenos escritórios.
 
@@ -32,7 +32,7 @@ Todos usam o **mesmo acesso à internet** através do roteador.
 
 ---
 
-# 🏢 Roteador Empresarial
+## Roteador Empresarial
 
 Os **roteadores empresariais** são mais robustos e possuem recursos avançados.
 
@@ -52,7 +52,7 @@ Eles são comuns em:
 
 ---
 
-# 🏗️ Data Center
+## Data Center
 
 Um **data center** é um ambiente onde ficam concentrados:
 
@@ -68,18 +68,18 @@ Um data center funciona como uma **grande central de operações da internet**, 
 
 ---
 
-# 🔌 Conexões Serial — DCE e DTE
+## Conexões Serial — DCE e DTE
 
 Em algumas redes (especialmente em laboratórios e simulações), roteadores podem se conectar através de **interfaces seriais**.
 
 Existem dois lados:
 
-### 🔹 DCE (Data Communication Equipment)
+**DCE (Data Communication Equipment)**
 
 - É o dispositivo que **fornece o clock da comunicação**
 - Controla a velocidade da conexão
 
-### 🔹 DTE (Data Terminal Equipment)
+**DTE (Data Terminal Equipment)**
 
 - É o dispositivo que **recebe o clock**
 - Apenas participa da comunicação
@@ -92,7 +92,7 @@ Imagine uma dança:
 
 ---
 
-# ⚡ Velocidade de Link
+## Velocidade de Link
 
 Em alguns cenários, links podem ter velocidades específicas.
 
@@ -108,7 +108,7 @@ Esse tipo de velocidade já foi comum em:
 
 ---
 
-# 📡 Protocolo de Roteamento — RIP
+## Protocolo de Roteamento — RIP
 
 O **RIP (Routing Information Protocol)** é um dos protocolos de roteamento mais antigos.
 
@@ -129,21 +129,21 @@ Embora ainda seja usado para estudo, hoje existem protocolos mais avançados, co
 
 ---
 
-# ⚙️ 5 Passos Básicos para Configurar um Roteador
+## 5 Passos Básicos para Configurar um Roteador
 
-1️⃣ Definir o **nome do roteador**  
-2️⃣ Configurar a **rede LAN**  
-3️⃣ Configurar a **rede WAN**  
-4️⃣ Definir o **protocolo de roteamento**  
-5️⃣ **Salvar a configuração**
+1. Definir o **nome do roteador**  
+2. Configurar a **rede LAN**  
+3. Configurar a **rede WAN**  
+4. Definir o **protocolo de roteamento**  
+5. **Salvar a configuração**
 
 ---
 
-# 🖥️ Comandos Básicos de Configuração (Cisco)
+# Comandos Básicos de Configuração (Cisco)
 
-## 🔐 Entrar no modo privilegiado
+## Entrar no modo privilegiado
 
-```bash
+```
 Router> enable
 
 
