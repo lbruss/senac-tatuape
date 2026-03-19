@@ -285,6 +285,151 @@ SP# copy running-config startup-config
 
 Isso garante que as configurações não sejam perdidas após reiniciar o roteador.
 
+---
+
+# Comandos de Configuração no Roteador 2 (Cisco)
+
+**Entrar no modo privilegiado**
+
+```
+Router> enable
+```
+
+---
+
+**Entrar no modo de configuração**
+
+```
+Router# configure terminal
+```
+
+---
+
+**Definir o Nome do Roteador**
+
+```
+Router(config)# hostname SP 
+```
+
+Resultado:
+
+```
+SP(config)#
+```
+
+---
+
+**Configurar Interface LAN**
+
+```
+SP(config)# interface fastEthernet 0/0
+```
+
+**Adicionar descrição:**
+
+```
+SP(config-if)# description REDE_LOCAL
+```
+
+**Definir endereço IP:**
+
+```
+SP(config-if)# ip address 192.168.0.1 255.255.255.0
+```
+
+**Ativar interface:**
+
+```
+SP(config-if)# no shutdown
+```
+
+**Sair da interface:**
+
+```
+SP(config-if)# exit
+```
+
+---
+
+**Configurar Interface WAN (Serial)**
+
+```
+SP(config)# interface serial 0/0
+```
+
+**Adicionar descrição:**
+
+```
+SP(config-if)# description LINK_ENTRE_ROTEADORES
+```
+
+**Definir endereço IP:**
+
+```
+SP(config-if)# ip address 10.0.0.1 255.255.255.252
+```
+
+**Ativar interface:**
+
+```
+SP(config-if)# no shutdown
+```
+
+**Definir clock (caso seja DCE):**
+
+```
+SP(config-if)# clock rate 256000
+```
+
+***Definir largura de banda:**
+
+```
+SP(config-if)# bandwidth 256
+```
+
+**Sair:**
+
+```
+SP(config-if)# exit
+```
+
+---
+
+**Configurar Protocolo RIP**
+
+```
+SP(config)# router rip
+```
+
+**Definir redes participantes:**
+
+```
+SP(config-router)# network 192.168.0.0
+```
+
+```
+SP(config-router)# network 10.0.0.0
+```
+
+**Sair da configuração:**
+
+```
+SP(config-router)# end
+```
+
+ou
+
+```
+Ctrl + Z
+```
+
+---
+
+**Salvar Configuração**
+
+```
+SP# copy running-config startup-config
+```
 
 ---
 
