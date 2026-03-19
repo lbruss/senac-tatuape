@@ -308,13 +308,13 @@ Router# configure terminal
 **Definir o Nome do Roteador**
 
 ```
-Router(config)# hostname SP 
+Router(config)# hostname RJ
 ```
 
 Resultado:
 
 ```
-SP(config)#
+RJ(config)#
 ```
 
 ---
@@ -322,31 +322,31 @@ SP(config)#
 **Configurar Interface LAN**
 
 ```
-SP(config)# interface fastEthernet 0/0
+RJ(config)# interface fastEthernet 0/1
 ```
 
 **Adicionar descrição:**
 
 ```
-SP(config-if)# description REDE_LOCAL
+RJ(config-if)# description QUALQUERUMASEQUISER
 ```
 
 **Definir endereço IP:**
 
 ```
-SP(config-if)# ip address 192.168.0.1 255.255.255.0
+RJ(config-if)# ip address 192.168.10.1 255.255.255.0
 ```
 
 **Ativar interface:**
 
 ```
-SP(config-if)# no shutdown
+RJ(config-if)# no shutdown
 ```
 
 **Sair da interface:**
 
 ```
-SP(config-if)# exit
+RJ(config-if)# exit
 ```
 
 ---
@@ -354,13 +354,13 @@ SP(config-if)# exit
 **Configurar Interface WAN (Serial)**
 
 ```
-SP(config)# interface serial 0/0
+RJ(config)# interface serial 0/1
 ```
 
 **Adicionar descrição:**
 
 ```
-SP(config-if)# description LINK_ENTRE_ROTEADORES
+SP(config-if)# description QUALQUERUMSEQUISER
 ```
 
 **Definir endereço IP:**
