@@ -1,6 +1,6 @@
-# Reflexo Arduino
+# Theremin Ultrassônico com Arduino
 
-**Este projeto é um jogo de reflexo com Arduino. O sistema acende um LED após um tempo aleatório e mede quanto tempo o jogador demora para apertar o botão. Dependendo da velocidade do jogador, o sistema indica vitória ou derrota com LEDs e sons. O jogo também possui níveis de dificuldade, que exigem reflexos cada vez mais rápidos.**
+Neste projeto criamos um instrumento eletrônico inspirado no Theremin. O sensor ultrassônico mede a distância de um objeto e o Arduino transforma essa distância em diferentes frequências sonoras no buzzer, permitindo controlar o som apenas movimentando a mão ou um objeto no ar.
 
 ## Projeto Arduino Day
 
@@ -21,37 +21,24 @@
 
 * Cabo USB
 * Arduino Uno
-* 11 Fios Jumper
-* 3 LEDs
+* Fios Jumper
 * Buzzer
 * Prontoboard
-* 3 Resistores (330Ω)
-* Push Buttons
 
 # Códigos feitos no Arduino para realizar o projeto
 
 ```ino
-int ledInicio = 8;
-int ledVerde = 6;
-int ledVermelho = 7;
+int trig = 9;
+int echo = 10;
+int buzzer = 8;
 
-int botaoJogo = 2;
-
-int buzzer = 9;
-
-unsigned long tempoInicio;
-unsigned long tempoReacao;
-
-int nivel = 1;
+long duracao;
+int distancia;
 
 void setup() {
 
-  pinMode(ledInicio, OUTPUT);
-  pinMode(ledVerde, OUTPUT);
-  pinMode(ledVermelho, OUTPUT);
-
-  pinMode(botaoJogo, INPUT_PULLUP);
-
+  pinMode(trig, OUTPUT);
+  pinMode(echo, INPUT);
   pinMode(buzzer, OUTPUT);
 
   Serial.begin(9600);
@@ -60,76 +47,41 @@ void setup() {
 
 void loop() {
 
-  digitalWrite(ledInicio, LOW);
-  digitalWrite(ledVerde, LOW);
-  digitalWrite(ledVermelho, LOW);
+  // Envia pulso ultrassônico
+  digitalWrite(trig, LOW);
+  delayMicroseconds(2);
 
-  int tempoAleatorio = random(1000, 4000);
-  delay(tempoAleatorio);
+  digitalWrite(trig, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trig, LOW);
 
-  digitalWrite(ledInicio, HIGH);
+  // Recebe o tempo do eco
+  duracao = pulseIn(echo, HIGH);
 
-  tempoInicio = millis();
+  // Calcula a distância
+  distancia = duracao * 0.034 / 2;
 
-  while (digitalRead(botaoJogo) == HIGH) {
+  // Mostra no monitor serial
+  Serial.print("Distancia: ");
+  Serial.println(distancia);
+
+  // Limite mínimo
+  if (distancia < 20) {
+    distancia = 20;
   }
 
-  tempoReacao = millis() - tempoInicio;
-
-  Serial.print("Tempo de reação: ");
-  Serial.println(tempoReacao);
-
-  int tempoMaximo;
-
-  switch(nivel) {
-
-    case 1: tempoMaximo = 600; break;
-    case 2: tempoMaximo = 550; break;
-    case 3: tempoMaximo = 500; break;
-    case 4: tempoMaximo = 450; break;
-    case 5: tempoMaximo = 400; break;
-    case 6: tempoMaximo = 350; break;
-    case 7: tempoMaximo = 300; break;
-    case 8: tempoMaximo = 270; break;
-    case 9: tempoMaximo = 140; break;
-    default: tempoMaximo = 100; break;
-
+  // Limite máximo
+  if (distancia > 200) {
+    distancia = 200;
   }
 
-  if (tempoReacao < tempoMaximo) {
+  // Converte distância em som
+  int tom = map(distancia, 20, 200, 2000, 200);
 
-    digitalWrite(ledVerde, HIGH);
+  // Toca o som
+  tone(buzzer, tom);
 
-    tone(buzzer, 1200);
-    delay(200);
-    tone(buzzer, 1500);
-    delay(200);
-    noTone(buzzer);
-
-    Serial.println("Reflexo rápido!");
-
-    if (nivel < 10) {
-      nivel++;
-    }
-
-  } else {
-
-    digitalWrite(ledVermelho, HIGH);
-
-    tone(buzzer, 400);
-    delay(500);
-    noTone(buzzer);
-
-    Serial.println("Reflexo lento!");
-
-    nivel = 1;
-
-  }
-
-  Serial.print("Nível atual: ");
-  Serial.println(nivel);
-
-  delay(3000);
+  delay(30);
 
 }
 ```
@@ -138,7 +90,7 @@ void loop() {
 
 # O projeto (TinkerCad)
 
-<img width="819" height="766" alt="Captura de tela 2026-03-18 212448" src="https://github.com/user-attachments/assets/1397e113-0f80-414f-82ce-0fb40d8d9a53" />
+<img width="825" height="752" alt="image" src="https://github.com/user-attachments/assets/f355f1f5-8d40-4685-bfad-43590595773d" />
 
 ---
 
@@ -152,64 +104,49 @@ void loop() {
 
 ---
 
-# Pessoa 1 – Componentes e início do código
+# Pessoa 1 – Sensores e início do programa
 
-### Definição dos pinos
+## Definição dos pinos
 
 ```ino
-int ledInicio = 8;
-int ledVerde = 6;
-int ledVermelho = 7;
-
-int botaoJogo = 2;
-
-int buzzer = 9;
+int trig = 9;
+int echo = 10;
+int buzzer = 8;
 ```
 
 **Explicação:**
 
-Aqui o Arduino define **em quais pinos cada componente está conectado**.
+Aqui o Arduino define **onde cada componente está conectado**.
 
-* LED de início → pino **8**
-* LED verde → pino **6**
-* LED vermelho → pino **7**
-* Botão → pino **2**
-* Buzzer → pino **9**
-
-Isso permite que o Arduino **controle esses componentes**.
+* `trig` → pino que **envia o sinal ultrassônico**
+* `echo` → pino que **recebe o sinal de volta**
+* `buzzer` → pino que **produz o som**
 
 ---
 
-### Variáveis do jogo
+## Variáveis de medição
 
 ```ino
-unsigned long tempoInicio;
-unsigned long tempoReacao;
-
-int nivel = 1;
+long duracao;
+int distancia;
 ```
 
 **Explicação:**
 
-Essas variáveis guardam informações do jogo.
+Essas variáveis guardam informações da medição.
 
-* `tempoInicio` → momento em que o LED acende
-* `tempoReacao` → tempo que o jogador demorou para apertar o botão
-* `nivel` → nível atual de dificuldade
+* `duracao` → tempo que o som demorou para ir e voltar
+* `distancia` → distância calculada entre o sensor e o objeto
 
 ---
 
-### Função setup()
+## Função setup()
 
 ```ino
 void setup() {
 
-  pinMode(ledInicio, OUTPUT);
-  pinMode(ledVerde, OUTPUT);
-  pinMode(ledVermelho, OUTPUT);
-
-  pinMode(botaoJogo, INPUT_PULLUP);
-
+  pinMode(trig, OUTPUT);
+  pinMode(echo, INPUT);
   pinMode(buzzer, OUTPUT);
 
   Serial.begin(9600);
@@ -219,143 +156,130 @@ void setup() {
 
 **Explicação:**
 
-O `setup()` roda **uma única vez quando o Arduino liga**.
+O `setup()` roda **uma vez quando o Arduino liga**.
 
-Aqui ele:
+Ele define:
 
-* define **LEDs e buzzer como saída**
-* define o **botão como entrada**
-* ativa o **Monitor Serial** para mostrar informações
+* `trig` → saída
+* `echo` → entrada
+* `buzzer` → saída
+
+Também ativa o **Monitor Serial**, que mostra a distância medida.
 
 ---
 
-# Pessoa 2 – Funcionamento do jogo
+# Pessoa 2 – Funcionamento do instrumento
 
-### Espera aleatória
+## Envio do pulso ultrassônico
 
 ```ino
-int tempoAleatorio = random(1000, 4000);
-delay(tempoAleatorio);
+digitalWrite(trig, LOW);
+delayMicroseconds(2);
+
+digitalWrite(trig, HIGH);
+delayMicroseconds(10);
+digitalWrite(trig, LOW);
 ```
 
 **Explicação:**
 
-O Arduino espera **entre 2 e 5 segundos**.
+O sensor envia uma **onda de ultrassom**.
 
-Isso evita que o jogador **preveja quando o LED vai acender**.
+Essa onda viaja pelo ar até bater em um objeto e voltar.
 
 ---
 
-### Início do jogo
+## Recebendo o eco
 
 ```ino
-digitalWrite(ledInicio, HIGH);
-
-tempoInicio = millis();
+duracao = pulseIn(echo, HIGH);
 ```
 
 **Explicação:**
 
-* O **LED acende**, indicando que o jogador deve apertar o botão.
-* `millis()` começa a contar o tempo em **milissegundos**.
+Aqui o Arduino mede **quanto tempo a onda demorou para voltar**.
+
+Esse tempo é usado para descobrir a distância.
 
 ---
 
-### Espera o botão ser pressionado
+## Cálculo da distância
 
 ```ino
-while (digitalRead(botaoJogo) == HIGH) {
+distancia = duracao * 0.034 / 2;
+```
+
+**Explicação:**
+
+Essa fórmula transforma o tempo em **centímetros**.
+
+* `0.034` → velocidade do som no ar
+* `/2` → porque o som vai **até o objeto e volta**
+
+---
+
+## Mostrar a distância
+
+```ino
+Serial.print("Distancia: ");
+Serial.println(distancia);
+```
+
+**Explicação:**
+
+Mostra no computador **quantos centímetros o objeto está do sensor**.
+
+---
+
+## Limite de distância
+
+```ino
+if (distancia < 5) {
+  distancia = 5;
+}
+
+if (distancia > 50) {
+  distancia = 50;
 }
 ```
 
 **Explicação:**
 
-O Arduino **fica esperando até o jogador apertar o botão**.
+Essas linhas evitam erros do sensor.
+
+Elas garantem que a distância fique entre **5 cm e 50 cm**, que é a faixa ideal do sensor.
 
 ---
 
-### Cálculo do tempo de reação
+## Transformando distância em som
 
 ```ino
-tempoReacao = millis() - tempoInicio;
+int tom = map(distancia, 5, 50, 2000, 200);
 ```
 
 **Explicação:**
 
-Aqui o Arduino calcula:
+Aqui acontece a parte mais importante.
 
-**tempo atual – tempo que o LED acendeu**
+O Arduino **transforma distância em frequência sonora**.
 
-Assim ele descobre **quanto tempo o jogador demorou**.
+| Distância | Som       |
+| --------- | --------- |
+| perto     | som agudo |
+| longe     | som grave |
 
 ---
 
-### Sistema de níveis
+## Produção do som
 
 ```ino
-switch(nivel) {
-
-case 1: tempoMaximo = 600; break;
-case 2: tempoMaximo = 550; break;
-case 3: tempoMaximo = 500; break;
+tone(buzzer, tom);
 ```
 
 **Explicação:**
 
-Cada nível tem um **tempo máximo para reagir**.
+O buzzer toca o som com a frequência calculada.
 
-Quanto maior o nível:
-
-➡ menor o tempo permitido
-➡ mais difícil fica o jogo
-
----
-
-### Verificação do resultado
-
-```ino
-if (tempoReacao < tempoMaximo)
-```
-
-**Explicação:**
-
-O Arduino verifica se o jogador foi **rápido o suficiente**.
-
-Se foi rápido:
-
-* LED verde acende
-* nível aumenta
-
-Se foi lento:
-
-* LED vermelho acende
-* jogo reinicia
-
----
-
-### Sons do buzzer
-
-Vitória:
-
-```ino
-tone(buzzer, 1200);
-```
-
-Derrota:
-
-```ino
-tone(buzzer, 400);
-```
-
-**Explicação:**
-
-* Som **agudo** → vitória
-* Som **grave** → derrota
-
-Isso ajuda a identificar o resultado **sem olhar para os LEDs**.
-
----
-
-> "Este projeto é um jogo de reflexo com Arduino. O sistema acende um LED após um tempo aleatório e mede quanto tempo o jogador demora para apertar o botão. Dependendo da velocidade do jogador, o sistema indica vitória ou derrota com LEDs e sons. O jogo também possui níveis de dificuldade, que exigem reflexos cada vez mais rápidos."
+Assim, quando você move a mão ou um objeto, **o som muda**.
 
 ---
