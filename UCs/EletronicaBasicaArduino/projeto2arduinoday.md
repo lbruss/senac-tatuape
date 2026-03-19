@@ -136,6 +136,18 @@ void loop() {
 
 ---
 
+# O projeto (TinkerCad)
+
+<img width="819" height="766" alt="Captura de tela 2026-03-18 212448" src="https://github.com/user-attachments/assets/1397e113-0f80-414f-82ce-0fb40d8d9a53" />
+
+---
+
+# O projeto (Real)
+
+
+
+---
+
 # Explicação dos códigos:
 
 ---
