@@ -147,7 +147,7 @@ void tocaBuzzer() {
 
 # O projeto (TnkerCad)
 
-<img width="819" height="766" alt="Captura de tela 2026-03-18 212448" src="https://github.com/user-attachments/assets/1397e113-0f80-414f-82ce-0fb40d8d9a53" />
+<img width="1054" height="774" alt="Captura de tela 2026-03-18 212842" src="https://github.com/user-attachments/assets/3cdb3d43-62e2-440d-91a5-149d0355e039" />
 
 ---
 
