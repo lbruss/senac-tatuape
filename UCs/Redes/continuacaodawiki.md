@@ -334,7 +334,7 @@ RJ(config-if)# description QUALQUERUMASEQUISER
 **Definir endereço IP:**
 
 ```
-RJ(config-if)# ip address 192.168.10.1 255.255.255.0
+RJ(config-if)# ip address 192.168.10.24 255.255.255.0
 ```
 
 **Ativar interface:**
@@ -360,19 +360,19 @@ RJ(config)# interface serial 0/1
 **Adicionar descrição:**
 
 ```
-SP(config-if)# description QUALQUERUMSEQUISER
+RJ(config-if)# description QUALQUERUMSEQUISER
 ```
 
 **Definir endereço IP:**
 
 ```
-SP(config-if)# ip address 10.0.0.1 255.255.255.252
+RJ(config-if)# ip address 20.0.0.1 255.0.0.0
 ```
 
 **Ativar interface:**
 
 ```
-SP(config-if)# no shutdown
+RJ(config-if)# no shutdown
 ```
 
 **Definir clock (caso seja DCE):**
@@ -384,13 +384,13 @@ SP(config-if)# clock rate 256000
 ***Definir largura de banda:**
 
 ```
-SP(config-if)# bandwidth 256
+RJ(config-if)# bandwidth 256
 ```
 
 **Sair:**
 
 ```
-SP(config-if)# exit
+RJ(config-if)# exit
 ```
 
 ---
@@ -398,23 +398,23 @@ SP(config-if)# exit
 **Configurar Protocolo RIP**
 
 ```
-SP(config)# router rip
+RJ(config)# router rip
 ```
 
 **Definir redes participantes:**
 
 ```
-SP(config-router)# network 192.168.0.0
+RJ(config-router)# network 192.168.0.0
 ```
 
 ```
-SP(config-router)# network 10.0.0.0
+RJ(config-router)# network 20.0.0.0
 ```
 
 **Sair da configuração:**
 
 ```
-SP(config-router)# end
+RJ(config-router)# end
 ```
 
 ou
@@ -428,7 +428,7 @@ Ctrl + Z
 **Salvar Configuração**
 
 ```
-SP# copy running-config startup-config
+RJ# copy running-config startup-config
 ```
 
 ---
