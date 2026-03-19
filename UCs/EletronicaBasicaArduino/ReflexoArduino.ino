@@ -31,7 +31,7 @@ void loop() {
   digitalWrite(ledVerde, LOW);
   digitalWrite(ledVermelho, LOW);
 
-  int tempoAleatorio = random(2000, 5000);
+  int tempoAleatorio = random(1000, 4000);
   delay(tempoAleatorio);
 
   digitalWrite(ledInicio, HIGH);
