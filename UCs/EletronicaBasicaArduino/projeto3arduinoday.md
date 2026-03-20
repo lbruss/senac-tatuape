@@ -22,11 +22,11 @@ Neste projeto criamos um dado eletrônico usando Arduino. Quando o botão é pre
 * Cabo USB
 * Arduino Uno
 * Fios jumper
-* 4 LEDs
+* 6 LEDs
 * Buzzer
 * Protoboard
-* 4 Resistores
-* 4 Push Buttons
+* 6 Resistores
+* Push Button
 
 ---
 
