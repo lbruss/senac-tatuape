@@ -83,6 +83,8 @@ void loop() {
 
 ---
 
+# Explicação dos códigos:
+
 # Pessoa 1 – Configuração do sistema
 
 ## Lista de LEDs
