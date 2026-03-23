@@ -17,7 +17,11 @@
 
 **Lista de materiais utilizados:**
 
-
+* Cabo USB
+* Arduino Uno
+* Fios jumper
+* 7 Resistores (330Ω)
+* 2 Push Buttons
 
 ---
 
@@ -141,7 +145,7 @@ void loop() {
 
 # O projeto
 
-
+<img width="998" height="767" alt="image" src="https://github.com/user-attachments/assets/849b18b9-8547-4d0e-bf42-e992b5774fd2" />
 
 ---
 
