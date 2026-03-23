@@ -20,7 +20,7 @@
 * Cabo USB
 * Arduino Uno
 * Fios jumper
-* 6 Resistores
+* 6 Resistores (330Ω)
 * 5 LEDs
 * Buzzer
 * Push Buttons
