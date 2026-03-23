@@ -1,18 +1,18 @@
 // Distâncias (em cm)
-const int distancia_carro = 20;   // PERTO
-const int distancia_media = 40;   // MÉDIO
+const int distancia_objeto = 10;   // PERTO
+const int distancia_media = 20;   // MÉDIO
 
 // Sensor ultrassônico
 const int TRIG = 3;
 const int ECHO = 2;
 
 // LEDs
-const int ledGreen = 7;
-const int ledYellow = 4;
-const int ledRed = 8;
+const int ledGreen = 6;
+const int ledYellow = 5;
+const int ledRed = 4;
 
 // Buzzer
-const int buzzer = 9;
+const int buzzer = 7;
 
 // Variáveis do buzzer (sirene)
 float seno;
@@ -39,7 +39,7 @@ void loop() {
   int distancia = sensor_morcego(TRIG, ECHO);
 
   // LED Vermelho
-  if (distancia <= distancia_carro) {
+  if (distancia <= distancia_objeto) {
 
     Serial.print("PERTO: ");
     Serial.print(distancia);
