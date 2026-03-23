@@ -23,6 +23,7 @@
 * 6 Resistores
 * 5 LEDs
 * Buzzer
+* Push Buttons
 
 ---
 
