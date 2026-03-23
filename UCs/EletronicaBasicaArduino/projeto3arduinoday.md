@@ -17,7 +17,12 @@
 
 **Lista de materiais utilizados:**
 
-
+* Cabo USB
+* Arduino Uno
+* Fios jumper
+* LDR
+* 2 Resistores
+* LED
 
 ---
 
