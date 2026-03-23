@@ -156,67 +156,109 @@ void tocaBuzzer() {
 
 ---
 
-# Explicação dos códigos:
+# Explicação dos códigos e o que se pode falar na hora da explicação:
 
+# Pessoa 1 — O que é Arduino + início do código
 
-## Pessoa 1 — Configuração + Sensor
+## Introdução
 
-### 1. O que o código faz
+Olá, nós desenvolvemos um projeto utilizando **Arduino** e um **sensor ultrassônico** para detectar a distância de objetos.
 
-> O Arduino mede a distância de um objeto e usa LEDs e buzzer para indicar se ele está perto, médio ou longe.
+O Arduino é uma **plataforma eletrônica de código aberto** usada para criar projetos tecnológicos. Ele possui uma pequena placa com um **microcontrolador**, que funciona como um **pequeno computador** capaz de ler sensores e controlar componentes eletrônicos, como LEDs, motores e buzzer.
+
+Quando dizemos que ele é **código aberto**, significa que qualquer pessoa pode acessar os projetos, aprender com eles e modificar o código livremente.
+
+No nosso projeto, o Arduino mede a distância de um objeto e usa **três LEDs e um buzzer** para indicar se o objeto está **longe, em distância média ou perto**.
 
 ---
 
-## 2. Configurações iniciais
+# Configuração das distâncias
 
 ```ino
-const int distancia_carro = 10;
+const int distancia_objeto = 10;
 const int distancia_media = 20;
 ```
 
-Define as faixas de distância:
+Aqui nós definimos duas distâncias importantes:
 
-* até 10 cm → perto
-* até 20 cm → médio
+* **10 centímetros** → indica que o objeto está **perto**
+* **20 centímetros** → indica uma distância **média**
+
+Esses valores ajudam o programa a decidir qual LED deve acender.
 
 ---
 
-## 3. Definição dos pinos
+# Configuração do sensor
 
 ```ino
 const int TRIG = 3;
 const int ECHO = 2;
 ```
 
- Sensor ultrassônico:
+Essas linhas definem os pinos usados pelo **sensor ultrassônico**.
 
-* TRIG → envia o sinal
-* ECHO → recebe o eco
+O sensor possui dois pinos principais:
+
+* **TRIG** → envia um pulso de som ultrassônico
+* **ECHO** → recebe o eco desse som quando ele volta após bater em um objeto
+
+Esse funcionamento é parecido com o de um **morcego**, que usa o som para localizar objetos.
 
 ---
+
+# Configuração dos LEDs
 
 ```ino
-const int ledGreen = 7;
-const int ledYellow = 6;
-const int ledRed = 8;
-const int buzzer = 9;
+const int ledGreen = 6;
+const int ledYellow = 5;
+const int ledRed = 4;
 ```
 
-Componentes:
+Aqui definimos os pinos onde os LEDs estão conectados:
 
-* LEDs → indicam distância
-* Buzzer → faz som de alerta
+* LED verde → indica que está **seguro**
+* LED amarelo → indica **atenção**
+* LED vermelho → indica **perigo**
 
 ---
 
-## 4. Função `setup()`
+# Configuração do buzzer
+
+```ino
+const int buzzer = 7;
+```
+
+O **buzzer** é um pequeno componente que emite som.
+Ele será usado como **alerta sonoro** quando um objeto estiver muito perto.
+
+---
+
+# Variáveis usadas no som
+
+```ino
+float seno;
+int frequencia;
+```
+
+Essas variáveis são usadas para criar um **efeito de sirene**, fazendo o som do buzzer variar de frequência.
+
+---
+
+# Função de inicialização
 
 ```ino
 void setup() {
-  Serial.begin(9600);
 ```
 
-Inicia comunicação com o computador
+Essa função roda **uma única vez**, quando o Arduino é ligado.
+
+---
+
+```ino
+Serial.begin(9600);
+```
+
+Essa linha inicia a comunicação com o computador, permitindo que o Arduino mostre informações como a **distância medida**.
 
 ---
 
@@ -225,10 +267,10 @@ pinMode(TRIG, OUTPUT);
 pinMode(ECHO, INPUT);
 ```
 
-Define sensor:
+Aqui definimos como os pinos do sensor irão funcionar:
 
-* TRIG envia
-* ECHO recebe
+* **TRIG envia sinal** → saída
+* **ECHO recebe sinal** → entrada
 
 ---
 
@@ -236,73 +278,57 @@ Define sensor:
 pinMode(ledGreen, OUTPUT);
 pinMode(ledYellow, OUTPUT);
 pinMode(ledRed, OUTPUT);
+```
+
+Essas linhas dizem ao Arduino que os LEDs serão **dispositivos de saída**, ou seja, o Arduino vai controlar quando eles ligam ou desligam.
+
+---
+
+```ino
 pinMode(buzzer, OUTPUT);
 ```
 
-Define LEDs e buzzer como saída
+O buzzer também é configurado como **saída**, pois o Arduino irá enviar o sinal que gera o som.
 
 ---
 
-## 5. Função do sensor
+# Pessoa 2 — Funcionamento do sistema
 
-```ino
-int sensor_morcego(int pinotrig, int pinoecho)
+## Função principal
+
+```cpp
+void loop() {
 ```
 
-Mede a distância do objeto
+Essa é a função principal do programa.
+
+Ela roda **repetidamente enquanto o Arduino estiver ligado**, verificando constantemente a distância do objeto.
 
 ---
 
-### Como funciona:
-
-```ino
-digitalWrite(pinotrig, LOW);
-delayMicroseconds(2);
-digitalWrite(pinotrig, HIGH);
-delayMicroseconds(10);
-digitalWrite(pinotrig, LOW);
-```
-
-Envia um pulso ultrassônico
-
----
-
-```ino
-return pulseIn(pinoecho, HIGH) / 58;
-```
-
-Explicação simples:
-
-* Mede o tempo do eco
-* Converte para centímetros
-
-Analogia:
-
-> Igual um morcego 🦇: ele “manda som” e calcula a distância pelo retorno
-
----
-
----
-
-# Pessoa 2 — Lógica + LEDs + Buzzer
-
-## 6. Função `loop()`
+## Medindo a distância
 
 ```ino
 int distancia = sensor_morcego(TRIG, ECHO);
 ```
 
-Mede a distância do objeto o tempo todo
+Aqui o programa chama uma função que mede a distância do objeto usando o sensor ultrassônico.
+
+O valor medido é armazenado na variável chamada **distancia**.
 
 ---
 
-## 7. Objeto perto
+# Objeto muito perto
 
 ```ino
-if (distancia <= distancia_carro)
+if (distancia <= distancia_objeto)
 ```
 
-Se estiver até 10 cm:
+Essa condição verifica se o objeto está a **10 cm ou menos**.
+
+Se isso acontecer, o sistema entende que o objeto está **muito perto**.
+
+---
 
 ```ino
 digitalWrite(ledRed, HIGH);
@@ -310,7 +336,10 @@ digitalWrite(ledYellow, LOW);
 digitalWrite(ledGreen, LOW);
 ```
 
-Liga LED vermelho (perigo)
+Aqui o Arduino:
+
+* Liga o **LED vermelho**
+* Apaga os outros LEDs
 
 ---
 
@@ -318,25 +347,28 @@ Liga LED vermelho (perigo)
 tocaBuzzer();
 ```
 
-Ativa sirene (som forte)
+Depois disso, o buzzer toca um **som de alerta mais forte**.
 
 ---
 
----
-
-## 8. Distância média
+# Distância média
 
 ```ino
 else if (distancia <= distancia_media)
 ```
 
-Entre 11 e 20 cm:
+Aqui o programa verifica se a distância está **entre 10 e 20 centímetros**.
+
+---
 
 ```ino
 digitalWrite(ledYellow, HIGH);
 ```
 
-Liga LED amarelo (atenção)
+Nesse caso:
+
+* O **LED amarelo acende**
+* Indica que o objeto está em uma distância intermediária
 
 ---
 
@@ -344,25 +376,25 @@ Liga LED amarelo (atenção)
 tone(buzzer, 1000);
 ```
 
-Som mais leve
+O buzzer emite um **som leve**, indicando atenção.
 
 ---
 
----
-
-## 9. Objeto longe
+# Objeto longe
 
 ```ino
 else
 ```
 
-Acima de 20 cm:
+Se nenhuma das condições anteriores acontecer, significa que o objeto está **mais longe que 20 cm**.
+
+---
 
 ```ino
 digitalWrite(ledGreen, HIGH);
 ```
 
-Liga LED verde (seguro)
+Então o **LED verde acende**, indicando que está seguro.
 
 ---
 
@@ -370,19 +402,73 @@ Liga LED verde (seguro)
 noTone(buzzer);
 ```
 
-Sem som
+E o buzzer permanece **desligado**.
 
 ---
 
+```ino
+delay(100);
+```
+
+Essa linha faz o programa esperar **100 milissegundos** antes de repetir o processo.
+
+Isso evita leituras rápidas demais.
+
 ---
 
-## 10. Função do buzzer (sirene)
+# Função do sensor
+
+```ino
+int sensor_morcego(int pinotrig, int pinoecho)
+```
+
+Essa função é responsável por **medir a distância usando o sensor ultrassônico**.
+
+---
+
+```ino
+digitalWrite(pinotrig, LOW);
+delayMicroseconds(2);
+```
+
+Aqui o sensor é preparado para enviar o sinal.
+
+---
+
+```ino
+digitalWrite(pinotrig, HIGH);
+delayMicroseconds(10);
+```
+
+O sensor envia um **pulso ultrassônico**.
+
+---
+
+```cpp
+digitalWrite(pinotrig, LOW);
+```
+
+Depois o pulso é interrompido.
+
+---
+
+```ino
+return pulseIn(pinoecho, HIGH) / 58;
+```
+
+O Arduino mede quanto tempo o sinal demorou para voltar.
+
+Esse tempo é convertido em **centímetros**, que é a distância do objeto.
+
+---
+
+# Função do buzzer
 
 ```ino
 void tocaBuzzer()
 ```
 
-Cria som de alerta
+Essa função cria o **som de sirene**.
 
 ---
 
@@ -390,7 +476,7 @@ Cria som de alerta
 for (int x = 0; x < 180; x++)
 ```
 
-Repete várias vezes (efeito contínuo)
+Esse laço repete várias vezes para gerar o efeito sonoro.
 
 ---
 
@@ -398,7 +484,7 @@ Repete várias vezes (efeito contínuo)
 seno = (sin(x * 3.1416 / 180));
 ```
 
-Cria variação do som
+Aqui usamos um cálculo matemático para fazer o som **variar de frequência**.
 
 ---
 
@@ -406,7 +492,7 @@ Cria variação do som
 frequencia = 2000 + (int)(seno * 1000);
 ```
 
-Frequência muda → som tipo sirene 🚨
+Isso faz o buzzer mudar o tom do som, criando o efeito de **sirene**.
 
 ---
 
@@ -414,6 +500,20 @@ Frequência muda → som tipo sirene 🚨
 tone(buzzer, frequencia);
 ```
 
-Emite o som
+Essa linha faz o buzzer emitir o som.
+
+---
+
+# Conclusão da apresentação
+
+Resumindo, o nosso sistema funciona como um **sensor inteligente de proximidade**.
+
+Ele usa um sensor ultrassônico para medir a distância de um objeto e indica o resultado através de **luzes e som**:
+
+* LED verde → objeto longe
+* LED amarelo → atenção
+* LED vermelho + buzzer → objeto muito perto
+
+Esse tipo de tecnologia é usada em diversas aplicações, como **sensores de estacionamento, robótica e sistemas de segurança**.
 
 ---
