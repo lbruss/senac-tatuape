@@ -115,24 +115,9 @@ void loop(){
 
 # Explicação dos códigos e o que se pode falar na hora da explicação:
 
-Vou montar **um roteiro de explicação para feira de ciências**, igual fiz no projeto anterior:
-
-* linguagem **simples**
-* explicação **linha por linha**
-* dividido para **duas pessoas** 👥
-* fácil para qualquer pessoa entender.
-
 ---
 
 # Pessoa 1 — Introdução, Arduino e configuração do código
-
-## Introdução
-
-Olá, nós desenvolvemos um projeto utilizando **Arduino** para simular o funcionamento de um **semáforo de veículos com travessia de pedestres**.
-
-O **Arduino** é uma placa eletrônica com um pequeno computador chamado **microcontrolador**. Esse microcontrolador consegue **ler informações de sensores ou botões e controlar dispositivos eletrônicos**, como LEDs, motores ou buzzer.
-
-Ele também é uma plataforma **de código aberto**, o que significa que qualquer pessoa pode usar, estudar e modificar os projetos livremente.
 
 No nosso projeto, o Arduino controla:
 
