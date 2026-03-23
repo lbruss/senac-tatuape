@@ -22,6 +22,7 @@
 * Fios jumper
 * 7 Resistores (330Ω)
 * 2 Push Buttons
+* 7 LEDs
 
 ---
 
