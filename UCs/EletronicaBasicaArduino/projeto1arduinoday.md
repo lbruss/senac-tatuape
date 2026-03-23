@@ -152,7 +152,7 @@ void tocaBuzzer() {
 
 # O projeto (Real)
 
-
+<img width="909" height="790" alt="Sensor Inteligentede de Proximidade" src="https://github.com/user-attachments/assets/d326ee49-a913-4df7-a305-da95682415de" />
 
 ---
 
