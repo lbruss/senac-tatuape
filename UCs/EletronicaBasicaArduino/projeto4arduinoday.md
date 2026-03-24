@@ -26,7 +26,7 @@
 
 ---
 
-# Códigos feitos no Arduino para realizar o projeto
+# Códigos feitos no Arduino para realizar o projeto:
 
 ```ino
 const int botaoVel = 2;
@@ -144,7 +144,7 @@ void loop() {
 
 ---
 
-# O projeto
+# O Projeto:
 
 <img width="998" height="767" alt="image" src="https://github.com/user-attachments/assets/849b18b9-8547-4d0e-bf42-e992b5774fd2" />
 
