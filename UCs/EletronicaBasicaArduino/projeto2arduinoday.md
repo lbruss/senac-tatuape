@@ -27,7 +27,7 @@
 
 ---
 
-# Códigos feitos no Arduino para realizar o projeto
+# Códigos feitos no Arduino para realizar o projeto:
 
 ```ino
 //Projeto Microcontroladores - Semáforo de veículos e pedestre com parada + PIEZO
@@ -113,7 +113,7 @@ void loop(){
 
 ---
 
-# O projeto
+# O Projeto:
 
 <img width="1030" height="779" alt="image" src="https://github.com/user-attachments/assets/8c0138e1-bf22-48e2-8121-7b1520f6c26f" />
 
