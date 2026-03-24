@@ -26,7 +26,7 @@
 
 ---
 
-# Códigos feitos no Arduino para realizar o projeto
+# Códigos feitos no Arduino para realizar o projeto:
 
 ```ino
 #define LED 9  
@@ -64,7 +64,7 @@ void loop ()
 
 ---
 
-# O projeto
+# O Projeto:
 
 <img width="1120" height="775" alt="image" src="https://github.com/user-attachments/assets/fbd8bd4a-37fd-4109-b12a-bd06c42a111a" />
 
