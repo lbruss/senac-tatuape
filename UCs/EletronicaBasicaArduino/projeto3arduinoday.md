@@ -70,17 +70,6 @@ void loop ()
 
 ---
 
-# Explicação dos códigos e o que se pode falar na hora da explicação:
-
-Vou montar novamente **um roteiro de apresentação para feira de ciências**, igual aos outros projetos:
-
-* linguagem **simples**
-* explicação **linha por linha**
-* dividido para **duas pessoas** 👥
-* fácil para qualquer pessoa entender.
-
----
-
 # Pessoa 1 — Introdução, Arduino e início do código
 
 No nosso projeto, o Arduino mede a quantidade de luz no ambiente e **liga ou desliga um LED dependendo da iluminação**.
