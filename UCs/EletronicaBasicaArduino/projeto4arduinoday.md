@@ -152,8 +152,6 @@ void loop() {
 
 # Explicação dos códigos e o que se pode falar na hora da explicação:
 
-Vou montar novamente **um roteiro de apresentação para feira de ciências**, dividido para **duas pessoas**, com explicação **linha por linha**, usando **linguagem simples** para qualquer pessoa entender.
-
 ---
 
 # Pessoa 1 — Introdução, Arduino e configuração do código
