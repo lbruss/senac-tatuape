@@ -1,11 +1,4 @@
-# Comandos Básicos e Estrutura do Linux (Debian)
-
-Este guia apresenta **conceitos e comandos essenciais do Linux**, especialmente úteis em servidores como o **Debian**.  
-A ideia é explicar de forma **simples, clara e prática**.
-
----
-
-# Tipos de Usuário no Linux
+# Tipos de Usuário no Linux (Debian)
 
 No Linux existem diferentes níveis de usuário.
 
