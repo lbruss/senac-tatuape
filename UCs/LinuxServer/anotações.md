@@ -1,6 +1,6 @@
 # Instalação Debian — Servidor Web
 
-1. Instalação do Debian (Modo Servidor Web)
+**Instalação do Debian (Modo Servidor Web)**
 
 Durante a instalação do Debian:
 
