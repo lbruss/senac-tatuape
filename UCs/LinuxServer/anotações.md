@@ -1,22 +1,10 @@
-# 🌐 Instalação Debian — Servidor Web (Passo a Passo Completo)
+# Instalação Debian — Servidor Web
 
-Este guia ensina como:
-
-- Instalar o **Debian como servidor web**
-- Configurar **IP fixo**
-- Configurar **DNS**
-- Testar a rede
-- Criar uma página web simples
-
-Tudo explicado de forma clara e prática.
-
----
-
-# 💿 1. Instalação do Debian (Modo Servidor Web)
+1. Instalação do Debian (Modo Servidor Web)
 
 Durante a instalação do Debian:
 
-### 📌 Nome de domínio
+## Nome de domínio
 
 Quando aparecer a opção:
 
@@ -30,7 +18,7 @@ domain.com.br
 
 ---
 
-### 📌 Outras opções
+## Outras opções
 
 - **Ler mídia adicional:** NÃO  
 - **Proxy:** deixe em branco  
@@ -38,19 +26,19 @@ domain.com.br
 
 ---
 
-### 📦 Seleção de Software
+## Seleção de Software
 
 Selecione apenas:
 
-- ✅ Servidor Web  
-- ✅ Servidor SSH  
-- ✅ Utilitários de sistema padrão  
+-  Servidor Web  
+-  Servidor SSH  
+-  Utilitários de sistema padrão  
 
-❌ Desmarque o restante para manter o sistema leve.
+> Desmarque o restante para manter o sistema leve.
 
 ---
 
-# 🌐 2. Definir IP Fixo no Debian
+# Definir IP Fixo no Debian
 
 Exemplo usado:
 
@@ -58,17 +46,19 @@ IP: 10.26.44.222/24 Gateway: 10.26.44.1
 
 ---
 
-## 📌 Passo 1 — Acessar diretório de rede
+Passo 1 — Acessar diretório de rede
 
-```bash
+```
 cd /etc/network
-
+```
 
 ---
 
-📌 Passo 2 — Criar backup do arquivo
+Passo 2 — Criar backup do arquivo
 
+```
 cp interfaces interfaces.bkp
+```
 
 Analogia:
 É como fazer uma cópia de segurança antes de editar um documento importante.
@@ -76,26 +66,30 @@ Analogia:
 
 ---
 
-📌 Passo 3 — Editar o arquivo de rede
+Passo 3 — Editar o arquivo de rede
 
+```
 nano interfaces
-
+```
 
 ---
 
-✏️ Alterações no arquivo
+**Alterações no arquivo**
 
 Procure por algo como:
 
+```
 iface enp0s3 inet dhcp
+```
 
 E altere para:
 
+```
 iface enp0s3 inet static
     address 10.26.44.222
     netmask 255.255.255.0
     gateway 10.26.44.1
-
+```
 
 ---
 
@@ -105,12 +99,13 @@ auto enp0s3
 
 Ficando assim:
 
+```
 #auto enp0s3
-
+```
 
 ---
 
-💾 Salvar alterações
+## Salvar alterações
 
 Ctrl + O → salvar
 
@@ -118,34 +113,41 @@ Enter → confirmar
 
 Ctrl + X → sair
 
-
-
 ---
 
-🌍 3. Configurar DNS
+# Configurar DNS
 
-📌 Instalar serviço DNS local
+**Instalar serviço DNS local**
 
+```
 apt install systemd-resolved
+```
 
 Verificar status:
 
+```
 systemctl status systemd-resolved
+```
 
 Se travar:
 
 Pressione Q ou Ctrl + C
 
-
-
 ---
 
-📌 Configurar DNS
+## Configurar DNS
 
+```
 cd /etc/systemd
-cp resolved.conf resolved.conf.bkp
-nano resolved.conf
+```
 
+```
+cp resolved.conf resolved.conf.bkp
+```
+
+```
+nano resolved.conf
+```
 
 ---
 
