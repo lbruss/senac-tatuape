@@ -1,283 +1,350 @@
-# Comandos e Serviços no Linux (Debian)
+# 🌐 Instalação Debian — Servidor Web (Passo a Passo Completo)
 
-Este guia apresenta **comandos importantes para administração de servidores Linux**, especialmente no **Debian**.  
-Eles são usados para **identificar o sistema, gerenciar serviços e acessar servidores remotamente**.
+Este guia ensina como:
 
----
+- Instalar o **Debian como servidor web**
+- Configurar **IP fixo**
+- Configurar **DNS**
+- Testar a rede
+- Criar uma página web simples
 
-# Informações do Sistema
-
-`hostname`
-
-```
-hostname
-````
-
-Mostra o **nome do computador (host)** na rede.
-
-Exemplo de saída:
-
-```
-server01
-```
-
-**Analogia:**
-O hostname é como **o nome de uma pessoa em uma empresa**, usado para identificar o computador dentro da rede.
+Tudo explicado de forma clara e prática.
 
 ---
 
-`hostnamectl`
+# 💿 1. Instalação do Debian (Modo Servidor Web)
 
-```
-hostnamectl
-```
+Durante a instalação do Debian:
 
-Mostra informações mais completas sobre o sistema, como:
+### 📌 Nome de domínio
 
-* hostname do computador
-* sistema operacional
-* versão do kernel
-* arquitetura do sistema
+Quando aparecer a opção:
 
-Exemplo de saída simplificada:
+Nome de domínio
 
-```
-Static hostname: servidor01
-Operating System: Debian GNU/Linux
-Kernel: Linux 6.x
-Architecture: x86_64
-```
+Digite:
 
-Esse comando também permite **alterar o nome do computador**.
+domain.com.br
+
+> Você pode alterar isso depois, se quiser.
 
 ---
 
-# Gerenciamento de Serviços no Linux
+### 📌 Outras opções
 
-Nos sistemas Linux modernos, o gerenciamento de serviços é feito pelo **systemd**, usando o comando:
-
-```
-systemctl
-```
-
-Ele controla **serviços que rodam em segundo plano**, chamados de **daemons**.
-
-Exemplos de serviços:
-
-* servidor SSH
-* servidor web
-* banco de dados
-* servidor de arquivos
-
-**Analogia:**
-Pense nesses serviços como **funcionários trabalhando nos bastidores do sistema**.
+- **Ler mídia adicional:** NÃO  
+- **Proxy:** deixe em branco  
+- **Perguntas (Sim/Não):** pode seguir com **Sim**, como na instalação padrão  
 
 ---
 
-# Verificar Status de um Serviço
+### 📦 Seleção de Software
 
-```
-systemctl status nome-do-servico
-```
+Selecione apenas:
 
-Exemplo:
+- ✅ Servidor Web  
+- ✅ Servidor SSH  
+- ✅ Utilitários de sistema padrão  
 
-```
-systemctl status ssh
-```
-
-Mostra informações como:
-
-* se o serviço está ativo
-* se está parado
-* logs recentes do serviço
+❌ Desmarque o restante para manter o sistema leve.
 
 ---
 
-# Parar um Serviço
+# 🌐 2. Definir IP Fixo no Debian
 
-```
-systemctl stop nome-do-servico
-```
+Exemplo usado:
 
-Exemplo:
-
-```
-systemctl stop ssh
-```
-
-Isso **interrompe o funcionamento do serviço**.
+IP: 10.26.44.222/24 Gateway: 10.26.44.1
 
 ---
 
-# Iniciar um Serviço
+## 📌 Passo 1 — Acessar diretório de rede
 
-```
-systemctl start nome-do-servico
-```
+```bash
+cd /etc/network
 
-Exemplo:
-
-```
-systemctl start ssh
-```
-
-Inicia o serviço novamente.
 
 ---
 
-# Reiniciar um Serviço
+📌 Passo 2 — Criar backup do arquivo
 
-```
-systemctl restart nome-do-servico
-```
+cp interfaces interfaces.bkp
 
-Exemplo:
+Analogia:
+É como fazer uma cópia de segurança antes de editar um documento importante.
 
-```
-systemctl restart ssh
-```
-
-Isso **desliga e inicia o serviço novamente**, sendo útil após mudanças de configuração.
 
 ---
 
-# SSH — Acesso Remoto Seguro
+📌 Passo 3 — Editar o arquivo de rede
 
-**SSH (Secure Shell)** é um protocolo que permite **acessar um servidor remotamente de forma segura**.
+nano interfaces
 
-Ele utiliza criptografia para proteger a comunicação.
-
-### Estrutura básica
-
-```
-Cliente  ----->  Servidor SSH (Debian)
-```
-
-Ou seja:
-
-* um **computador cliente** conecta
-* a um **servidor Linux**
-* através do protocolo SSH
 
 ---
 
-## Cliente SSH
+✏️ Alterações no arquivo
 
-Para acessar um servidor SSH, é necessário um **cliente SSH**.
+Procure por algo como:
 
-Um dos mais conhecidos no Windows é:
+iface enp0s3 inet dhcp
 
-**PuTTY**
+E altere para:
 
-Ele é amplamente utilizado porque é:
+iface enp0s3 inet static
+    address 10.26.44.222
+    netmask 255.255.255.0
+    gateway 10.26.44.1
 
-* leve
-* simples
-* gratuito
-
----
-
-# Conectando ao servidor com PuTTY
-
-Passos básicos:
-
-1. Abrir o **PuTTY**
-2. Inserir o **endereço IP do servidor Debian**
-3. Usar a **porta padrão do SSH**
-
-```
-22
-```
-
-4. Clicar em **Open**
 
 ---
 
-# Login no servidor
+Agora comente a linha automática:
 
-Após conectar, aparecerá o terminal solicitando login.
+auto enp0s3
 
-Exemplo:
+Ficando assim:
 
-```
-login as: usuario
-```
+#auto enp0s3
 
-Digite o **nome do usuário criado no sistema**.
-
-Depois digite a senha.
 
 ---
 
-# Acesso administrativo
+💾 Salvar alterações
 
-Em muitos servidores, o login direto como **root** pode estar desativado por segurança.
+Ctrl + O → salvar
 
-Nesse caso, você entra com um **usuário comum** e depois usa:
+Enter → confirmar
 
-```
-su
-```
+Ctrl + X → sair
 
-ou
 
-```
-su -
-```
-
-Depois disso, será solicitada a **senha do root**.
-
-Se estiver correta, o usuário ganha **permissões administrativas**.
 
 ---
 
-# Por que o SSH é importante?
+🌍 3. Configurar DNS
 
-O SSH é essencial para administrar servidores porque permite:
+📌 Instalar serviço DNS local
 
-* controlar servidores remotamente
-* executar comandos
-* instalar programas
-* corrigir problemas
-* transferir arquivos
+apt install systemd-resolved
 
-Tudo isso **sem precisar estar fisicamente perto do servidor**.
+Verificar status:
 
----
+systemctl status systemd-resolved
 
-## Informação Adicional Importante
+Se travar:
 
-O serviço SSH precisa estar **instalado e ativo no servidor**.
+Pressione Q ou Ctrl + C
 
-Para verificar:
 
-```
-systemctl status ssh
-```
-
-Se não estiver instalado:
-
-```
-apt install openssh-server
-```
-
-Depois iniciar:
-
-```
-systemctl start ssh
-```
 
 ---
 
-# Conclusão
+📌 Configurar DNS
 
-Comandos como:
+cd /etc/systemd
+cp resolved.conf resolved.conf.bkp
+nano resolved.conf
 
-* `hostname`
-* `hostnamectl`
-* `systemctl`
 
-são fundamentais para **administrar servidores Linux**.
+---
 
-Já o **SSH** permite que administradores controlem servidores **de qualquer lugar da rede ou da internet**, tornando a gestão de sistemas muito mais prática e eficiente.
+✏️ Dentro do arquivo, configure:
+
+[Resolve]
+DNS=8.8.8.8 8.8.4.4
+
+
+---
+
+💾 Salvar
+
+Ctrl + O
+
+Enter
+
+Ctrl + X
+
+
+
+---
+
+🔄 Reiniciar serviço DNS
+
+systemctl restart systemd-resolved
+
+
+---
+
+🔁 4. Reiniciar Rede
+
+Você pode:
+
+systemctl restart networking
+
+ou reiniciar tudo:
+
+reboot
+
+
+---
+
+✅ 5. Testes de Funcionamento
+
+📌 Verificar IP
+
+ip a
+
+Se aparecer:
+
+10.26.44.222
+
+✔️ Está correto
+
+
+---
+
+📌 Testar DNS
+
+ping google.com
+
+Se responder → DNS funcionando
+
+
+---
+
+📌 Teste na rede (Windows)
+
+No CMD:
+
+ping 10.26.44.222
+
+Se responder → comunicação funcionando
+
+
+---
+
+🌐 6. Testar Servidor Web
+
+Abra o navegador e digite:
+
+http://10.26.44.222
+
+Se aparecer uma página → servidor funcionando
+
+
+---
+
+⚙️ 7. Gerenciar Servidor Web (Apache)
+
+⛔ Parar servidor
+
+systemctl stop apache2
+
+
+---
+
+▶️ Iniciar servidor
+
+systemctl start apache2
+
+
+---
+
+📁 8. Criar Página Web
+
+📌 Ir para pasta do site
+
+cd /var/www/html
+
+
+---
+
+📌 Remover página padrão
+
+rm index.html
+
+
+---
+
+📌 Criar nova página
+
+nano index.html
+
+
+---
+
+✏️ Exemplo de código HTML
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello World</title>
+</head>
+<body>
+<h1>Hello World</h1>
+<p>SEUNOME</p>
+</body>
+</html>
+
+
+---
+
+💾 Salvar
+
+Ctrl + O
+
+Enter
+
+Ctrl + X
+
+
+
+---
+
+🎯 Resultado Final
+
+Agora, ao acessar:
+
+http://10.26.44.222
+
+Você verá sua página personalizada.
+
+
+---
+
+🧠 Resumo Geral
+
+Você configurou:
+
+✅ Servidor Debian
+
+✅ IP fixo
+
+✅ DNS
+
+✅ Servidor Web (Apache)
+
+✅ Página HTML
+
+
+
+---
+
+🏁 Conclusão
+
+Com esses passos, você criou um servidor web completo.
+
+Analogia final:
+Você basicamente:
+
+Montou um computador (servidor)
+
+Deu um endereço fixo (IP)
+
+Configurou a internet (DNS)
+
+E abriu um site (Apache + HTML)
+
+
+Isso é a base de como a internet funciona por trás dos sites que você acessa todos os dias.
