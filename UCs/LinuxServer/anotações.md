@@ -151,15 +151,16 @@ nano resolved.conf
 
 ---
 
-✏️ Dentro do arquivo, configure:
+**Dentro do arquivo, configure:**
 
+```
 [Resolve]
 DNS=8.8.8.8 8.8.4.4
-
+```
 
 ---
 
-💾 Salvar
+**Salvar**
 
 Ctrl + O
 
@@ -167,66 +168,71 @@ Enter
 
 Ctrl + X
 
-
-
 ---
 
-🔄 Reiniciar serviço DNS
+## Reiniciar serviço DNS
 
+```
 systemctl restart systemd-resolved
-
+```
 
 ---
 
-🔁 4. Reiniciar Rede
+## Reiniciar Rede
 
 Você pode:
 
+```
 systemctl restart networking
+```
 
 ou reiniciar tudo:
 
+```
 reboot
-
+```
 
 ---
 
-✅ 5. Testes de Funcionamento
+# Testes de Funcionamento
 
-📌 Verificar IP
+**Verificar IP**
 
+```
 ip a
+```
 
 Se aparecer:
 
 10.26.44.222
 
-✔️ Está correto
-
+**Está correto**
 
 ---
 
-📌 Testar DNS
+**Testar DNS**
 
+```
 ping google.com
+```
 
 Se responder → DNS funcionando
 
-
 ---
 
-📌 Teste na rede (Windows)
+**Teste na rede (Windows)**
 
 No CMD:
 
+```
 ping 10.26.44.222
+```
 
 Se responder → comunicação funcionando
 
-
 ---
 
-🌐 6. Testar Servidor Web
+## Testar Servidor Web
 
 Abra o navegador e digite:
 
@@ -234,50 +240,55 @@ http://10.26.44.222
 
 Se aparecer uma página → servidor funcionando
 
-
 ---
 
-⚙️ 7. Gerenciar Servidor Web (Apache)
+# Gerenciar Servidor Web (Apache)
 
-⛔ Parar servidor
+**Parar servidor**
 
+```
 systemctl stop apache2
-
+```
 
 ---
 
-▶️ Iniciar servidor
+**Iniciar servidor**
 
+```
 systemctl start apache2
-
+```
 
 ---
 
-📁 8. Criar Página Web
+## Criar Página Web
 
-📌 Ir para pasta do site
+Ir para pasta do site
 
+```
 cd /var/www/html
-
+```
 
 ---
 
-📌 Remover página padrão
+Remover página padrão
 
+```
 rm index.html
-
+```
 
 ---
 
-📌 Criar nova página
+Criar nova página
 
+```
 nano index.html
-
+```
 
 ---
 
-✏️ Exemplo de código HTML
+**Exemplo de código HTML**
 
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -288,11 +299,11 @@ nano index.html
 <p>SEUNOME</p>
 </body>
 </html>
-
+```
 
 ---
 
-💾 Salvar
+**Salvar**
 
 Ctrl + O
 
@@ -300,11 +311,9 @@ Enter
 
 Ctrl + X
 
-
-
 ---
 
-🎯 Resultado Final
+**Resultado Final**
 
 Agora, ao acessar:
 
@@ -312,41 +321,35 @@ http://10.26.44.222
 
 Você verá sua página personalizada.
 
+---
+
+**Resumo**
+
+Foi configurou:
+
+- Servidor Debian
+
+- IP fixo
+
+- DNS
+
+- Servidor Web (Apache)
+
+- Página HTML
 
 ---
 
-🧠 Resumo Geral
+# Conclusão
 
-Você configurou:
-
-✅ Servidor Debian
-
-✅ IP fixo
-
-✅ DNS
-
-✅ Servidor Web (Apache)
-
-✅ Página HTML
-
-
-
----
-
-🏁 Conclusão
-
-Com esses passos, você criou um servidor web completo.
+Com esses passos, foi criado um servidor web completo.
 
 Analogia final:
 Você basicamente:
 
-Montou um computador (servidor)
+- Montou um computador (servidor)
 
-Deu um endereço fixo (IP)
+- Deu um endereço fixo (IP)
 
-Configurou a internet (DNS)
+- Configurou a internet (DNS)
 
-E abriu um site (Apache + HTML)
-
-
-Isso é a base de como a internet funciona por trás dos sites que você acessa todos os dias.
+- E abriu um site (Apache + HTML)
