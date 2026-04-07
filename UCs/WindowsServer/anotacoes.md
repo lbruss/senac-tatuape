@@ -24,14 +24,14 @@ Se o Windows comum é um computador pessoal, o Windows Server é como o “cére
 
 ---
 
-🎯 Para que serve o Windows Server?
+**Função do Windows Server**
 
 Ele serve para centralizar e gerenciar tudo dentro de uma rede.
 
 
 ---
 
-👥 1. Gerenciamento de usuários
+1. Gerenciamento de usuários
 
 Com o Windows Server você pode:
 
@@ -42,7 +42,7 @@ definir permissões (quem pode acessar o quê)
 controlar logins
 
 
-👉 Isso é feito principalmente com o Active Directory
+Isso é feito principalmente com o Active Directory
 
 Analogia:
 É como um porteiro inteligente, que decide quem entra e onde pode ir.
@@ -50,7 +50,7 @@ Analogia:
 
 ---
 
-📁 2. Compartilhamento de arquivos
+2. Compartilhamento de arquivos
 
 Criar pastas compartilhadas
 
@@ -59,12 +59,12 @@ Controlar quem pode acessar
 Armazenar arquivos da empresa
 
 
-👉 Muito usado em escritórios
+Muito usado em escritórios
 
 
 ---
 
-🌐 3. Servidor de rede
+3. Servidor de rede
 
 Ele pode fornecer serviços como:
 
@@ -80,7 +80,7 @@ Servidor de impressão
 
 ---
 
-🔐 4. Segurança
+4. Segurança
 
 Controle de acesso
 
@@ -91,12 +91,12 @@ Firewall
 Auditoria de usuários
 
 
-👉 Ajuda a proteger os dados da empresa
+Ajuda a proteger os dados da empresa
 
 
 ---
 
-☁️ 5. Virtualização
+5. Virtualização
 
 Com ferramentas como o Hyper-V, o Windows Server permite:
 
@@ -111,7 +111,7 @@ Analogia:
 
 ---
 
-🏢 6. Aplicações empresariais
+6. Aplicações empresariais
 
 Ele também roda sistemas como:
 
@@ -125,7 +125,7 @@ sistemas internos da empresa
 
 ---
 
-🆚 Diferença entre Windows comum e Windows Server
+## Diferença entre Windows comum e Windows Server
 
 Windows comum	Windows Server
 
@@ -138,7 +138,7 @@ Não gerencia rede	Gerencia toda a rede
 
 ---
 
-📌 Onde o Windows Server é usado?
+## Onde o Windows Server é usado?
 
 Empresas
 
@@ -154,7 +154,7 @@ Data centers
 
 ---
 
-💡 Resumindo
+**Resumindo**
 
 O Windows Server serve para:
 
@@ -165,8 +165,6 @@ controlar usuários
 armazenar dados
 
 manter serviços funcionando
-
-
 
 ---
 
@@ -185,6 +183,8 @@ mantenham tudo funcionando de forma centralizada
 
 Em poucas palavras:
 sem servidores, a maioria das empresas simplesmente não conseguiria funcionar direito.
+
+---
 
 # Versões do Windows Server
 
