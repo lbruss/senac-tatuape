@@ -168,7 +168,7 @@ manter serviços funcionando
 
 ---
 
-🧠 Conclusão
+# Conclusão
 
 O Windows Server é essencial no mundo da TI porque permite que empresas:
 
