@@ -1,14 +1,10 @@
 # Windows Server 
 
-**Configuração Inicial**
-
----
-
-# 📦 Versões do Windows Server
+## Versões do Windows Server
 
 O **Windows Server** possui diferentes versões, cada uma com objetivos específicos.
 
-## 🔹 Windows Server Standard
+**Windows Server Standard**
 
 - Possui **menos recursos avançados**
 - Indicado para **pequenas e médias empresas**
@@ -16,7 +12,7 @@ O **Windows Server** possui diferentes versões, cada uma com objetivos específ
 
 ---
 
-## 🔹 Windows Server Datacenter
+**Windows Server Datacenter**
 
 - Versão mais completa
 - Possui **todos os recursos disponíveis**
@@ -31,22 +27,22 @@ O **Windows Server** possui diferentes versões, cada uma com objetivos específ
 
 ---
 
-# ⚙️ Windows Server 2022 (64 bits)
+# Windows Server 2022 (64 bits)
 
 O **Windows Server 2022 x64** é uma versão moderna e estável.
 
-### Características
+**Características**
 
 - Melhor segurança  
 - Correções de erros  
 - Maior desempenho  
 - Suporte a novas tecnologias  
 
-👉 Em geral, quem aprende uma versão consegue usar outras, pois a base é muito parecida.
+Em geral, quem aprende uma versão consegue usar outras, pois a base é muito parecida.
 
 ---
 
-# 💿 Instalação do Windows Server
+# Instalação do Windows Server
 
 A instalação é **muito semelhante ao Windows comum**:
 
@@ -56,21 +52,21 @@ A instalação é **muito semelhante ao Windows comum**:
 
 ---
 
-## 📌 Escolha da versão
+**Escolha da versão**
 
 Durante a instalação, escolha:
 
 Datacenter (Experiência com área de trabalho)
 
-👉 Essa opção inclui **interface gráfica (GUI)**, facilitando o uso.
+Essa opção inclui **interface gráfica (GUI)**, facilitando o uso.
 
 ---
 
-# 🔌 Configuração de Rede (NIC Teaming)
+# Configuração de Rede (NIC Teaming)
 
 O **NIC Teaming** permite unir várias placas de rede em uma só.
 
-### 🎯 Vantagens
+**Vantagens**
 
 - Maior velocidade  
 - Redundância (se uma falhar, outra assume)  
@@ -81,7 +77,7 @@ O **NIC Teaming** permite unir várias placas de rede em uma só.
 
 ---
 
-## 📌 Criar equipe de rede
+## Criar equipe de rede
 
 1. Vá em **Servidor Local**
 2. Em **Agrupamento NIC**, clique em:
@@ -97,7 +93,7 @@ NICBruss
 
 ---
 
-## ⚙️ Configurações recomendadas
+## Configurações recomendadas
 
 - **Modo de agrupamento:** Alternar independente  
 - **Balanceamento de carga:** Dinâmico  
@@ -106,9 +102,7 @@ NICBruss
 
 ---
 
-# 🌐 Configurar IP Manual
-
-## 📌 Passo a passo
+# Configurar IP Manual
 
 1. Clique com o botão direito no ícone de rede (canto inferior direito)
 2. Abra:
@@ -128,7 +122,7 @@ Protocolo IP Versão 4 (TCP/IPv4)
 
 ---
 
-## 📌 Definir IP
+## Definir IP
 
 Marque:
 
@@ -136,11 +130,13 @@ Usar o seguinte endereço IP
 
 Exemplo:
 
-IP: 192.168.32.10 Máscara: 255.255.255.0 Gateway: 192.168.32.1
+- IP: 192.168.32.10
+- Máscara: 255.255.255.0
+- Gateway: 192.168.32.1
 
 ---
 
-# 🖥️ Alterar Nome do Servidor
+## Alterar Nome do Servidor
 
 1. Vá em **Servidor Local**
 2. Clique em **Nome do Computador**
@@ -157,18 +153,18 @@ O nome do servidor é como o **nome de um funcionário na empresa**, facilita a 
 
 ---
 
-# 💡 Informação Adicional
+**Informação Adicional**
 
 Mesmo após alterar configurações, às vezes o sistema pode:
 
 - não aplicar imediatamente
 - apresentar erro temporário
 
-👉 Nesses casos, **reiniciar o servidor resolve na maioria das vezes**.
+Nesses casos, **reiniciar o servidor resolve na maioria das vezes**.
 
 ---
 
-# ✅ Conclusão
+# Conclusão
 
 Com esses passos você consegue:
 
