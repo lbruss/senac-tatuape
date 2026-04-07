@@ -1,11 +1,6 @@
-# 🖥️ Windows Server — Guia Básico e Configuração Inicial
+# Windows Server 
 
-Este guia explica de forma simples:
-
-- Diferenças entre versões do Windows Server  
-- Instalação básica  
-- Configuração de rede  
-- Agrupamento de placas (NIC Teaming)  
+**Configuração Inicial**
 
 ---
 
