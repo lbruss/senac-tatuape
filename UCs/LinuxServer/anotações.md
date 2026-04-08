@@ -1,10 +1,8 @@
-# 🌐 WordPress + LAMP — Guia Completo (Servidor Debian)
-
-Este guia mostra como montar um **site com WordPress** usando um servidor Linux.
+# WordPress + LAMP
 
 ---
 
-# 🧠 O que é WordPress?
+# O que é WordPress?
 
 O **WordPress** é uma plataforma usada para criar:
 
@@ -12,14 +10,14 @@ O **WordPress** é uma plataforma usada para criar:
 - Blogs
 - Lojas virtuais (E-commerce)
 
-👉 Aproximadamente **43% dos sites da internet usam WordPress**.
+Aproximadamente **43% dos sites da internet usam WordPress**.
 
 **Analogia:**  
 O WordPress é como um **“construtor de sites pronto”**, onde você monta tudo sem precisar programar do zero.
 
 ---
 
-# 🧱 O que é LAMP?
+# O que é LAMP?
 
 LAMP é um conjunto de tecnologias usadas para rodar sites:
 
@@ -38,11 +36,11 @@ LAMP é um conjunto de tecnologias usadas para rodar sites:
 
 ---
 
-# ⚙️ Etapas para montar o WordPress
+# Etapas para montar o WordPress
 
 ---
 
-# 📌 1. Preparação inicial
+**1. Preparação inicial**
 
 Antes de tudo, você deve:
 
@@ -50,118 +48,129 @@ Antes de tudo, você deve:
 - Definir um IP fixo
 - Verificar se o Apache está ativo:
 
-```bash
+```
 systemctl status apache2
-
+```
 
 ---
 
-🗄️ 2. Instalar o Banco de Dados (MariaDB)
+**2. Instalar o Banco de Dados (MariaDB)**
 
-📥 Instalação
+* Instalação
 
+```
 apt install mariadb-server
-
+```
 
 ---
 
-🔍 Verificar se está ativo
+* Verificar se está ativo
 
+```
 systemctl status mariadb
-
+```
 
 ---
 
-🔐 Segurança do banco
+**Segurança do banco**
 
+```
 mariadb-secure-installation
+```
 
-Durante o processo:
+**Durante o processo:**
 
-Defina senha do root
+* Defina senha do root
 
 Responda Y (sim) para as opções de segurança
 
 
-👉 Isso protege o banco contra acessos indevidos.
-
+Isso protege o banco contra acessos indevidos.
 
 ---
 
-🧩 3. Criar Banco de Dados do WordPress
+**3. Criar Banco de Dados do WordPress**
 
 Entrar no banco:
 
+```
 mariadb
-
+```
 
 ---
 
-📌 Criar banco
+**Criar banco**
 
+```
 CREATE DATABASE wordpress;
-
+```
 
 ---
 
-👤 Criar usuário
+**Criar usuário**
 
+```
 CREATE USER 'admin'@'localhost' IDENTIFIED BY '123@senac';
-
+```
 
 ---
 
-🔑 Dar permissões
+**Dar permissões**
 
+```
 GRANT ALL PRIVILEGES ON wordpress.* TO 'admin'@'localhost';
 FLUSH PRIVILEGES;
-
+```
 
 ---
 
-🔍 Verificar
+**Verificar**
 
+```
 SELECT User, Host FROM mysql.user;
-
+```
 
 ---
 
-🚪 Sair
+**Sair**
 
+```
 quit
-
+```
 
 ---
 
-🧪 4. Instalar PHP + phpMyAdmin
+**4. Instalar PHP + phpMyAdmin**
 
+```
 apt install php phpmyadmin
+```
 
-Durante a instalação:
+* Durante a instalação:
 
 Selecione apache2
 
 Configure senha do banco
 
-
-
 ---
 
-🔄 Reiniciar Apache
+**Reiniciar Apache**
 
+```
 systemctl restart apache2
-
+```
 
 ---
 
-🔍 Verificar versão do PHP
+**Verificar versão do PHP**
 
+```
 php -v
-
+```
 
 ---
 
-🌐 Acessar phpMyAdmin
+**Acessar phpMyAdmin**
 
 No navegador:
 
@@ -173,188 +182,192 @@ Usuário: admin
 
 Senha: a que você criou
 
-
-
 ---
 
-⚡ 5. Ajustar Memória do PHP (Importante)
+**5. Ajustar Memória do PHP (Importante)**
 
 Valores recomendados:
 
-Padrão → 128M
+- Padrão → 128M
 
-Uso comum → 256M
+- Uso comum → 256M
 
-E-commerce → 512M
-
-
+- E-commerce → 512M
 
 ---
 
-📂 Acessar configuração
+**Acessar configuração**
 
+```
 cd /etc/php/8.x/apache2/
+```
 
 (Substitua 8.x pela sua versão)
 
-
 ---
 
-📌 Backup
+* Backup
 
+```
 cp php.ini php.ini.bkp
-
+```
 
 ---
 
-✏️ Editar
+**Editar**
 
+```
 nano php.ini
+```
 
 Procure:
 
+```
 memory_limit = 128M
+```
 
 Altere para:
 
+```
 memory_limit = 512M
-
-
----
-
-💾 Salvar
-
-Ctrl + O
-
-Enter
-
-Ctrl + X
-
-
+```
 
 ---
 
-🔄 Reiniciar Apache
+**Salvar**
 
+- Ctrl + O
+
+- Enter
+
+- Ctrl + X
+
+---
+
+**Reiniciar Apache**
+
+```
 systemctl restart apache2
-
+```
 
 ---
 
-🌍 6. Instalar WordPress
+**6. Instalar WordPress**
 
-📂 Ir para diretório do site
+Ir para diretório do site
 
+```
 cd /var/www/html
-
+```
 
 ---
 
-🧹 Remover página padrão
+**Remover página padrão**
 
+```
 rm index.html
-
+```
 
 ---
 
-⬇️ Baixar WordPress
+**Baixar WordPress**
 
+```
 cd ..
+```
+
+```
 wget https://wordpress.org/latest.tar.gz
-
+```
 
 ---
 
-📦 Extrair arquivos
+**Extrair arquivos**
 
+```
 tar -xzvf latest.tar.gz
-
+```
 
 ---
 
-📁 Copiar arquivos
+**Copiar arquivos**
 
+```
 rsync -avP wordpress/ /var/www/html/
-
+```
 
 ---
 
-🔐 Permissões
+**Permissões**
 
+```
 chown -R www-data:www-data /var/www/html
-
+```
 
 ---
 
-🌐 7. Finalizar pelo Navegador
+**7. Finalizar pelo Navegador**
 
 Acesse:
 
 http://IP_DO_SERVIDOR
 
-
 ---
 
 🛠️ Configuração inicial
 
-Escolha idioma
+- Escolha idioma
 
-Clique em “Vamos lá”
+- Clique em “Vamos lá”
 
 Configure:
 
-Nome do banco → wordpress
+- Nome do banco → wordpress
 
-Usuário → admin
+- Usuário → admin
 
-Senha → definida anteriormente
-
-
-
+- Senha → definida anteriormente
 
 ---
 
-🎯 Criar site
+**Criar site**
 
-Título do site
+- Título do site
 
-Usuário admin
+- Usuário admin
 
-Senha
+- Senha
 
-E-mail
+- E-mail
 
 
-👉 Se tudo estiver certo → aparecerá Sucesso!
-
+Se tudo estiver certo → aparecerá Sucesso!
 
 ---
 
-🎨 8. Personalização
+**8. Personalização**
 
 No painel do WordPress:
 
-Vá em Aparência → Temas
+- Vá em Aparência → Temas
 
-Instale um tema (ex: Astra)
+- Instale um tema (ex: Astra)
 
-Personalize como quiser
-
-
+- Personalize como quiser
 
 ---
 
-🌐 Hospedagem gratuita (Front-end)
+# Hospedagem gratuita (Front-end)
 
 Você pode hospedar sites simples (HTML, CSS, JS) gratuitamente usando o GitHub Pages da Microsoft.
 
-⚠️ WordPress NÃO funciona no GitHub Pages (precisa de servidor PHP).
-
+**WordPress NÃO funciona no GitHub Pages (precisa de servidor PHP).**
 
 ---
 
-📄 Criar página HTML simples
+**Criar página HTML simples**
 
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -367,11 +380,11 @@ Você pode hospedar sites simples (HTML, CSS, JS) gratuitamente usando o GitHub 
 <p>Seu Nome</p>
 </body>
 </html>
-
+```
 
 ---
 
-🚀 Publicar no GitHub Pages
+**Publicar no GitHub Pages**
 
 1. Criar repositório
 
@@ -387,18 +400,16 @@ Você pode hospedar sites simples (HTML, CSS, JS) gratuitamente usando o GitHub 
 
 5. Salvar
 
-
-
-👉 Após alguns minutos, o site estará online.
+Após alguns minutos, o site estará online.
 
 
 ---
 
-🌍 Domínio próprio
+**Domínio próprio**
 
 Você pode comprar domínio em:
 
-Registro.br
+* Registro.br
 
 
 Exemplo:
@@ -407,34 +418,32 @@ seusite.com.br
 
 Depois, pode conectar ao GitHub Pages ou ao seu servidor.
 
-
 ---
 
-🧠 Conclusão
+# Conclusão
 
 Você montou um ambiente completo com:
 
-Linux (Debian)
+- Linux (Debian)
 
-Apache
+- Apache
 
-MariaDB
+- MariaDB
 
-PHP
+- PHP
 
-WordPress
-
+- WordPress
 
 Analogia final:
 Você construiu:
 
-o terreno (Linux)
+- o terreno (Linux)
 
-a casa (Apache + PHP)
+- a casa (Apache + PHP)
 
-o banco de dados (MariaDB)
+- o banco de dados (MariaDB)
 
-e decorou tudo (WordPress)
+- e decorou tudo (WordPress)
 
 
-👉 Isso é exatamente como a maioria dos sites profissionais funciona hoje.
+Isso é exatamente como a maioria dos sites profissionais funciona hoje.
