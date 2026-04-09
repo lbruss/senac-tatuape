@@ -1,4 +1,4 @@
-# 💾 RAID — Entenda de Forma Simples (RAID 1 e RAID 5)
+# RAID — RAID 1 e RAID 5
 
 RAID é uma tecnologia que usa **vários discos (HDs/SSDs)** para melhorar:
 
@@ -8,7 +8,7 @@ RAID é uma tecnologia que usa **vários discos (HDs/SSDs)** para melhorar:
 
 ---
 
-# ⚠️ IMPORTANTE
+**IMPORTANTE**
 
 👉 **RAID NÃO substitui backup**
 
@@ -20,9 +20,9 @@ Se algo grave acontecer (vírus, erro humano, incêndio), só o backup salva.
 
 ---
 
-# 🪞 RAID 1 — Espelhamento
+# RAID 1 — Espelhamento
 
-## 📌 Como funciona
+**Como funciona**
 
 - Usa **no mínimo 2 discos**
 - Um disco é uma cópia exata do outro
@@ -31,14 +31,14 @@ Tudo que acontece em um disco → acontece no outro automaticamente
 
 ---
 
-## 🧠 Analogia
+**Analogia**
 
 É como escrever em **dois cadernos ao mesmo tempo**.  
 Se você perder um, o outro ainda tem tudo.
 
 ---
 
-## ✅ Vantagens
+## Vantagens
 
 - Alta segurança  
 - Simples de configurar  
@@ -46,34 +46,34 @@ Se você perder um, o outro ainda tem tudo.
 
 ---
 
-## ❌ Desvantagens
+## Desvantagens
 
 - Usa o dobro de espaço (2 discos = capacidade de 1)  
 - Não melhora muito o desempenho  
 
 ---
 
-# ⚙️ Configurar RAID 1 no Windows
+# Configurar RAID 1 no Windows
 
-## 📌 Passo a passo
+**Passo a passo**
 
 1. Clique com botão direito no menu iniciar  
 2. Abra **Gerenciamento de Disco**
 
 ---
 
-## 📌 Inicializar discos
+**Inicializar discos**
 
 Ao aparecer:
 
 - **MBR** → suporta até 2TB  
 - **GPT** → suporta discos maiores e é mais moderno  
 
-👉 Recomendado: **GPT**
+Recomendado: **GPT**
 
 ---
 
-## 📌 Criar espelhamento
+**Criar espelhamento**
 
 1. Clique com botão direito no disco  
 2. Selecione:
@@ -87,16 +87,16 @@ Novo volume espelhado
 
 ---
 
-# 🔧 Se um HD falhar (RAID 1)
+# Se um HD falhar (RAID 1)
 
-## 📌 O que acontece
+**O que acontece**
 
 - O sistema continua funcionando  
 - Seus arquivos continuam acessíveis  
 
 ---
 
-## 📌 Resolver problema
+**Resolver problema**
 
 1. Vá em **Gerenciamento de Disco**
 2. Clique no volume espelhado
@@ -106,11 +106,11 @@ Remover espelho
 
 4. Escolha o disco com problema  
 
-👉 Seus dados continuam no disco saudável
+Seus dados continuam no disco saudável
 
 ---
 
-## 🔁 Refazer o espelho
+## Refazer o espelho
 
 1. Clique no disco ativo  
 2. Selecione:
@@ -122,9 +122,9 @@ Adicionar espelho
 
 ---
 
-# 🧩 RAID 5 — Paridade
+# RAID 5 — Paridade
 
-## 📌 Como funciona
+**Como funciona**
 
 - Usa **mínimo 3 discos**
 - Os dados são distribuídos entre os discos
@@ -132,7 +132,7 @@ Adicionar espelho
 
 ---
 
-## 🧠 Analogia
+**Analogia**
 
 Imagine 3 pessoas guardando partes de um segredo.
 
@@ -140,7 +140,7 @@ Se uma esquecer, as outras conseguem **reconstruir a informação**.
 
 ---
 
-## ✅ Vantagens
+## Vantagens
 
 - Melhor aproveitamento de espaço  
 - Boa segurança  
@@ -148,16 +148,16 @@ Se uma esquecer, as outras conseguem **reconstruir a informação**.
 
 ---
 
-## ❌ Desvantagens
+## Desvantagens
 
 - Configuração mais complexa  
 - Se **2 discos falharem**, os dados são perdidos  
 
 ---
 
-# ⚙️ Configurar RAID 5 no Windows
+# Configurar RAID 5 no Windows
 
-## 📌 Passo a passo
+**Passo a passo**
 
 1. Abra **Gerenciamento de Disco**
 2. Clique com botão direito em um disco
@@ -170,9 +170,9 @@ Novo volume RAID-5
 
 ---
 
-# 🔧 Se um HD falhar (RAID 5)
+# Se um HD falhar (RAID 5)
 
-## 📌 O que acontece
+**O que acontece**
 
 - O sistema continua funcionando  
 - Os dados ainda estão acessíveis  
@@ -180,7 +180,7 @@ Novo volume RAID-5
 
 ---
 
-## 🔁 Reparar RAID 5
+## Reparar RAID 5
 
 1. Vá em **Gerenciamento de Disco**
 2. Clique no volume RAID
@@ -191,11 +191,11 @@ Reparar volume
 4. Escolha um novo disco  
 5. Confirme  
 
-👉 O sistema irá reconstruir automaticamente os dados
+O sistema irá reconstruir automaticamente os dados
 
 ---
 
-# 📊 Comparação Rápida
+## Comparação Rápida
 
 | Tipo | Mín. discos | Segurança | Desempenho | Espaço |
 |------|------------|----------|------------|--------|
@@ -204,7 +204,7 @@ Reparar volume
 
 ---
 
-# 💡 Informação Adicional
+**Informação Adicional**
 
 RAID pode ser implementado de duas formas:
 
