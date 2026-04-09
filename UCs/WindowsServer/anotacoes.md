@@ -208,11 +208,11 @@ O sistema irá reconstruir automaticamente os dados
 
 RAID pode ser implementado de duas formas:
 
-* RAID por software
+**RAID por software**
 - Configurado no sistema operacional  
 - Mais simples  
 
-* RAID por hardware
+**RAID por hardware**
 - Feito por controladoras físicas  
 - Mais rápido e profissional  
 
