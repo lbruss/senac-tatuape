@@ -1,364 +1,232 @@
-# Windows Server 
+# 💾 RAID — Entenda de Forma Simples (RAID 1 e RAID 5)
 
-O Windows Server é um sistema operacional da Microsoft criado especialmente para gerenciar redes, usuários e serviços dentro de empresas.
+RAID é uma tecnologia que usa **vários discos (HDs/SSDs)** para melhorar:
 
-
----
-
-**O que é Windows Server?**
-
-O Windows Server é como uma versão “profissional” do Windows, feita para:
-
-controlar vários computadores ao mesmo tempo
-
-armazenar dados com segurança
-
-rodar serviços importantes
-
-manter sistemas funcionando 24h
-
-
-Analogia:
-Se o Windows comum é um computador pessoal, o Windows Server é como o “cérebro da empresa”, que organiza tudo e garante que tudo funcione corretamente.
-
+- segurança dos dados  
+- desempenho  
+- disponibilidade  
 
 ---
 
-**Função do Windows Server**
+# ⚠️ IMPORTANTE
 
-Ele serve para centralizar e gerenciar tudo dentro de uma rede.
-
-
----
-
-1. Gerenciamento de usuários
-
-Com o Windows Server você pode:
-
-criar contas para funcionários
-
-definir permissões (quem pode acessar o quê)
-
-controlar logins
-
-
-Isso é feito principalmente com o Active Directory
-
-Analogia:
-É como um porteiro inteligente, que decide quem entra e onde pode ir.
-
-
----
-
-2. Compartilhamento de arquivos
-
-Criar pastas compartilhadas
-
-Controlar quem pode acessar
-
-Armazenar arquivos da empresa
-
-
-Muito usado em escritórios
-
-
----
-
-3. Servidor de rede
-
-Ele pode fornecer serviços como:
-
-DHCP → distribui IP automaticamente
-
-DNS → resolve nomes (ex: google.com)
-
-Servidor Web → hospeda sites
-
-Servidor de impressão
-
-
-
----
-
-4. Segurança
-
-Controle de acesso
-
-Políticas de senha
-
-Firewall
-
-Auditoria de usuários
-
-
-Ajuda a proteger os dados da empresa
-
-
----
-
-5. Virtualização
-
-Com ferramentas como o Hyper-V, o Windows Server permite:
-
-criar máquinas virtuais
-
-rodar vários sistemas em um único servidor
-
-
-Analogia:
-É como ter vários computadores dentro de um só.
-
-
----
-
-6. Aplicações empresariais
-
-Ele também roda sistemas como:
-
-ERPs
-
-bancos de dados
-
-sistemas internos da empresa
-
-
-
----
-
-## Diferença entre Windows comum e Windows Server
-
-Windows comum	Windows Server
-
-Uso pessoal	Uso empresarial
-1 usuário principal	Vários usuários
-Interface simples	Ferramentas avançadas
-Não gerencia rede	Gerencia toda a rede
-
-
-
----
-
-## Onde o Windows Server é usado?
-
-Empresas
-
-Escolas
-
-Hospitais
-
-Bancos
-
-Data centers
-
-
-
----
-
-**Resumindo**
-
-O Windows Server serve para:
-
-organizar redes
-
-controlar usuários
-
-armazenar dados
-
-manter serviços funcionando
-
----
-
-# Conclusão
-
-O Windows Server é essencial no mundo da TI porque permite que empresas:
-
-tenham controle total da rede
-
-aumentem a segurança
-
-melhorem a organização
-
-mantenham tudo funcionando de forma centralizada
-
-
-Em poucas palavras:
-sem servidores, a maioria das empresas simplesmente não conseguiria funcionar direito.
-
----
-
-# Versões do Windows Server
-
-O **Windows Server** possui diferentes versões, cada uma com objetivos específicos.
-
-**Windows Server Standard**
-
-- Possui **menos recursos avançados**
-- Indicado para **pequenas e médias empresas**
-- Suporta virtualização, mas com limitações
-
----
-
-**Windows Server Datacenter**
-
-- Versão mais completa
-- Possui **todos os recursos disponíveis**
-- Indicado para:
-  - grandes empresas
-  - data centers
-  - ambientes com muita virtualização
+👉 **RAID NÃO substitui backup**
 
 **Analogia:**  
-- Standard → carro básico  
-- Datacenter → carro completo com todos os opcionais
+- RAID = cofre reforçado  
+- Backup = cópia guardada em outro lugar  
+
+Se algo grave acontecer (vírus, erro humano, incêndio), só o backup salva.
 
 ---
 
-# Windows Server 2022 (64 bits)
+# 🪞 RAID 1 — Espelhamento
 
-O **Windows Server 2022 x64** é uma versão moderna e estável.
+## 📌 Como funciona
 
-**Características**
+- Usa **no mínimo 2 discos**
+- Um disco é uma cópia exata do outro
 
-- Melhor segurança  
-- Correções de erros  
-- Maior desempenho  
-- Suporte a novas tecnologias  
-
-Em geral, quem aprende uma versão consegue usar outras, pois a base é muito parecida.
+Tudo que acontece em um disco → acontece no outro automaticamente
 
 ---
 
-# Instalação do Windows Server
+## 🧠 Analogia
 
-A instalação é **muito semelhante ao Windows comum**:
-
-1. Iniciar a instalação pelo ISO
-2. Escolher idioma
-3. Avançar normalmente
+É como escrever em **dois cadernos ao mesmo tempo**.  
+Se você perder um, o outro ainda tem tudo.
 
 ---
 
-**Escolha da versão**
+## ✅ Vantagens
 
-Durante a instalação, escolha:
-
-Datacenter (Experiência com área de trabalho)
-
-Essa opção inclui **interface gráfica (GUI)**, facilitando o uso.
+- Alta segurança  
+- Simples de configurar  
+- Proteção contra falha de 1 disco  
 
 ---
 
-# Configuração de Rede (NIC Teaming)
+## ❌ Desvantagens
 
-O **NIC Teaming** permite unir várias placas de rede em uma só.
-
-**Vantagens**
-
-- Maior velocidade  
-- Redundância (se uma falhar, outra assume)  
-- Melhor desempenho  
-
-**Analogia:**  
-É como usar **várias pistas em uma rodovia** ao invés de apenas uma.
+- Usa o dobro de espaço (2 discos = capacidade de 1)  
+- Não melhora muito o desempenho  
 
 ---
 
-## Criar equipe de rede
+# ⚙️ Configurar RAID 1 no Windows
 
-1. Vá em **Servidor Local**
-2. Em **Agrupamento NIC**, clique em:
+## 📌 Passo a passo
 
-Desabilitado
-
-3. Clique em **Tarefas → Nova Equipe**
-4. Defina um nome (exemplo):
-
-NICBruss
-
-5. Selecione as placas de rede disponíveis
+1. Clique com botão direito no menu iniciar  
+2. Abra **Gerenciamento de Disco**
 
 ---
 
-## Configurações recomendadas
+## 📌 Inicializar discos
 
-- **Modo de agrupamento:** Alternar independente  
-- **Balanceamento de carga:** Dinâmico  
-- **Adaptador em espera:** Nenhum (todos ativos)  
-- **Interface primária:** padrão  
+Ao aparecer:
 
----
+- **MBR** → suporta até 2TB  
+- **GPT** → suporta discos maiores e é mais moderno  
 
-# Configurar IP Manual
-
-1. Clique com o botão direito no ícone de rede (canto inferior direito)
-2. Abra:
-
-Configurações de rede e Internet
-
-3. Clique em:
-
-Alterar opções de adaptador
-
-4. Clique com o botão direito na interface criada (ex: NICBruss)
-5. Vá em:
-
-Protocolo IP Versão 4 (TCP/IPv4)
-
-6. Clique em **Propriedades**
+👉 Recomendado: **GPT**
 
 ---
 
-## Definir IP
+## 📌 Criar espelhamento
 
-Marque:
+1. Clique com botão direito no disco  
+2. Selecione:
 
-Usar o seguinte endereço IP
+Novo volume espelhado
 
-Exemplo:
-
-- IP: 192.168.32.10
-- Máscara: 255.255.255.0
-- Gateway: 192.168.32.1
-
----
-
-## Alterar Nome do Servidor
-
-1. Vá em **Servidor Local**
-2. Clique em **Nome do Computador**
-3. Clique em **Alterar**
-4. Defina um nome (exemplo):
-
-SRVBruss
-
-5. Clique em **OK**
-6. Reinicie o servidor se necessário
-
-**Analogia:**  
-O nome do servidor é como o **nome de um funcionário na empresa**, facilita a identificação na rede.
+3. Se não aparecer:
+- Converta para **Disco Dinâmico**
+4. Adicione o segundo disco  
+5. Avance → Formate → Concluir  
 
 ---
 
-**Informação Adicional**
+# 🔧 Se um HD falhar (RAID 1)
 
-Mesmo após alterar configurações, às vezes o sistema pode:
+## 📌 O que acontece
 
-- não aplicar imediatamente
-- apresentar erro temporário
-
-Nesses casos, **reiniciar o servidor resolve na maioria das vezes**.
+- O sistema continua funcionando  
+- Seus arquivos continuam acessíveis  
 
 ---
 
-# Conclusão
+## 📌 Resolver problema
 
-Com esses passos você consegue:
+1. Vá em **Gerenciamento de Disco**
+2. Clique no volume espelhado
+3. Selecione:
 
-- Escolher a versão correta do Windows Server  
-- Instalar o sistema  
-- Configurar rede  
-- Criar redundância com NIC Teaming  
-- Definir IP fixo  
-- Nomear o servidor  
+Remover espelho
 
-Essas são as configurações iniciais essenciais para começar a trabalhar com servidores Windows em ambientes profissionais.
+4. Escolha o disco com problema  
+
+👉 Seus dados continuam no disco saudável
+
+---
+
+## 🔁 Refazer o espelho
+
+1. Clique no disco ativo  
+2. Selecione:
+
+Adicionar espelho
+
+3. Escolha o novo disco  
+4. Confirme  
+
+---
+
+# 🧩 RAID 5 — Paridade
+
+## 📌 Como funciona
+
+- Usa **mínimo 3 discos**
+- Os dados são distribuídos entre os discos
+- Existe uma **informação de paridade** que permite recuperar dados
+
+---
+
+## 🧠 Analogia
+
+Imagine 3 pessoas guardando partes de um segredo.
+
+Se uma esquecer, as outras conseguem **reconstruir a informação**.
+
+---
+
+## ✅ Vantagens
+
+- Melhor aproveitamento de espaço  
+- Boa segurança  
+- Melhor desempenho que RAID 1 (principalmente leitura)
+
+---
+
+## ❌ Desvantagens
+
+- Configuração mais complexa  
+- Se **2 discos falharem**, os dados são perdidos  
+
+---
+
+# ⚙️ Configurar RAID 5 no Windows
+
+## 📌 Passo a passo
+
+1. Abra **Gerenciamento de Disco**
+2. Clique com botão direito em um disco
+3. Selecione:
+
+Novo volume RAID-5
+
+4. Adicione **pelo menos 3 discos**
+5. Avance → Formate → Concluir  
+
+---
+
+# 🔧 Se um HD falhar (RAID 5)
+
+## 📌 O que acontece
+
+- O sistema continua funcionando  
+- Os dados ainda estão acessíveis  
+- Mas a segurança diminui  
+
+---
+
+## 🔁 Reparar RAID 5
+
+1. Vá em **Gerenciamento de Disco**
+2. Clique no volume RAID
+3. Selecione:
+
+Reparar volume
+
+4. Escolha um novo disco  
+5. Confirme  
+
+👉 O sistema irá reconstruir automaticamente os dados
+
+---
+
+# 📊 Comparação Rápida
+
+| Tipo | Mín. discos | Segurança | Desempenho | Espaço |
+|------|------------|----------|------------|--------|
+| RAID 1 | 2 | Alta | Normal | 50% |
+| RAID 5 | 3 | Média/Alta | Bom | Melhor aproveitamento |
+
+---
+
+# 💡 Informação Adicional
+
+RAID pode ser implementado de duas formas:
+
+### 🔹 RAID por software
+- Configurado no sistema operacional  
+- Mais simples  
+
+### 🔹 RAID por hardware
+- Feito por controladoras físicas  
+- Mais rápido e profissional  
+
+---
+
+# 🏁 Conclusão
+
+RAID é essencial para ambientes profissionais porque:
+
+- protege dados contra falhas de disco  
+- mantém sistemas funcionando  
+- melhora desempenho  
+
+👉 Em resumo:
+
+- **RAID 1** → máxima segurança (espelho)  
+- **RAID 5** → equilíbrio entre segurança e desempenho
