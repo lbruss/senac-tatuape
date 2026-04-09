@@ -10,7 +10,7 @@ RAID é uma tecnologia que usa **vários discos (HDs/SSDs)** para melhorar:
 
 **IMPORTANTE**
 
-👉 **RAID NÃO substitui backup**
+**RAID NÃO substitui backup**
 
 **Analogia:**  
 - RAID = cofre reforçado  
@@ -208,17 +208,17 @@ O sistema irá reconstruir automaticamente os dados
 
 RAID pode ser implementado de duas formas:
 
-### 🔹 RAID por software
+* RAID por software
 - Configurado no sistema operacional  
 - Mais simples  
 
-### 🔹 RAID por hardware
+* RAID por hardware
 - Feito por controladoras físicas  
 - Mais rápido e profissional  
 
 ---
 
-# 🏁 Conclusão
+# Conclusão
 
 RAID é essencial para ambientes profissionais porque:
 
@@ -226,7 +226,7 @@ RAID é essencial para ambientes profissionais porque:
 - mantém sistemas funcionando  
 - melhora desempenho  
 
-👉 Em resumo:
+Em resumo:
 
 - **RAID 1** → máxima segurança (espelho)  
 - **RAID 5** → equilíbrio entre segurança e desempenho
