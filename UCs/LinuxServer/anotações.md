@@ -136,14 +136,15 @@ apt install tomcat11 tomcat11-admin tomcat11-examples tomcat11-docs
 
 ---
 
-🔍 Verificar serviço
+- Verificar serviço
 
+```
 systemctl status tomcat11
-
+```
 
 ---
 
-🌐 Acessar no navegador
+**Acessar no navegador**
 
 Digite:
 
@@ -153,44 +154,47 @@ Exemplo:
 
 http://10.26.44.222:8080
 
-👉 Se aparecer a página, o Tomcat está funcionando ✅
-
+- Se aparecer a página, o Tomcat está funcionando.
 
 ---
 
-👤 Passo 5 — Criar usuário administrador
+## Criar usuário administrador
 
-📂 Acessar diretório
+**Acessar diretório**
 
+```
 cd /etc/tomcat11
-
+```
 
 ---
 
-💾 Fazer backup
+**Fazer backup**
 
+```
 cp tomcat-users.xml tomcat-users.xml.bkp
-
+```
 
 ---
 
-✏️ Editar arquivo
+**Editar arquivo**
 
+```
 nano tomcat-users.xml
-
+```
 
 ---
 
-📌 Adicionar usuário
+**Adicionar usuário**
 
 Dentro do arquivo, adicione:
 
+```
 <user username="admin" password="SUA_SENHA" roles="manager-gui,admin-gui"/>
-
+```
 
 ---
 
-💾 Salvar
+**Salvar**
 
 Ctrl + O
 
@@ -198,18 +202,17 @@ Enter
 
 Ctrl + X
 
-
-
 ---
 
-🔄 Reiniciar serviço
+**Reiniciar serviço**
 
+```
 systemctl restart tomcat11
-
+```
 
 ---
 
-🌐 Acessar painel administrativo
+**Acessar painel administrativo**
 
 1. Abra no navegador:
 
@@ -223,31 +226,25 @@ Manager App
 
 3. Faça login com:
 
-
-
 Usuário: admin
 
 Senha: definida anteriormente
 
-
-
 ---
 
-💡 Informação Adicional
+**Informação Adicional**
 
-🔹 Porta 8080
+- Porta 8080
 
 É a porta padrão do Tomcat
 
 Diferente do Apache (porta 80)
 
-
-👉 Você pode mudar isso depois na configuração.
-
+- Você pode mudar isso depois na configuração.
 
 ---
 
-🔹 Segurança
+- Segurança
 
 Por padrão:
 
@@ -255,27 +252,20 @@ O acesso administrativo pode ser restrito
 
 Em produção, recomenda-se limitar acesso por IP
 
-
-
 ---
 
-🧠 Resumo Final
+# Conclusão
 
 Você configurou:
 
-Debian (sistema base)
-
-Rede (IP + DNS)
-
-Java (necessário para rodar aplicações)
-
-Tomcat (servidor de aplicações)
-
-
+- Debian (sistema base)
+- Rede (IP + DNS)
+- Java (necessário para rodar aplicações)
+- Tomcat (servidor de aplicações)
 
 ---
 
-🎯 Analogia Final
+**Analogia Final**
 
 Você montou:
 
@@ -285,5 +275,4 @@ Energia → Java
 
 Máquina → Tomcat
 
-
-👉 Agora você tem um servidor pronto para rodar aplicações Java na web 🚀
+**Agora você tem um servidor pronto para rodar aplicações Java na web**
