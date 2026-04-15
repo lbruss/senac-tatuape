@@ -1,14 +1,10 @@
-# ☕ Apache Tomcat — Guia Completo no Debian
+# Apache Tomcat
 
-Este guia mostra como instalar e configurar o **Apache Tomcat**, um servidor de aplicações Java.
-
----
-
-# 🧠 O que é o Tomcat?
+## O que é o Tomcat?
 
 O **Apache Tomcat** é um servidor que executa aplicações Java na web.
 
-👉 Ele é muito usado para rodar:
+Ele é muito usado para rodar:
 
 - Sistemas web em Java  
 - APIs  
@@ -16,13 +12,13 @@ O **Apache Tomcat** é um servidor que executa aplicações Java na web.
 
 ---
 
-## 🧠 Analogia
+**Analogia**
 
 Se o **Apache (web server)** entrega páginas HTML, o **Tomcat** é como um **motor inteligente**, que executa código Java e gera páginas dinâmicas.
 
 ---
 
-# ⚙️ Etapas Gerais
+# Etapas Gerais
 
 1. Instalar Debian  
 2. Configurar rede  
@@ -32,7 +28,7 @@ Se o **Apache (web server)** entrega páginas HTML, o **Tomcat** é como um **mo
 
 ---
 
-# 🖥️ Passo 1 — Instalar Debian
+**Instalar Debian**
 
 Durante a instalação:
 
@@ -42,7 +38,7 @@ Durante a instalação:
 
 ---
 
-## 📌 Particionamento
+**Particionamento**
 
 - Escolher:
 
@@ -54,7 +50,7 @@ Assistido - usar disco inteiro com LVM
 
 ---
 
-## 📦 Seleção de software
+**Seleção de software**
 
 Marcar apenas:
 
@@ -63,70 +59,80 @@ Marcar apenas:
 
 ---
 
-## 🔐 Finalização
+**Finalização**
 
 - Finalize a instalação  
 - Faça login como:
 
+```
 root
+```
 
 ---
 
-# 🌐 Passo 2 — Configurar Rede
+**Passo 2 — Configurar Rede**
 
-## 📌 Configurar IP fixo e DNS
+- Configurar IP fixo e DNS
 
 Depois de configurar:
 
-### ✔️ Testes
+## Testes
 
-```bash
+```
 ping google.com
+```
 
-👉 Testa internet (DNS funcionando)
-
+- Testa internet (DNS funcionando)
 
 ---
 
+```
 ip a
+```
 
-👉 Verifica o IP configurado
-
+- Verifica o IP configurado
 
 ---
 
-👉 Teste também de outro computador:
+Teste também de outro computador:
 
+```
 ping IP_DO_SERVIDOR
-
+```
 
 ---
 
-☕ Passo 3 — Instalar Java
+## Instalar Java
 
 O Tomcat precisa do Java para funcionar.
 
-📥 Instalar
+-Instalar
 
+```
 apt install default-jdk
-
+```
 
 ---
 
-🔍 Verificar
+- Verificar
 
+```
 java -version
-javac -version
+```
 
+```
+javac -version
+```
 
 ---
 
-🚀 Passo 4 — Instalar Apache Tomcat
+## Instalar Apache Tomcat
 
-📥 Instalação
+- Instalação
 
+```
 apt install tomcat11 tomcat11-admin tomcat11-examples tomcat11-docs
-
+```
 
 ---
 
