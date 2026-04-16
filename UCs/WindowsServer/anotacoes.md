@@ -1,4 +1,4 @@
-# 🏢 Active Directory — Unidade Organizacional (OU) e Usuários
+# AD - Unidade Organizacional (OU) e Usuários
 
 Este guia mostra como:
 
@@ -9,7 +9,7 @@ Este guia mostra como:
 
 ---
 
-# 🧠 O que é uma Unidade Organizacional (OU)?
+## O que é uma Unidade Organizacional (OU)?
 
 A **OU (Organizational Unit)** é como uma pasta dentro do Active Directory usada para:
 
@@ -19,7 +19,7 @@ A **OU (Organizational Unit)** é como uma pasta dentro do Active Directory usad
 
 ---
 
-## 🧠 Analogia
+**Analogia**
 
 Pense na OU como uma **gaveta de escritório**:
 
@@ -28,9 +28,9 @@ Pense na OU como uma **gaveta de escritório**:
 
 ---
 
-# 📁 Criar Unidade Organizacional (OU)
+# Criar Unidade Organizacional (OU)
 
-## 📌 Passo a passo
+**Passo a passo**
 
 1. Abrir:
 
@@ -46,9 +46,9 @@ Novo → Unidade Organizacional
 
 ---
 
-# 👤 Criar Usuários
+# Criar Usuários
 
-## 📌 Passo a passo
+**Passo a passo**
 
 1. Entre na OU criada  
 2. Clique com botão direito na área branca  
@@ -64,7 +64,7 @@ Novo → Usuário
 
 ---
 
-## 🔐 Definir senha
+## Definir senha
 
 Escolha uma senha e configure opções:
 
@@ -73,19 +73,19 @@ Escolha uma senha e configure opções:
 - Senha nunca expira  
 - Conta desativada  
 
-👉 Selecione conforme a necessidade
+**Selecione conforme a necessidade**
 
 ---
 
-## 📌 Finalizar
+**Finalizar**
 
 - Clique em **Avançar → Concluir**
 
 ---
 
-# 🔄 Gerenciar Usuários
+# Gerenciar Usuários
 
-## 📌 Habilitar ou desabilitar conta
+**Habilitar ou desabilitar conta**
 
 - Clique com botão direito no usuário  
 - Escolha:
@@ -98,7 +98,7 @@ Desabilitar conta
 
 ---
 
-## 📌 Exemplos práticos
+**Exemplos práticos**
 
 - **Daniel** → não pode alterar senha  
 - **Enzo** → senha nunca expira + conta desativada  
@@ -106,15 +106,15 @@ Desabilitar conta
 
 ---
 
-# 🛟 Criar usuário administrador reserva
+# Criar usuário administrador reserva
 
-## 📌 Por que fazer isso?
+**Por que fazer isso?**
 
-👉 Para evitar perda de acesso caso o administrador principal tenha problemas.
+- Para evitar perda de acesso caso o administrador principal tenha problemas.
 
 ---
 
-## 📌 Passo a passo
+**Passo a passo**
 
 1. Vá em:
 
@@ -132,7 +132,7 @@ Copiar
 
 ---
 
-## 📌 Configuração importante
+**Configuração importante**
 
 - Marque:
 
@@ -140,29 +140,29 @@ Senha nunca expira
 
 ---
 
-## 📂 Organizar
+## Organizar
 
 - Arraste esse usuário para a OU criada  
 
-👉 Esse usuário terá privilégios administrativos
+**Esse usuário terá privilégios administrativos**
 
 ---
 
-# 🌐 Adicionar computador ao domínio
+# Adicionar computador ao domínio
 
-## 📌 Testar DNS antes
+**Testar DNS antes**
 
 No computador cliente:
 
-```bash
+```
 ping bruss.tec
+```
 
-👉 Se responder, o DNS está funcionando
-
+- Se responder, o DNS está funcionando
 
 ---
 
-📌 Entrar no domínio
+**Entrar no domínio**
 
 1. Vá em:
 
@@ -188,30 +188,24 @@ Domínio
 
 bruss.tec
 
-
-
-
 ---
 
-🔐 Autenticação
+**Autenticação**
 
 Digite usuário e senha do administrador do servidor
 
 
-👉 Se aparecer mensagem de boas-vindas, deu certo ✅
-
+**Se aparecer mensagem de boas-vindas, deu certo**
 
 ---
 
-🔄 Reiniciar
+**Reiniciar**
 
 Reinicie o computador
 
-
-
 ---
 
-🔑 Testar login
+**Testar login**
 
 Após reiniciar:
 
@@ -219,24 +213,21 @@ Clique em Outro usuário
 
 Faça login com um usuário criado no servidor
 
-
-
 ---
 
-📌 Verificar no servidor
+## Verificar no servidor
 
 No Active Directory:
 
 Domínio → Computers
 
-👉 O computador aparecerá na lista
-
+**O computador aparecerá na lista**
 
 ---
 
-🎯 Controlar acesso dos usuários
+# Controlar acesso dos usuários
 
-📌 Configurar restrições
+**Configurar restrições**
 
 1. Abra o usuário
 
@@ -245,20 +236,15 @@ Domínio → Computers
 
 Conta
 
-
-
-
 ---
 
-⏰ Horário de login
+## Horário de login
 
 Defina dias e horários permitidos
 
-
-
 ---
 
-💻 Restringir computadores
+## Restringir computadores
 
 Clique em:
 
@@ -270,11 +256,9 @@ Os seguintes computadores
 
 Adicione os nomes dos PCs
 
-
-
 ---
 
-🧠 Analogia
+**Analogia**
 
 É como um cartão de acesso:
 
@@ -282,51 +266,40 @@ Só funciona em certos lugares
 
 Só funciona em certos horários
 
-
-
 ---
 
-💡 Informação Adicional
+**Informação Adicional**
 
 Essas configurações são muito usadas em:
 
-Bancos
+- Bancos
+- Empresas grandes
+- Ambientes corporativos
 
-Empresas grandes
-
-Ambientes corporativos
-
-
-👉 Aumenta a segurança e o controle sobre os usuários
+**Aumenta a segurança e o controle sobre os usuários**
 
 
 ---
 
-🧠 Conclusão
+# Conclusão
 
 Com isso você consegue:
 
-Organizar usuários com OUs
-
-Criar e controlar contas
-
-Adicionar computadores ao domínio
-
-Definir regras de acesso
+- Organizar usuários com OUs
+- Criar e controlar contas
+- Adicionar computadores ao domínio
+- Definir regras de acesso
 
 
 
 ---
 
-🎯 Resumo final
+**Resumo final**
 
-OU → organização
-
-Usuários → controle de acesso
-
-Domínio → centralização
-
-Regras → segurança
+- OU → organização
+- Usuários → controle de acesso
+- Domínio → centralização
+- Regras → segurança
 
 
-👉 Isso é a base de qualquer rede corporativa moderna.
+**Isso é a base de qualquer rede corporativa moderna.**
