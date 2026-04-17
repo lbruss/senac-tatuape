@@ -1,169 +1,163 @@
-# ☕ Continuação do Tomcat 11 — Banco de Dados MySQL + Deploy de Aplicação
-
-Este guia continua a configuração do servidor **Tomcat**, adicionando:
-
-- Banco de dados **MySQL**
-- Criação de banco e tabela
-- Implantação de aplicação Java (.WAR)
-
----
-
-# 🗄️ Passo 5 — Instalar MySQL (Oracle)
+**Passo 5 — Instalar MySQL (Oracle)**
 
 O **MySQL** é um banco de dados usado para armazenar informações da aplicação.
 
 ---
 
-## 🧠 Analogia
+**Analogia**
 
 Se o Tomcat é o “motor” da aplicação, o banco de dados é o **arquivo onde tudo é guardado** (usuários, dados, registros, etc).
 
 ---
 
-## 📥 Instalar dependência (chaves)
+## Instalar dependência (chaves)
 
-```bash
+```
 apt install gnupg
+```
 
-👉 Serve para validar pacotes com segurança (assinatura digital).
-
+- Serve para validar pacotes com segurança (assinatura digital).
 
 ---
 
-🌐 Baixar repositório oficial do MySQL
+**Baixar repositório oficial do MySQL**
 
 1. Acesse:
 
 https://mysql.com
 
-
 2. Vá em:
 
 Downloads → MySQL Community Edition → MySQL APT Repository
 
-
 3. Copie o link do download
-
-
-
 
 ---
 
-⬇️ Baixar no Debian
+**Baixar no Debian**
 
 wget LINK_COPIADO
 
 Exemplo:
 
+```
 wget https://dev.mysql.com/get/mysql-apt-config_0.8.xx.deb
-
+```
 
 ---
 
-📦 Instalar pacote
+**Instalar pacote**
 
+```
 dpkg -i mysql-apt-config*.deb
+```
 
-👉 Use TAB e ENTER para confirmar as opções padrão.
-
+- Use TAB e ENTER para confirmar as opções padrão.
 
 ---
 
-🔄 Atualizar repositórios
+**Atualizar repositórios**
 
+```
 apt update
-
+```
 
 ---
 
-📥 Instalar MySQL
+**Instalar MySQL**
 
+```
 apt install mysql-server
+```
 
-👉 Durante a instalação:
+- Durante a instalação:
 
 Defina a senha do usuário root do banco
 
-
-
 ---
 
-🔍 Verificar instalação
+**Verificar instalação**
 
+```
 mysql -V
-
+```
 
 ---
 
-🧪 Usando o MySQL (Exemplo Prático)
+**Usando o MySQL (Exemplo Prático)**
 
-📌 Acessar o banco
+- Acessar o banco
 
+```
 mysql -u root -p
+```
 
 Digite a senha configurada.
 
-
 ---
 
-🧹 Limpar tela
+- Limpar tela
 
 Ctrl + L
 
-
 ---
 
-📊 Ver bancos existentes
+- Ver bancos existentes
 
+```
 SHOW DATABASES;
-
+```
 
 ---
 
-📁 Criar banco de dados
+**Criar banco de dados**
 
+```
 CREATE DATABASE agenda;
-
+```
 
 ---
 
-📂 Usar banco
+**Usar banco**
 
+```
 USE agenda;
-
+```
 
 ---
 
-📋 Ver tabelas
+**Ver tabelas**
 
+```
 SHOW TABLES;
-
+```
 
 ---
 
-🧱 Criar tabela
+**Criar tabela**
 
+```java
 CREATE TABLE contatos (
   idcon INT PRIMARY KEY AUTO_INCREMENT,
   nome VARCHAR(30) NOT NULL,
   fone VARCHAR(15) NOT NULL,
   email VARCHAR(30)
 );
-
+```
 
 ---
 
-🔍 Descrever tabela
+**Descrever tabela**
 
+```
 DESCRIBE contatos;
-
+```
 
 ---
 
-🚪 Sair do MySQL
+**Sair do MySQL**
 
 Ctrl + D
-
 
 ---
 
