@@ -161,45 +161,38 @@ Ctrl + D
 
 ---
 
-🚀 Deploy de Aplicação Java (.WAR)
+# Deploy de Aplicação Java (.WAR)
 
-📌 O que é um arquivo WAR?
+**O que é um arquivo WAR?**
 
 É um pacote de aplicação Java
 
 Contém tudo que o sistema precisa para rodar
 
-
-
 ---
 
-🧠 Analogia
+**Analogia**
 
 Um arquivo .war é como um arquivo compactado (.zip) com um sistema pronto dentro.
 
 
 ---
 
-📤 Implantar aplicação no Tomcat
+# Implantar aplicação no Tomcat
 
 1. Abra o navegador:
 
 http://IP_DO_SERVIDOR:8080
 
-
 2. Clique em:
 
 Manager App
 
-
 3. Faça login com usuário admin
-
-
-
 
 ---
 
-📦 Fazer upload do WAR
+**Fazer upload do WAR**
 
 Na seção:
 
@@ -213,31 +206,27 @@ Clique em:
 
 Deploy
 
-
-
 ---
 
-📂 Aplicação implantada
+**Aplicação implantada**
 
 Após o deploy, aparecerá algo como:
 
 /agenda
 
-
 ---
 
-🌐 Acessar aplicação
+**Acessar aplicação**
 
 No navegador:
 
 http://IP_DO_SERVIDOR:8080/agenda
 
-
 ---
 
-💡 Informação Adicional
+**Informação Adicional**
 
-🔹 Integração Tomcat + MySQL
+- Integração Tomcat + MySQL
 
 Muitas aplicações Java usam:
 
@@ -246,39 +235,35 @@ Tomcat → executa o sistema
 MySQL → armazena dados
 
 
-👉 Eles trabalham juntos o tempo todo.
+**Eles trabalham juntos o tempo todo.**
 
 
 ---
 
-🔹 Segurança básica
+- Segurança básica
 
 Após instalar o MySQL, é recomendado:
 
+```
 mysql_secure_installation
+```
 
-👉 Isso melhora a segurança do banco.
-
+**Isso melhora a segurança do banco.**
 
 ---
 
-🧠 Conclusão
+# Conclusão
 
 Agora você tem um ambiente completo com:
 
-Servidor Linux (Debian)
-
-Tomcat (aplicações Java)
-
-MySQL (banco de dados)
-
-Aplicação rodando (.WAR)
-
-
+- Servidor Linux (Debian)
+- Tomcat (aplicações Java)
+- MySQL (banco de dados)
+- Aplicação rodando (.WAR)
 
 ---
 
-🎯 Resumo Final
+**Resumo Final**
 
 MySQL → guarda dados
 
@@ -287,4 +272,4 @@ Tomcat → executa aplicação
 WAR → sistema pronto
 
 
-👉 Isso é a base de sistemas web Java usados em empresas 🚀
+**Isso é a base de sistemas web Java usados em empresas**
