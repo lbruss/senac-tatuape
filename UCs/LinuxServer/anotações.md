@@ -1,220 +1,194 @@
-# Apache Tomcat
+# ☕ Continuação do Tomcat 11 — Banco de Dados MySQL + Deploy de Aplicação
 
-## O que é o Tomcat?
+Este guia continua a configuração do servidor **Tomcat**, adicionando:
 
-O **Apache Tomcat** é um servidor que executa aplicações Java na web.
-
-Ele é muito usado para rodar:
-
-- Sistemas web em Java  
-- APIs  
-- Aplicações corporativas  
+- Banco de dados **MySQL**
+- Criação de banco e tabela
+- Implantação de aplicação Java (.WAR)
 
 ---
 
-**Analogia**
+# 🗄️ Passo 5 — Instalar MySQL (Oracle)
 
-Se o **Apache (web server)** entrega páginas HTML, o **Tomcat** é como um **motor inteligente**, que executa código Java e gera páginas dinâmicas.
-
----
-
-# Etapas Gerais
-
-1. Instalar Debian  
-2. Configurar rede  
-3. Instalar Java  
-4. Instalar Tomcat  
-5. Configurar acesso  
+O **MySQL** é um banco de dados usado para armazenar informações da aplicação.
 
 ---
 
-**Instalar Debian**
+## 🧠 Analogia
 
-Durante a instalação:
-
-- Escolha **Graphic Install**
-- Domínio → pode deixar em branco (configura depois)
-- Defina senha do root
+Se o Tomcat é o “motor” da aplicação, o banco de dados é o **arquivo onde tudo é guardado** (usuários, dados, registros, etc).
 
 ---
 
-**Particionamento**
+## 📥 Instalar dependência (chaves)
 
-- Escolher:
+```bash
+apt install gnupg
 
-Assistido - usar disco inteiro com LVM
+👉 Serve para validar pacotes com segurança (assinatura digital).
 
-- Depois:
-
-/home, /var e /tmp separados
 
 ---
 
-**Seleção de software**
+🌐 Baixar repositório oficial do MySQL
 
-Marcar apenas:
+1. Acesse:
 
-- Servidor SSH  
-- Utilitários padrão  
+https://mysql.com
 
----
 
-**Finalização**
+2. Vá em:
 
-- Finalize a instalação  
-- Faça login como:
+Downloads → MySQL Community Edition → MySQL APT Repository
 
-```
-root
-```
 
----
+3. Copie o link do download
 
-**Passo 2 — Configurar Rede**
 
-- Configurar IP fixo e DNS
 
-Depois de configurar:
-
-## Testes
-
-```
-ping google.com
-```
-
-- Testa internet (DNS funcionando)
 
 ---
 
-```
-ip a
-```
+⬇️ Baixar no Debian
 
-- Verifica o IP configurado
-
----
-
-Teste também de outro computador:
-
-```
-ping IP_DO_SERVIDOR
-```
-
----
-
-## Instalar Java
-
-O Tomcat precisa do Java para funcionar.
-
--Instalar
-
-```
-apt install default-jdk
-```
-
----
-
-- Verificar
-
-```
-java -version
-```
-
-```
-javac -version
-```
-
----
-
-## Instalar Apache Tomcat
-
-- Instalação
-
-```
-apt install tomcat11 tomcat11-admin tomcat11-examples tomcat11-docs
-```
-
----
-
-- Verificar serviço
-
-```
-systemctl status tomcat11
-```
-
----
-
-**Acessar no navegador**
-
-Digite:
-
-http://IP_DO_SERVIDOR:8080
+wget LINK_COPIADO
 
 Exemplo:
 
-http://10.26.44.222:8080
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.xx.deb
 
-- Se aparecer a página, o Tomcat está funcionando.
-
----
-
-## Criar usuário administrador
-
-**Acessar diretório**
-
-```
-cd /etc/tomcat11
-```
 
 ---
 
-**Fazer backup**
+📦 Instalar pacote
 
-```
-cp tomcat-users.xml tomcat-users.xml.bkp
-```
+dpkg -i mysql-apt-config*.deb
 
----
+👉 Use TAB e ENTER para confirmar as opções padrão.
 
-**Editar arquivo**
-
-```
-nano tomcat-users.xml
-```
 
 ---
 
-**Adicionar usuário**
+🔄 Atualizar repositórios
 
-Dentro do arquivo, adicione:
+apt update
 
-```
-<user username="admin" password="SUA_SENHA" roles="manager-gui,admin-gui"/>
-```
 
 ---
 
-**Salvar**
+📥 Instalar MySQL
 
-Ctrl + O
+apt install mysql-server
 
-Enter
+👉 Durante a instalação:
 
-Ctrl + X
+Defina a senha do usuário root do banco
 
----
 
-**Reiniciar serviço**
-
-```
-systemctl restart tomcat11
-```
 
 ---
 
-**Acessar painel administrativo**
+🔍 Verificar instalação
 
-1. Abra no navegador:
+mysql -V
+
+
+---
+
+🧪 Usando o MySQL (Exemplo Prático)
+
+📌 Acessar o banco
+
+mysql -u root -p
+
+Digite a senha configurada.
+
+
+---
+
+🧹 Limpar tela
+
+Ctrl + L
+
+
+---
+
+📊 Ver bancos existentes
+
+SHOW DATABASES;
+
+
+---
+
+📁 Criar banco de dados
+
+CREATE DATABASE agenda;
+
+
+---
+
+📂 Usar banco
+
+USE agenda;
+
+
+---
+
+📋 Ver tabelas
+
+SHOW TABLES;
+
+
+---
+
+🧱 Criar tabela
+
+CREATE TABLE contatos (
+  idcon INT PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(30) NOT NULL,
+  fone VARCHAR(15) NOT NULL,
+  email VARCHAR(30)
+);
+
+
+---
+
+🔍 Descrever tabela
+
+DESCRIBE contatos;
+
+
+---
+
+🚪 Sair do MySQL
+
+Ctrl + D
+
+
+---
+
+🚀 Deploy de Aplicação Java (.WAR)
+
+📌 O que é um arquivo WAR?
+
+É um pacote de aplicação Java
+
+Contém tudo que o sistema precisa para rodar
+
+
+
+---
+
+🧠 Analogia
+
+Um arquivo .war é como um arquivo compactado (.zip) com um sistema pronto dentro.
+
+
+---
+
+📤 Implantar aplicação no Tomcat
+
+1. Abra o navegador:
 
 http://IP_DO_SERVIDOR:8080
 
@@ -224,55 +198,99 @@ http://IP_DO_SERVIDOR:8080
 Manager App
 
 
-3. Faça login com:
+3. Faça login com usuário admin
 
-Usuário: admin
 
-Senha: definida anteriormente
 
----
-
-**Informação Adicional**
-
-- Porta 8080
-
-É a porta padrão do Tomcat
-
-Diferente do Apache (porta 80)
-
-- Você pode mudar isso depois na configuração.
 
 ---
 
-- Segurança
+📦 Fazer upload do WAR
 
-Por padrão:
+Na seção:
 
-O acesso administrativo pode ser restrito
+WAR file to deploy
 
-Em produção, recomenda-se limitar acesso por IP
+Clique em Escolher arquivo
 
----
+Selecione seu arquivo .war
 
-# Conclusão
+Clique em:
 
-Você configurou:
+Deploy
 
-- Debian (sistema base)
-- Rede (IP + DNS)
-- Java (necessário para rodar aplicações)
-- Tomcat (servidor de aplicações)
+
 
 ---
 
-**Analogia Final**
+📂 Aplicação implantada
 
-Você montou:
+Após o deploy, aparecerá algo como:
 
-O terreno → Debian
+/agenda
 
-Energia → Java
 
-Máquina → Tomcat
+---
 
-**Agora você tem um servidor pronto para rodar aplicações Java na web**
+🌐 Acessar aplicação
+
+No navegador:
+
+http://IP_DO_SERVIDOR:8080/agenda
+
+
+---
+
+💡 Informação Adicional
+
+🔹 Integração Tomcat + MySQL
+
+Muitas aplicações Java usam:
+
+Tomcat → executa o sistema
+
+MySQL → armazena dados
+
+
+👉 Eles trabalham juntos o tempo todo.
+
+
+---
+
+🔹 Segurança básica
+
+Após instalar o MySQL, é recomendado:
+
+mysql_secure_installation
+
+👉 Isso melhora a segurança do banco.
+
+
+---
+
+🧠 Conclusão
+
+Agora você tem um ambiente completo com:
+
+Servidor Linux (Debian)
+
+Tomcat (aplicações Java)
+
+MySQL (banco de dados)
+
+Aplicação rodando (.WAR)
+
+
+
+---
+
+🎯 Resumo Final
+
+MySQL → guarda dados
+
+Tomcat → executa aplicação
+
+WAR → sistema pronto
+
+
+👉 Isso é a base de sistemas web Java usados em empresas 🚀
