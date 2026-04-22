@@ -1,186 +1,169 @@
-# ☕ Continuação Tomcat — MySQL (Usuários, Workbench e Backup)
-
-Este guia mostra como:
-
-- Criar usuário administrador no MySQL  
-- Conectar via MySQL Workbench  
-- Executar comandos  
-- Fazer backup e restauração de banco de dados  
+# MySQL (Usuários, Workbench e Backup)
 
 ---
 
-# 👤 Criar usuário administrador no MySQL
+# Criar usuário administrador no MySQL
 
-## 📌 Acessar o MySQL
+## Acessar o MySQL
 
 No Debian:
 
-```bash
+```
 mysql -u root -p
+```
 
 Digite a senha do root.
 
-
 ---
 
-👤 Criar usuário
+**Criar usuário**
 
+```
 CREATE USER 'dba'@'%' IDENTIFIED BY '123@senac';
+```
 
-👉 % significa que o usuário pode acessar de qualquer IP.
-
+**% significa que o usuário pode acessar de qualquer IP.**
 
 ---
 
-🔑 Dar permissões
+* Dar permissões
 
+```
 GRANT ALL PRIVILEGES ON *.* TO 'dba'@'%';
-FLUSH PRIVILEGES;
+```
 
+```
+FLUSH PRIVILEGES;
+```
 
 ---
 
-🧠 Analogia
+**Analogia**
 
 Esse usuário é como um administrador geral do banco, com acesso total a tudo.
 
-
 ---
 
-🖥️ MySQL Workbench
+## MySQL Workbench
 
 O MySQL Workbench é uma ferramenta gráfica para gerenciar bancos de dados.
 
-👉 É como um “VS Code do banco de dados”.
-
+**É como um “VS Code do banco de dados”.**
 
 ---
 
-🔌 Criar conexão
+**Criar conexão**
 
 1. Clique em + (Nova conexão)
 
-
 2. Preencha:
 
+* Nome da conexão: qualquer (ex: ServidorDB)
 
+* Host: IP do servidor
 
-Nome da conexão: qualquer (ex: ServidorDB)
-
-Host: IP do servidor
-
-Usuário: dba
+* Usuário: dba
 
 
 3. Clique em OK
 
-
-
-
 ---
 
-🔐 Conectar
+**Conectar**
 
 Clique na conexão criada
 
 Digite a senha
 
-
-
 ---
 
-⚠️ Executar comandos
+**Executar comandos**
 
-👉 Diferente do terminal:
+* Diferente do terminal:
 
 Use:
 
 Ctrl + Enter
 
-
 Para executar comandos
 
-
 ---
 
-🧪 Exemplos de comandos
+## Exemplos de comandos
 
+```
 SHOW DATABASES;
+```
 
+```
 USE agenda;
+```
 
+```
 SELECT * FROM contatos;
-
+```
 
 ---
 
-💾 Backup de Banco de Dados
+# Backup de Banco de Dados
 
-📌 Passo a passo (Exportar)
+**Passo a passo (Exportar)**
 
 1. Vá em:
 
 Administration → Data Export
 
-
 2. Selecione o banco (ex: agenda)
-
 
 3. Escolha:
 
-Dump Structure and Data
-
+* Dump Structure and Data
 
 4. Clique em:
 
 Start Export
 
-
-
-
 ---
 
-🧠 Analogia
+**Analogia**
 
 Backup é como tirar uma foto do banco de dados para guardar caso algo dê errado.
 
-
 ---
 
-❌ Apagar banco de dados
+## Apagar banco de dados
 
+```
 DROP DATABASE agenda;
+```
 
-⚠️ Isso apaga tudo permanentemente.
-
-
----
-
-🔄 Restaurar Backup (Importar)
-
-📌 Importante
-
-👉 Você precisa criar o banco antes de restaurar.
-
+**Isso apaga tudo permanentemente.**
 
 ---
 
-📌 Criar banco
+## Restaurar Backup (Importar)
 
+* Importante
+
+** Você precisa criar o banco antes de restaurar.
+
+---
+
+**Criar banco**
+
+```
 CREATE DATABASE agenda;
-
+```
 
 ---
 
-📥 Importar no Workbench
+## Importar no Workbench (Restaurar Backup)
 
 1. Vá em:
 
 Administration → Data Import/Restore
 
-
 2. Clique nos 3 pontinhos e selecione o backup
-
 
 3. Escolha o banco (agenda)
 
