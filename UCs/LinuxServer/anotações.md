@@ -1,275 +1,254 @@
-**Passo 5 — Instalar MySQL (Oracle)**
+# ☕ Continuação Tomcat — MySQL (Usuários, Workbench e Backup)
 
-O **MySQL** é um banco de dados usado para armazenar informações da aplicação.
+Este guia mostra como:
 
----
-
-**Analogia**
-
-Se o Tomcat é o “motor” da aplicação, o banco de dados é o **arquivo onde tudo é guardado** (usuários, dados, registros, etc).
-
----
-
-## Instalar dependência (chaves)
-
-```
-apt install gnupg
-```
-
-- Serve para validar pacotes com segurança (assinatura digital).
+- Criar usuário administrador no MySQL  
+- Conectar via MySQL Workbench  
+- Executar comandos  
+- Fazer backup e restauração de banco de dados  
 
 ---
 
-**Baixar repositório oficial do MySQL**
+# 👤 Criar usuário administrador no MySQL
 
-1. Acesse:
+## 📌 Acessar o MySQL
 
-https://mysql.com
+No Debian:
 
-2. Vá em:
-
-Downloads → MySQL Community Edition → MySQL APT Repository
-
-3. Copie o link do download
-
----
-
-**Baixar no Debian**
-
-wget LINK_COPIADO
-
-Exemplo:
-
-```
-wget https://dev.mysql.com/get/mysql-apt-config_0.8.xx.deb
-```
-
----
-
-**Instalar pacote**
-
-```
-dpkg -i mysql-apt-config*.deb
-```
-
-- Use TAB e ENTER para confirmar as opções padrão.
-
----
-
-**Atualizar repositórios**
-
-```
-apt update
-```
-
----
-
-**Instalar MySQL**
-
-```
-apt install mysql-server
-```
-
-- Durante a instalação:
-
-Defina a senha do usuário root do banco
-
----
-
-**Verificar instalação**
-
-```
-mysql -V
-```
-
----
-
-**Usando o MySQL (Exemplo Prático)**
-
-- Acessar o banco
-
-```
+```bash
 mysql -u root -p
-```
 
-Digite a senha configurada.
+Digite a senha do root.
 
----
-
-- Limpar tela
-
-Ctrl + L
 
 ---
 
-- Ver bancos existentes
+👤 Criar usuário
 
-```
+CREATE USER 'dba'@'%' IDENTIFIED BY '123@senac';
+
+👉 % significa que o usuário pode acessar de qualquer IP.
+
+
+---
+
+🔑 Dar permissões
+
+GRANT ALL PRIVILEGES ON *.* TO 'dba'@'%';
+FLUSH PRIVILEGES;
+
+
+---
+
+🧠 Analogia
+
+Esse usuário é como um administrador geral do banco, com acesso total a tudo.
+
+
+---
+
+🖥️ MySQL Workbench
+
+O MySQL Workbench é uma ferramenta gráfica para gerenciar bancos de dados.
+
+👉 É como um “VS Code do banco de dados”.
+
+
+---
+
+🔌 Criar conexão
+
+1. Clique em + (Nova conexão)
+
+
+2. Preencha:
+
+
+
+Nome da conexão: qualquer (ex: ServidorDB)
+
+Host: IP do servidor
+
+Usuário: dba
+
+
+3. Clique em OK
+
+
+
+
+---
+
+🔐 Conectar
+
+Clique na conexão criada
+
+Digite a senha
+
+
+
+---
+
+⚠️ Executar comandos
+
+👉 Diferente do terminal:
+
+Use:
+
+Ctrl + Enter
+
+
+Para executar comandos
+
+
+---
+
+🧪 Exemplos de comandos
+
 SHOW DATABASES;
-```
 
----
-
-**Criar banco de dados**
-
-```
-CREATE DATABASE agenda;
-```
-
----
-
-**Usar banco**
-
-```
 USE agenda;
-```
 
----
-
-**Ver tabelas**
-
-```
-SHOW TABLES;
-```
-
----
-
-**Criar tabela**
-
-```java
-CREATE TABLE contatos (
-  idcon INT PRIMARY KEY AUTO_INCREMENT,
-  nome VARCHAR(30) NOT NULL,
-  fone VARCHAR(15) NOT NULL,
-  email VARCHAR(30)
-);
-```
-
----
-
-**Descrever tabela**
-
-```
-DESCRIBE contatos;
-```
-
----
-
-**Sair do MySQL**
-
-Ctrl + D
-
----
-
-# Deploy de Aplicação Java (.WAR)
-
-**O que é um arquivo WAR?**
-
-É um pacote de aplicação Java
-
-Contém tudo que o sistema precisa para rodar
-
----
-
-**Analogia**
-
-Um arquivo .war é como um arquivo compactado (.zip) com um sistema pronto dentro.
+SELECT * FROM contatos;
 
 
 ---
 
-# Implantar aplicação no Tomcat
+💾 Backup de Banco de Dados
 
-1. Abra o navegador:
+📌 Passo a passo (Exportar)
 
-http://IP_DO_SERVIDOR:8080
+1. Vá em:
 
-2. Clique em:
-
-Manager App
-
-3. Faça login com usuário admin
-
----
-
-**Fazer upload do WAR**
-
-Na seção:
-
-WAR file to deploy
-
-Clique em Escolher arquivo
-
-Selecione seu arquivo .war
-
-Clique em:
-
-Deploy
-
----
-
-**Aplicação implantada**
-
-Após o deploy, aparecerá algo como:
-
-/agenda
-
----
-
-**Acessar aplicação**
-
-No navegador:
-
-http://IP_DO_SERVIDOR:8080/agenda
-
----
-
-**Informação Adicional**
-
-- Integração Tomcat + MySQL
-
-Muitas aplicações Java usam:
-
-Tomcat → executa o sistema
-
-MySQL → armazena dados
+Administration → Data Export
 
 
-**Eles trabalham juntos o tempo todo.**
+2. Selecione o banco (ex: agenda)
+
+
+3. Escolha:
+
+Dump Structure and Data
+
+
+4. Clique em:
+
+Start Export
+
+
 
 
 ---
 
-- Segurança básica
+🧠 Analogia
 
-Após instalar o MySQL, é recomendado:
+Backup é como tirar uma foto do banco de dados para guardar caso algo dê errado.
 
-```
-mysql_secure_installation
-```
-
-**Isso melhora a segurança do banco.**
 
 ---
 
-# Conclusão
+❌ Apagar banco de dados
 
-Agora você tem um ambiente completo com:
+DROP DATABASE agenda;
 
-- Servidor Linux (Debian)
-- Tomcat (aplicações Java)
-- MySQL (banco de dados)
-- Aplicação rodando (.WAR)
+⚠️ Isso apaga tudo permanentemente.
+
 
 ---
 
-**Resumo Final**
+🔄 Restaurar Backup (Importar)
 
-MySQL → guarda dados
+📌 Importante
 
-Tomcat → executa aplicação
-
-WAR → sistema pronto
+👉 Você precisa criar o banco antes de restaurar.
 
 
-**Isso é a base de sistemas web Java usados em empresas**
+---
+
+📌 Criar banco
+
+CREATE DATABASE agenda;
+
+
+---
+
+📥 Importar no Workbench
+
+1. Vá em:
+
+Administration → Data Import/Restore
+
+
+2. Clique nos 3 pontinhos e selecione o backup
+
+
+3. Escolha o banco (agenda)
+
+
+4. Clique em:
+
+Start Import
+
+
+
+
+---
+
+💡 Informação Adicional
+
+🔹 Segurança
+
+Permitir acesso com '%' é prático, mas:
+
+Em produção, o ideal é limitar por IP:
+
+'dba'@'192.168.0.%'
+
+
+👉 Isso aumenta a segurança.
+
+
+---
+
+🔹 Uso real
+
+Esse tipo de configuração é comum em:
+
+Sistemas web (Tomcat + MySQL)
+
+Aplicações empresariais
+
+APIs
+
+
+
+---
+
+🧠 Conclusão
+
+Agora você consegue:
+
+Criar usuários no MySQL
+
+Acessar remotamente
+
+Gerenciar banco com interface gráfica
+
+Fazer backup e restore
+
+
+
+---
+
+🎯 Resumo final
+
+Usuário dba → administrador do banco
+
+Workbench → interface visual
+
+Backup → segurança dos dados
+
+Restore → recuperação
+
+
+👉 Isso completa o ambiente profissional com Tomcat + Banco de Dados 🚀
