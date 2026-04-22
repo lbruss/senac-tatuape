@@ -172,42 +172,37 @@ Administration → Data Import/Restore
 
 Start Import
 
-
-
-
 ---
 
-💡 Informação Adicional
+**Informação Adicional**
 
-🔹 Segurança
+* Segurança
 
 Permitir acesso com '%' é prático, mas:
 
 Em produção, o ideal é limitar por IP:
 
+```
 'dba'@'192.168.0.%'
+```
 
-
-👉 Isso aumenta a segurança.
-
+**Isso aumenta a segurança.**
 
 ---
 
-🔹 Uso real
+* Uso real
 
 Esse tipo de configuração é comum em:
 
-Sistemas web (Tomcat + MySQL)
+* Sistemas web (Tomcat + MySQL)
 
-Aplicações empresariais
+* Aplicações empresariais
 
-APIs
-
-
+* APIs
 
 ---
 
-🧠 Conclusão
+# Conclusão
 
 Agora você consegue:
 
@@ -219,11 +214,9 @@ Gerenciar banco com interface gráfica
 
 Fazer backup e restore
 
-
-
 ---
 
-🎯 Resumo final
+**Resumo final**
 
 Usuário dba → administrador do banco
 
@@ -233,5 +226,4 @@ Backup → segurança dos dados
 
 Restore → recuperação
 
-
-👉 Isso completa o ambiente profissional com Tomcat + Banco de Dados 🚀
+**Isso completa o ambiente profissional com Tomcat + Banco de Dados.**
