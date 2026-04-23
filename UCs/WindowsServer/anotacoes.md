@@ -1,305 +1,268 @@
-# AD - Unidade Organizacional (OU) e Usuários
+# Usuários, Grupos e Permissões de Pasta
 
-Este guia mostra como:
+**1. Criar Unidade Organizacional (UO)**
 
-- Criar uma **Unidade Organizacional (OU)**  
-- Criar e gerenciar usuários  
-- Conectar um computador ao domínio  
-- Aplicar regras de acesso  
-
----
-
-## O que é uma Unidade Organizacional (OU)?
-
-A **OU (Organizational Unit)** é como uma pasta dentro do Active Directory usada para:
-
-- Organizar usuários  
-- Separar setores (RH, TI, Financeiro)  
-- Aplicar regras específicas  
-
----
-
-**Analogia**
-
-Pense na OU como uma **gaveta de escritório**:
-
-- Cada gaveta guarda um tipo de documento  
-- Facilita organização e controle  
-
----
-
-# Criar Unidade Organizacional (OU)
+A **UO (Unidade Organizacional)** funciona como uma “pasta” para organizar usuários e grupos dentro do domínio.
 
 **Passo a passo**
 
-1. Abrir:
+1. Abra:
 
-Ferramentas → Usuários e Computadores do Active Directory
+Usuários e Computadores do Active Directory
 
-2. Clique com botão direito no domínio (ex: `bruss.tec`)
+2. Clique com o botão direito no domínio
 3. Vá em:
 
 Novo → Unidade Organizacional
 
-4. Defina um nome (ex: `TI`, `Financeiro`)
-5. Clique em **OK**
+4. Defina um nome (ex: `TI`, `Financeiro`, `Projetos`)
 
----
-
-# Criar Usuários
-
-**Passo a passo**
-
-1. Entre na OU criada  
-2. Clique com botão direito na área branca  
-3. Vá em:
-
-Novo → Usuário
-
-4. Preencha:
-
-- Nome  
-- Sobrenome  
-- Nome de logon  
-
----
-
-## Definir senha
-
-Escolha uma senha e configure opções:
-
-- Usuário deve alterar senha no próximo logon  
-- Usuário não pode alterar senha  
-- Senha nunca expira  
-- Conta desativada  
-
-**Selecione conforme a necessidade**
-
----
-
-**Finalizar**
-
-- Clique em **Avançar → Concluir**
-
----
-
-# Gerenciar Usuários
-
-**Habilitar ou desabilitar conta**
-
-- Clique com botão direito no usuário  
-- Escolha:
-
-Habilitar conta
-
-ou
-
-Desabilitar conta
-
----
-
-**Exemplos práticos**
-
-- **Daniel** → não pode alterar senha  
-- **Enzo** → senha nunca expira + conta desativada  
-- **Ezequiel** → deve alterar senha no próximo login  
-
----
-
-# Criar usuário administrador reserva
-
-**Por que fazer isso?**
-
-- Para evitar perda de acesso caso o administrador principal tenha problemas.
-
----
-
-**Passo a passo**
-
-1. Vá em:
-
-Users
-
-2. Clique com botão direito em:
-
-Administrador
-
-3. Clique em:
-
-Copiar
-
-4. Crie o novo usuário
-
----
-
-**Configuração importante**
-
-- Marque:
-
-Senha nunca expira
-
----
-
-## Organizar
-
-- Arraste esse usuário para a OU criada  
-
-**Esse usuário terá privilégios administrativos**
-
----
-
-# Adicionar computador ao domínio
-
-**Testar DNS antes**
-
-No computador cliente:
-
-```
-ping bruss.tec
-```
-
-- Se responder, o DNS está funcionando
-
----
-
-**Entrar no domínio**
-
-1. Vá em:
-
-Configurações → Sistema → Sobre
-
-
-2. Clique em:
-
-Configurações avançadas do sistema
-
-
-3. Aba:
-
-Nome do computador → Alterar
-
-
-4. Selecione:
-
-Domínio
-
-
-5. Digite:
-
-bruss.tec
-
----
-
-**Autenticação**
-
-Digite usuário e senha do administrador do servidor
-
-
-**Se aparecer mensagem de boas-vindas, deu certo**
-
----
-
-**Reiniciar**
-
-Reinicie o computador
-
----
-
-**Testar login**
-
-Após reiniciar:
-
-Clique em Outro usuário
-
-Faça login com um usuário criado no servidor
-
----
-
-## Verificar no servidor
-
-No Active Directory:
-
-Domínio → Computers
-
-**O computador aparecerá na lista**
-
----
-
-# Controlar acesso dos usuários
-
-**Configurar restrições**
-
-1. Abra o usuário
-
-
-2. Vá na aba:
-
-Conta
-
----
-
-## Horário de login
-
-Defina dias e horários permitidos
-
----
-
-## Restringir computadores
-
-Clique em:
-
-Fazer logon em
-
-Selecione:
-
-Os seguintes computadores
-
-Adicione os nomes dos PCs
+* Criar usuários
 
 ---
 
 **Analogia**
 
-É como um cartão de acesso:
-
-Só funciona em certos lugares
-
-Só funciona em certos horários
+Usuários são como **funcionários da empresa**, cada um com seu login e senha.
 
 ---
 
-**Informação Adicional**
+#  Criar grupo
 
-Essas configurações são muito usadas em:
+Grupos facilitam o gerenciamento. Em vez de dar permissão para cada usuário, você dá para o grupo.
 
-- Bancos
-- Empresas grandes
-- Ambientes corporativos
+**Criar grupo**
 
-**Aumenta a segurança e o controle sobre os usuários**
+1. Dentro da UO:
 
+Novo → Grupo
 
----
-
-# Conclusão
-
-Com isso você consegue:
-
-- Organizar usuários com OUs
-- Criar e controlar contas
-- Adicionar computadores ao domínio
-- Definir regras de acesso
-
-
+2. Defina um nome (ex: `Equipe-Projeto`)
 
 ---
 
-**Resumo final**
+## Tipo de grupo
 
-- OU → organização
-- Usuários → controle de acesso
-- Domínio → centralização
-- Regras → segurança
+- **Segurança** → usado para permissões (acesso a pastas, arquivos, etc) 
+- **Distribuição** → usado para e-mails (listas)  
 
+* Neste exemplo foi selecionado: **Segurança**
 
-**Isso é a base de qualquer rede corporativa moderna.**
+---
+
+## Escopo do grupo
+
+- **Domínio Local** → usado dentro do domínio específico  
+- **Global** → usado dentro do domínio e recomendado para usuários  
+- **Universal** → usado em toda a floresta  
+
+Para o exemplo foi selecionado: **Global**
+
+---
+
+**Analogia**
+
+Grupo é como um **time** (ex: equipe de TI).  
+Você não precisa dar acesso para cada pessoa, basta dar acesso ao time.
+
+---
+
+# Adicionar usuários ao grupo
+
+**Passo a passo**
+
+1. Dê duplo clique no grupo  
+2. Vá em:
+
+Membros → Adicionar
+
+3. Digite os nomes dos usuários  
+
+* Para vários usuários:
+
+Coloque o começo dos nomes dos usuários, exemplo:
+
+geo;gabr
+
+4. Clique em:
+
+Verificar nomes → OK → Aplicar → OK
+
+Também é possível adicionar **grupos dentro de grupos**
+
+---
+
+# Compartilhamento simples de pasta
+
+## Criar e compartilhar
+
+1. Crie uma pasta em qualquer HD  
+2. Clique com botão direito:
+
+Conceder acesso a → Pessoas específicas
+
+3. Selecione:
+
+Todos
+
+4. Defina permissão:
+
+Leitura/Gravação
+
+5. Clique em:
+
+Compartilhar
+
+---
+
+**Analogia**
+
+Esse método é como deixar a porta aberta para todo mundo entrar.
+
+---
+
+# Compartilhamento avançado (controle real)
+
+Aqui você define exatamente quem pode acessar e o que pode fazer.
+
+**Passo a passo**
+
+* Aba Compartilhamento
+
+1. Clique com botão direito na pasta:
+
+Propriedades → Compartilhamento → Compartilhamento Avançado
+
+2. Marque:
+
+Compartilhar esta pasta
+
+3. Clique em:
+
+Permissões
+
+4. Remova:
+
+Todos
+
+5. Adicione:
+
+Usuários do domínio
+
+6. Marque:
+
+Alteração
+
+7. Clique em OK
+
+---
+
+* Aba Segurança
+
+1. Vá em:
+
+Segurança → Avançadas
+
+2. Clique em:
+
+Desabilitar herança
+
+3. Selecione:
+
+Converter permissões herdadas
+
+4. Clique em:
+
+Editar
+
+5. Remova:
+
+Usuários
+
+6. Clique em:
+
+Adicionar
+
+7. Adicione usuários ou grupos desejados  
+8. Marque:
+
+Modificar
+
+9. Clique em OK
+
+---
+
+**Analogia**
+
+Aqui você está criando uma **lista VIP**:  
+- Alguns podem só ver  
+- Outros podem editar  
+- Outros podem fazer tudo  
+
+---
+
+# Exemplo prático (empresa)
+
+## Cenário
+
+Pasta: `Projetos`
+
+- Funcionários → podem **ler e copiar**
+- Gerente → pode **modificar tudo**
+
+## Configuração
+
+- Grupo Funcionários → **sem permissão de modificar**
+- Grupo Gerente → **com permissão de modificar**
+
+---
+
+# Testar acesso
+
+*(Em outro computador**
+
+1. Pressione:
+
+Windows + R
+
+2. Digite:
+
+\NOME-DO-SERVIDOR
+
+3. Acesse a pasta compartilhada
+
+---
+
+**Analogia**
+
+É como um funcionário indo até outro setor da empresa para acessar arquivos.
+
+---
+
+**Informações adicionais**
+
+**Permissões NTFS vs Compartilhamento**
+
+- **Compartilhamento** → controla acesso pela rede  
+- **Segurança (NTFS)** → controla o que pode fazer dentro da pasta  
+
+**A regra mais restritiva sempre prevalece.**
+
+---
+
+* Boas práticas
+
+- Use **grupos**, não usuários diretamente  
+- Separe por departamentos  
+- Evite usar “Todos” em ambientes reais  
+
+---
+
+# Resumo final
+
+- UO → organização  
+- Usuários → pessoas  
+- Grupos → equipes  
+- Permissões → controle de acesso  
+
+**Resultado: rede organizada, segura e fácil de administrar.**
