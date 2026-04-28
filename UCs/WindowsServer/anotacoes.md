@@ -1,268 +1,261 @@
-# Usuários, Grupos e Permissões de Pasta
+# 🖥️ Script de Logon e Mapeamento de Rede (Active Directory)
 
-**1. Criar Unidade Organizacional (UO)**
+Este guia mostra como **automatizar tarefas quando o usuário faz login**, como:
 
-A **UO (Unidade Organizacional)** funciona como uma “pasta” para organizar usuários e grupos dentro do domínio.
+- Mapear pastas de rede 📁  
+- Abrir programas 🚀  
+- Abrir sites 🌐  
 
-**Passo a passo**
+Pense nisso como um **“roteiro automático”**: quando o usuário entra no computador, tudo que ele precisa já abre sozinho.
+
+---
+
+# 📁 1. Onde fica o Script de Logon
+
+O script deve ser salvo no diretório padrão do domínio:
+
+C:\Windows\SYSVOL\sysvol\NOMEDODOMINIO\scripts
+
+> 🔎 Esse local é especial porque todos os computadores do domínio conseguem acessar automaticamente.
+
+---
+
+# 🔗 2. Mapear uma pasta de rede
+
+## 📌 Comando básico
+
+Abra o Bloco de Notas e escreva:
+
+```bat
+net use P: \\SERVIDOR\PASTA
+
+✔️ Explicação
+
+P: → letra da unidade (pode ser qualquer uma disponível)
+
+\\SERVIDOR\PASTA → caminho da pasta na rede
+
+
+
+---
+
+🧠 Analogia
+
+É como criar um atalho automático: a pasta da rede aparece como se fosse um “HD” dentro do computador.
+
+
+---
+
+🚀 3. Abrir programas automaticamente
+
+📌 Exemplo
+
+start notepad
+
+Ou:
+
+start "C:\Program Files\Google\Chrome\Application\chrome.exe"
+
+
+---
+
+🌐 4. Abrir sites automaticamente
+
+start https://www.google.com
+
+
+---
+
+🧠 Analogia
+
+É como ligar o computador e já deixar tudo pronto:
+
+Pasta aberta
+
+Sistema iniciado
+
+Site carregado
+
+
+
+---
+
+📝 5. Criar o arquivo de script
+
+📌 Passo a passo
+
+1. Abra o Bloco de Notas
+
+
+2. Escreva os comandos (juntos ou separados)
+
+
+
+💡 Exemplo completo:
+
+net use P: \\SRV-ARQUIVOS\Projetos
+start notepad
+start https://www.google.com
+
+3. Clique em Salvar como
+
+
+4. Escolha o local:
+
+C:\Windows\SYSVOL\sysvol\NOMEDODOMINIO\scripts
+
+
+5. Nome do arquivo:
+
+logon.cmd
+
+ou
+
+logon.bat
+
+
+6. Em Tipo, selecione:
+
+Todos os arquivos
+
+
+
+
+---
+
+👤 6. Vincular script ao usuário
+
+📌 Passo a passo
 
 1. Abra:
 
 Usuários e Computadores do Active Directory
 
-2. Clique com o botão direito no domínio
+
+2. Clique com botão direito no usuário
+
+
 3. Vá em:
 
-Novo → Unidade Organizacional
+Propriedades → Perfil
 
-4. Defina um nome (ex: `TI`, `Financeiro`, `Projetos`)
 
-* Criar usuários
+4. No campo:
 
----
+Script de logon
 
-**Analogia**
+Digite:
 
-Usuários são como **funcionários da empresa**, cada um com seu login e senha.
+logon.cmd
 
----
 
-#  Criar grupo
+5. Clique em Aplicar e OK
 
-Grupos facilitam o gerenciamento. Em vez de dar permissão para cada usuário, você dá para o grupo.
 
-**Criar grupo**
 
-1. Dentro da UO:
-
-Novo → Grupo
-
-2. Defina um nome (ex: `Equipe-Projeto`)
 
 ---
 
-## Tipo de grupo
+🧠 Analogia
 
-- **Segurança** → usado para permissões (acesso a pastas, arquivos, etc) 
-- **Distribuição** → usado para e-mails (listas)  
+É como dizer:
+👉 “Sempre que esse usuário entrar, execute esse roteiro automaticamente.”
 
-* Neste exemplo foi selecionado: **Segurança**
-
----
-
-## Escopo do grupo
-
-- **Domínio Local** → usado dentro do domínio específico  
-- **Global** → usado dentro do domínio e recomendado para usuários  
-- **Universal** → usado em toda a floresta  
-
-Para o exemplo foi selecionado: **Global**
 
 ---
 
-**Analogia**
+👁️ 7. Enumeração baseada em acesso (Segurança)
 
-Grupo é como um **time** (ex: equipe de TI).  
-Você não precisa dar acesso para cada pessoa, basta dar acesso ao time.
+Esse recurso faz com que o usuário veja apenas o que ele tem permissão para acessar.
+
 
 ---
 
-# Adicionar usuários ao grupo
+📌 Como ativar
 
-**Passo a passo**
+1. Abra o:
 
-1. Dê duplo clique no grupo  
+Gerenciador do Servidor
+
+
 2. Vá em:
 
-Membros → Adicionar
+Serviços de Arquivo e Armazenamento → Compartilhamentos
 
-3. Digite os nomes dos usuários  
 
-* Para vários usuários:
+3. Selecione a pasta desejada
 
-Coloque o começo dos nomes dos usuários, exemplo:
-
-geo;gabr
 
 4. Clique em:
 
-Verificar nomes → OK → Aplicar → OK
+Propriedades → Configurações
 
-Também é possível adicionar **grupos dentro de grupos**
 
----
+5. Ative:
 
-# Compartilhamento simples de pasta
+Habilitar enumeração baseada em acesso
 
-## Criar e compartilhar
 
-1. Crie uma pasta em qualquer HD  
-2. Clique com botão direito:
 
-Conceder acesso a → Pessoas específicas
-
-3. Selecione:
-
-Todos
-
-4. Defina permissão:
-
-Leitura/Gravação
-
-5. Clique em:
-
-Compartilhar
 
 ---
 
-**Analogia**
+🧠 Analogia
 
-Esse método é como deixar a porta aberta para todo mundo entrar.
+Imagine um armário com várias gavetas:
 
----
+🔓 Você só enxerga as gavetas que pode abrir
 
-# Compartilhamento avançado (controle real)
+🔒 As outras simplesmente não aparecem
 
-Aqui você define exatamente quem pode acessar e o que pode fazer.
 
-**Passo a passo**
-
-* Aba Compartilhamento
-
-1. Clique com botão direito na pasta:
-
-Propriedades → Compartilhamento → Compartilhamento Avançado
-
-2. Marque:
-
-Compartilhar esta pasta
-
-3. Clique em:
-
-Permissões
-
-4. Remova:
-
-Todos
-
-5. Adicione:
-
-Usuários do domínio
-
-6. Marque:
-
-Alteração
-
-7. Clique em OK
 
 ---
 
-* Aba Segurança
+💡 Informações adicionais
 
-1. Vá em:
+🔹 Persistência do mapeamento
 
-Segurança → Avançadas
+Se quiser garantir que a unidade continue após reiniciar:
 
-2. Clique em:
+net use P: \\SERVIDOR\PASTA /persistent:yes
 
-Desabilitar herança
-
-3. Selecione:
-
-Converter permissões herdadas
-
-4. Clique em:
-
-Editar
-
-5. Remova:
-
-Usuários
-
-6. Clique em:
-
-Adicionar
-
-7. Adicione usuários ou grupos desejados  
-8. Marque:
-
-Modificar
-
-9. Clique em OK
 
 ---
 
-**Analogia**
+🔹 Remover mapeamento
 
-Aqui você está criando uma **lista VIP**:  
-- Alguns podem só ver  
-- Outros podem editar  
-- Outros podem fazer tudo  
+net use P: /delete
+
 
 ---
 
-# Exemplo prático (empresa)
+🔹 Ordem de execução
 
-## Cenário
+Scripts rodam no login do usuário
 
-Pasta: `Projetos`
+Dependem da rede estar disponível
 
-- Funcionários → podem **ler e copiar**
-- Gerente → pode **modificar tudo**
 
-## Configuração
+👉 Em redes lentas, pode haver atraso na execução.
 
-- Grupo Funcionários → **sem permissão de modificar**
-- Grupo Gerente → **com permissão de modificar**
 
 ---
 
-# Testar acesso
+🎯 Resumo final
 
-*(Em outro computador**
+Script de logon → automatiza tarefas
 
-1. Pressione:
+net use → mapeia rede
 
-Windows + R
+start → abre programas/sites
 
-2. Digite:
+SYSVOL → pasta padrão do domínio
 
-\NOME-DO-SERVIDOR
+Enumeração → esconde o que não pode acessar
 
-3. Acesse a pasta compartilhada
 
----
-
-**Analogia**
-
-É como um funcionário indo até outro setor da empresa para acessar arquivos.
 
 ---
 
-**Informações adicionais**
-
-**Permissões NTFS vs Compartilhamento**
-
-- **Compartilhamento** → controla acesso pela rede  
-- **Segurança (NTFS)** → controla o que pode fazer dentro da pasta  
-
-**A regra mais restritiva sempre prevalece.**
-
----
-
-* Boas práticas
-
-- Use **grupos**, não usuários diretamente  
-- Separe por departamentos  
-- Evite usar “Todos” em ambientes reais  
-
----
-
-# Resumo final
-
-- UO → organização  
-- Usuários → pessoas  
-- Grupos → equipes  
-- Permissões → controle de acesso  
-
-**Resultado: rede organizada, segura e fácil de administrar.**
+✅ Resultado: ambiente automatizado, organizado e mais profissional 💼
