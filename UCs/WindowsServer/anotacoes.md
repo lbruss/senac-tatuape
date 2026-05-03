@@ -1,221 +1,178 @@
-# Script de Logon e Mapeamento de Rede
+# Versões do Windows Server
 
-Pense nisso como um **“roteiro automático”**: quando o usuário entra no computador, tudo que ele precisa já abre sozinho.
+O **Windows Server** possui diferentes versões, cada uma com objetivos específicos.
 
----
+**Windows Server Standard**
 
-# 1. Onde fica o Script de Logon
-
-O script deve ser salvo no diretório padrão do domínio:
-
-C:\Windows\SYSVOL\sysvol\NOMEDODOMINIO\scripts
-
-> Esse local é especial porque todos os computadores do domínio conseguem acessar automaticamente.
+- Possui **menos recursos avançados**
+- Indicado para **pequenas e médias empresas**
+- Suporta virtualização, mas com limitações
 
 ---
 
-# 2. Mapear uma pasta de rede
+**Windows Server Datacenter**
 
-**Comando básico**
+- Versão mais completa
+- Possui **todos os recursos disponíveis**
+- Indicado para:
+  - grandes empresas
+  - data centers
+  - ambientes com muita virtualização
 
-Abra o Bloco de Notas e escreva:
-
-```
-net use P: \\SERVIDOR\PASTA
-```
-
-* Explicação
-
-P: → letra da unidade (pode ser qualquer uma disponível)
-
-\\SERVIDOR\PASTA → caminho da pasta na rede
+**Analogia:**  
+- Standard → carro básico  
+- Datacenter → carro completo com todos os opcionais
 
 ---
 
-**Analogia**
+# Windows Server 2022 (64 bits)
 
-É como criar um atalho automático: a pasta da rede aparece como se fosse um “HD” dentro do computador.
+O **Windows Server 2022 x64** é uma versão moderna e estável.
 
----
+**Características**
 
-***3. Abrir programas automaticamente**
+- Melhor segurança  
+- Correções de erros  
+- Maior desempenho  
+- Suporte a novas tecnologias  
 
-* Exemplo
-
-start "C:\Program Files\Google\Chrome\Application\chrome.exe"
-
-
----
-
-**4. Abrir sites automaticamente**
-
-```
-start https://www.google.com
-```
+Em geral, quem aprende uma versão consegue usar outras, pois a base é muito parecida.
 
 ---
 
-**Analogia**
+# Instalação do Windows Server
 
-É como ligar o computador e já deixar tudo pronto:
+A instalação é **muito semelhante ao Windows comum**:
 
-* Pasta aberta
-* Sistema iniciado
-* Site carregado
-
----
-
-**5. Criar o arquivo de script**
-
-1. Abra o Bloco de Notas
-
-
-2. Escreva os comandos (juntos ou separados)
-
-**Exemplo completo:**
-
-```
-net use P: \\SRV-ARQUIVOS\Projetos
-start "C:\Program Files\Google\Chrome\Application\chrome.exe"
-start https://www.google.com
-```
-
-3. Clique em Salvar como
-
-
-4. Escolha o local:
-
-C:\Windows\SYSVOL\sysvol\NOMEDODOMINIO\scripts
-
-5. Nome do arquivo:
-
-```
-logon.cmd
-```
-
-ou
-
-```
-logon.bat
-```
-
-6. Em Tipo, selecione:
-
-Todos os arquivos
+1. Iniciar a instalação pelo ISO
+2. Escolher idioma
+3. Avançar normalmente
 
 ---
 
-**6. Vincular script ao usuário**
+**Escolha da versão**
 
-1. Abra:
+Durante a instalação, escolha:
 
-Usuários e Computadores do Active Directory
+Datacenter (Experiência com área de trabalho)
 
-2. Clique com botão direito no usuário
-
-3. Vá em:
-
-Propriedades → Perfil
-
-4. No campo:
-
-Script de logon
-
-Digite:
-
-```
-logon.cmd
-```
-
-5. Clique em Aplicar e OK
+Essa opção inclui **interface gráfica (GUI)**, facilitando o uso.
 
 ---
 
-**Analogia**
+# Configuração de Rede (NIC Teaming)
 
-É como dizer:
-“Sempre que esse usuário entrar, execute esse roteiro automaticamente.”
+O **NIC Teaming** permite unir várias placas de rede em uma só.
 
----
+**Vantagens**
 
-# Enumeração baseada em acesso (Segurança)
+- Maior velocidade  
+- Redundância (se uma falhar, outra assume)  
+- Melhor desempenho  
 
-Esse recurso faz com que o usuário veja apenas o que ele tem permissão para acessar.
-
----
-
-1. Abra o:
-
-Gerenciador do Servidor
-
-2. Vá em:
-
-Serviços de Arquivo e Armazenamento → Compartilhamentos
-
-3. Selecione a pasta desejada
-
-4. Clique em:
-
-Propriedades → Configurações
-
-5. Ative:
-
-Habilitar enumeração baseada em acesso
+**Analogia:**  
+É como usar **várias pistas em uma rodovia** ao invés de apenas uma.
 
 ---
 
-**Analogia**
+## Criar equipe de rede
 
-Imagine um armário com várias gavetas:
+1. Vá em **Servidor Local**
+2. Em **Agrupamento NIC**, clique em:
 
-* Você só enxerga as gavetas que pode abrir
+Desabilitado
 
-* As outras simplesmente não aparecem
+3. Clique em **Tarefas → Nova Equipe**
+4. Defina um nome (exemplo):
 
----
+NICBruss
 
-**Informações adicionais**
-
-* Persistência do mapeamento
-
-Se quiser garantir que a unidade continue após reiniciar:
-
-```
-net use P: \\SERVIDOR\PASTA /persistent:yes
-```
+5. Selecione as placas de rede disponíveis
 
 ---
 
-* Remover mapeamento
+## Configurações recomendadas
 
-```
-net use P: /delete
-```
-
----
-
-* Ordem de execução
-
-Scripts rodam no login do usuário
-
-Dependem da rede estar disponível
-
-
-**Em redes lentas, pode haver atraso na execução.**
+- **Modo de agrupamento:** Alternar independente  
+- **Balanceamento de carga:** Dinâmico  
+- **Adaptador em espera:** Nenhum (todos ativos)  
+- **Interface primária:** padrão  
 
 ---
 
-**Resumo final**
+# Configurar IP Manual
 
-Script de logon → automatiza tarefas
+1. Clique com o botão direito no ícone de rede (canto inferior direito)
+2. Abra:
 
-net use → mapeia rede
+Configurações de rede e Internet
 
-start → abre programas/sites
+3. Clique em:
 
-SYSVOL → pasta padrão do domínio
+Alterar opções de adaptador
 
-Enumeração → esconde o que não pode acessar
+4. Clique com o botão direito na interface criada (ex: NICBruss)
+5. Vá em:
+
+Protocolo IP Versão 4 (TCP/IPv4)
+
+6. Clique em **Propriedades**
 
 ---
-Resultado: ambiente automatizado, organizado e mais profissional 
+
+## Definir IP
+
+Marque:
+
+Usar o seguinte endereço IP
+
+Exemplo:
+
+- IP: 192.168.32.10
+- Máscara: 255.255.255.0
+- Gateway: 192.168.32.1
+
+---
+
+## Alterar Nome do Servidor
+
+1. Vá em **Servidor Local**
+2. Clique em **Nome do Computador**
+3. Clique em **Alterar**
+4. Defina um nome (exemplo):
+
+SRVBruss
+
+5. Clique em **OK**
+6. Reinicie o servidor se necessário
+
+**Analogia:**  
+O nome do servidor é como o **nome de um funcionário na empresa**, facilita a identificação na rede.
+
+---
+
+**Informação Adicional**
+
+Mesmo após alterar configurações, às vezes o sistema pode:
+
+- não aplicar imediatamente
+- apresentar erro temporário
+
+Nesses casos, **reiniciar o servidor resolve na maioria das vezes**.
+
+---
+
+# Conclusão
+
+Com esses passos você consegue:
+
+- Escolher a versão correta do Windows Server  
+- Instalar o sistema  
+- Configurar rede  
+- Criar redundância com NIC Teaming  
+- Definir IP fixo  
+- Nomear o servidor  
+
+Essas são as configurações iniciais essenciais para começar a trabalhar com servidores Windows em ambientes profissionais.
+
+---
