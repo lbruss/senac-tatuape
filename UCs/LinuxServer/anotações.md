@@ -103,7 +103,7 @@ cd /etc/network
 
 ---
 
-** Backup do arquivo**
+**Backup do arquivo**
 
 ```
 cp interfaces interfaces.bkp
