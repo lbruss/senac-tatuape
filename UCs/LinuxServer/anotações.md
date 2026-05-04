@@ -79,7 +79,7 @@ apt install linuxlogo
 
 ---
 
-**Personalização***
+**Personalização**
 
 ```
 cd /etc
