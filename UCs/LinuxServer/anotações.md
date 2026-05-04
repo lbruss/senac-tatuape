@@ -1,229 +1,315 @@
-# Continuação Tomcat - MySQL (Usuários, Workbench e Backup)
+# 🔐 Segurança de Redes + Firewall com Debian
+
+## 📌 Visão Geral
+
+Segurança de redes envolve garantir:
+
+- 📡 **Disponibilidade** → sistema sempre acessível  
+- ⚡ **Desempenho** → funcionamento eficiente  
+- 🔒 **Confidencialidade** → evitar roubo de dados  
 
 ---
 
-# Criar usuário administrador no MySQL
+## 🚪 Firewall (Conceito)
 
-## Acessar o MySQL
+O **firewall** é um sistema que controla o tráfego entre redes.
 
-No Debian:
+- Fica entre:
+  - 🌐 Internet (rede externa)
+  - 🏢 Rede interna (privada)
 
-```
-mysql -u root -p
-```
-
-Digite a senha do root.
-
----
-
-**Criar usuário**
-
-```
-CREATE USER 'dba'@'%' IDENTIFIED BY '123@senac';
-```
-
-**% significa que o usuário pode acessar de qualquer IP.**
+> 💡 **Analogia:**  
+É como uma **porta com segurança**: decide quem entra, quem sai e o que pode passar.
 
 ---
 
-* Dar permissões
+# 🐧 Debian como Firewall
 
-```
-GRANT ALL PRIVILEGES ON *.* TO 'dba'@'%';
-```
+## 📌 Ideia
 
-```
-FLUSH PRIVILEGES;
-```
+Usar um servidor com **Debian Linux** como firewall da rede.
 
----
-
-**Analogia**
-
-Esse usuário é como um administrador geral do banco, com acesso total a tudo.
+- Substitui um roteador doméstico  
+- Mais controle e segurança  
+- Ideal para ambiente corporativo  
 
 ---
 
-## MySQL Workbench
+## 🧠 Cenário da Rede
 
-O MySQL Workbench é uma ferramenta gráfica para gerenciar bancos de dados.
-
-**É como um “VS Code do banco de dados”.**
-
----
-
-**Criar conexão**
-
-1. Clique em + (Nova conexão)
-
-2. Preencha:
-
-* Nome da conexão: qualquer (ex: ServidorDB)
-
-* Host: IP do servidor
-
-* Usuário: dba
-
-
-3. Clique em OK
+- 🐧 Debian Server → Firewall  
+- 🖥️ Windows Server → AD, DHCP, DNS  
+- 🔌 Ambos conectados no mesmo **switch**
 
 ---
 
-**Conectar**
+## 🌐 Interfaces de Rede
 
-Clique na conexão criada
+O Debian terá **2 placas de rede**:
 
-Digite a senha
+1. **WAN (Internet)**
+   - Modo: NAT  
+2. **LAN (Rede interna)**
+   - Modo: Rede interna  
 
----
-
-**Executar comandos**
-
-* Diferente do terminal:
-
-Use:
-
-Ctrl + Enter
-
-Para executar comandos
+> 💡 **Analogia:**  
+- WAN = porta para o mundo  
+- LAN = porta para a empresa  
 
 ---
 
-## Exemplos de comandos
+# ⚙️ Instalação Inicial do Debian
 
-```
-SHOW DATABASES;
-```
+## 📌 Instalar com:
 
-```
-USE agenda;
-```
-
-```
-SELECT * FROM contatos;
-```
+- Sistema básico  
+- SSH ativado  
 
 ---
 
-# Backup de Banco de Dados
+## 📦 Instalar pacotes úteis
 
-**Passo a passo (Exportar)**
-
-1. Vá em:
-
-Administration → Data Export
-
-2. Selecione o banco (ex: agenda)
-
-3. Escolha:
-
-* Dump Structure and Data
-
-4. Clique em:
-
-Start Export
+```bash
+apt install vim
+apt install linuxlogo
+``` id="k3ybxk"
 
 ---
 
-**Analogia**
+## 🎨 Personalização (opcional)
 
-Backup é como tirar uma foto do banco de dados para guardar caso algo dê errado.
+```bash
+cd /etc
+cat issue.linuxlogo > issue
+``` id="b5d3sl"
 
----
-
-## Apagar banco de dados
-
-```
-DROP DATABASE agenda;
-```
-
-**Isso apaga tudo permanentemente.**
+✔️ Exibe logo no terminal
 
 ---
 
-## Restaurar Backup (Importar)
+# 🌐 Configuração de Rede
 
-* Importante
+## 📁 Acessar diretório
 
-** Você precisa criar o banco antes de restaurar.
-
----
-
-**Criar banco**
-
-```
-CREATE DATABASE agenda;
-```
+```bash
+cd /etc/network
+``` id="x9v9zw"
 
 ---
 
-## Importar no Workbench (Restaurar Backup)
+## 💾 Backup do arquivo
 
-1. Vá em:
+```bash
+cp interfaces interfaces.bkp
+``` id="3h9vqa"
 
-Administration → Data Import/Restore
-
-2. Clique nos 3 pontinhos e selecione o backup
-
-3. Escolha o banco (agenda)
-
-
-4. Clique em:
-
-Start Import
+✔️ Evita perda de configuração
 
 ---
 
-**Informação Adicional**
+## 🔍 Ver interfaces
 
-* Segurança
+```bash
+ip a
+``` id="yz9q2g"
 
-Permitir acesso com '%' é prático, mas:
-
-Em produção, o ideal é limitar por IP:
-
-```
-'dba'@'192.168.0.%'
-```
-
-**Isso aumenta a segurança.**
+✔️ Mostra nome das placas (ex: enp0s3, enp0s8)
 
 ---
 
-* Uso real
+## ✏️ Editar configuração
 
-Esse tipo de configuração é comum em:
-
-* Sistemas web (Tomcat + MySQL)
-
-* Aplicações empresariais
-
-* APIs
+```bash
+nano interfaces
+``` id="r1l0pq"
 
 ---
 
-# Conclusão
+## ➕ Configurar LAN (IP fixo)
 
-Agora você consegue:
+Adicionar:
 
-Criar usuários no MySQL
-
-Acessar remotamente
-
-Gerenciar banco com interface gráfica
-
-Fazer backup e restore
+```bash
+# LAN (gateway)
+allow-hotplug enp0s8
+iface enp0s8 inet static
+address 192.168.0.1/24
+``` id="3sn4i9"
 
 ---
 
-**Resumo final**
+### 📌 Explicação
 
-Usuário dba → administrador do banco
+- `enp0s8` → nome da interface (varia por máquina)  
+- `static` → IP fixo  
+- `192.168.0.1` → gateway da rede interna  
 
-Workbench → interface visual
+✔️ Geralmente o gateway termina em **.1**
 
-Backup → segurança dos dados
+---
 
-Restore → recuperação
+## 💾 Salvar e aplicar
 
-**Isso completa o ambiente profissional com Tomcat + Banco de Dados.**
+- `Ctrl + O` → salvar  
+- `Ctrl + X` → sair  
+
+---
+
+## 🔄 Reiniciar rede
+
+```bash
+systemctl restart networking
+
+ou
+
+reboot
+``` id="9zq0ld"
+
+---
+
+## ✅ Verificar
+
+```bash
+ip a
+``` id="8hz3dp"
+
+✔️ Interface deve estar **UP**  
+✔️ IP configurado deve aparecer  
+
+---
+
+# 🖥️ Configurar Cliente Windows
+
+## 📌 Configuração manual
+
+- IP: `192.168.0.100`  
+- Máscara: `255.255.255.0`  
+- Gateway: `192.168.0.1`  
+- DNS: `192.168.0.1`  
+
+---
+
+## ⚙️ Ajustes
+
+- Desativar IPv6  
+- Aplicar configurações  
+
+---
+
+## 🧪 Teste
+
+No CMD:
+
+```bash
+ipconfig
+ping 192.168.0.1
+``` id="0l2f0h"
+
+✔️ Se responder → comunicação OK
+
+---
+
+# ⚠️ Integração com Windows Server
+
+## 📌 Problema
+
+- Windows Server já tem outra rede (ex: `192.168.32.x`)
+- Debian está em `192.168.0.x`
+- Redes diferentes → não se comunicam
+
+---
+
+## 🛠️ Solução
+
+Alinhar o IP da LAN do Debian com a rede do Windows Server
+
+---
+
+## ✏️ Alterar no Debian
+
+```bash
+nano /etc/network/interfaces
+``` id="g3x7we"
+
+---
+
+### Alterar para:
+
+```bash
+# LAN (gateway)
+allow-hotplug enp0s8
+iface enp0s8 inet static
+address 192.168.32.1/24
+``` id="f1k9lm"
+
+---
+
+## 🔄 Aplicar
+
+```bash
+systemctl restart networking
+
+ou
+
+reboot
+``` id="x7r1pn"
+
+---
+
+## ✅ Verificar
+
+```bash
+ip a
+``` id="y2p0zz"
+
+✔️ IP deve aparecer corretamente
+
+---
+
+## 🧪 Teste final
+
+No Windows Server:
+
+```bash
+ping 192.168.32.1
+``` id="u4p8kd"
+
+✔️ Se responder → integração funcionando
+
+---
+
+# 🧠 Entendimento Final
+
+## 📌 O que foi feito
+
+- Criado firewall com Debian  
+- Configurada LAN com IP fixo  
+- Cliente conectado ao gateway  
+- Integração com Windows Server  
+
+---
+
+## ⚡ Resumo Relâmpago (10 linhas)
+
+- Segurança envolve disponibilidade, desempenho e proteção  
+- Firewall controla tráfego da rede  
+- Debian pode substituir roteador  
+- Usa duas interfaces: WAN e LAN  
+- LAN recebe IP fixo  
+- Cliente usa gateway do Debian  
+- Redes precisam estar na mesma faixa  
+- Configuração feita no arquivo interfaces  
+- Reiniciar rede aplica mudanças  
+- Teste é feito com ping  
+
+---
+
+# 📌 Resumo Final (Revisão Rápida)
+
+- Firewall = controle de acesso à rede  
+- Debian = solução robusta para firewall  
+- IP fixo define gateway da rede  
+- Mesma rede = comunicação funciona  
+- Testar sempre com ping  
+
+---
