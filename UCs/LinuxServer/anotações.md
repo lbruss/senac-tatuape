@@ -300,7 +300,7 @@ ping 192.168.32.1
 
 ---
 
-**Resumo Relâmpago***
+**Resumo Relâmpago**
 
 - Segurança envolve disponibilidade, desempenho e proteção  
 - Firewall controla tráfego da rede  
