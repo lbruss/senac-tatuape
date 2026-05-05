@@ -1,6 +1,6 @@
-# 📁 Pasta Base (Home Folder) no Active Directory
+# Pasta Base (Home Folder) no Active Directory
 
-## 📌 Visão Geral
+**Visão Geral**
 
 A **Pasta Base (Home Folder)** funciona como uma “gaveta pessoal” de cada usuário dentro da rede.
 
@@ -8,14 +8,14 @@ A **Pasta Base (Home Folder)** funciona como uma “gaveta pessoal” de cada us
 - A pasta é criada automaticamente  
 - Pode ser mapeada como uma unidade (ex: H:)  
 
-> 💡 **Analogia:**  
+> **Analogia:**  
 É como um armário com várias gavetas — cada funcionário tem a sua, com chave própria.
 
 ---
 
-# 👁️ Compartilhamento Oculto
+# Compartilhamento Oculto
 
-## 📌 Como funciona
+**Como funciona**
 
 Se o nome do compartilhamento termina com **`$`**, ele fica oculto na rede.
 
@@ -23,21 +23,21 @@ Exemplo:
 
 home$
 
-✔️ A pasta existe, mas não aparece ao navegar na rede  
-✔️ Só acessa quem sabe o caminho
+- A pasta existe, mas não aparece ao navegar na rede  
+- Só acessa quem sabe o caminho
 
 ---
 
-# 🛠️ Criando a Pasta HOME (Base)
+# Criando a Pasta HOME (Base)
 
-## 📁 Passo inicial
+**Passo inicial**
 
 1. Criar pasta:
    - Nome: `HOME`
 
 ---
 
-## 🔗 Compartilhar
+**Compartilhar**
 
 1. Botão direito → **Propriedades**
 2. Aba:
@@ -46,36 +46,36 @@ home$
 
 ---
 
-### Configurar:
+## Configurar:
 
-- ✔️ Marcar: **Compartilhar esta pasta**
+- Marcar: **Compartilhar esta pasta**
 - Nome:
 
 home$
 
 ---
 
-## 🔐 Permissões de compartilhamento
+**Permissões de compartilhamento**
 
 1. Clique em:
  - **Permissões**
 
 2. Remover:
- - ❌ Todos
+ - Todos
 
 3. Adicionar:
- - ✅ **Usuários do domínio**
+ - **Usuários do domínio**
 
 4. Marcar:
- - ✔️ **Alteração**
+ - **Alteração**
 
-✔️ Isso permite criar e alterar arquivos via rede
+> Isso permite criar e alterar arquivos via rede
 
 ---
 
-# 🔒 Configuração de Segurança (NTFS) — Forma Correta
+# Configuração de Segurança (NTFS) — Forma Correta
 
-## 📌 Objetivo
+**Objetivo**
 
 Garantir que:
 - Cada usuário acesse **apenas sua pasta**
@@ -83,7 +83,7 @@ Garantir que:
 
 ---
 
-## 🛠️ Passo a passo
+**Passo a passo**
 
 1. Aba:
  - **Segurança**
@@ -106,7 +106,7 @@ Garantir que:
 
 ---
 
-## 👤 Configurar permissões
+## Configurar permissões
 
 1. **Selecionar entidade de segurança**
  - Digitar:
@@ -124,7 +124,7 @@ Garantir que:
 ---
 
 3. Em permissões:
- - ✔️ Marcar **Modificar**
+ - Marcar **Modificar**
 
 ---
 
@@ -132,7 +132,7 @@ Garantir que:
 
 ---
 
-## 📌 Por que isso funciona?
+**Por que isso funciona?**
 
 - Usuários podem criar sua própria pasta  
 - O sistema automaticamente define o dono da pasta  
@@ -140,9 +140,9 @@ Garantir que:
 
 ---
 
-# 🔗 Vincular Pasta Base ao Usuário
+# Vincular Pasta Base ao Usuário
 
-## 🛠️ Passo a passo
+**Passo a passo**
 
 1. Abrir:
  - **Usuários e Computadores do AD**
@@ -175,17 +175,17 @@ Garantir que:
 
 ---
 
-## 📌 Explicação
+**Explicação**
 
 - `\\NOMEDODOMINIO` → servidor  
 - `home$` → pasta compartilhada  
 - `%USERNAME%` → cria pasta com nome do usuário automaticamente  
 
-✔️ Cada usuário acessa sua própria pasta
+> Cada usuário acessa sua própria pasta
 
 ---
 
-# 🔄 Resultado Final
+# Resultado Final
 
 Quando o usuário faz login:
 
@@ -195,9 +195,9 @@ Quando o usuário faz login:
 
 ---
 
-# 🔒 Problema comum (e solução)
+# Problema comum
 
-## ❌ Problema
+**Problema**
 
 Usuários conseguem acessar pastas de outros digitando:
 
@@ -205,22 +205,22 @@ Usuários conseguem acessar pastas de outros digitando:
 
 ---
 
-## ✅ Solução aplicada acima
+**Solução aplicada acima**
 
 - Ajustar permissões NTFS corretamente  
 - Cada usuário só acessa sua pasta  
 
 ---
 
-# 👁️ Ocultar pastas (Enumeração)
+# Ocultar pastas (Enumeração)
 
-## 📌 Melhorar segurança visual
+**Melhorar segurança visual**
 
 Mesmo com permissão correta, ainda dá pra “ver” pastas
 
 ---
 
-## 🛠️ Ativar Enumeração Baseada em Acesso
+## Ativar Enumeração Baseada em Acesso
 
 1. Ir em:
    - **Gerenciador do Servidor**
@@ -239,17 +239,17 @@ Mesmo com permissão correta, ainda dá pra “ver” pastas
 ---
 
 6. Marcar:
-   - ✅ **Habilitar enumeração baseada em acesso**
+   - **Habilitar enumeração baseada em acesso**
 
 ---
 
-✔️ Agora:
+Agora:
 - Usuário só vê a própria pasta  
 - Outras ficam invisíveis  
 
 ---
 
-# ⚡ Resumo Relâmpago (10 linhas)
+**Resumo Relâmpago**
 
 - Pasta base é a pasta pessoal do usuário  
 - Pode ser mapeada como unidade (H:)  
@@ -264,7 +264,7 @@ Mesmo com permissão correta, ainda dá pra “ver” pastas
 
 ---
 
-# 📌 Resumo Final (Revisão Rápida)
+# Resumo Final
 
 - Pasta base = armazenamento individual  
 - Compartilhar como `home$`  
