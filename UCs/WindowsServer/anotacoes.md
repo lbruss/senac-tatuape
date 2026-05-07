@@ -1,275 +1,304 @@
-# Pasta Base (Home Folder) no Active Directory
+# GPO (Group Policy Objects)
 
 **Visão Geral**
 
-A **Pasta Base (Home Folder)** funciona como uma “gaveta pessoal” de cada usuário dentro da rede.
+GPO (**Group Policy Object**) são políticas usadas no Active Directory para:
 
-- Cada usuário tem sua própria pasta  
-- A pasta é criada automaticamente  
-- Pode ser mapeada como uma unidade (ex: H:)  
+- Controlar usuários
+- Controlar computadores
+- Padronizar ambientes
+- Restringir ações
 
 > **Analogia:**  
-É como um armário com várias gavetas — cada funcionário tem a sua, com chave própria.
+A GPO é como um “conjunto de regras da empresa” aplicado automaticamente nos computadores e usuários.
 
 ---
 
-# Compartilhamento Oculto
+# Conceitos Importantes
 
-**Como funciona**
+**GPO se aplica a:**
 
-Se o nome do compartilhamento termina com **`$`**, ele fica oculto na rede.
+- Usuários
+- Computadores
 
-Exemplo:
-
-home$
-
-- A pasta existe, mas não aparece ao navegar na rede  
-- Só acessa quem sabe o caminho
+**Não se aplica diretamente a grupos**
 
 ---
 
-# Criando a Pasta HOME (Base)
+**Vinculação**
 
-**Passo inicial**
+A GPO normalmente é vinculada a:
 
-1. Criar pasta:
-   - Nome: `HOME`
+- Unidade Organizacional (OU)
+- Domínio
+- Site
 
----
-
-**Compartilhar**
-
-1. Botão direito → **Propriedades**
-2. Aba:
-   - **Compartilhamento**
-3. **Compartilhamento Avançado**
+> Mais comum: **OU**
 
 ---
 
-## Configurar:
+# Políticas x Preferências
 
-- Marcar: **Compartilhar esta pasta**
-- Nome:
+**Políticas**
+São regras obrigatórias.
 
-home$
-
----
-
-**Permissões de compartilhamento**
-
-1. Clique em:
- - **Permissões**
-
-2. Remover:
- - Todos
-
-3. Adicionar:
- - **Usuários do domínio**
-
-4. Marcar:
- - **Alteração**
-
-> Isso permite criar e alterar arquivos via rede
+- Usuário não consegue alterar
 
 ---
 
-# Configuração de Segurança (NTFS) — Forma Correta
+**Preferências**
+São sugestões/configurações iniciais.
+
+- Usuário pode alterar depois
+
+---
+
+> **Analogia:**  
+- Política = lei  
+- Preferência = recomendação  
+
+---
+
+# Forçar Atualização da GPO
+
+**Comando**
+
+No CMD:
+
+```
+gpupdate /force
+```
+
+---
+
+**O que faz?**
+
+- Atualiza políticas imediatamente
+- Evita esperar sincronização automática
+
+**Muito usado em testes**
+
+---
+
+# Ocultar Disco Local C:
 
 **Objetivo**
 
-Garantir que:
-- Cada usuário acesse **apenas sua pasta**
-- Ninguém veja ou modifique pasta de outro
+Impedir que o usuário:
+
+- Veja o Disco C:
+- Acesse o Disco C:
+
+> Força armazenamento em rede  
+> Evita salvar arquivos localmente
 
 ---
 
-**Passo a passo**
-
-1. Aba:
- - **Segurança**
-
-2. Clique:
- - **Avançadas**
-
----
-
-3. Clique:
- - **Desabilitar herança**
-
-4. Selecionar:
- - **Remover todas as permissões herdadas**
-
----
-
-5. Clique em:
- - **Adicionar**
-
----
-
-## Configurar permissões
-
-1. **Selecionar entidade de segurança**
- - Digitar:
-   ```
-   Usuários
-   ```
-
----
-
-2. Em:
- - **Aplicável a**
- - Selecionar:
-   - **Esta pasta somente**
-
----
-
-3. Em permissões:
- - Marcar **Modificar**
-
----
-
-✔️ Confirmar tudo com OK
-
----
-
-**Por que isso funciona?**
-
-- Usuários podem criar sua própria pasta  
-- O sistema automaticamente define o dono da pasta  
-- Só o dono terá acesso total  
-
----
-
-# Vincular Pasta Base ao Usuário
+# Criando a GPO
 
 **Passo a passo**
 
 1. Abrir:
- - **Usuários e Computadores do AD**
+   - **Gerenciador do Servidor**
 
-2. Selecionar usuários
-
-3. Botão direito → **Propriedades**
-
----
-
-4. Aba:
- - **Perfil**
+2. Ir em:
+   - **Ferramentas → Gerenciamento de Política de Grupo**
 
 ---
 
-5. Em:
- - **Pasta Base (Home Folder)**
+3. Localizar:
+   - Domínio
+   - Unidade Organizacional (OU)
 
+---
+
+4. Botão direito na OU:
+   - **Criar um GPO neste domínio e vinculá-lo aqui**
+
+---
+
+5. Nomear a GPO
+
+Exemplo:
+
+Impedir e ocultar o disco local
+
+> Sempre usar nomes claros
+
+---
+
+**Editar a GPO**
+
+1. Botão direito na GPO
+2. **Editar**
+
+---
+
+# Ocultar unidade C:
+
+**Caminho**
+
+Configuração do Usuário
+→ Políticas
+→ Modelos Administrativos
+→ Componentes do Windows
+→ Explorador de Arquivos
+
+---
+
+**Configurar:**
+
+* “Ocultar estas unidades específicas em Meu Computador"
+
+- Abrir
 - Marcar:
-- **Conectar**
-
-- Escolher letra:
-- Ex: `H:`
+  - Habilitado
 
 ---
 
-6. Caminho:
+**Resultado**
 
-\NOMEDODOMINIO\home$%USERNAME%
+Usuário não verá o Disco C:
 
 ---
 
-**Explicação**
+# Impedir acesso ao Disco C:
 
-- `\\NOMEDODOMINIO` → servidor  
-- `home$` → pasta compartilhada  
-- `%USERNAME%` → cria pasta com nome do usuário automaticamente  
+No mesmo local:
 
-> Cada usuário acessa sua própria pasta
+* “Impedir o acesso a unidades do Meu Computador”
+
+- Habilitar
+- Aplicar
+- OK
+
+---
+
+**Resultado Final**
+
+Mesmo tentando abrir diretamente:
+- usuário não acessa o Disco C:
+
+---
+
+> **Objetivo corporativo:**  
+Centralizar arquivos na rede e reduzir perda de dados locais.
+
+---
+
+# Bloquear CMD e PowerShell
+
+**Objetivo**
+
+Impedir:
+- CMD
+- PowerShell
+- Execução de comandos
+
+> Aumenta segurança  
+> Reduz risco de alteração indevida
+
+---
+
+# Imedir o acesso ao Disco Local através de comandos
+
+**Criar nova GPO**
+
+Exemplo de nome:
+
+Impedir CMD e PowerShell
+
+---
+
+**Editar GPO**
+
+**Caminho**
+
+Configuração do Usuário
+→ Modelos Administrativos
+→ Sistema
+
+---
+
+# Bloquear CMD
+
+**Política:**
+
+* “Impedir o acesso ao Prompt de Comando”
+
+- Habilitar
+- Aplicar
+- OK
+
+---
+
+# Bloquear PowerShell
+
+**Política:**
+
+* “Não executar aplicativos especificados do Windows”
+
+- Habilitar
+- Clique em:
+  - **Mostrar**
+
+---
+
+**Adicionar:**
+
+powershell.exe
+powershell_ise.exe
+pwsh.exe
+
+---
+
+* Aplicar → OK
 
 ---
 
 # Resultado Final
 
-Quando o usuário faz login:
+Usuário:
 
-- Unidade (H:) aparece automaticamente  
-- Pasta pessoal é criada (se não existir)  
-- Acesso é exclusivo  
+-  Não acessa Disco C:
+-  Não usa CMD
+-  Não usa PowerShell
 
----
-
-# Problema comum
-
-**Problema**
-
-Usuários conseguem acessar pastas de outros digitando:
-
-\servidor\home$
+> Ambiente mais controlado e seguro
 
 ---
 
-**Solução aplicada acima**
+# Observação Importante
 
-- Ajustar permissões NTFS corretamente  
-- Cada usuário só acessa sua pasta  
+Bloquear CMD e PowerShell:
 
----
-
-# Ocultar pastas (Enumeração)
-
-**Melhorar segurança visual**
-
-Mesmo com permissão correta, ainda dá pra “ver” pastas
-
----
-
-## Ativar Enumeração Baseada em Acesso
-
-1. Ir em:
-   - **Gerenciador do Servidor**
-
-2. **Serviços de Arquivo e Armazenamento**
-
-3. **Compartilhamentos**
-
----
-
-4. Botão direito na pasta → **Propriedades**
-
-5. Aba:
-   - **Configurações**
-
----
-
-6. Marcar:
-   - **Habilitar enumeração baseada em acesso**
-
----
-
-Agora:
-- Usuário só vê a própria pasta  
-- Outras ficam invisíveis  
+- Pode atrapalhar suporte técnico
+- Pode impedir scripts legítimos
+- Deve ser aplicado apenas onde necessário
 
 ---
 
 **Resumo Relâmpago**
 
-- Pasta base é a pasta pessoal do usuário  
-- Pode ser mapeada como unidade (H:)  
-- $ no nome deixa o compartilhamento oculto  
-- Usuários do domínio recebem permissão  
-- NTFS controla acesso real  
-- Herança deve ser desabilitada  
-- %USERNAME% cria pasta automática  
-- Cada usuário acessa só sua pasta  
-- Enumeração oculta pastas de outros  
-- Tudo funciona automaticamente no login  
+- GPO aplica regras no AD  
+- É vinculada à OU  
+- Políticas são obrigatórias  
+- Preferências são sugestões  
+- gpupdate força atualização  
+- GPO pode ocultar Disco C:  
+- Também pode bloquear acesso ao disco  
+- CMD pode ser bloqueado  
+- PowerShell também pode ser bloqueado  
+- Tudo aumenta controle e segurança  
 
 ---
 
 # Resumo Final
 
-- Pasta base = armazenamento individual  
-- Compartilhar como `home$`  
-- Configurar NTFS corretamente  
-- Usar `%USERNAME%` no caminho  
-- Ativar enumeração para segurança visual  
+- GPO = automação de regras  
+- Aplicada em usuários e computadores  
+- Disco C: pode ser ocultado e bloqueado  
+- CMD e PowerShell podem ser desativados  
+- Muito usado em ambientes corporativos  
 
 ---
