@@ -103,40 +103,40 @@ nano dnsmasq.conf
 
 ---
 
-# ⚙️ Configuração LAN
+## Configuração LAN
 
 Adicionar:
 
-```bash
+```
 #LAN
 interface=enp0s8
 bind-interfaces
-``` id="y1n7ms"
+```
 
 ---
 
-## 📌 Explicação
+**Explicação**
 
 - `interface=` → define placa usada
 - `bind-interfaces` → força escuta apenas nessa interface
 
 ---
 
-# 🌍 Configuração DNS
+## Configuração DNS
 
 Adicionar:
 
-```bash
+```
 #DNS
 listen-address=192.168.32.1
 server=8.8.8.8
 server=8.8.4.4
 cache-size=1000
-``` id="xj7d4r"
+```
 
 ---
 
-## 📌 Explicação
+**Explicação**
 
 - `listen-address` → IP do servidor DNS
 - `server=` → DNS externos (Google)
@@ -144,77 +144,80 @@ cache-size=1000
 
 ---
 
-# 🔄 Reiniciar DNSMasq
+**Reiniciar DNSMasq**
 
-```bash
+```
 systemctl restart dnsmasq
 systemctl status dnsmasq
-``` id="4lhb0x"
+```
 
-✔️ Sem erro = funcionando
+* Sem erro = funcionando
 
 ---
 
-# 🔁 Ativar NAT
+# Ativar NAT
 
-# 📌 O que é NAT?
+**O que é NAT?**
 
 NAT (**Network Address Translation**) permite:
 
 - Vários PCs compartilharem a mesma internet
 
-> 💡 **Analogia:**  
+> **Analogia:**  
 É como um recepcionista que traduz pedidos internos para o mundo externo.
 
 ---
 
-# 🛠️ Habilitar encaminhamento IPv4
+**Habilitar encaminhamento IPv4**
 
-## 📌 Ver regras
+* Ver regras
 
-```bash
+```
 sysctl --system
-``` id="8bgd0x"
+```
 
 ---
 
-## 📁 Editar configuração
+**Editar configuração**
 
-```bash
+```
 cd /etc/sysctl.d
+```
+
+```
 nano sysctl.conf
-``` id="ojb7t6"
+```
 
 ---
 
-## ➕ Adicionar
+**Adicionar**
 
-```bash
+```
 #NAT
 net.ipv4.ip_forward=1
-``` id="jydwrf"
+```
 
 ---
 
-## 📌 Explicação
+**Explicação**
 
 Ativa roteamento de pacotes IPv4.
 
-✔️ Sem isso, o Debian não encaminha internet
+* Sem isso, o Debian não encaminha internet
 
 ---
 
-# 🔄 Aplicar
+**Aplicar**
 
-```bash
+```
 sysctl --system
-``` id="3x0tw1"
+```
 
 ---
 
-# 🔥 NFTables (Firewall)
+# NFTables (Firewall)
 
-## 📌 O que é?
+**📌 O que é?**
 
 Sistema moderno de firewall do Linux.
 
@@ -223,57 +226,63 @@ Substitui:
 
 ---
 
-## 🔍 Verificar status
+**Verificar status**
 
-```bash
+```
 systemctl status nftables
-``` id="wn8lrp"
+```
 
 ---
 
-# ▶️ Ativar firewall
+## Ativar firewall
 
-```bash
+```
 systemctl start nftables
+```
+
+```
 systemctl enable nftables
-``` id="13xcy9"
+```
 
 ---
 
-## 🔍 Conferir
+* Conferir
 
-```bash
+```
 systemctl status nftables
-``` id="6vz1x4"
+```
 
 ---
 
-# 📜 Ver regras do firewall
+## Ver regras do firewall
 
-```bash
+```
 nft list ruleset
-``` id="xmpc4m"
+```
 
 ---
 
-# 💾 Backup da configuração
+**Backup da configuração**
 
-```bash
+```
 cd /etc
+```
+
+```
 cp nftables.conf nftables.conf.bkp
-``` id="cyhtrj"
+```
 
 ---
 
-# ✏️ Editar firewall
+## Editar firewall
 
-```bash
+```
 nano nftables.conf
-``` id="mpd7hb"
+```
 
 ---
 
-# 🌐 Configuração NAT no Firewall
+# Configuração NAT no Firewall
 
 Adicionar ao final:
 
