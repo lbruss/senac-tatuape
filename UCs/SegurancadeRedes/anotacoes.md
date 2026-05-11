@@ -1,33 +1,33 @@
-# 🌐 Debian Firewall — NAT, DNSMasq e Bloqueio de Sites
+# NAT, DNSMasq e Bloqueio de Sites
 
-# 📌 Visão Geral
+**Visão Geral**
 
 Aqui o Debian passa a funcionar como:
 
-- 🔥 Firewall
-- 🌍 Gateway de internet
-- 📡 Servidor DNS
-- 🚫 Filtro de sites
+- Firewall
+- Gateway de internet
+- Servidor DNS
+- Filtro de sites
 
-> 💡 **Ideia central:**  
+> **Ideia central:**  
 O Windows passa a acessar a internet através do Debian, e o Debian controla o tráfego.
 
 ---
 
-# 🖥️ Configurar Windows para usar o Debian
+# Configurar Windows para usar o Debian
 
-## 📌 Alterar IP manualmente
+**Alterar IP manualmente**
 
 No Windows:
 
-1. Botão direito no ícone de rede 🌐
+1. Botão direito no ícone de rede
 2. **Configurações de Rede e Internet**
 3. **Configurações avançadas de rede**
 4. Ethernet → **Editar**
 
 ---
 
-## ⚙️ Configurar IPv4
+**Configurar IPv4**
 
 Exemplo:
 
@@ -40,21 +40,21 @@ Exemplo:
 
 ---
 
-## 🧪 Teste
+* Teste
 
 No CMD:
 
-```bash
+```
 ping 192.168.32.1
-``` id="6m3bft"
+``` 
 
-✔️ Se responder → comunicação funcionando
+* Se responder → comunicação funcionando
 
 ---
 
-# 📡 Instalar DNSMasq
+## Instalar DNSMasq
 
-## 📌 O que é DNSMasq?
+**O que é DNSMasq?**
 
 Ferramenta leve que fornece:
 
@@ -62,41 +62,44 @@ Ferramenta leve que fornece:
 - Cache DNS
 - DHCP (opcional)
 
-> 💡 **Analogia:**  
+> **Analogia:**  
 Ele funciona como um “tradutor” de nomes da internet.
 
 ---
 
-# 🛠️ Instalação
+**Instalação**
 
-```bash
+```
 apt install dnsmasq
-``` id="0ijmpf"
+```
 
 ---
 
-## 🔍 Verificar status
+* Verificar status
 
-```bash
+```
 systemctl status dnsmasq
-``` id="j49g4j"
+```
 
 ---
 
-# 💾 Backup da configuração
+**Backup da configuração**
 
-```bash
+```
 cd /etc
+```
+
+```
 mv dnsmasq.conf dnsmasq.conf.bkp
-``` id="3kqjlwm"
+```
 
 ---
 
-# ✏️ Criar nova configuração
+**Criar nova configuração**
 
-```bash
+```
 nano dnsmasq.conf
-``` id="br42gf"
+```
 
 ---
 
