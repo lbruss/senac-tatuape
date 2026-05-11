@@ -217,7 +217,7 @@ sysctl --system
 
 # NFTables (Firewall)
 
-**📌 O que é?**
+**O que é?**
 
 Sistema moderno de firewall do Linux.
 
@@ -286,7 +286,7 @@ nano nftables.conf
 
 Adicionar ao final:
 
-```bash
+```
 table ip nat {
     chain postrouting {
         type nat hook postrouting priority 100;
@@ -294,48 +294,54 @@ table ip nat {
         oif "enp0s3" masquerade;
     }
 }
-``` id="4ng2d5"
+```
 
 ---
 
-## 📌 Explicação
+**Explicação**
 
 - `oif` → interface de saída para internet
 - `masquerade` → faz tradução NAT automaticamente
 
 ---
 
-## ⚠️ Importante
+**Importante**
 
 `enp0s3` muda conforme a máquina.
 
 Sempre verificar com:
 
-```bash
+```
 ip a
-``` id="cz7d5x"
+```
 
 ---
 
-# 🔄 Reiniciar firewall
+## Reiniciar firewall
 
-```bash
+```
 systemctl restart nftables
+```
+
+```
 systemctl status nftables
+```
+
+```
 nft list ruleset
-``` id="jjfks1"
+```
 
 ---
 
-# 🌍 Resultado
+# Resultado
 
-✔️ Windows agora usa internet através do Debian
+Windows agora usa internet através do Debian
 
 ---
 
-# 🚫 Bloqueio de Sites (Blacklist DNS)
+# Bloqueio de Sites (Blacklist DNS)
 
-## 📌 Conceito
+**Conceito**
 
 Bloqueio via DNS:
 
@@ -344,12 +350,15 @@ Bloqueio via DNS:
 
 ---
 
-# 🛠️ Criar blacklist
+## Criar blacklist
 
-```bash
+```
 cd /etc/dnsmasq.d
+```
+
+```
 nano blacklist.conf
-``` id="m7j0d8"
+```
 
 ---
 
