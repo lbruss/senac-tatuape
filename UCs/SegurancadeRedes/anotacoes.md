@@ -362,63 +362,66 @@ nano blacklist.conf
 
 ---
 
-## ➕ Adicionar
+**Adicionar**
 
-```bash
+```
 #Lista negra
 address=/netflix.com/0.0.0.0
 address=/facebook.com/0.0.0.0
-``` id="h6zzh9"
+```
 
 ---
 
-## 📌 Explicação
+**Explicação**
 
 - `0.0.0.0` = endereço inválido
 - Site não abre
 
 ---
 
-# 🔗 Vincular blacklist ao DNSMasq
+## Vincular blacklist ao DNSMasq
 
 Editar:
 
-```bash
+```
 nano /etc/dnsmasq.conf
-``` id="w2t0qr"
+```
 
 ---
 
-## ➕ Adicionar
+* Adicionar
 
-```bash
+```
 #Blacklist
 domain-needed
 conf-file=/etc/dnsmasq.d/blacklist.conf
-``` id="6vmr4z"
+```
 
 ---
 
-# 🔄 Reiniciar serviço
+## Reiniciar serviço
 
-```bash
+```
 systemctl restart dnsmasq
+```
+
+```
 systemctl status dnsmasq
-``` id="r2gc6s"
+```
 
 ---
 
-# 🖥️ Integrar com Windows Server
+# Integrar com Windows Server
 
-## 📌 Objetivo
+**Objetivo**
 
 Fazer o AD usar o Debian como saída DNS/internet.
 
 ---
 
-# ⚙️ Configurar DNS no Windows Server
+## Configurar DNS no Windows Server
 
-## Passo a passo
+**Passo a passo**
 
 1. Configurações de rede
 2. Adaptador (ex: NICBruss)
@@ -426,21 +429,21 @@ Fazer o AD usar o Debian como saída DNS/internet.
 
 ---
 
-## Configurar DNS
+**Configurar DNS**
 
 Exemplo:
 
-```text
+```
 192.168.32.10
-``` id="2sg86t"
+```
 
-✔️ DNS do próprio servidor AD
+* DNS do próprio servidor AD
 
 ---
 
-# 🌍 Configurar Encaminhador DNS
+## Configurar Encaminhador DNS
 
-## Caminho
+**Caminho**
 
 1. Gerenciador do Servidor
 2. DNS
@@ -451,7 +454,7 @@ Exemplo:
 
 ---
 
-## Configurar
+**Configurar**
 
 - Desmarcar:
   - “Usar dicas de raiz...”
@@ -462,11 +465,11 @@ Exemplo:
 
 192.168.32.1
 
-✔️ Debian vira saída DNS da rede
+* Debian vira saída DNS da rede
 
 ---
 
-# 📡 Verificar DHCP
+# Verificar DHCP
 
 No DHCP:
 
@@ -483,18 +486,18 @@ No DHCP:
 
 ---
 
-# 🧪 Teste Final
+# Teste Final
 
 Tentar acessar:
 
 - Netflix
 - Facebook
 
-✔️ Se bloquear → configuração funcionando
+* Se bloquear → configuração funcionando
 
 ---
 
-# ⚡ Resumo Relâmpago (10 linhas)
+**Resumo Relâmpago**
 
 - Debian virou gateway da rede  
 - DNSMasq fornece DNS  
@@ -509,7 +512,7 @@ Tentar acessar:
 
 ---
 
-# 📌 Resumo Final (Revisão Rápida)
+# Resumo Final
 
 - Debian = firewall + gateway + DNS  
 - DNSMasq resolve nomes e bloqueia sites  
