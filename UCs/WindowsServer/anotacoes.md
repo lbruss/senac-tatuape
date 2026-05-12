@@ -39,7 +39,7 @@ O IIS funciona como um “garçom” da web:
    - **Funções do Servidor**
 
 2. Marcar:
-   - ✅ **Servidor Web (IIS)**
+   - **Servidor Web (IIS)**
 
 ---
 
@@ -368,45 +368,45 @@ www.tabuadinha.tec
 
 ---
 
-# 🌐 Criar DNS do Novo Site
+## Criar DNS do Novo Site
 
-## 📌 Repetir processo DNS
+**Repetir processo DNS**
 
 Criar nova zona:
 
-```text
+```
 tabuadinha.tec
-``` id="kfg7dr"
+```
 
 ---
 
-## Criar Host A
+**Criar Host A**
 
-### Nome:
-```text
+* Nome:
+```
 www
-``` id="yv9j7m"
+```
 
-### IP:
+* IP:
 ```text
 192.168.32.10
-``` id="1lkw8j"
+``` 
 
 ---
 
-# 🧪 Teste Final
+**Teste Final**
 
 No navegador:
 
-```text
+```
 http://www.tabuadinha.tec
-``` id="dnp4r7"
+```
 
-✔️ Novo site deve abrir
+* Novo site deve abrir
 
 ---
 
-# 🧠 Como o IIS diferencia os sites?
+**Como o IIS diferencia os sites?**
 
 O IIS verifica:
 
@@ -422,7 +422,7 @@ Exemplo:
 
 ---
 
-# ⚡ Resumo Relâmpago (10 linhas)
+**Resumo Relâmpago**
 
 - IIS é o servidor web da Microsoft  
 - Sites ficam em `wwwroot`  
@@ -437,7 +437,7 @@ Exemplo:
 
 ---
 
-# 📌 Resumo Final (Revisão Rápida)
+# Resumo Final
 
 - IIS hospeda sites no Windows Server  
 - `wwwroot` é a pasta padrão  
