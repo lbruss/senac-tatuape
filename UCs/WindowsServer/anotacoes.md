@@ -1,28 +1,28 @@
-# 🌐 Web Server com Windows Server (IIS)
+# Web Server com Windows Server (IIS)
 
-# 📌 Visão Geral
+**Visão Geral**
 
 O **IIS (Internet Information Services)** é o servidor web da Microsoft.
 
 Com ele, o Windows Server pode:
 
-- 🌍 Hospedar sites
-- 📄 Exibir páginas HTML
-- 📡 Publicar aplicações web
-- 🔗 Trabalhar integrado ao Active Directory e DNS
+- Hospedar sites
+- Exibir páginas HTML
+- Publicar aplicações web
+- Trabalhar integrado ao Active Directory e DNS
 
 ---
 
-> 💡 **Analogia:**  
+> **Analogia:**  
 O IIS funciona como um “garçom” da web:
 - o navegador faz o pedido
 - o IIS entrega a página ao usuário
 
 ---
 
-# 🛠️ Instalando o IIS
+## Instalando o IIS
 
-## 📌 Caminho
+* Caminho
 
 1. Abrir:
    - **Gerenciador do Servidor**
@@ -33,7 +33,7 @@ O IIS funciona como um “garçom” da web:
 
 ---
 
-## 📌 Instalação
+**Instalação**
 
 1. Avançar até:
    - **Funções do Servidor**
@@ -43,7 +43,7 @@ O IIS funciona como um “garçom” da web:
 
 ---
 
-## ⚙️ Serviços de Função
+## Serviços de Função
 
 Na parte de serviços:
 
@@ -60,42 +60,42 @@ Exemplos:
 
 ---
 
-# 🌍 Testando o IIS
+# Testando o IIS
 
 Após instalar:
 
 No navegador, acessar:
 
-```text
+```
 http://IP_DO_SERVIDOR
-``` id="0axvhu"
+```
 
 Exemplo:
 
-```text
+```
 http://192.168.32.10
-``` id="nsyu91"
+``` 
 
 ---
 
-## ✅ Resultado
+**Resultado**
 
 Se aparecer a página padrão do IIS:
 - instalação funcionou
 
 ---
 
-# 📁 Estrutura do Site
+# Estrutura do Site
 
-## 📌 Pasta padrão do IIS
+**Pasta padrão do IIS**
 
-```text
+```
 C:\inetpub\wwwroot
-``` id="9o4i4t"
+```
 
 ---
 
-## 📌 O que fica nessa pasta?
+**O que fica nessa pasta?**
 
 Arquivos do site:
 
@@ -106,9 +106,9 @@ Arquivos do site:
 
 ---
 
-# 🛠️ Publicando um Site
+## Publicando um Site
 
-## 📌 Passos
+**Passos**
 
 1. Pegar:
    - HTML
@@ -119,9 +119,9 @@ Arquivos do site:
 
 2. Ir em:
 
-```text
+```
 C:\inetpub\wwwroot
-``` id="2m2cm6"
+```
 
 ---
 
@@ -134,21 +134,21 @@ C:\inetpub\wwwroot
 
 ---
 
-# 🌍 Teste
+**Teste**
 
 No navegador:
 
-```text
+```
 http://IP_DO_SERVIDOR
-``` id="w6t7qt"
+```
 
-✔️ O site já deve abrir
+* O site já deve abrir
 
 ---
 
-# 🧠 Entendimento Importante
+**Entendimento Importante**
 
-## 📌 Por que funciona?
+**Por que funciona?**
 
 Porque:
 
@@ -158,38 +158,38 @@ Porque:
 
 ---
 
-> 💡 **Analogia:**  
+> **Analogia:**  
 A pasta `wwwroot` é como a vitrine principal do site.
 
 ---
 
-# 🌐 Configurar DNS para o Site
+# Configurar DNS para o Site
 
-## 📌 Problema
+**Problema**
 
 Sem DNS:
 - precisa acessar usando IP
 
 Exemplo:
-```text
+```
 http://192.168.32.10
-``` id="xk7zlp"
+```
 
 ---
 
-## 📌 Solução
+**Solução**
 
 Criar um nome amigável:
 
-```text
+```
 www.janelinha.tec
-``` id="st5j2z"
+```
 
 ---
 
-# 🛠️ Criar Zona DNS
+## Criar Zona DNS
 
-## Caminho
+**Caminho**
 
 1. Gerenciador do Servidor
 2. DNS
@@ -198,7 +198,7 @@ www.janelinha.tec
 
 ---
 
-## 📌 Criar Zona
+**Criar Zona**
 
 1. Botão direito:
    - **Zona de Pesquisa Direta**
@@ -208,77 +208,77 @@ www.janelinha.tec
 
 ---
 
-## ⚙️ Configuração
+## Configuração
 
 - Zona Primária
 - Integrada ao Active Directory
 - Nome da zona:
 
 Exemplo:
-```text
+```
 janelinha.tec
-``` id="6jjlwm"
+```
 
 ---
 
-# 🌍 Criar Registro Host (A)
+# Criar Registro Host (A)
 
-## 📌 Dentro da zona criada
+**Dentro da zona criada**
 
 1. Área branca → botão direito
 2. **Novo Host (A ou AAAA)**
 
 ---
 
-## Configurar
+**Configurar**
 
-### Nome:
+* Nome:
 
-```text
+```
 www
-``` id="dmdby4"
+```
 
 ---
 
-### Endereço IP:
+* Endereço IP:
 
-```text
+```
 192.168.32.10
-``` id="s4ij5m"
+```
 
 ---
 
-✔️ Adicionar Host
+* Adicionar Host
 
 ---
 
-# 🧪 Testar DNS
+**Testar DNS**
 
 No CMD:
 
-```bash
+```
 ping www.janelinha.tec
-``` id="3x0f3h"
+```
 
-✔️ Deve responder com IP do servidor
+* Deve responder com IP do servidor
 
 ---
 
-# 🌍 Testar Site
+**Testar Site**
 
 No navegador:
 
-```text
+```
 http://www.janelinha.tec
-``` id="2z1v9s"
+```
 
-✔️ Site deve abrir normalmente
+* Site deve abrir normalmente
 
 ---
 
-# 🌐 Hospedar Mais de Um Site
+# Hospedar Mais de Um Site
 
-## 📌 Conceito
+**Conceito**
 
 O IIS consegue hospedar vários sites no mesmo servidor.
 
@@ -289,25 +289,25 @@ Isso acontece usando:
 
 ---
 
-> 💡 **Analogia:**  
+> **Analogia:**  
 O servidor é como um prédio com vários apartamentos:
 - cada domínio aponta para um site diferente
 
 ---
 
-# 🛠️ Criar Novo Site
+## Criar Novo Site
 
-## 📁 Criar pasta
+**Criar pasta**
 
 Exemplo:
 
-```text
+```
 C:\inetpub\Tabuadinha
-``` id="1r9myl"
+```
 
 ---
 
-## 📌 Colocar arquivos HTML
+**Colocar arquivos HTML**
 
 - index.html
 - imagens
@@ -316,9 +316,9 @@ C:\inetpub\Tabuadinha
 
 ---
 
-# ⚙️ Adicionar Site no IIS
+## Adicionar Site no IIS
 
-## Caminho
+* Caminho
 
 1. Gerenciador do Servidor
 2. Ferramentas
@@ -326,7 +326,7 @@ C:\inetpub\Tabuadinha
 
 ---
 
-## 📌 Adicionar site
+## Adicionar site
 
 1. Expandir servidor
 2. Botão direito em:
@@ -335,36 +335,36 @@ C:\inetpub\Tabuadinha
 
 ---
 
-# ⚙️ Configuração
+## Configuração
 
-## Nome do site
+* Nome do site
 
 Exemplo:
-```text
+```
 Tabuadinha
-``` id="d9hylf"
+``` 
 
 ---
 
-## Caminho físico
+* Caminho físico
 
 Selecionar:
-```text
+```
 C:\inetpub\Tabuadinha
-``` id="9d0d1m"
+```
 
 ---
 
 ## Nome do Host
 
 Exemplo:
-```text
+```
 www.tabuadinha.tec
-``` id="oqf0v6"
+```
 
 ---
 
-✔️ OK
+* OK
 
 ---
 
