@@ -1,304 +1,448 @@
-# GPO (Group Policy Objects)
+# 🌐 Web Server com Windows Server (IIS)
 
-**Visão Geral**
+# 📌 Visão Geral
 
-GPO (**Group Policy Object**) são políticas usadas no Active Directory para:
+O **IIS (Internet Information Services)** é o servidor web da Microsoft.
 
-- Controlar usuários
-- Controlar computadores
-- Padronizar ambientes
-- Restringir ações
+Com ele, o Windows Server pode:
 
-> **Analogia:**  
-A GPO é como um “conjunto de regras da empresa” aplicado automaticamente nos computadores e usuários.
-
----
-
-# Conceitos Importantes
-
-**GPO se aplica a:**
-
-- Usuários
-- Computadores
-
-**Não se aplica diretamente a grupos**
+- 🌍 Hospedar sites
+- 📄 Exibir páginas HTML
+- 📡 Publicar aplicações web
+- 🔗 Trabalhar integrado ao Active Directory e DNS
 
 ---
 
-**Vinculação**
-
-A GPO normalmente é vinculada a:
-
-- Unidade Organizacional (OU)
-- Domínio
-- Site
-
-> Mais comum: **OU**
+> 💡 **Analogia:**  
+O IIS funciona como um “garçom” da web:
+- o navegador faz o pedido
+- o IIS entrega a página ao usuário
 
 ---
 
-# Políticas x Preferências
+# 🛠️ Instalando o IIS
 
-**Políticas**
-São regras obrigatórias.
-
-- Usuário não consegue alterar
-
----
-
-**Preferências**
-São sugestões/configurações iniciais.
-
-- Usuário pode alterar depois
-
----
-
-> **Analogia:**  
-- Política = lei  
-- Preferência = recomendação  
-
----
-
-# Forçar Atualização da GPO
-
-**Comando**
-
-No CMD:
-
-```
-gpupdate /force
-```
-
----
-
-**O que faz?**
-
-- Atualiza políticas imediatamente
-- Evita esperar sincronização automática
-
-**Muito usado em testes**
-
----
-
-# Ocultar Disco Local C:
-
-**Objetivo**
-
-Impedir que o usuário:
-
-- Veja o Disco C:
-- Acesse o Disco C:
-
-> Força armazenamento em rede  
-> Evita salvar arquivos localmente
-
----
-
-# Criando a GPO
-
-**Passo a passo**
+## 📌 Caminho
 
 1. Abrir:
    - **Gerenciador do Servidor**
 
 2. Ir em:
-   - **Ferramentas → Gerenciamento de Política de Grupo**
+   - **Gerenciar**
+   - **Adicionar Funções e Recursos**
 
 ---
 
-3. Localizar:
-   - Domínio
-   - Unidade Organizacional (OU)
+## 📌 Instalação
+
+1. Avançar até:
+   - **Funções do Servidor**
+
+2. Marcar:
+   - ✅ **Servidor Web (IIS)**
 
 ---
 
-4. Botão direito na OU:
-   - **Criar um GPO neste domínio e vinculá-lo aqui**
+## ⚙️ Serviços de Função
+
+Na parte de serviços:
+
+- No exemplo foi marcado tudo
+- Em ambiente real:
+  - o desenvolvedor informa quais tecnologias serão usadas
+
+Exemplos:
+- ASP.NET
+- PHP
+- CGI
+- WebSocket
+- FTP
 
 ---
 
-5. Nomear a GPO
+# 🌍 Testando o IIS
+
+Após instalar:
+
+No navegador, acessar:
+
+```text
+http://IP_DO_SERVIDOR
+``` id="0axvhu"
 
 Exemplo:
 
-Impedir e ocultar o disco local
-
-> Sempre usar nomes claros
-
----
-
-**Editar a GPO**
-
-1. Botão direito na GPO
-2. **Editar**
+```text
+http://192.168.32.10
+``` id="nsyu91"
 
 ---
 
-# Ocultar unidade C:
+## ✅ Resultado
 
-**Caminho**
-
-Configuração do Usuário
-→ Políticas
-→ Modelos Administrativos
-→ Componentes do Windows
-→ Explorador de Arquivos
+Se aparecer a página padrão do IIS:
+- instalação funcionou
 
 ---
 
-**Configurar:**
+# 📁 Estrutura do Site
 
-* “Ocultar estas unidades específicas em Meu Computador"
+## 📌 Pasta padrão do IIS
 
-- Abrir
-- Marcar:
-  - Habilitado
-
----
-
-**Resultado**
-
-Usuário não verá o Disco C:
+```text
+C:\inetpub\wwwroot
+``` id="9o4i4t"
 
 ---
 
-# Impedir acesso ao Disco C:
+## 📌 O que fica nessa pasta?
 
-No mesmo local:
+Arquivos do site:
 
-* “Impedir o acesso a unidades do Meu Computador”
-
-- Habilitar
-- Aplicar
-- OK
-
----
-
-**Resultado Final**
-
-Mesmo tentando abrir diretamente:
-- usuário não acessa o Disco C:
+- index.html
+- imagens
+- CSS
+- JavaScript
 
 ---
 
-> **Objetivo corporativo:**  
-Centralizar arquivos na rede e reduzir perda de dados locais.
+# 🛠️ Publicando um Site
+
+## 📌 Passos
+
+1. Pegar:
+   - HTML
+   - imagens
+   - arquivos do projeto
 
 ---
 
-# Bloquear CMD e PowerShell
+2. Ir em:
 
-**Objetivo**
-
-Impedir:
-- CMD
-- PowerShell
-- Execução de comandos
-
-> Aumenta segurança  
-> Reduz risco de alteração indevida
+```text
+C:\inetpub\wwwroot
+``` id="2m2cm6"
 
 ---
 
-# Imedir o acesso ao Disco Local através de comandos
+3. Remover arquivos padrão do IIS
 
-**Criar nova GPO**
-
-Exemplo de nome:
-
-Impedir CMD e PowerShell
-
----
-
-**Editar GPO**
-
-**Caminho**
-
-Configuração do Usuário
-→ Modelos Administrativos
-→ Sistema
+4. Colocar:
+   - index.html
+   - imagens
+   - restante do projeto
 
 ---
 
-# Bloquear CMD
+# 🌍 Teste
 
-**Política:**
+No navegador:
 
-* “Impedir o acesso ao Prompt de Comando”
+```text
+http://IP_DO_SERVIDOR
+``` id="w6t7qt"
 
-- Habilitar
-- Aplicar
-- OK
-
----
-
-# Bloquear PowerShell
-
-**Política:**
-
-* “Não executar aplicativos especificados do Windows”
-
-- Habilitar
-- Clique em:
-  - **Mostrar**
+✔️ O site já deve abrir
 
 ---
 
-**Adicionar:**
+# 🧠 Entendimento Importante
 
-powershell.exe
-powershell_ise.exe
-pwsh.exe
+## 📌 Por que funciona?
 
----
+Porque:
 
-* Aplicar → OK
-
----
-
-# Resultado Final
-
-Usuário:
-
--  Não acessa Disco C:
--  Não usa CMD
--  Não usa PowerShell
-
-> Ambiente mais controlado e seguro
+- IIS escuta requisições HTTP
+- A pasta `wwwroot` é a raiz do site
+- O arquivo `index.html` é carregado automaticamente
 
 ---
 
-# Observação Importante
-
-Bloquear CMD e PowerShell:
-
-- Pode atrapalhar suporte técnico
-- Pode impedir scripts legítimos
-- Deve ser aplicado apenas onde necessário
+> 💡 **Analogia:**  
+A pasta `wwwroot` é como a vitrine principal do site.
 
 ---
 
-**Resumo Relâmpago**
+# 🌐 Configurar DNS para o Site
 
-- GPO aplica regras no AD  
-- É vinculada à OU  
-- Políticas são obrigatórias  
-- Preferências são sugestões  
-- gpupdate força atualização  
-- GPO pode ocultar Disco C:  
-- Também pode bloquear acesso ao disco  
-- CMD pode ser bloqueado  
-- PowerShell também pode ser bloqueado  
-- Tudo aumenta controle e segurança  
+## 📌 Problema
+
+Sem DNS:
+- precisa acessar usando IP
+
+Exemplo:
+```text
+http://192.168.32.10
+``` id="xk7zlp"
 
 ---
 
-# Resumo Final
+## 📌 Solução
 
-- GPO = automação de regras  
-- Aplicada em usuários e computadores  
-- Disco C: pode ser ocultado e bloqueado  
-- CMD e PowerShell podem ser desativados  
-- Muito usado em ambientes corporativos  
+Criar um nome amigável:
+
+```text
+www.janelinha.tec
+``` id="st5j2z"
+
+---
+
+# 🛠️ Criar Zona DNS
+
+## Caminho
+
+1. Gerenciador do Servidor
+2. DNS
+3. Botão direito no servidor
+4. **Gerenciar DNS**
+
+---
+
+## 📌 Criar Zona
+
+1. Botão direito:
+   - **Zona de Pesquisa Direta**
+
+2. Selecionar:
+   - **Nova Zona**
+
+---
+
+## ⚙️ Configuração
+
+- Zona Primária
+- Integrada ao Active Directory
+- Nome da zona:
+
+Exemplo:
+```text
+janelinha.tec
+``` id="6jjlwm"
+
+---
+
+# 🌍 Criar Registro Host (A)
+
+## 📌 Dentro da zona criada
+
+1. Área branca → botão direito
+2. **Novo Host (A ou AAAA)**
+
+---
+
+## Configurar
+
+### Nome:
+
+```text
+www
+``` id="dmdby4"
+
+---
+
+### Endereço IP:
+
+```text
+192.168.32.10
+``` id="s4ij5m"
+
+---
+
+✔️ Adicionar Host
+
+---
+
+# 🧪 Testar DNS
+
+No CMD:
+
+```bash
+ping www.janelinha.tec
+``` id="3x0f3h"
+
+✔️ Deve responder com IP do servidor
+
+---
+
+# 🌍 Testar Site
+
+No navegador:
+
+```text
+http://www.janelinha.tec
+``` id="2z1v9s"
+
+✔️ Site deve abrir normalmente
+
+---
+
+# 🌐 Hospedar Mais de Um Site
+
+## 📌 Conceito
+
+O IIS consegue hospedar vários sites no mesmo servidor.
+
+Isso acontece usando:
+- Hostname
+- DNS
+- Binding
+
+---
+
+> 💡 **Analogia:**  
+O servidor é como um prédio com vários apartamentos:
+- cada domínio aponta para um site diferente
+
+---
+
+# 🛠️ Criar Novo Site
+
+## 📁 Criar pasta
+
+Exemplo:
+
+```text
+C:\inetpub\Tabuadinha
+``` id="1r9myl"
+
+---
+
+## 📌 Colocar arquivos HTML
+
+- index.html
+- imagens
+- CSS
+- JS
+
+---
+
+# ⚙️ Adicionar Site no IIS
+
+## Caminho
+
+1. Gerenciador do Servidor
+2. Ferramentas
+3. **Gerenciador dos Serviços de Informações da Internet (IIS)**
+
+---
+
+## 📌 Adicionar site
+
+1. Expandir servidor
+2. Botão direito em:
+   - **Sites**
+3. **Adicionar Site**
+
+---
+
+# ⚙️ Configuração
+
+## Nome do site
+
+Exemplo:
+```text
+Tabuadinha
+``` id="d9hylf"
+
+---
+
+## Caminho físico
+
+Selecionar:
+```text
+C:\inetpub\Tabuadinha
+``` id="9d0d1m"
+
+---
+
+## Nome do Host
+
+Exemplo:
+```text
+www.tabuadinha.tec
+``` id="oqf0v6"
+
+---
+
+✔️ OK
+
+---
+
+# 🌐 Criar DNS do Novo Site
+
+## 📌 Repetir processo DNS
+
+Criar nova zona:
+
+```text
+tabuadinha.tec
+``` id="kfg7dr"
+
+---
+
+## Criar Host A
+
+### Nome:
+```text
+www
+``` id="yv9j7m"
+
+### IP:
+```text
+192.168.32.10
+``` id="1lkw8j"
+
+---
+
+# 🧪 Teste Final
+
+No navegador:
+
+```text
+http://www.tabuadinha.tec
+``` id="dnp4r7"
+
+✔️ Novo site deve abrir
+
+---
+
+# 🧠 Como o IIS diferencia os sites?
+
+O IIS verifica:
+
+- Nome digitado no navegador
+- Binding configurado
+
+Exemplo:
+
+| Nome | Site aberto |
+|---|---|
+| www.janelinha.tec | Site 1 |
+| www.tabuadinha.tec | Site 2 |
+
+---
+
+# ⚡ Resumo Relâmpago (10 linhas)
+
+- IIS é o servidor web da Microsoft  
+- Sites ficam em `wwwroot`  
+- HTML é exibido automaticamente  
+- DNS evita acessar por IP  
+- Zona DNS cria domínio interno  
+- Registro A aponta nome para IP  
+- IIS suporta múltiplos sites  
+- Cada site possui pasta própria  
+- Hostname diferencia os sites  
+- Navegador acessa pelo domínio criado  
+
+---
+
+# 📌 Resumo Final (Revisão Rápida)
+
+- IIS hospeda sites no Windows Server  
+- `wwwroot` é a pasta padrão  
+- DNS cria nomes amigáveis  
+- Registro A liga domínio ao IP  
+- IIS consegue servir vários sites simultaneamente  
 
 ---
