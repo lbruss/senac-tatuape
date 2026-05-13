@@ -2,155 +2,110 @@
 
 O Windows Server é um sistema operacional da Microsoft criado especialmente para gerenciar redes, usuários e serviços dentro de empresas.
 
-
 ---
 
 **O que é Windows Server?**
 
 O Windows Server é como uma versão “profissional” do Windows, feita para:
 
-controlar vários computadores ao mesmo tempo
+- Controlar vários computadores ao mesmo tempo
+- Armazenar dados com segurança
+- Rodar serviços importantes
+- Manter sistemas funcionando 24h
 
-armazenar dados com segurança
-
-rodar serviços importantes
-
-manter sistemas funcionando 24h
-
-
-Analogia:
+> **Analogia:**
 Se o Windows comum é um computador pessoal, o Windows Server é como o “cérebro da empresa”, que organiza tudo e garante que tudo funcione corretamente.
-
 
 ---
 
-**Função do Windows Server**
+## Função do Windows Server
 
 Ele serve para centralizar e gerenciar tudo dentro de uma rede.
 
-
 ---
 
-1. Gerenciamento de usuários
+**1. Gerenciamento de usuários**
 
 Com o Windows Server você pode:
 
-criar contas para funcionários
-
-definir permissões (quem pode acessar o quê)
-
-controlar logins
-
+- Criar contas para funcionários
+- Definir permissões (quem pode acessar o quê)
+- Controlar logins
 
 Isso é feito principalmente com o Active Directory
 
-Analogia:
+> **Analogia:**
 É como um porteiro inteligente, que decide quem entra e onde pode ir.
 
+---
+
+**2. Compartilhamento de arquivos**
+
+- Criar pastas compartilhadas
+- Controlar quem pode acessar
+- Armazenar arquivos da empresa
+- Muito usado em escritórios
 
 ---
 
-2. Compartilhamento de arquivos
-
-Criar pastas compartilhadas
-
-Controlar quem pode acessar
-
-Armazenar arquivos da empresa
-
-
-Muito usado em escritórios
-
-
----
-
-3. Servidor de rede
+**3. Servidor de rede**
 
 Ele pode fornecer serviços como:
 
-DHCP → distribui IP automaticamente
-
-DNS → resolve nomes (ex: google.com)
-
-Servidor Web → hospeda sites
-
-Servidor de impressão
-
-
+- DHCP → distribui IP automaticamente
+- DNS → resolve nomes (ex: google.com)
+- Servidor Web → hospeda sites
 
 ---
 
-4. Segurança
+**4. Segurança**
 
-Controle de acesso
-
-Políticas de senha
-
-Firewall
-
-Auditoria de usuários
-
-
-Ajuda a proteger os dados da empresa
-
+- Controle de acesso
+- Políticas de senha
+- Firewall
+- Auditoria de usuários
+- Ajuda a proteger os dados da empresa
 
 ---
 
-5. Virtualização
+**5. Virtualização**
 
 Com ferramentas como o Hyper-V, o Windows Server permite:
 
-criar máquinas virtuais
+- Criar máquinas virtuais
+- Rodar vários sistemas em um único servidor
 
-rodar vários sistemas em um único servidor
-
-
-Analogia:
+> **Analogia:**
 É como ter vários computadores dentro de um só.
-
 
 ---
 
-6. Aplicações empresariais
+**6. Aplicações empresariais**
 
 Ele também roda sistemas como:
 
-ERPs
-
-bancos de dados
-
-sistemas internos da empresa
-
-
+- ERPs
+- Bancos de dados
+- Sistemas internos da empresa
 
 ---
 
 ## Diferença entre Windows comum e Windows Server
 
-Windows comum	Windows Server
-
-Uso pessoal	Uso empresarial
-1 usuário principal	Vários usuários
-Interface simples	Ferramentas avançadas
-Não gerencia rede	Gerencia toda a rede
-
-
+- Uso pessoal	Uso empresarial
+- 1 usuário principal	Vários usuários
+- Interface simples	Ferramentas avançadas
+- Não gerencia rede	Gerencia toda a rede
 
 ---
 
 ## Onde o Windows Server é usado?
 
-Empresas
-
-Escolas
-
-Hospitais
-
-Bancos
-
-Data centers
-
-
+- Empresas
+- Escolas
+- Hospitais
+- Bancos
+- Data centers
 
 ---
 
@@ -158,35 +113,24 @@ Data centers
 
 O Windows Server serve para:
 
-organizar redes
+- Organizar redes
+- Controlar usuários
+- Armazenar dados
+- Manter serviços funcionando
 
-controlar usuários
+**O Windows Server é essencial no mundo da TI porque permite que empresas:**
 
-armazenar dados
+- Tenham controle total da rede
+- Aumentem a segurança
+- Melhorem a organização
+- Mantenham tudo funcionando de forma centralizada
 
-manter serviços funcionando
-
----
-
-# Conclusão
-
-O Windows Server é essencial no mundo da TI porque permite que empresas:
-
-tenham controle total da rede
-
-aumentem a segurança
-
-melhorem a organização
-
-mantenham tudo funcionando de forma centralizada
-
-
-Em poucas palavras:
-sem servidores, a maioria das empresas simplesmente não conseguiria funcionar direito.
+**Em poucas palavras:**
+Sem servidores, a maioria das empresas simplesmente não conseguiria funcionar direito.
 
 ---
 
-# Versões do Windows Server
+## Versões do Windows Server
 
 O **Windows Server** possui diferentes versões, cada uma com objetivos específicos.
 
@@ -207,13 +151,11 @@ O **Windows Server** possui diferentes versões, cada uma com objetivos específ
   - data centers
   - ambientes com muita virtualização
 
-**Analogia:**  
+> **Analogia:**  
 - Standard → carro básico  
 - Datacenter → carro completo com todos os opcionais
 
----
-
-# Windows Server 2022 (64 bits)
+**Sobre o Windows Server 2022 (64 bits)**
 
 O **Windows Server 2022 x64** é uma versão moderna e estável.
 
@@ -228,7 +170,7 @@ Em geral, quem aprende uma versão consegue usar outras, pois a base é muito pa
 
 ---
 
-# Instalação do Windows Server
+## Instalação do Windows Server
 
 A instalação é **muito semelhante ao Windows comum**:
 
@@ -241,8 +183,7 @@ A instalação é **muito semelhante ao Windows comum**:
 **Escolha da versão**
 
 Durante a instalação, escolha:
-
-Datacenter (Experiência com área de trabalho)
+- Datacenter (Experiência com área de trabalho)
 
 Essa opção inclui **interface gráfica (GUI)**, facilitando o uso.
 
@@ -268,18 +209,16 @@ O **NIC Teaming** permite unir várias placas de rede em uma só.
 1. Vá em **Servidor Local**
 2. Em **Agrupamento NIC**, clique em:
 
-Desabilitado
+`Desabilitado`
 
 3. Clique em **Tarefas → Nova Equipe**
 4. Defina um nome (exemplo):
 
-NICBruss
+`NICBruss`
 
 5. Selecione as placas de rede disponíveis
 
----
-
-## Configurações recomendadas
+**Configurações recomendadas**
 
 - **Modo de agrupamento:** Alternar independente  
 - **Balanceamento de carga:** Dinâmico  
@@ -293,16 +232,16 @@ NICBruss
 1. Clique com o botão direito no ícone de rede (canto inferior direito)
 2. Abra:
 
-Configurações de rede e Internet
+`Configurações de rede e Internet`
 
 3. Clique em:
 
-Alterar opções de adaptador
+`Alterar opções de adaptador`
 
-4. Clique com o botão direito na interface criada (ex: NICBruss)
+4. Clique com o botão direito na interface criada (ex: `NICBruss`)
 5. Vá em:
 
-Protocolo IP Versão 4 (TCP/IPv4)
+`Protocolo IP Versão 4 (TCP/IPv4)`
 
 6. Clique em **Propriedades**
 
@@ -316,9 +255,9 @@ Usar o seguinte endereço IP
 
 Exemplo:
 
-- IP: 192.168.32.10
-- Máscara: 255.255.255.0
-- Gateway: 192.168.32.1
+- **IP:** 192.168.32.10
+- **Máscara:** 255.255.255.0
+- **Gateway:** 192.168.32.1
 
 ---
 
@@ -329,12 +268,12 @@ Exemplo:
 3. Clique em **Alterar**
 4. Defina um nome (exemplo):
 
-SRVBruss
+`SRVBruss`
 
 5. Clique em **OK**
 6. Reinicie o servidor se necessário
 
-**Analogia:**  
+> **Analogia:**  
 O nome do servidor é como o **nome de um funcionário na empresa**, facilita a identificação na rede.
 
 ---
@@ -350,36 +289,21 @@ Nesses casos, **reiniciar o servidor resolve na maioria das vezes**.
 
 ---
 
-# Conclusão
-
-Com esses passos você consegue:
-
-- Escolher a versão correta do Windows Server  
-- Instalar o sistema  
-- Configurar rede  
-- Criar redundância com NIC Teaming  
-- Definir IP fixo  
-- Nomear o servidor  
-
-Essas são as configurações iniciais essenciais para começar a trabalhar com servidores Windows em ambientes profissionais.
-
----
-
 # RAID — RAID 1 e RAID 5
 
 RAID é uma tecnologia que usa **vários discos (HDs/SSDs)** para melhorar:
 
-- segurança dos dados  
-- desempenho  
-- disponibilidade  
+- Segurança dos dados  
+- Desempenho  
+- Disponibilidade  
 
 ---
 
-**IMPORTANTE**
+**IMPORTANTE!!!**
 
 **RAID NÃO substitui backup**
 
-**Analogia:**  
+> **Analogia:**  
 - RAID = cofre reforçado  
 - Backup = cópia guardada em outro lugar  
 
@@ -387,7 +311,7 @@ Se algo grave acontecer (vírus, erro humano, incêndio), só o backup salva.
 
 ---
 
-# RAID 1 — Espelhamento
+## RAID 1 — Espelhamento
 
 **Como funciona**
 
@@ -398,14 +322,13 @@ Tudo que acontece em um disco → acontece no outro automaticamente
 
 ---
 
-**Analogia**
-
-É como escrever em **dois cadernos ao mesmo tempo**.  
-Se você perder um, o outro ainda tem tudo.
+> **Analogia**
+- É como escrever em **dois cadernos ao mesmo tempo**.  
+- Se você perder um, o outro ainda tem tudo.
 
 ---
 
-## Vantagens
+**Vantagens**
 
 - Alta segurança  
 - Simples de configurar  
@@ -413,7 +336,7 @@ Se você perder um, o outro ainda tem tudo.
 
 ---
 
-## Desvantagens
+**Desvantagens**
 
 - Usa o dobro de espaço (2 discos = capacidade de 1)  
 - Não melhora muito o desempenho  
@@ -422,12 +345,8 @@ Se você perder um, o outro ainda tem tudo.
 
 # Configurar RAID 1 no Windows
 
-**Passo a passo**
-
 1. Clique com botão direito no menu iniciar  
 2. Abra **Gerenciamento de Disco**
-
----
 
 **Inicializar discos**
 
@@ -454,7 +373,7 @@ Novo volume espelhado
 
 ---
 
-# Se um HD falhar (RAID 1)
+## Se um HD falhar e solução (RAID 1)
 
 **O que acontece**
 
@@ -469,20 +388,20 @@ Novo volume espelhado
 2. Clique no volume espelhado
 3. Selecione:
 
-Remover espelho
+`Remover espelho`
 
 4. Escolha o disco com problema  
 
-Seus dados continuam no disco saudável
+- Seus dados continuam no disco saudável
 
 ---
 
-## Refazer o espelho
+* Refazer o espelho
 
 1. Clique no disco ativo  
 2. Selecione:
 
-Adicionar espelho
+`Adicionar espelho`
 
 3. Escolha o novo disco  
 4. Confirme  
@@ -499,15 +418,12 @@ Adicionar espelho
 
 ---
 
-**Analogia**
-
-Imagine 3 pessoas guardando partes de um segredo.
-
-Se uma esquecer, as outras conseguem **reconstruir a informação**.
+> **Analogia**
+Imagine 3 pessoas guardando partes de um segredo. Se uma esquecer, as outras conseguem **reconstruir a informação**.
 
 ---
 
-## Vantagens
+**Vantagens**
 
 - Melhor aproveitamento de espaço  
 - Boa segurança  
@@ -515,7 +431,7 @@ Se uma esquecer, as outras conseguem **reconstruir a informação**.
 
 ---
 
-## Desvantagens
+**Desvantagens**
 
 - Configuração mais complexa  
 - Se **2 discos falharem**, os dados são perdidos  
@@ -524,20 +440,26 @@ Se uma esquecer, as outras conseguem **reconstruir a informação**.
 
 # Configurar RAID 5 no Windows
 
-**Passo a passo**
-
 1. Abra **Gerenciamento de Disco**
+
+Ao aparecer:
+
+- **MBR** → suporta até 2TB  
+- **GPT** → suporta discos maiores e é mais moderno  
+
+Recomendado: **GPT**
+
 2. Clique com botão direito em um disco
 3. Selecione:
 
-Novo volume RAID-5
+`Novo volume RAID-5`
 
 4. Adicione **pelo menos 3 discos**
 5. Avance → Formate → Concluir  
 
 ---
 
-# Se um HD falhar (RAID 5)
+## Se um HD falhar e solução (RAID 5)
 
 **O que acontece**
 
@@ -547,18 +469,18 @@ Novo volume RAID-5
 
 ---
 
-## Reparar RAID 5
+**Reparar RAID 5**
 
 1. Vá em **Gerenciamento de Disco**
 2. Clique no volume RAID
 3. Selecione:
 
-Reparar volume
+`Reparar volume`
 
 4. Escolha um novo disco  
 5. Confirme  
 
-O sistema irá reconstruir automaticamente os dados
+- O sistema irá reconstruir automaticamente os dados
 
 ---
 
@@ -585,29 +507,9 @@ RAID pode ser implementado de duas formas:
 
 ---
 
-# Conclusão
-
-RAID é essencial para ambientes profissionais porque:
-
-- protege dados contra falhas de disco  
-- mantém sistemas funcionando  
-- melhora desempenho  
-
-Em resumo:
-
-- **RAID 1** → máxima segurança (espelho)  
-- **RAID 5** → equilíbrio entre segurança e desempenho
-
----
-
 # Tipos de Rede: Workgroup vs Cliente-Servidor (Active Directory)
 
-Este guia explica de forma simples como funcionam os dois principais modelos de rede:
-
-- Workgroup (Grupo de Trabalho)
-- Cliente-Servidor (Active Directory)
-
----
+Explicação e diferenças entre Workgroup e Cliente-Servidor (Active Directory).
 
 ## Rede Workgroup (Grupo de Trabalho)
 
@@ -617,7 +519,7 @@ Este guia explica de forma simples como funcionam os dois principais modelos de 
 
 ---
 
-## Características
+**Características**
 
 - Usuários e senhas ficam **em cada computador**
 - Não existe servidor central
@@ -626,14 +528,12 @@ Este guia explica de forma simples como funcionam os dois principais modelos de 
 
 ---
 
-**Analogia**
-
-É como um grupo de pessoas sem chefe:  
-cada um cuida do seu próprio trabalho, sem controle central.
+> **Analogia**
+É como um grupo de pessoas sem chefe: cada um cuida do seu próprio trabalho, sem controle central.
 
 ---
 
-## Desvantagens
+**Desvantagens**
 
 - Difícil de gerenciar  
 - Pouca segurança  
@@ -641,7 +541,7 @@ cada um cuida do seu próprio trabalho, sem controle central.
 
 ---
 
-# Rede Cliente-Servidor (Active Directory)
+## Rede Cliente-Servidor (Active Directory)
 
 **O que é?**
 
@@ -651,7 +551,7 @@ Esse servidor roda o **Active Directory (AD)** no Windows Server.
 
 ---
 
-## Características
+**Características**
 
 - Usuários centralizados  
 - Login único em qualquer máquina  
@@ -661,7 +561,7 @@ Esse servidor roda o **Active Directory (AD)** no Windows Server.
 
 ---
 
-**Analogia**
+> **Analogia**
 
 É como uma empresa com um **chefe (servidor)**:
 
@@ -675,13 +575,13 @@ Esse servidor roda o **Active Directory (AD)** no Windows Server.
 
 Quando você instala o AD, o servidor vira um:
 
-## Controlador de Domínio (Domain Controller - DC)
+**Controlador de Domínio (Domain Controller - DC)**
 
 - Ele é o “cérebro da rede”
 
 ---
 
-## Estrutura de Domínio
+**Estrutura de Domínio**
 
 Exemplo:
 
@@ -691,7 +591,7 @@ bruss.tec        → domínio principal (matriz) sp.bruss.tec     → filial sc.
 
 ---
 
-# RODC (Read-Only Domain Controller)
+## RODC (Read-Only Domain Controller)
 
 **O que é?**
 
@@ -700,7 +600,7 @@ bruss.tec        → domínio principal (matriz) sp.bruss.tec     → filial sc.
 
 ---
 
-**Analogia**
+> **Analogia**
 
 É como uma **filial com acesso limitado**:
 
@@ -713,7 +613,7 @@ bruss.tec        → domínio principal (matriz) sp.bruss.tec     → filial sc.
 
 # Instalação do Active Directory
 
-## Pré-requisitos
+**Pré-requisitos**
 
 - Nome do servidor definido  
 - IP fixo configurado  
@@ -727,17 +627,15 @@ bruss.tec        → domínio principal (matriz) sp.bruss.tec     → filial sc.
 1. Abrir **Gerenciador do Servidor**
 2. Clicar em:
 
-Gerenciar → Adicionar funções e recursos
+`Gerenciar` → `Adicionar funções e recursos`
 
 3. Avançar até selecionar o servidor
 4. Marcar:
 
-Serviços de Domínio Active Directory
+`Serviços de Domínio Active Directory`
 
 5. Clicar em **Adicionar recursos**
 6. Avançar até **Instalar**
-
----
 
 **Promover a controlador de domínio**
 
@@ -745,7 +643,7 @@ Após instalar:
 
 - Clique em:
 
-Promover este servidor a um controlador de domínio
+`Promover este servidor a um controlador de domínio`
 
 ---
 
@@ -764,13 +662,13 @@ Adicionar uma nova floresta
 
 ---
 
-# Instalação do DHCP
+# DHCP
 
 **O que é DHCP?**
 
 É o serviço que distribui IP automaticamente na rede.
 
-**Analogia:**  
+> **Analogia:**  
 É como um **atendente que entrega números de senha (IPs)** para cada dispositivo.
 
 ---
@@ -780,22 +678,31 @@ Adicionar uma nova floresta
 1. Gerenciador do Servidor  
 2. Clique em:
 
-Gerenciar → Adicionar funções e recursos
+`Gerenciar` → `Adicionar funções e recursos`
 
 3. Selecionar:
 
-Servidor DHCP
+`Servidor DHCP`
 
-4. Avançar até instalar  
-5. Concluir configuração  
+4. Avançar até instalar
+
+Após instalar: 
+
+- Clique em
+
+`Concluir configuração`
 
 ---
 
-# Configurar Escopo DHCP
+## Configurar Escopo DHCP
 
-## Informações necessárias (exemplo)
+**Informações necessárias (exemplo)**
 
-IP inicial: 192.168.32.100 IP final:   192.168.32.200 Duração:    2 horas DNS:        192.168.32.10 Gateway:    192.168.32.1
+**IP inicial:** 192.168.32.100
+**IP final:** 192.168.32.200
+**Duração:** 2 horas
+**DNS:** 192.168.32.10
+**Gateway:** 192.168.32.1
 
 ---
 
@@ -803,17 +710,17 @@ IP inicial: 192.168.32.100 IP final:   192.168.32.200 Duração:    2 horas DNS:
 
 1. Abrir:
 
-Ferramentas → DHCP
+`Ferramentas` → `DHCP`
 
 2. Clique com botão direito em **IPv4**
 3. Selecione:
 
-Novo Escopo
+`Novo Escopo`
 
 4. Avançar e configurar:
 
 - Nome e descrição  
-- Intervalo de IP  
+- Intervalo de IP (Se quiser)
 - Tempo de concessão  
 - Gateway  
 - DNS  
@@ -822,7 +729,7 @@ Novo Escopo
 
 ---
 
-# Testar DHCP
+## Testar DHCP
 
 Em outro computador:
 
@@ -838,54 +745,16 @@ ipconfig
 **Verifique:**
 
 - Se recebeu IP dentro do intervalo
-
 - Se o DNS corresponde ao servidor
-
 - Se o gateway está correto
-
 
 **Se tudo estiver certo, o DHCP está funcionando**
 
 ---
 
-# Conclusão
-
-**Comparação**
-
-Característica	Workgroup	Active Directory
-
-- Tipo	Descentralizado	Centralizado
-- Usuários	Local	Central
-- Segurança	Baixa	Alta
-- Escalabilidade	Limitada	Alta
-
----
-
-# Resumo
-
-Workgroup → simples, pequeno, doméstico
-
-AD → profissional, seguro, empresarial
-
----
-
-**Insight Final**
-
-Em redes modernas, o padrão é usar:
-
-- Active Directory
-
-- DHCP
-
-- DNS
-
-**Isso permite controle total, organização e segurança na rede.**
-
----
-
 # AD - Unidade Organizacional (OU) e Usuários
 
-## O que é uma Unidade Organizacional (OU)?
+**O que é uma Unidade Organizacional (OU)?**
 
 A **OU (Organizational Unit)** é como uma pasta dentro do Active Directory usada para:
 
@@ -895,7 +764,7 @@ A **OU (Organizational Unit)** é como uma pasta dentro do Active Directory usad
 
 ---
 
-**Analogia**
+> **Analogia**
 
 Pense na OU como uma **gaveta de escritório**:
 
@@ -904,33 +773,33 @@ Pense na OU como uma **gaveta de escritório**:
 
 ---
 
-# Criar Unidade Organizacional (OU)
-
-**Passo a passo**
+## Criar Unidade Organizacional (OU)
 
 1. Abrir:
 
-Ferramentas → Usuários e Computadores do Active Directory
+`Ferramentas` → `Usuários e Computadores do Active Directory`
 
 2. Clique com botão direito no domínio (ex: `bruss.tec`)
 3. Vá em:
 
-Novo → Unidade Organizacional
+`Novo` → `Unidade Organizacional`
 
 4. Defina um nome (ex: `TI`, `Financeiro`)
 5. Clique em **OK**
 
 ---
 
-# Criar Usuários
+## Criar Usuários
 
-**Passo a passo**
+- Abrir:
+
+`Ferramentas` → `Usuários e Computadores do Active Directory`
 
 1. Entre na OU criada  
 2. Clique com botão direito na área branca  
 3. Vá em:
 
-Novo → Usuário
+`Novo` → `Usuário`
 
 4. Preencha:
 
@@ -940,7 +809,7 @@ Novo → Usuário
 
 ---
 
-## Definir senha
+**Definir senha**
 
 Escolha uma senha e configure opções:
 
@@ -955,34 +824,38 @@ Escolha uma senha e configure opções:
 
 **Finalizar**
 
-- Clique em **Avançar → Concluir**
+- Clique em `Avançar` → `Concluir`
 
 ---
 
-# Gerenciar Usuários
+## Gerenciar Usuários
 
 **Habilitar ou desabilitar conta**
+
+- Abrir:
+
+`Ferramentas` → `Usuários e Computadores do Active Directory`
 
 - Clique com botão direito no usuário  
 - Escolha:
 
-Habilitar conta
+`Habilitar conta`
 
 ou
 
-Desabilitar conta
+`Desabilitar conta`
 
 ---
 
 **Exemplos práticos**
 
-- **Daniel** → não pode alterar senha  
-- **Enzo** → senha nunca expira + conta desativada  
-- **Ezequiel** → deve alterar senha no próximo login  
+- **Usuário1** → não pode alterar senha  
+- **Usuário2** → senha nunca expira + conta desativada  
+- **Usuário3** → deve alterar senha no próximo login  
 
 ---
 
-# Criar usuário administrador reserva
+## Criar usuário administrador reserva
 
 **Por que fazer isso?**
 
@@ -990,35 +863,33 @@ Desabilitar conta
 
 ---
 
-**Passo a passo**
+1. Abrir:
 
-1. Vá em:
+`Ferramentas` → `Usuários e Computadores do Active Directory`
 
-Users
+Vá em:
+
+`Users`
 
 2. Clique com botão direito em:
 
-Administrador
+`Administrador`
 
 3. Clique em:
 
-Copiar
+`Copiar`
 
 4. Crie o novo usuário
 
----
-
-**Configuração importante**
-
 - Marque:
 
-Senha nunca expira
+`Senha nunca expira`
 
 ---
 
-## Organizar
+**Organizar**
 
-- Arraste esse usuário para a OU criada  
+- Arraste esse usuário criado para a OU criada ou a que você desejar.  
 
 **Esse usuário terá privilégios administrativos**
 
@@ -1042,60 +913,51 @@ ping bruss.tec
 
 1. Vá em:
 
-Configurações → Sistema → Sobre
-
+`Configurações` → `Sistema → Sobre`
 
 2. Clique em:
 
-Configurações avançadas do sistema
-
+`Configurações avançadas do sistema`
 
 3. Aba:
 
-Nome do computador → Alterar
-
+`Nome do computador` → `Alterar`
 
 4. Selecione:
 
-Domínio
+`Domínio`
 
+5. Digite (Como exemplo):
 
-5. Digite:
-
-bruss.tec
+`bruss.tec`
 
 ---
 
-**Autenticação**
+- Autenticação
 
 Digite usuário e senha do administrador do servidor
 
-
 **Se aparecer mensagem de boas-vindas, deu certo**
 
----
 
-**Reiniciar**
+- Reiniciar
 
-Reinicie o computador
+**Reinicie o computador**
 
----
-
-**Testar login**
+- Testar login
 
 Após reiniciar:
 
-Clique em Outro usuário
-
-Faça login com um usuário criado no servidor
+- Clique em Outro usuário
+- Faça login com um usuário criado no servidor
 
 ---
 
-## Verificar no servidor
+**Verificar no servidor**
 
 No Active Directory:
 
-Domínio → Computers
+`Domínio` → `Computers`
 
 **O computador aparecerá na lista**
 
@@ -1105,12 +967,13 @@ Domínio → Computers
 
 **Configurar restrições**
 
-1. Abra o usuário
+No Active Directory:
 
+1. Abra o usuário
 
 2. Vá na aba:
 
-Conta
+`Conta`
 
 ---
 
@@ -1118,23 +981,21 @@ Conta
 
 Defina dias e horários permitidos
 
----
-
 ## Restringir computadores
 
 Clique em:
 
-Fazer logon em
+`Fazer logon em`
 
 Selecione:
 
-Os seguintes computadores
+`Os seguintes computadores`
 
 Adicione os nomes dos PCs
 
 ---
 
-**Analogia**
+> **Analogia**
 
 É como um cartão de acesso:
 
@@ -1153,32 +1014,6 @@ Essas configurações são muito usadas em:
 - Ambientes corporativos
 
 **Aumenta a segurança e o controle sobre os usuários**
-
-
----
-
-# Conclusão
-
-Com isso você consegue:
-
-- Organizar usuários com OUs
-- Criar e controlar contas
-- Adicionar computadores ao domínio
-- Definir regras de acesso
-
-
-
----
-
-**Resumo final**
-
-- OU → organização
-- Usuários → controle de acesso
-- Domínio → centralização
-- Regras → segurança
-
-
-**Isso é a base de qualquer rede corporativa moderna.**
 
 ---
 
