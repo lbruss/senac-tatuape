@@ -1131,7 +1131,7 @@ Também é possível adicionar **grupos dentro de grupos**
 
 ---
 
-**Analogia**
+> **Analogia**
 
 Esse método é como deixar a porta aberta para todo mundo entrar.
 
@@ -1218,29 +1218,29 @@ Aqui você está criando uma **lista VIP**:
 
 ---
 
-# Exemplo prático (empresa)
+## Exemplo prático (empresa)
 
-## Cenário
+**Cenário**
 
 Pasta: `Projetos`
 
 - Funcionários → podem **ler e copiar**
 - Gerente → pode **modificar tudo**
 
-## Configuração
+**Configuração**
 
 - Grupo Funcionários → **sem permissão de modificar**
 - Grupo Gerente → **com permissão de modificar**
 
 ---
 
-# Testar acesso
+## Testar acesso
 
 **Em outro computador**
 
 1. Pressione:
 
-Windows + R
+`Windows + R`
 
 2. Digite:
 
@@ -1250,7 +1250,7 @@ Windows + R
 
 ---
 
-**Analogia**
+> **Analogia**
 
 É como um funcionário indo até outro setor da empresa para acessar arquivos.
 
@@ -1267,7 +1267,7 @@ Windows + R
 
 ---
 
-* Boas práticas
+**Boas práticas**
 
 - Use **grupos**, não usuários diretamente  
 - Separe por departamentos  
@@ -1275,33 +1275,23 @@ Windows + R
 
 ---
 
-# Resumo final
-
-- UO → organização  
-- Usuários → pessoas  
-- Grupos → equipes  
-- Permissões → controle de acesso  
-
-**Resultado: rede organizada, segura e fácil de administrar.**
-
----
 # Script de Logon e Mapeamento de Rede
 
 Pense nisso como um **“roteiro automático”**: quando o usuário entra no computador, tudo que ele precisa já abre sozinho.
 
 ---
 
-# 1. Onde fica o Script de Logon
+**Onde fica o Script de Logo**
 
 O script deve ser salvo no diretório padrão do domínio:
 
-C:\Windows\SYSVOL\sysvol\NOMEDODOMINIO\scripts
+`C:\Windows\SYSVOL\sysvol\NOMEDODOMINIO\scripts`
 
 > Esse local é especial porque todos os computadores do domínio conseguem acessar automaticamente.
 
 ---
 
-# 2. Mapear uma pasta de rede
+## Mapear uma pasta de rede
 
 **Comando básico**
 
@@ -1311,30 +1301,30 @@ Abra o Bloco de Notas e escreva:
 net use P: \\SERVIDOR\PASTA
 ```
 
-* Explicação
+**Explicação**
 
-P: → letra da unidade (pode ser qualquer uma disponível)
+`P:` → letra da unidade (pode ser qualquer uma disponível)
 
-\\SERVIDOR\PASTA → caminho da pasta na rede
+`\\SERVIDOR\PASTA` → `caminho da pasta na rede`
 
 ---
 
-**Analogia**
-
+> **Analogia**
 É como criar um atalho automático: a pasta da rede aparece como se fosse um “HD” dentro do computador.
 
 ---
 
-***3. Abrir programas automaticamente**
+## Abrir programas automaticamente
 
-* Exemplo
+- Exemplo
 
+```
 start "C:\Program Files\Google\Chrome\Application\chrome.exe"
-
+```
 
 ---
 
-**4. Abrir sites automaticamente**
+## Abrir sites automaticamente
 
 ```
 start https://www.google.com
@@ -1342,7 +1332,7 @@ start https://www.google.com
 
 ---
 
-**Analogia**
+> **Analogia**
 
 É como ligar o computador e já deixar tudo pronto:
 
@@ -1352,7 +1342,7 @@ start https://www.google.com
 
 ---
 
-**5. Criar o arquivo de script**
+## Criar o arquivo de script
 
 1. Abra o Bloco de Notas
 
@@ -1367,12 +1357,12 @@ start "C:\Program Files\Google\Chrome\Application\chrome.exe"
 start https://www.google.com
 ```
 
-3. Clique em Salvar como
+3. Clique em `Salvar como`
 
 
 4. Escolha o local:
 
-C:\Windows\SYSVOL\sysvol\NOMEDODOMINIO\scripts
+`C:\Windows\SYSVOL\sysvol\NOMEDODOMINIO\scripts`
 
 5. Nome do arquivo:
 
@@ -1386,7 +1376,7 @@ ou
 logon.bat
 ```
 
-6. Em Tipo, selecione:
+- Em `Tipo`, selecione:
 
 Todos os arquivos
 
