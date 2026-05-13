@@ -726,19 +726,6 @@ Isso faz com que o **logo do Linux apareça na tela de login do sistema**.
 
 ---
 
-# Conclusão
-
-Aprender os comandos básicos do Linux é essencial para quem trabalha com:
-
-* servidores
-* redes
-* infraestrutura de TI
-* segurança da informação
-
-O terminal Linux oferece **controle total do sistema**, permitindo administrar servidores de forma eficiente e profissional.
-
----
-
 # Comandos e Serviços no Linux (Debian)
 
 Este guia apresenta **comandos importantes para administração de servidores Linux**, especialmente no **Debian**.  
@@ -746,7 +733,7 @@ Eles são usados para **identificar o sistema, gerenciar serviços e acessar ser
 
 ---
 
-# Informações do Sistema
+**Informações do Sistema**
 
 `hostname`
 
@@ -762,7 +749,7 @@ Exemplo de saída:
 server01
 ```
 
-**Analogia:**
+> **Analogia:**
 O hostname é como **o nome de uma pessoa em uma empresa**, usado para identificar o computador dentro da rede.
 
 ---
@@ -793,7 +780,7 @@ Esse comando também permite **alterar o nome do computador**.
 
 ---
 
-# Gerenciamento de Serviços no Linux
+**Gerenciamento de Serviços no Linux**
 
 Nos sistemas Linux modernos, o gerenciamento de serviços é feito pelo **systemd**, usando o comando:
 
@@ -810,12 +797,12 @@ Exemplos de serviços:
 * banco de dados
 * servidor de arquivos
 
-**Analogia:**
+> **Analogia:**
 Pense nesses serviços como **funcionários trabalhando nos bastidores do sistema**.
 
 ---
 
-# Verificar Status de um Serviço
+**Verificar Status de um Serviço**
 
 ```
 systemctl status nome-do-servico
@@ -835,7 +822,7 @@ Mostra informações como:
 
 ---
 
-# Parar um Serviço
+**Parar um Serviço**
 
 ```
 systemctl stop nome-do-servico
@@ -851,7 +838,7 @@ Isso **interrompe o funcionamento do serviço**.
 
 ---
 
-# Iniciar um Serviço
+**Iniciar um Serviço**
 
 ```
 systemctl start nome-do-servico
@@ -867,7 +854,7 @@ Inicia o serviço novamente.
 
 ---
 
-# Reiniciar um Serviço
+**Reiniciar um Serviço**
 
 ```
 systemctl restart nome-do-servico
@@ -891,9 +878,7 @@ Ele utiliza criptografia para proteger a comunicação.
 
 ### Estrutura básica
 
-```
-Cliente  ----->  Servidor SSH (Debian)
-```
+`Cliente  ----->  Servidor SSH (Debian)`
 
 Ou seja:
 
@@ -927,9 +912,7 @@ Passos básicos:
 2. Inserir o **endereço IP do servidor Debian**
 3. Usar a **porta padrão do SSH**
 
-```
-22
-```
+`22`
 
 4. Clicar em **Open**
 
@@ -973,7 +956,7 @@ Se estiver correta, o usuário ganha **permissões administrativas**.
 
 ---
 
-# Por que o SSH é importante?
+## Por que o SSH é importante?
 
 O SSH é essencial para administrar servidores porque permite:
 
@@ -987,7 +970,7 @@ Tudo isso **sem precisar estar fisicamente perto do servidor**.
 
 ---
 
-## Informação Adicional Importante
+**Informação Adicional Importante**
 
 O serviço SSH precisa estar **instalado e ativo no servidor**.
 
@@ -1011,20 +994,6 @@ systemctl start ssh
 
 ---
 
-# Conclusão
-
-Comandos como:
-
-* `hostname`
-* `hostnamectl`
-* `systemctl`
-
-são fundamentais para **administrar servidores Linux**.
-
-Já o **SSH** permite que administradores controlem servidores **de qualquer lugar da rede ou da internet**, tornando a gestão de sistemas muito mais prática e eficiente.
-
----
-
 # Instalação Debian — Servidor Web
 
 **Instalação do Debian (Modo Servidor Web)**
@@ -1039,13 +1008,15 @@ Nome de domínio
 
 Digite:
 
+```
 domain.com.br
+```
 
 > Você pode alterar isso depois, se quiser.
 
 ---
 
-## Outras opções
+**Outras opções**
 
 - **Ler mídia adicional:** NÃO  
 - **Proxy:** deixe em branco  
@@ -1053,7 +1024,7 @@ domain.com.br
 
 ---
 
-## Seleção de Software
+**Seleção de Software**
 
 Selecione apenas:
 
@@ -1065,15 +1036,16 @@ Selecione apenas:
 
 ---
 
-# Definir IP Fixo no Debian
+## Definir IP Fixo no Debian
 
 Exemplo usado:
 
-IP: 10.26.44.222/24 Gateway: 10.26.44.1
+- IP: 10.26.44.222/24
+- Gateway: 10.26.44.1
 
 ---
 
-Passo 1 — Acessar diretório de rede
+- Passo 1 — Acessar diretório de rede
 
 ```
 cd /etc/network
@@ -1081,19 +1053,18 @@ cd /etc/network
 
 ---
 
-Passo 2 — Criar backup do arquivo
+- Passo 2 — Criar backup do arquivo
 
 ```
 cp interfaces interfaces.bkp
 ```
 
-Analogia:
+> Analogia:
 É como fazer uma cópia de segurança antes de editar um documento importante.
-
 
 ---
 
-Passo 3 — Editar o arquivo de rede
+- Passo 3 — Editar o arquivo de rede
 
 ```
 nano interfaces
@@ -1122,21 +1093,21 @@ iface enp0s3 inet static
 
 Agora comente a linha:
 
-A linha automatica ipv6, com o sinal `#`
+**A linha automatica ipv6, com o sinal `#`**
 
 ---
 
-## Salvar alterações
+**Salvar alterações**
 
-Ctrl + O → salvar
+`Ctrl + O` → salvar
 
-Enter → confirmar
+`Enter` → confirmar
 
-Ctrl + X → sair
+`Ctrl + X` → sair
 
 ---
 
-# Configurar DNS
+## Configurar DNS
 
 **Instalar serviço DNS local**
 
@@ -1152,7 +1123,7 @@ systemctl status systemd-resolved
 
 Se travar:
 
-Pressione Q ou Ctrl + C
+Pressione `Q` ou `Ctrl + C`
 
 ---
 
@@ -1183,11 +1154,11 @@ DNS=8.8.8.8 8.8.4.4
 
 **Salvar**
 
-Ctrl + O
+`Ctrl + O`
 
-Enter
+`Enter`
 
-Ctrl + X
+`Ctrl + X`
 
 ---
 
@@ -1215,7 +1186,7 @@ reboot
 
 ---
 
-# Testes de Funcionamento
+## Testes de Funcionamento
 
 **Verificar IP**
 
@@ -1225,7 +1196,7 @@ ip a
 
 Se aparecer:
 
-10.26.44.222
+`10.26.44.222`
 
 **Está correto**
 
@@ -1291,7 +1262,7 @@ cd /var/www/html
 
 ---
 
-Remover página padrão
+**Remover página padrão**
 
 ```
 rm index.html
@@ -1299,7 +1270,7 @@ rm index.html
 
 ---
 
-Criar nova página
+**Criar nova página**
 
 ```
 nano index.html
@@ -1344,44 +1315,9 @@ Você verá sua página personalizada.
 
 ---
 
-**Resumo**
-
-Foi configurou:
-
-- Servidor Debian
-
-- IP fixo
-
-- DNS
-
-- Servidor Web (Apache)
-
-- Página HTML
-
----
-
-# Conclusão
-
-Com esses passos, foi criado um servidor web completo.
-
-Analogia final:
-Você basicamente:
-
-- Montou um computador (servidor)
-
-- Deu um endereço fixo (IP)
-
-- Configurou a internet (DNS)
-
-- E abriu um site (Apache + HTML)
-
----
-
 # WordPress + LAMP
 
----
-
-# O que é WordPress?
+**O que é WordPress?**
 
 O **WordPress** é uma plataforma usada para criar:
 
@@ -1396,7 +1332,7 @@ O WordPress é como um **“construtor de sites pronto”**, onde você monta tu
 
 ---
 
-# O que é LAMP?
+**O que é LAMP?**
 
 LAMP é um conjunto de tecnologias usadas para rodar sites:
 
@@ -1405,7 +1341,7 @@ LAMP é um conjunto de tecnologias usadas para rodar sites:
 - **M** → MariaDB / MySQL (Banco de dados)
 - **P** → PHP (Linguagem do servidor)
 
-**Analogia:**  
+> **Analogia:**  
 É como montar uma casa:
 
 - Linux → terreno  
@@ -1415,7 +1351,7 @@ LAMP é um conjunto de tecnologias usadas para rodar sites:
 
 ---
 
-# Etapas para montar o WordPress
+# Montar o WordPress
 
 ---
 
@@ -1435,7 +1371,7 @@ systemctl status apache2
 
 **2. Instalar o Banco de Dados (MariaDB)**
 
-* Instalação
+- Instalação
 
 ```
 apt install mariadb-server
@@ -1443,7 +1379,7 @@ apt install mariadb-server
 
 ---
 
-* Verificar se está ativo
+- Verificar se está ativo
 
 ```
 systemctl status mariadb
@@ -1459,10 +1395,8 @@ mariadb-secure-installation
 
 **Durante o processo:**
 
-* Defina senha do root
-
-Responda Y (sim) para as opções de segurança
-
+- Defina senha do root
+- Responda Y (sim) para as opções de segurança
 
 Isso protege o banco contra acessos indevidos.
 
@@ -1525,9 +1459,9 @@ quit
 apt install php phpmyadmin
 ```
 
-* Durante a instalação:
+- Durante a instalação:
 
-Selecione apache2
+Selecione `apache2`
 
 Configure senha do banco
 
@@ -1553,9 +1487,9 @@ php -v
 
 No navegador:
 
-http://IP_DO_SERVIDOR/phpmyadmin
+`http://IP_DO_SERVIDOR/phpmyadmin`
 
-Login:
+*Login:**
 
 Usuário: admin
 
@@ -1585,7 +1519,7 @@ cd /etc/php/8.x/apache2/
 
 ---
 
-* Backup
+- Backup
 
 ```
 cp php.ini php.ini.bkp
@@ -1599,13 +1533,13 @@ cp php.ini php.ini.bkp
 nano php.ini
 ```
 
-Procure:
+**Procure:**
 
 ```
 memory_limit = 128M
 ```
 
-Altere para:
+**Altere para:**
 
 ```
 memory_limit = 512M
@@ -1615,11 +1549,11 @@ memory_limit = 512M
 
 **Salvar**
 
-- Ctrl + O
+- `Ctrl + O`
 
-- Enter
+- `Enter`
 
-- Ctrl + X
+- `Ctrl + X`
 
 ---
 
@@ -1699,7 +1633,7 @@ http://IP_DO_SERVIDOR
 
 - Clique em “Vamos lá”
 
-Configure:
+**Configure:**
 
 - Nome do banco → wordpress
 
@@ -1736,102 +1670,9 @@ No painel do WordPress:
 
 ---
 
-# Hospedagem gratuita (Front-end)
-
-Você pode hospedar sites simples (HTML, CSS, JS) gratuitamente usando o GitHub Pages da Microsoft.
-
-**WordPress NÃO funciona no GitHub Pages (precisa de servidor PHP).**
-
----
-
-**Criar página HTML simples**
-
-```html
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hello World</title>
-</head>
-<body>
-<h1>Hello World</h1>
-<p>Seu Nome</p>
-</body>
-</html>
-```
-
----
-
-**Publicar no GitHub Pages**
-
-1. Criar repositório
-
-
-2. Enviar index.html
-
-
-3. Ir em Settings → Pages
-
-
-4. Selecionar branch main
-
-
-5. Salvar
-
-Após alguns minutos, o site estará online.
-
-
----
-
-**Domínio próprio**
-
-Você pode comprar domínio em:
-
-* Registro.br
-
-
-Exemplo:
-
-seusite.com.br
-
-Depois, pode conectar ao GitHub Pages ou ao seu servidor.
-
----
-
-# Conclusão
-
-Você montou um ambiente completo com:
-
-- Linux (Debian)
-
-- Apache
-
-- MariaDB
-
-- PHP
-
-- WordPress
-
-Analogia final:
-Você construiu:
-
-- o terreno (Linux)
-
-- a casa (Apache + PHP)
-
-- o banco de dados (MariaDB)
-
-- e decorou tudo (WordPress)
-
-
-Isso é exatamente como a maioria dos sites profissionais funciona hoje.
-
----
-
 # Apache Tomcat
 
-## O que é o Tomcat?
+**O que é o Tomcat?**
 
 O **Apache Tomcat** é um servidor que executa aplicações Java na web.
 
@@ -1843,13 +1684,13 @@ Ele é muito usado para rodar:
 
 ---
 
-**Analogia**
+> **Analogia**
 
 Se o **Apache (web server)** entrega páginas HTML, o **Tomcat** é como um **motor inteligente**, que executa código Java e gera páginas dinâmicas.
 
 ---
 
-# Etapas Gerais
+**Etapas Gerais**
 
 1. Instalar Debian  
 2. Configurar rede  
@@ -1859,7 +1700,7 @@ Se o **Apache (web server)** entrega páginas HTML, o **Tomcat** é como um **mo
 
 ---
 
-**Instalar Debian**
+## Instalar Debian
 
 Durante a instalação:
 
@@ -1901,13 +1742,13 @@ root
 
 ---
 
-**Passo 2 — Configurar Rede**
+## Configurar Rede
 
 - Configurar IP fixo e DNS
 
 Depois de configurar:
 
-## Testes
+**Testes**
 
 ```
 ping google.com
@@ -1937,7 +1778,7 @@ ping IP_DO_SERVIDOR
 
 O Tomcat precisa do Java para funcionar.
 
--Instalar
+- Instalar
 
 ```
 apt install default-jdk
@@ -2017,9 +1858,10 @@ nano tomcat-users.xml
 
 **Adicionar usuário**
 
-Dentro do arquivo, adicione:
+Delete o <-- inicial e coloque ele da seguinte maneira:
 
 ```
+<--
 <user username="admin" password="SUA_SENHA" roles="manager-gui,admin-gui"/>
 ```
 
@@ -2027,11 +1869,11 @@ Dentro do arquivo, adicione:
 
 **Salvar**
 
-Ctrl + O
+`Ctrl + O`
 
-Enter
+`Enter`
 
-Ctrl + X
+`Ctrl + X`
 
 ---
 
@@ -2052,7 +1894,7 @@ http://IP_DO_SERVIDOR:8080
 
 2. Clique em:
 
-Manager App
+`Manager App`
 
 
 3. Faça login com:
@@ -2069,13 +1911,12 @@ O **MySQL** é um banco de dados usado para armazenar informações da aplicaç�
 
 ---
 
-**Analogia**
-
+> **Analogia**
 Se o Tomcat é o “motor” da aplicação, o banco de dados é o **arquivo onde tudo é guardado** (usuários, dados, registros, etc).
 
 ---
 
-## Instalar dependência (chaves)
+**Instalar dependência (chaves)**
 
 ```
 apt install gnupg
@@ -2093,7 +1934,7 @@ https://mysql.com
 
 2. Vá em:
 
-Downloads → MySQL Community Edition → MySQL APT Repository
+`Downloads` → `MySQL Community Edition` → `MySQL APT Repository`
 
 3. Copie o link do download
 
@@ -2101,7 +1942,9 @@ Downloads → MySQL Community Edition → MySQL APT Repository
 
 **Baixar no Debian**
 
+```
 wget LINK_COPIADO
+```
 
 Exemplo:
 
@@ -2163,7 +2006,7 @@ Digite a senha configurada.
 
 - Limpar tela
 
-Ctrl + L
+`Ctrl + L`
 
 ---
 
@@ -2180,6 +2023,8 @@ SHOW DATABASES;
 ```
 CREATE DATABASE agenda;
 ```
+
+- De exemplo foi criado com o nome "agenda"
 
 ---
 
@@ -2222,7 +2067,7 @@ DESCRIBE contatos;
 
 **Sair do MySQL**
 
-Ctrl + D
+`Ctrl + D`
 
 ---
 
@@ -2230,16 +2075,14 @@ Ctrl + D
 
 **O que é um arquivo WAR?**
 
-É um pacote de aplicação Java
-
-Contém tudo que o sistema precisa para rodar
+- É um pacote de aplicação Java
+- Contém tudo que o sistema precisa para rodar
 
 ---
 
-**Analogia**
+> **Analogia**
 
 Um arquivo .war é como um arquivo compactado (.zip) com um sistema pronto dentro.
-
 
 ---
 
@@ -2251,7 +2094,7 @@ http://IP_DO_SERVIDOR:8080
 
 2. Clique em:
 
-Manager App
+`Manager App`
 
 3. Faça login com usuário admin
 
@@ -2259,17 +2102,17 @@ Manager App
 
 **Fazer upload do WAR**
 
-Na seção:
+- Na seção:
 
-WAR file to deploy
+`WAR file to deploy`
 
-Clique em Escolher arquivo
+- Clique em Escolher arquivo
 
-Selecione seu arquivo .war
+Selecione seu arquivo `.war`
 
-Clique em:
+- Clique em:
 
-Deploy
+`Deploy`
 
 ---
 
@@ -2277,7 +2120,7 @@ Deploy
 
 Após o deploy, aparecerá algo como:
 
-/agenda
+`/agenda`
 
 ---
 
@@ -2299,13 +2142,11 @@ Tomcat → executa o sistema
 
 MySQL → armazena dados
 
-
 **Eles trabalham juntos o tempo todo.**
-
 
 ---
 
-- Segurança básica
+**Segurança básica**
 
 Após instalar o MySQL, é recomendado:
 
@@ -2316,28 +2157,6 @@ mysql_secure_installation
 **Isso melhora a segurança do banco.**
 
 ---
-
-# Conclusão 1
-
-Agora você tem um ambiente completo com:
-
-- Servidor Linux (Debian)
-- Tomcat (aplicações Java)
-- MySQL (banco de dados)
-- Aplicação rodando (.WAR)
-
----
-
-**Resumo Final**
-
-MySQL → guarda dados
-
-Tomcat → executa aplicação
-
-WAR → sistema pronto
-
-
-**Isso é a base de sistemas web Java usados em empresas**
 
 **Informação Adicional**
 
@@ -2355,44 +2174,16 @@ Diferente do Apache (porta 80)
 
 Por padrão:
 
-O acesso administrativo pode ser restrito
-
-Em produção, recomenda-se limitar acesso por IP
-
----
-
-# Conclusão 2
-
-Foi configurado:
-
-- Debian (sistema base)
-- Rede (IP + DNS)
-- Java (necessário para rodar aplicações)
-- Tomcat (servidor de aplicações)
+- O acesso administrativo pode ser restrito
+- Em produção, recomenda-se limitar acesso por IP
 
 ---
 
-**Analogia Final**
-
-Você montou:
-
-O terreno → Debian
-
-Energia → Java
-
-Máquina → Tomcat
-
-**Agora você tem um servidor pronto para rodar aplicações Java na web**
-
----
-
-# Continuação Tomcat - MySQL (Usuários, Workbench e Backup)
-
----
+## Tomcat - MySQL (Usuários, Workbench e Backup)
 
 # Criar usuário administrador no MySQL
 
-## Acessar o MySQL
+**Acessar o MySQL**
 
 No Debian:
 
@@ -2414,7 +2205,7 @@ CREATE USER 'dba'@'%' IDENTIFIED BY '123@senac';
 
 ---
 
-* Dar permissões
+- Dar permissões
 
 ```
 GRANT ALL PRIVILEGES ON *.* TO 'dba'@'%';
@@ -2426,7 +2217,7 @@ FLUSH PRIVILEGES;
 
 ---
 
-**Analogia**
+> **Analogia**
 
 Esse usuário é como um administrador geral do banco, com acesso total a tudo.
 
@@ -2446,11 +2237,9 @@ O MySQL Workbench é uma ferramenta gráfica para gerenciar bancos de dados.
 
 2. Preencha:
 
-* Nome da conexão: qualquer (ex: ServidorDB)
-
-* Host: IP do servidor
-
-* Usuário: dba
+- Nome da conexão: qualquer (ex: ServidorDB)
+- Host: IP do servidor
+- Usuário: dba
 
 
 3. Clique em OK
@@ -2459,25 +2248,24 @@ O MySQL Workbench é uma ferramenta gráfica para gerenciar bancos de dados.
 
 **Conectar**
 
-Clique na conexão criada
-
-Digite a senha
+- Clique na conexão criada
+- Digite a senha
 
 ---
 
 **Executar comandos**
 
-* Diferente do terminal:
+- Diferente do terminal:
 
 Use:
 
-Ctrl + Enter
+`Ctrl + Enter`
 
 Para executar comandos
 
 ---
 
-## Exemplos de comandos
+**Exemplos de comandos**
 
 ```
 SHOW DATABASES;
@@ -2499,22 +2287,21 @@ SELECT * FROM contatos;
 
 1. Vá em:
 
-Administration → Data Export
+`Administration` → `Data Export`
 
 2. Selecione o banco (ex: agenda)
 
 3. Escolha:
 
-* Dump Structure and Data
+`Dump Structure and Data`
 
 4. Clique em:
 
-Start Export
+`Start Export`
 
 ---
 
-**Analogia**
-
+> **Analogia**
 Backup é como tirar uma foto do banco de dados para guardar caso algo dê errado.
 
 ---
@@ -2531,9 +2318,9 @@ DROP DATABASE agenda;
 
 ## Restaurar Backup (Importar)
 
-* Importante
+- Importante
 
-** Você precisa criar o banco antes de restaurar.
+**Você precisa criar o banco antes de restaurar.**
 
 ---
 
@@ -2549,22 +2336,21 @@ CREATE DATABASE agenda;
 
 1. Vá em:
 
-Administration → Data Import/Restore
+`Administration` → `Data Import/Restore`
 
 2. Clique nos 3 pontinhos e selecione o backup
 
 3. Escolha o banco (agenda)
 
-
 4. Clique em:
 
-Start Import
+`Start Import`
 
 ---
 
 **Informação Adicional**
 
-* Segurança
+- Segurança
 
 Permitir acesso com '%' é prático, mas:
 
@@ -2578,42 +2364,12 @@ Em produção, o ideal é limitar por IP:
 
 ---
 
-* Uso real
+- Uso real
 
 Esse tipo de configuração é comum em:
 
-* Sistemas web (Tomcat + MySQL)
-
-* Aplicações empresariais
-
-* APIs
-
----
-
-# Conclusão
-
-Agora você consegue:
-
-Criar usuários no MySQL
-
-Acessar remotamente
-
-Gerenciar banco com interface gráfica
-
-Fazer backup e restore
-
----
-
-**Resumo final**
-
-Usuário dba → administrador do banco
-
-Workbench → interface visual
-
-Backup → segurança dos dados
-
-Restore → recuperação
-
-**Isso completa o ambiente profissional com Tomcat + Banco de Dados.**
+- Sistemas web (Tomcat + MySQL)
+- Aplicações empresariais
+- APIs
 
 ---
