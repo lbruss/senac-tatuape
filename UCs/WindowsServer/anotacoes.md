@@ -1040,76 +1040,69 @@ A **UO (Unidade Organizacional)** funciona como uma “pasta” para organizar u
 
 4. Defina um nome (ex: `TI`, `Financeiro`, `Projetos`)
 
-`Crie usuários`
+- Crie usuários
 
 ---
 
-**Analogia**
+> **Analogia**
 
 Usuários são como **funcionários da empresa**, cada um com seu login e senha.
 
 ---
 
-#  Criar grupo
+## Criar grupo
 
 Grupos facilitam o gerenciamento. Em vez de dar permissão para cada usuário, você dá para o grupo.
 
-**Criar grupo**
 
 1. Dentro da UO:
 
-Novo → Grupo
+`Novo` → `Grupo`
 
 2. Defina um nome (ex: `Equipe-Projeto`)
 
 ---
 
-## Tipo de grupo
+**Tipo de grupo**
 
 - **Segurança** → usado para permissões (acesso a pastas, arquivos, etc) 
 - **Distribuição** → usado para e-mails (listas)  
 
-* Neste exemplo foi selecionado: **Segurança**
-
 ---
 
-## Escopo do grupo
+**Escopo do grupo**
 
 - **Domínio Local** → usado dentro do domínio específico  
 - **Global** → usado dentro do domínio e recomendado para usuários  
 - **Universal** → usado em toda a floresta  
 
-Para o exemplo foi selecionado: **Global**
-
 ---
 
-**Analogia**
+> **Analogia**
 
 Grupo é como um **time** (ex: equipe de TI).  
 Você não precisa dar acesso para cada pessoa, basta dar acesso ao time.
 
 ---
 
-# Adicionar usuários ao grupo
-
-**Passo a passo**
+## Adicionar usuários ao grupo
 
 1. Dê duplo clique no grupo  
 2. Vá em:
 
-Membros → Adicionar
+`Membros` → `Adicionar`
 
 3. Digite os nomes dos usuários  
 
-* Para vários usuários:
+**Para vários usuários:**
 
 Coloque o começo dos nomes dos usuários, exemplo:
 
-geo;gabr
+`geo;gabr`
 
 4. Clique em:
 
-Verificar nomes → OK → Aplicar → OK
+`Verificar nomes` → `OK` → `Aplicar` → `OK`
 
 Também é possível adicionar **grupos dentro de grupos**
 
@@ -1117,24 +1110,24 @@ Também é possível adicionar **grupos dentro de grupos**
 
 # Compartilhamento simples de pasta
 
-## Criar e compartilhar
+**Criar e compartilhar**
 
 1. Crie uma pasta em qualquer HD  
 2. Clique com botão direito:
 
-Conceder acesso a → Pessoas específicas
+`Conceder acesso a` → `Pessoas específicas`
 
 3. Selecione:
 
-Todos
+`Todos`
 
 4. Defina permissão:
 
-Leitura/Gravação
+`Leitura/Gravação`
 
 5. Clique em:
 
-Compartilhar
+`Compartilhar`
 
 ---
 
@@ -1150,72 +1143,73 @@ Aqui você define exatamente quem pode acessar e o que pode fazer.
 
 **Passo a passo**
 
-* Aba Compartilhamento
+- Aba Compartilhamento
 
 1. Clique com botão direito na pasta:
 
-Propriedades → Compartilhamento → Compartilhamento Avançado
+`Propriedades` → `Compartilhamento` → `Compartilhamento Avançado`
 
 2. Marque:
 
-Compartilhar esta pasta
+`Compartilhar esta pasta`
 
 3. Clique em:
 
-Permissões
+`Permissões`
 
 4. Remova:
 
-Todos
+`Todos`
 
 5. Adicione:
 
-Usuários do domínio
+`Usuários do domínio`
 
 6. Marque:
 
-Alteração
+`Alteração`
 
 7. Clique em OK
 
 ---
 
-* Aba Segurança
+- Aba Segurança
 
 1. Vá em:
 
-Segurança → Avançadas
+`Segurança` → `Avançadas`
 
 2. Clique em:
 
-Desabilitar herança
+`Desabilitar herança`
 
 3. Selecione:
 
-Converter permissões herdadas
+`Converter permissões herdadas`
 
 4. Clique em:
 
-Editar
+`Editar`
 
 5. Remova:
 
-Usuários
+`Usuários`
 
 6. Clique em:
 
-Adicionar
+`Adicionar`
 
-7. Adicione usuários ou grupos desejados  
+7. Adicione usuários ou grupos desejados 
+
 8. Marque:
 
-Modificar
+`Modificar`
 
 9. Clique em OK
 
 ---
 
-**Analogia**
+> **Analogia**
 
 Aqui você está criando uma **lista VIP**:  
 - Alguns podem só ver  
