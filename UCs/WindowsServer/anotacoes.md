@@ -1031,16 +1031,16 @@ A **UO (Unidade Organizacional)** funciona como uma “pasta” para organizar u
 
 1. Abra:
 
-Usuários e Computadores do Active Directory
+`Usuários e Computadores do Active Directory`
 
 2. Clique com o botão direito no domínio
 3. Vá em:
 
-Novo → Unidade Organizacional
+`Novo` → `Unidade Organizacional`
 
 4. Defina um nome (ex: `TI`, `Financeiro`, `Projetos`)
 
-* Criar usuários
+`Crie usuários`
 
 ---
 
