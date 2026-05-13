@@ -1023,7 +1023,7 @@ Essas configurações são muito usadas em:
 
 # Usuários, Grupos e Permissões de Pasta
 
-**1. Criar Unidade Organizacional (UO)**
+** Criar Unidade Organizacional (UO)**
 
 A **UO (Unidade Organizacional)** funciona como uma “pasta” para organizar usuários e grupos dentro do domínio.
 
@@ -1041,8 +1041,6 @@ A **UO (Unidade Organizacional)** funciona como uma “pasta” para organizar u
 4. Defina um nome (ex: `TI`, `Financeiro`, `Projetos`)
 
 - Crie usuários
-
----
 
 > **Analogia**
 
@@ -1132,7 +1130,6 @@ Também é possível adicionar **grupos dentro de grupos**
 ---
 
 > **Analogia**
-
 Esse método é como deixar a porta aberta para todo mundo entrar.
 
 ---
@@ -1346,7 +1343,6 @@ start https://www.google.com
 
 1. Abra o Bloco de Notas
 
-
 2. Escreva os comandos (juntos ou separados)
 
 **Exemplo completo:**
@@ -1378,25 +1374,27 @@ logon.bat
 
 - Em `Tipo`, selecione:
 
-Todos os arquivos
+`Todos os arquivos`
 
 ---
 
-**6. Vincular script ao usuário**
+6. Vincular script ao usuário
+
+---
 
 1. Abra:
 
-Usuários e Computadores do Active Directory
+`Usuários e Computadores do Active Directory`
 
 2. Clique com botão direito no usuário
 
 3. Vá em:
 
-Propriedades → Perfil
+`Propriedades` → `Perfil`
 
 4. No campo:
 
-Script de logon
+`Script de logon`
 
 Digite:
 
@@ -1423,25 +1421,25 @@ Esse recurso faz com que o usuário veja apenas o que ele tem permissão para ac
 
 1. Abra o:
 
-Gerenciador do Servidor
+`Gerenciador do Servidor`
 
 2. Vá em:
 
-Serviços de Arquivo e Armazenamento → Compartilhamentos
+`Serviços de Arquivo e Armazenamento` → `Compartilhamentos`
 
 3. Selecione a pasta desejada
 
 4. Clique em:
 
-Propriedades → Configurações
+`Propriedades` → `Configurações`
 
 5. Ative:
 
-Habilitar enumeração baseada em acesso
+`Habilitar enumeração baseada em acesso`
 
 ---
 
-**Analogia**
+> **Analogia**
 
 Imagine um armário com várias gavetas:
 
@@ -1453,7 +1451,7 @@ Imagine um armário com várias gavetas:
 
 **Informações adicionais**
 
-* Persistência do mapeamento
+- Persistência do mapeamento
 
 Se quiser garantir que a unidade continue após reiniciar:
 
@@ -1463,45 +1461,17 @@ net use P: \\SERVIDOR\PASTA /persistent:yes
 
 ---
 
-* Remover mapeamento
-
-```
-net use P: /delete
-```
-
----
-
-* Ordem de execução
+- Ordem de execução
 
 Scripts rodam no login do usuário
 
 Dependem da rede estar disponível
 
-
 **Em redes lentas, pode haver atraso na execução.**
 
 ---
 
-**Resumo final**
-
-Script de logon → automatiza tarefas
-
-net use → mapeia rede
-
-start → abre programas/sites
-
-SYSVOL → pasta padrão do domínio
-
-Enumeração → esconde o que não pode acessar
-
----
-Resultado: ambiente automatizado, organizado e mais profissional 
-
----
-
 # Pasta Base (Home Folder) no Active Directory
-
-**Visão Geral**
 
 A **Pasta Base (Home Folder)** funciona como uma “gaveta pessoal” de cada usuário dentro da rede.
 
@@ -1510,7 +1480,7 @@ A **Pasta Base (Home Folder)** funciona como uma “gaveta pessoal” de cada us
 - Pode ser mapeada como uma unidade (ex: H:)  
 
 > **Analogia:**  
-É como um armário com várias gavetas — cada funcionário tem a sua, com chave própria.
+É como um armário com várias gavetas, cada funcionário tem a sua, com chave própria.
 
 ---
 
@@ -1522,16 +1492,15 @@ Se o nome do compartilhamento termina com **`$`**, ele fica oculto na rede.
 
 Exemplo:
 
-home$
+`home$`
 
 - A pasta existe, mas não aparece ao navegar na rede  
 - Só acessa quem sabe o caminho
 
 ---
 
-# Criando a Pasta HOME (Base)
+## Criando a Pasta HOME (Base)
 
-**Passo inicial**
 
 1. Criar pasta:
    - Nome: `HOME`
@@ -1552,7 +1521,7 @@ home$
 - Marcar: **Compartilhar esta pasta**
 - Nome:
 
-home$
+`home$`
 
 ---
 
@@ -1576,15 +1545,11 @@ home$
 
 # Configuração de Segurança (NTFS) — Forma Correta
 
-**Objetivo**
-
 Garantir que:
 - Cada usuário acesse **apenas sua pasta**
 - Ninguém veja ou modifique pasta de outro
 
 ---
-
-**Passo a passo**
 
 1. Aba:
  - **Segurança**
@@ -1607,10 +1572,11 @@ Garantir que:
 
 ---
 
-## Configurar permissões
+**Configurar permissões**
 
 1. **Selecionar entidade de segurança**
  - Digitar:
+
    ```
    Usuários
    ```
@@ -1629,7 +1595,7 @@ Garantir que:
 
 ---
 
-* Confirmar tudo com OK
+- Confirmar tudo com OK
 
 ---
 
@@ -1641,9 +1607,7 @@ Garantir que:
 
 ---
 
-# Vincular Pasta Base ao Usuário
-
-**Passo a passo**
+## Vincular Pasta Base ao Usuário
 
 1. Abrir:
  - **Usuários e Computadores do AD**
@@ -1686,30 +1650,13 @@ Garantir que:
 
 ---
 
-# Resultado Final
+**Resultado Final**
 
 Quando o usuário faz login:
 
 - Unidade (H:) aparece automaticamente  
 - Pasta pessoal é criada (se não existir)  
 - Acesso é exclusivo  
-
----
-
-# Problema comum
-
-**Problema**
-
-Usuários conseguem acessar pastas de outros digitando:
-
-\servidor\home$
-
----
-
-**Solução aplicada acima**
-
-- Ajustar permissões NTFS corretamente  
-- Cada usuário só acessa sua pasta  
 
 ---
 
@@ -1750,34 +1697,7 @@ Agora:
 
 ---
 
-**Resumo Relâmpago**
-
-- Pasta base é a pasta pessoal do usuário  
-- Pode ser mapeada como unidade (H:)  
-- $ no nome deixa o compartilhamento oculto  
-- Usuários do domínio recebem permissão  
-- NTFS controla acesso real  
-- Herança deve ser desabilitada  
-- %USERNAME% cria pasta automática  
-- Cada usuário acessa só sua pasta  
-- Enumeração oculta pastas de outros  
-- Tudo funciona automaticamente no login  
-
----
-
-# Resumo Final
-
-- Pasta base = armazenamento individual  
-- Compartilhar como `home$`  
-- Configurar NTFS corretamente  
-- Usar `%USERNAME%` no caminho  
-- Ativar enumeração para segurança visual  
-
----
-
 # GPO (Group Policy Objects)
-
-**Visão Geral**
 
 GPO (**Group Policy Object**) são políticas usadas no Active Directory para:
 
@@ -1791,7 +1711,7 @@ A GPO é como um “conjunto de regras da empresa” aplicado automaticamente no
 
 ---
 
-# Conceitos Importantes
+## Conceitos Importantes
 
 **GPO se aplica a:**
 
@@ -1814,7 +1734,7 @@ A GPO normalmente é vinculada a:
 
 ---
 
-# Políticas x Preferências
+## Políticas x Preferências
 
 **Políticas**
 São regras obrigatórias.
@@ -1857,23 +1777,7 @@ gpupdate /force
 
 ---
 
-# Ocultar Disco Local C:
-
-**Objetivo**
-
-Impedir que o usuário:
-
-- Veja o Disco C:
-- Acesse o Disco C:
-
-> Força armazenamento em rede  
-> Evita salvar arquivos localmente
-
----
-
 # Criando a GPO
-
-**Passo a passo**
 
 1. Abrir:
    - **Gerenciador do Servidor**
@@ -1898,7 +1802,7 @@ Impedir que o usuário:
 
 Exemplo:
 
-Impedir e ocultar o disco local
+`Impedir e ocultar o disco local`
 
 > Sempre usar nomes claros
 
@@ -1963,27 +1867,18 @@ Centralizar arquivos na rede e reduzir perda de dados locais.
 
 ---
 
-# Bloquear CMD e PowerShell
-
-**Objetivo**
-
-Impedir:
-- CMD
-- PowerShell
-- Execução de comandos
+# Bloquear CMD
 
 > Aumenta segurança  
 > Reduz risco de alteração indevida
 
 ---
 
-# Imedir o acesso ao Disco Local através de comandos
-
 **Criar nova GPO**
 
 Exemplo de nome:
 
-Impedir CMD e PowerShell
+`Impedir CMD`
 
 ---
 
@@ -1997,8 +1892,6 @@ Configuração do Usuário
 
 ---
 
-# Bloquear CMD
-
 **Política:**
 
 * “Impedir o acesso ao Prompt de Comando”
@@ -2006,77 +1899,6 @@ Configuração do Usuário
 - Habilitar
 - Aplicar
 - OK
-
----
-
-# Bloquear PowerShell
-
-**Política:**
-
-* “Não executar aplicativos especificados do Windows”
-
-- Habilitar
-- Clique em:
-  - **Mostrar**
-
----
-
-**Adicionar:**
-
-powershell.exe
-powershell_ise.exe
-pwsh.exe
-
----
-
-* Aplicar → OK
-
----
-
-# Resultado Final
-
-Usuário:
-
--  Não acessa Disco C:
--  Não usa CMD
--  Não usa PowerShell
-
-> Ambiente mais controlado e seguro
-
----
-
-# Observação Importante
-
-Bloquear CMD e PowerShell:
-
-- Pode atrapalhar suporte técnico
-- Pode impedir scripts legítimos
-- Deve ser aplicado apenas onde necessário
-
----
-
-**Resumo Relâmpago**
-
-- GPO aplica regras no AD  
-- É vinculada à OU  
-- Políticas são obrigatórias  
-- Preferências são sugestões  
-- gpupdate força atualização  
-- GPO pode ocultar Disco C:  
-- Também pode bloquear acesso ao disco  
-- CMD pode ser bloqueado  
-- PowerShell também pode ser bloqueado  
-- Tudo aumenta controle e segurança  
-
----
-
-# Resumo Final
-
-- GPO = automação de regras  
-- Aplicada em usuários e computadores  
-- Disco C: pode ser ocultado e bloqueado  
-- CMD e PowerShell podem ser desativados  
-- Muito usado em ambientes corporativos  
 
 ---
 
@@ -2142,7 +1964,7 @@ Exemplos:
 
 ---
 
-# Testando o IIS
+## Testando o IIS
 
 Após instalar:
 
@@ -2224,7 +2046,7 @@ No navegador:
 http://IP_DO_SERVIDOR
 ```
 
-* O site já deve abrir
+- O site já deve abrir
 
 ---
 
@@ -2245,7 +2067,7 @@ A pasta `wwwroot` é como a vitrine principal do site.
 
 ---
 
-# Configurar DNS para o Site
+## Configurar DNS para o Site
 
 **Problema**
 
@@ -2470,7 +2292,7 @@ www
 ```
 
 * IP:
-```text
+```
 192.168.32.10
 ``` 
 
@@ -2501,30 +2323,5 @@ Exemplo:
 |---|---|
 | www.janelinha.tec | Site 1 |
 | www.tabuadinha.tec | Site 2 |
-
----
-
-**Resumo Relâmpago**
-
-- IIS é o servidor web da Microsoft  
-- Sites ficam em `wwwroot`  
-- HTML é exibido automaticamente  
-- DNS evita acessar por IP  
-- Zona DNS cria domínio interno  
-- Registro A aponta nome para IP  
-- IIS suporta múltiplos sites  
-- Cada site possui pasta própria  
-- Hostname diferencia os sites  
-- Navegador acessa pelo domínio criado  
-
----
-
-# Resumo Final
-
-- IIS hospeda sites no Windows Server  
-- `wwwroot` é a pasta padrão  
-- DNS cria nomes amigáveis  
-- Registro A liga domínio ao IP  
-- IIS consegue servir vários sites simultaneamente  
 
 ---
