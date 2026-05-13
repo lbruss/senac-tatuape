@@ -699,9 +699,13 @@ Após instalar:
 **Informações necessárias (exemplo)**
 
 **IP inicial:** 192.168.32.100
+
 **IP final:** 192.168.32.200
+
 **Duração:** 2 horas
+
 **DNS:** 192.168.32.10
+
 **Gateway:** 192.168.32.1
 
 ---
