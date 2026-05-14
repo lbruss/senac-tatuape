@@ -2325,3 +2325,27 @@ Exemplo:
 | www.tabuadinha.tec | Site 2 |
 
 ---
+
+# Resumo Geral
+
+O Windows Server é fundamental em ambientes corporativos, pois permite organizar redes, controlar usuários, armazenar dados e manter serviços funcionando de forma centralizada. Sem servidores, grande parte das empresas não conseguiria administrar seus recursos de maneira eficiente e segura.
+
+Em redes simples pode ser utilizado o modelo Workgroup, mais comum em ambientes domésticos e pequenos. Já em empresas, utiliza-se o Active Directory (AD), que oferece centralização, segurança e gerenciamento profissional da infraestrutura.
+
+O Active Directory permite organizar usuários e computadores através das OUs (Unidades Organizacionais), criar contas, adicionar máquinas ao domínio e aplicar regras de acesso. Dessa forma, a rede fica centralizada, organizada e mais segura.
+
+O gerenciamento de usuários, grupos e permissões facilita o controle de acesso aos recursos da empresa. Usuários representam pessoas, grupos representam equipes e as permissões definem quem pode acessar determinados arquivos e pastas, tornando a administração mais prática e eficiente.
+
+Os scripts de logon automatizam tarefas no momento em que o usuário entra no sistema. Comandos como `net use` permitem mapear unidades de rede automaticamente, enquanto `start` pode abrir programas ou sites. Os scripts ficam normalmente armazenados na pasta SYSVOL do domínio, e a enumeração ajuda a ocultar recursos que o usuário não possui permissão para acessar.
+
+A Pasta Base (Home Folder) fornece armazenamento individual para cada usuário do domínio. Ela pode ser mapeada automaticamente como unidade de rede, normalmente usando `%USERNAME%` para criar pastas automaticamente. Compartilhamentos ocultos com `$`, permissões NTFS e enumeração garantem privacidade e segurança dos arquivos.
+
+As GPOs (Group Policy Objects) permitem aplicar regras automaticamente em usuários e computadores do domínio. Elas podem ocultar e bloquear o Disco C:, desativar CMD e PowerShell e impor diversas políticas de segurança e padronização, aumentando o controle administrativo da rede.
+
+O IIS (Internet Information Services) funciona como servidor web da Microsoft. Ele hospeda sites no Windows Server utilizando a pasta padrão `wwwroot`. O DNS permite acessar os sites por nomes amigáveis em vez de IPs, enquanto registros A fazem a ligação entre domínio e endereço IP. O IIS também suporta múltiplos sites simultaneamente através de hostnames diferentes.
+
+O DNS traduz nomes para IPs e o DHCP distribui endereços IP automaticamente para os dispositivos da rede, facilitando a administração da infraestrutura.
+
+O RAID é utilizado para proteção e desempenho dos discos. O RAID 1 oferece espelhamento e maior segurança dos dados, enquanto o RAID 5 equilibra redundância e desempenho, sendo muito utilizado em ambientes corporativos.
+
+No resultado final, toda essa estrutura forma a base de uma infraestrutura corporativa moderna, centralizada, automatizada, segura e eficiente, permitindo melhor gerenciamento de usuários, computadores, arquivos, permissões, políticas de segurança, serviços de rede e hospedagem de aplicações.
