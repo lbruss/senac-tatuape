@@ -214,7 +214,7 @@ Esse servidor será responsável futuramente por:
 
 - hospedagem da aplicação backend;
 - processamento da API;
--integração com banco de dados.
+- integração com banco de dados.
 
 
 Pendência:
