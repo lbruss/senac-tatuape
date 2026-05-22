@@ -13,28 +13,28 @@
 
 # Sumário
 
-* 1. Introdução
-* 2. Sobre a ConnectStar
-* 3. Sobre a empresa cliente Synccode
-* 4. Sobre o sistema AutoLock
-* 5. Objetivo do projeto
-* 6. Escopo da infraestrutura
-* 7. Equipe técnica e responsabilidades
-* 8. Infraestrutura planejada
-* 9. Inventário de equipamentos
-* 10. Planta física da empresa cliente
-* 11. Arquitetura lógica da infraestrutura
-* 12. Diário técnico consolidado
-* 13. Estado atual da infraestrutura
-* 14. Pendências atuais
+1. Introdução
+2. Sobre a ConnectStar
+3. Sobre a empresa cliente Synccode
+4. Sobre o sistema AutoLock
+5. Objetivo do projeto
+6. Escopo da infraestrutura
+7. Equipe técnica e responsabilidades
+8. Infraestrutura planejada
+9. Inventário de equipamentos
+10. Planta física da empresa cliente
+11. Arquitetura lógica da infraestrutura
+12. Diário técnico consolidado
+13. Estado atual da infraestrutura
+14. Pendências atuais
 
 ---
 
 # 1. Introdução
 
-Este documento apresenta a documentação técnica parcial consolidada do Projeto Integrador desenvolvido pela equipe **ConnectStar**, responsável pelo planejamento, implementação e documentação da infraestrutura tecnológica necessária para suportar o funcionamento do sistema **AutoLock**, pertencente à empresa cliente **Synccode**.
+Este documento apresenta a documentação técnica parcial consolidada do Projeto desenvolvido pela **ConnectStar**, responsável pelo planejamento, implementação e documentação da infraestrutura tecnológica necessária para suportar o funcionamento do sistema **AutoLock**, pertencente à empresa cliente **Synccode**.
 
-O projeto simula um cenário corporativo real, no qual a ConnectStar atua como empresa especializada em:
+**ConnectStar** atua como empresa especializada em:
 
 * infraestrutura de TI;
 * redes corporativas;
@@ -80,8 +80,6 @@ A empresa representa uma organização especializada em serviços de tecnologia 
 * suporte técnico;
 * documentação de infraestrutura;
 * conectividade corporativa.
-
-Dentro do contexto do projeto, a ConnectStar foi contratada pela Synccode para projetar e implantar a infraestrutura necessária ao funcionamento do AutoLock.
 
 ---
 
