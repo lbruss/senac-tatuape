@@ -2,12 +2,10 @@
 
 ## Documentação Técnica Parcial Consolidada (Dia 1 ao Dia 6)
 
-**Empresa prestadora de serviços:** ConnectStar
-**Empresa cliente:** Synccode
-**Projeto atendido:** AutoLock
-**Curso:** Técnico em Informática — SENAC
-**Disciplina:** Projeto Integrador
-**Status:** Projeto em andamento *(documentação parcial consolidada)*
+- **Empresa prestadora de serviços:** ConnectStar
+- **Empresa cliente:** Synccode
+- **Projeto atendido:** AutoLock
+- **Status:** Projeto em andamento *(documentação parcial consolidada)*
 
 ---
 
@@ -69,9 +67,7 @@ Este documento consolida todas as atividades realizadas até o momento.
 
 # 2. Sobre a ConnectStar
 
-A **ConnectStar** é a empresa fictícia criada pela equipe responsável pela infraestrutura deste Projeto Integrador.
-
-A empresa representa uma organização especializada em serviços de tecnologia da informação, com foco em:
+A **ConnectStar** representa uma organização especializada em serviços de tecnologia da informação, com foco em:
 
 * montagem e manutenção de computadores;
 * implantação de redes locais;
@@ -89,7 +85,7 @@ A **Synccode** representa a empresa cliente atendida pela ConnectStar.
 
 Essa empresa corresponde ao grupo parceiro de outro Projeto Integrador, responsável pelo desenvolvimento do software AutoLock.
 
-No cenário corporativo proposto, a Synccode atua como empresa de desenvolvimento de software e terceiriza a implementação da infraestrutura tecnológica necessária para seu sistema.
+No cenário, a Synccode atua como empresa de desenvolvimento de software e terceiriza a implementação da infraestrutura tecnológica necessária para seu sistema.
 
 ---
 
@@ -262,7 +258,7 @@ Ambientes previstos:
 * sala de reunião
 * infraestrutura de rede
 
-**Aqui é recomendado colocar a imagem21 (planta física da empresa Synccode).**
+**Planta física da empresa Synccode.**
 
 ---
 
@@ -284,7 +280,7 @@ DHCP:
 
 Domínio:
 
-```text
+```
 auto.tec
 ```
 
@@ -329,8 +325,6 @@ Apesar da limitação de desempenho, os equipamentos atenderam à necessidade in
 
 Como a seleção ocorreu apenas no final do período, poucas configurações adicionais puderam ser executadas.
 
-**Aqui é recomendado colocar a imagem1.**
-
 ---
 
 ## Preparação do Windows Server
@@ -345,8 +339,6 @@ Foi então criado:
 - ISO do Windows Server 2025.
 
 Essa preparação ocorreu no final do dia.
-
-**Aqui é recomendado colocar a imagem2.**
 
 ---
 
@@ -384,7 +376,7 @@ O roteador inicialmente selecionado foi testado e configurado.
 
 Estado:
 
-✅ funcionando
+- funcionando
 
 ---
 
@@ -404,8 +396,6 @@ Objetivos:
 - organização;
 - rastreabilidade;
 - troubleshooting facilitado.
-
-**Aqui é recomendado colocar a imagem4.**
 
 ---
 
@@ -446,9 +436,7 @@ Um notebook apresentou falha e precisou ser substituído.
 
 Resultado:
 
-✅ instalação concluída com sucesso
-
-**Aqui é recomendado colocar a imagem5.**
+- instalação concluída com sucesso
 
 ---
 
@@ -487,9 +475,7 @@ Configuração final aplicada:
 
 Resultado:
 
-✅ internet funcionando
-
-**Aqui é recomendado colocar a imagem7.**
+- internet funcionando
 
 ---
 
@@ -564,7 +550,7 @@ Serviços instalados:
 
 ## Domínio
 
-```text
+```
 auto.tec
 ````
 
@@ -582,15 +568,13 @@ Foi desativado:
 
 Teste:
 
-```bash
+```
 ping auto.tec
 ```
 
 Resultado:
 
-✅ resolução funcional
-
-**Aqui é recomendado colocar a imagem12.**
+- resolução funcional
 
 ---
 
@@ -635,8 +619,6 @@ Objetivo:
 
 * centralização da conectividade.
 
-**Aqui é recomendado colocar a imagem13.**
-
 ---
 
 ## Substituição do roteador
@@ -657,7 +639,7 @@ Configurado como:
 
 IP configurado posteriormente:
 
-```text
+```
 192.168.0.2
 ```
 
@@ -700,11 +682,8 @@ Instalação finalizada.
 | MySQL    | 8.4.9   |
 | Tomcat   | 11.0.22 |
 
-**Aqui é recomendado colocar a imagem15.**
-
 ---
 
-````markdown
 # 12.5 Dia 5 — 21/05/2026
 
 ## Objetivo do dia
@@ -729,8 +708,6 @@ Objetivo:
 
 - estabilização das conexões;
 - continuidade dos testes.
-
-**Aqui é recomendado colocar a imagem16.**
 
 ---
 
@@ -758,7 +735,7 @@ Distribuição da rede:
 
 Foi criada uma Unidade Organizacional (OU):
 
-```text
+```
 AutoLock
 ````
 
@@ -767,8 +744,6 @@ Objetivo:
 * organização lógica;
 * administração centralizada;
 * separação de usuários do projeto.
-
-**Aqui é recomendado colocar a imagem17.**
 
 ---
 
@@ -785,15 +760,13 @@ Objetivo:
 * testes com domínio;
 * simulação de ambiente empresarial.
 
-**Aqui é recomendado colocar a imagem18.**
-
 ---
 
 ## Integração dos notebooks
 
 Os dois notebooks foram adicionados ao domínio:
 
-```text
+```
 auto.tec
 ```
 
@@ -804,11 +777,9 @@ Após isso:
 
 Resultado:
 
-✅ notebooks integrados ao domínio
-✅ autenticação funcional
-✅ Active Directory validado
-
-**Aqui é recomendado colocar a imagem19.**
+- notebooks integrados ao domínio
+- autenticação funcional
+- Active Directory validado
 
 ---
 
@@ -824,9 +795,7 @@ Problema observado:
 
 Sintoma:
 
-```text
-Internet aparentemente conectada, porém sem resolução funcional.
-```
+- Internet aparentemente conectada, porém sem resolução funcional.
 
 Diagnóstico preliminar:
 
@@ -835,8 +804,6 @@ Diagnóstico preliminar:
 * NAT;
 * DNSMasq;
 * integração entre firewall e Windows DNS.
-
-**Aqui é recomendado colocar a imagem20.**
 
 ---
 
@@ -866,8 +833,6 @@ Objetivo:
 
 * reiniciar testes de conectividade;
 * troubleshooting controlado.
-
-**Aqui é recomendado colocar a imagem22.**
 
 ---
 
@@ -914,7 +879,7 @@ Essa planta representa o ambiente corporativo fictício da empresa cliente.
 * sala de reunião
 * rede
 
-**Aqui é recomendado colocar a imagem21.**
+**Planta da empresa Synccode.**
 
 ---
 
@@ -973,13 +938,11 @@ Esse detalhe impactava o comportamento esperado.
 
 Após reinstalação e reconfiguração:
 
-✅ internet restaurada
-✅ gateway funcional
-✅ Linux Firewall operacional
+- internet restaurada
+- gateway funcional
+- Linux Firewall operacional
 
 Esse foi um marco importante do projeto.
-
-**Aqui é recomendado colocar a imagem23.**
 
 ---
 
@@ -1056,8 +1019,8 @@ Serviços:
 
 Status:
 
-✅ integrados ao domínio
-✅ autenticação funcional
+- integrados ao domínio
+- autenticação funcional
 
 ---
 
@@ -1078,12 +1041,10 @@ Ainda pendente:
 
 # Status do projeto
 
-```text
+```
 PROJETO EM ANDAMENTO
 DOCUMENTAÇÃO PARCIAL CONSOLIDADA
 DIAS 1 → 6
-```
-
 ```
 
 ---
