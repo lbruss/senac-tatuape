@@ -1,28 +1,3 @@
-Perfeito. Esse é exatamente o posicionamento correto.
-
-O Ezequiel **não é professor explicando tecnologia**.
-Ele é **consultor técnico da ConnectStar apresentando a solução corporativa entregue ao cliente**.
-
-A linguagem precisa passar:
-
-* autoridade técnica;
-* clareza;
-* profissionalismo;
-* domínio da infraestrutura;
-* narrativa corporativa.
-
-Não algo como:
-
-❌ “Windows Server é um sistema operacional da Microsoft…”
-
-Mas sim:
-
-✅ “Para gerenciamento centralizado da infraestrutura, implementamos um Windows Server com Active Directory, DNS e DHCP.”
-
-Esse é o tom.
-
----
-
 # ROTEIRO COMPLETO DE APRESENTAÇÃO — EZEQUIEL
 
 ## ConnectStar — Infraestrutura do AutoLock
@@ -31,7 +6,7 @@ Esse é o tom.
 
 # SLIDE 1 — CONNECTSTAR (ABERTURA)
 
-**Ezequiel fala:**
+**Ezequiel:**
 
 > Boa noite a todos.
 >
@@ -48,14 +23,11 @@ Esse é o tom.
 > * suporte à aplicação;
 > * e organização da infraestrutura.
 
-**Dica de apresentação:**
-tom firme, profissional, sem pressa.
-
 ---
 
 # SLIDE 2 — SOBRE A CONNECTSTAR
 
-**Ezequiel fala:**
+**Ezequiel:**
 
 > A ConnectStar foi estruturada como uma empresa focada em infraestrutura e suporte corporativo.
 >
@@ -69,7 +41,7 @@ tom firme, profissional, sem pressa.
 
 # SLIDE 3 — DESAFIO RECEBIDO
 
-**Ezequiel fala:**
+**Ezequiel:**
 
 > O desafio recebido foi construir uma infraestrutura corporativa capaz de sustentar a operação do sistema AutoLock.
 >
@@ -92,7 +64,7 @@ tom firme, profissional, sem pressa.
 
 (Topologia principal da rede)
 
-**Ezequiel fala:**
+**Ezequiel:**
 
 > Esta é a arquitetura lógica da solução implementada.
 >
@@ -117,7 +89,7 @@ tom firme, profissional, sem pressa.
 
 # SLIDE 5 — FIREWALL LINUX
 
-**Ezequiel fala:**
+**Ezequiel:**
 
 > O primeiro componente crítico da infraestrutura é o servidor Linux Firewall.
 >
@@ -143,7 +115,7 @@ tom firme, profissional, sem pressa.
 
 # SLIDE 6 — WINDOWS SERVER
 
-**Ezequiel fala:**
+**Ezequiel:**
 
 > Para gerenciamento corporativo da infraestrutura, implementamos um Windows Server 2025.
 >
@@ -167,7 +139,7 @@ tom firme, profissional, sem pressa.
 
 # SLIDE 7 — DOMÍNIO CORPORATIVO
 
-**Ezequiel fala:**
+**Ezequiel:**
 
 > Para centralizar a autenticação da infraestrutura, criamos o domínio corporativo **auto.tec**.
 >
@@ -186,7 +158,7 @@ tom firme, profissional, sem pressa.
 
 # SLIDE 8 — SERVIDOR LINUX DE APLICAÇÃO
 
-**Ezequiel fala:**
+**Ezequiel:**
 
 > Também implementamos um segundo servidor Linux Debian, dedicado à camada de aplicação.
 >
@@ -204,7 +176,7 @@ tom firme, profissional, sem pressa.
 
 # SLIDE 9 — REDE INTERNA
 
-**Ezequiel fala:**
+**Ezequiel:**
 
 > A infraestrutura interna foi organizada com um switch central, responsável por interligar todos os dispositivos.
 >
@@ -218,7 +190,7 @@ tom firme, profissional, sem pressa.
 
 # SLIDE 10 — FLUXO OPERACIONAL
 
-**Ezequiel fala:**
+**Ezequiel:**
 
 > Em funcionamento, o fluxo ocorre da seguinte forma:
 >
@@ -235,9 +207,7 @@ tom firme, profissional, sem pressa.
 
 # SLIDE 11 — DESAFIOS TÉCNICOS
 
-(Muito importante)
-
-**Ezequiel fala:**
+**Ezequiel:**
 
 > Durante a implementação enfrentamos desafios reais de infraestrutura.
 >
@@ -260,7 +230,7 @@ tom firme, profissional, sem pressa.
 
 # SLIDE 12 — RESULTADO FINAL
 
-**Ezequiel fala:**
+**Ezequiel:**
 
 > Ao final, entregamos uma infraestrutura corporativa funcional contendo:
 >
@@ -281,7 +251,7 @@ tom firme, profissional, sem pressa.
 
 # SLIDE 13 — ENCERRAMENTO
 
-**Ezequiel fala:**
+**Ezequiel:**
 
 > Esse projeto permitiu aplicar na prática conceitos reais de infraestrutura corporativa, administração de servidores, redes e segurança.
 >
@@ -290,26 +260,3 @@ tom firme, profissional, sem pressa.
 > Obrigado pela atenção.
 
 ---
-
-# DICAS IMPORTANTES PARA O EZEQUIEL
-
-### NÃO fazer:
-
-❌ parecer professor explicando definição
-❌ ler slides
-❌ falar rápido
-❌ falar “tipo”, “né”, “mano”
-
----
-
-### Fazer:
-
-✅ postura profissional
-✅ apontar topologia
-✅ explicar fluxo
-✅ mostrar domínio técnico
-✅ parecer consultor da ConnectStar
-
----
-
-Esse roteiro está em **nível apresentação corporativa**, não apresentação escolar. 🚀
