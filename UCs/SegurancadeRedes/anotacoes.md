@@ -258,7 +258,7 @@ Ambientes previstos:
 * sala de reunião
 * infraestrutura de rede
 
-**Planta física da empresa Synccode.**
+<img width="1431" height="787" alt="synccode" src="https://github.com/user-attachments/assets/3042d389-7a41-466a-a675-488b0483f81a" />
 
 ---
 
@@ -879,7 +879,7 @@ Essa planta representa o ambiente corporativo fictício da empresa cliente.
 * sala de reunião
 * rede
 
-**Planta da empresa Synccode.**
+<img width="1431" height="787" alt="synccode" src="https://github.com/user-attachments/assets/3042d389-7a41-466a-a675-488b0483f81a" />
 
 ---
 
