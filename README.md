@@ -1,6 +1,6 @@
 ![GitHub License](https://img.shields.io/github/license/lbruss/senac-tatuape1?style=flat)
 
-# 💻 Curso Técnico em Informática - SENAC Tatuapé
+# 💻 Curso Técnico em Informática - SENAC Tatuapé (Parte 1)
 
 Repositório dedicado ao registro de **conteúdos, práticas, anotações e projetos** desenvolvidos ao longo do Curso Técnico em Informática do SENAC Tatuapé.  
 Os materiais estão organizados por temas, com atualizações contínuas conforme o avanço dos estudos.
@@ -30,7 +30,7 @@ Este espaço funciona como:
 ---
 
 ## 📌 Observação
-Repositório em constante atualização conforme novos conteúdos são estudados e documentados.
+Repositório já chegou ao seu fim, a continuação esta [aqui](https://github.com/lbruss/senac-tatuape2).
 
 ## Autor
 Bruss Loza
