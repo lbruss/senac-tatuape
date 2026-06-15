@@ -1,4 +1,4 @@
-![GitHub License](https://img.shields.io/github/license/lbruss/senac-tatuape?style=flat)
+![GitHub License](https://img.shields.io/github/license/lbruss/senac-tatuape1?style=flat)
 
 # 💻 Curso Técnico em Informática - SENAC Tatuapé
 
